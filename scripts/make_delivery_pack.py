@@ -314,9 +314,17 @@ def verify(tasks: list[tuple[str, str, str]], pack: str) -> list[str]:
 
 def render_readme(manifest: list[dict], pack: str) -> str:
     docs = sorted({m["path"].split("/")[-1] for m in manifest if m["path"].startswith("01_交付文档/") and m["path"].count("/") == 1})
-    return README_TMPL.replace("{{DOC_COUNT}}", str(len(docs))).replace(
-        "{{DOC_LIST}}", "\n".join("| `%s` |" % d for d in docs)
-    ).replace("{{TOTAL}}", "%.2f MB" % (sum(m["bytes"] for m in manifest) / 1048576))
+    buckets: dict[str, int] = {}
+    for m in manifest:
+        top = m["path"].split("/")[0]
+        buckets[top] = buckets.get(top, 0) + 1
+    breakdown = " · ".join("%s %d" % (k.split("_", 1)[-1], buckets[k]) for k in sorted(buckets))
+    return (README_TMPL
+            .replace("{{DOC_COUNT}}", str(len(docs)))
+            .replace("{{DOC_LIST}}", "\n".join("| `%s` |" % d for d in docs))
+            .replace("{{N_SRC}}", str(len(manifest)))
+            .replace("{{BREAKDOWN}}", breakdown)
+            .replace("{{TOTAL}}", "%.2f MB" % (sum(m["bytes"] for m in manifest) / 1048576)))
 
 
 README_TMPL = """# 双人对话播客自动生成系统 · 交付包
@@ -340,6 +348,8 @@ README_TMPL = """# 双人对话播客自动生成系统 · 交付包
 | `05_验收证据/` | 回归与变异、一致率普查、订阅源核对、演示核验、浏览器取证、环境冒烟、文档终检 | 均为报告正文引用的原始证据 |
 
 `交付清单_MANIFEST.json` 逐文件给出 **字节数 + sha256**，可用于逐字节复核本包完整性。
+
+包内构成（按文件数）：{{BREAKDOWN}}。
 
 ## 二、任务书对账结论（摘要）
 
@@ -402,8 +412,9 @@ python scripts\\make_episode.py --topic "人工智能会不会取代程序员" -
 {{DOC_LIST}}
 
 > 以上 32 份当前版文档，连同 `archive/` 历史版本、演示产物（3 期成片 + 6 张截图 + 答辩 PPT）、
-> 源代码与依赖清单、启动脚本、验收证据，**全部入包，体积合计约 {{TOTAL}}**；
-> 另附本说明与 `交付清单_MANIFEST.json`（后者的 `文件数` / `总字节` 已把两者一并计入）。
+> 源代码与依赖清单、启动脚本、验收证据，**全部入包，共 {{N_SRC}} 个文件、约 {{TOTAL}}**；
+> 另附本说明与 `交付清单_MANIFEST.json`（前者已计入 `MANIFEST` 的 `文件数` / `总字节`，
+> 清单自身自然不计）。
 """
 
 
