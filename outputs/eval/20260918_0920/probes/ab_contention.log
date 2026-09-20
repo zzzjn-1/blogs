@@ -1,0 +1,27 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 10:44:52,722 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 10:44:53,799 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 10:44:55,152 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 10:44:55,201 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 10:44:55,952 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 10:44:59,223 INFO text_frontend=wetext | model=CosyVoice2 | 加载 11.1s
+2026-09-18 10:44:59,223 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 10:45:00,334 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 10:45:00,334 INFO 说话人 A → 音色 voice_a
+2026-09-18 10:45:00,334 INFO 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:45:00,339 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 10:45:05,837 INFO yield speech len 4.04, rtf 1.3605365658750628
+100%|██████████| 1/1 [00:05<00:00,  5.52s/it]100%|██████████| 1/1 [00:05<00:00,  5.52s/it]
+2026-09-18 10:45:05,859 INFO 预热耗时 5.52s
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:45:05,863 INFO synthesis text 竞甲甲号这是对照实验的探针文本用。
+2026-09-18 10:45:10,484 INFO yield speech len 4.16, rtf 1.1108701045696552
+100%|██████████| 1/1 [00:04<00:00,  4.64s/it]100%|██████████| 1/1 [00:04<00:00,  4.64s/it]
+  [quiet ]   4.67s  音频  4.16s  RTF 1.123
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:45:14,341 INFO synthesis text 竞甲乙号这是对照实验的探针文本用。

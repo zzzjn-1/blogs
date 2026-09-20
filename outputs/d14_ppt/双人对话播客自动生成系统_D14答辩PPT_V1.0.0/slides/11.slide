@@ -1,0 +1,93 @@
+<Slide style={{ width: 1280, height: 720, position: 'relative', background: '#F7F9FC', fontFamily: 'Source Han Sans SC, Noto Sans SC, Microsoft YaHei, sans-serif', overflow: 'hidden' }}>
+
+  <Box style={{ position: 'absolute', top: 0, left: 0, width: 1280, height: 56, background: '#1E4FA8', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px' }}>
+    <Text style={{ fontSize: 18, color: '#FFFFFF', fontWeight: 'bold' }}>双人对话播客自动生成系统</Text>
+    <Text style={{ fontSize: 15, color: '#BFD3EE' }}>D14 项目答辩</Text>
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 80, left: 40, width: 1200, flexDirection: 'column' }}>
+    <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#0E3F8C' }}>三个真实缺陷，以及它们为什么能活那么久</Text>
+    <Box style={{ width: 88, height: 3, background: '#3D7BD9', marginTop: 12 }} />
+  </Box>
+
+  {/* 左 60%：缺陷存活期时间轴（L1 证据图） */}
+  <Box style={{ position: 'absolute', top: 166, left: 40, width: 712, height: 488, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '22px 24px', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230' }}>缺陷引入 → 被发现的间隔</Text>
+
+    <svg width={664} height={296} viewBox='0 0 664 296'>
+      {/* 行 1 */}
+      <text x='0' y='34' fontSize='14' fill='#1A2230' fontWeight='bold'>配置键名写错</text>
+      <rect x='128' y='20' width='330' height='20' rx='4' fill='#E8EFF8' stroke='#1E4FA8' strokeWidth='1' />
+      <text x='466' y='35' fontSize='14' fill='#4A5568'>D3 引入 · 6 天不可见</text>
+
+      {/* 行 2 */}
+      <text x='0' y='94' fontSize='14' fill='#1A2230' fontWeight='bold'>订阅源落后一期</text>
+      <rect x='128' y='80' width='454' height='20' rx='4' fill='#E8EFF8' stroke='#1E4FA8' strokeWidth='1' />
+      <text x='128' y='118' fontSize='14' fill='#4A5568'>D6 引入 · 活过 4 个阶段，14 份 feed 每份恰好少 1 条</text>
+
+      {/* 行 3 */}
+      <text x='0' y='182' fontSize='14' fill='#1A2230' fontWeight='bold'>摆设断言</text>
+      <rect x='128' y='168' width='454' height='20' rx='4' fill='#FBE9E8' stroke='#D9534F' strokeWidth='1' />
+      <text x='128' y='206' fontSize='14' fill='#4A5568'>D11 首次 · 到 D13 已是第 4 次同族复发（三种形态）</text>
+
+      {/* 时间轴 */}
+      <path d='M128 256 L646 256' stroke='#D6DCE5' strokeWidth='2' />
+      <text x='120' y='278' fontSize='13' fill='#8B97A8'>D0</text>
+      <text x='250' y='278' fontSize='13' fill='#8B97A8'>D4</text>
+      <text x='380' y='278' fontSize='13' fill='#8B97A8'>D8</text>
+      <text x='510' y='278' fontSize='13' fill='#8B97A8'>D12</text>
+      <text x='628' y='278' fontSize='13' fill='#8B97A8'>D14</text>
+      <rect x='584' y='250' width='4' height='12' fill='#D9534F' />
+
+      {/* 发现点 */}
+      <circle cx='584' cy='30' r='6' fill='#D9534F' />
+      <circle cx='584' cy='90' r='6' fill='#D9534F' />
+      <circle cx='584' cy='178' r='6' fill='#D9534F' />
+    </svg>
+
+    <Box style={{ background: '#F0F5FC', borderLeft: '4px solid #D9534F', borderRadius: 4, padding: '12px 16px' }}>
+      <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.6 }}>
+        <span style={{ fontWeight: 'bold', color: '#B03B37' }}>共同点　</span>
+        三个缺陷都不会让系统报错——它们只是安静地给出错误的结果。
+      </Text>
+    </Box>
+  </Box>
+
+  {/* 右 40%：三个缺陷的对策 */}
+  <Box style={{ position: 'absolute', top: 166, left: 776, width: 464, height: 488, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+    <Box style={{ height: 152, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '16px 20px', flexDirection: 'column', gap: 7 }}>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#0E3F8C' }}>① 订阅源恒久落后一期</Text>
+      <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.55 }}>
+        写订阅源早于状态转 DONE，
+        <span style={{ fontWeight: 'bold', color: '#1A2230' }}>本期被自己的过滤条件挡掉</span>。
+      </Text>
+      <Text style={{ fontSize: 16, color: '#1E4FA8' }}>对策：把本期显式纳入本次生成</Text>
+    </Box>
+
+    <Box style={{ height: 152, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '16px 20px', flexDirection: 'column', gap: 7 }}>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#0E3F8C' }}>② 配置死键（6 天不可见）</Text>
+      <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.55 }}>
+        未知键被静默丢弃，且默认值恰好等于意图值，
+        <span style={{ fontWeight: 'bold', color: '#1A2230' }}>填错与填对毫无差别</span>。
+      </Text>
+      <Text style={{ fontSize: 16, color: '#1E4FA8' }}>对策：参数文档与配置字段双向比对</Text>
+    </Box>
+
+    <Box style={{ height: 152, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '16px 20px', flexDirection: 'column', gap: 7 }}>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#0E3F8C' }}>③ 摆设断言</Text>
+      <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.55 }}>
+        期望值与被测产物同源，等于拿产物跟自己比；
+        <span style={{ fontWeight: 'bold', color: '#1A2230' }}>注入缺陷测试照样全绿</span>。
+      </Text>
+      <Text style={{ fontSize: 16, color: '#1E4FA8' }}>对策：35 条变异 + 判据自带自证</Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 668, left: 40, width: 1200, height: 32, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>双人对话播客自动生成系统 · D14 答辩</Text>
+    <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold' }}>11 / 12</Text>
+  </Box>
+
+</Slide>

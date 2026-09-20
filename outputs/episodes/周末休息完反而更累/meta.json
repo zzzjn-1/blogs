@@ -1,0 +1,20 @@
+{
+  "topic": "为什么周末休息完反而更累",
+  "title": "周末休息完反而更累",
+  "summary": "聊聊为什么周末补觉刷手机反而更累，以及怎样才算真正有效的休息。",
+  "created": "2026-09-20T11:19:53",
+  "words": 900,
+  "chars": 817,
+  "lines": 47,
+  "status": "DONE",
+  "synth_elapsed_s": 366.12,
+  "sec_per_char": 0.4481,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\周末休息完反而更累\\周末休息完反而更累.mp3",
+  "mp3_bytes": 4114015,
+  "duration_s": 257.06,
+  "loudness_i": "-16.60",
+  "true_peak": "-1.86",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260920_111344\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 2
+}

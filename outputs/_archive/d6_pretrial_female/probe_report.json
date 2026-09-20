@@ -1,0 +1,26 @@
+{
+  "by_speaker": {
+    "A": {
+      "sentences": 13,
+      "speech_dbfs": -15.53,
+      "floor_dbfs": -62.06,
+      "snr_db": 46.31,
+      "f0_hz": 180.5,
+      "measurable": "13/13"
+    },
+    "B": {
+      "sentences": 13,
+      "speech_dbfs": -14.62,
+      "floor_dbfs": -41.64,
+      "snr_db": 27.91,
+      "f0_hz": 117.1,
+      "measurable": "11/13"
+    }
+  },
+  "mp3": {
+    "I_lufs": null,
+    "TP_dbtp": -1.9,
+    "LRA": 5.2,
+    "max_volume_dbfs": -1.9
+  }
+}

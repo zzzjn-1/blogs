@@ -1,0 +1,9 @@
+{
+  "id": "voice_b",
+  "name": "男声·B（录音素材）",
+  "wav": "voice_b.wav",
+  "prompt_text": "哈啰你好，请问你是哪个？这里是",
+  "gender": "male",
+  "style": "neutral",
+  "description": "来源：微信录音「录音机-20260915-1012.m4a」(8.93s, 48kHz 立体声 AAC)，已转 16kHz 单声道；F0 中位数 100 Hz（男声区间）；prompt_text 为 whisper small 初稿，尾段约 1.9s 未转写，待人工校正后重跑。"
+}

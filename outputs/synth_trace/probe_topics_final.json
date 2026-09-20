@@ -1,0 +1,16 @@
+{
+  "version": "probe-3",
+  "stage": "R21 修复后终态复核（非交付主题集）",
+  "description": "第三个全新主题，用于终态复核：①5.5s 落库忙等确已消失；②llm_end 抓取已生效（yield 前后切分有样本）。",
+  "spec": {
+    "categories": ["诊断"],
+    "per_category": 1,
+    "lengths": {"short": 1.5},
+    "per_category_split": {"short": 1, "long": 0},
+    "words_per_minute": 260
+  },
+  "notes": "必须是三个探针里都没出现过的主题，否则命中缓存拿不到 infer。",
+  "topics": [
+    {"id": "R21G", "category": "诊断", "length": "short", "topic": "为什么说睡眠是最好的恢复方式", "duration_min": 1.5}
+  ]
+}

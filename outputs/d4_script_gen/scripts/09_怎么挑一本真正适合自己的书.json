@@ -1,0 +1,154 @@
+{
+  "result": {
+    "topic": "怎么挑一本真正适合自己的书",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 390,
+    "word_range": [
+      351,
+      429
+    ],
+    "actual_words": 341,
+    "word_quota_ok": false,
+    "word_deviation_pct": -0.1256,
+    "line_count": 20,
+    "avg_chars_per_line": 17.1,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 3,
+    "correction_rounds": 2,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为选书方法的生活类讨论，无政治敏感、低俗、违法或专业建议等风险点。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 5696,
+      "completion_tokens": 1514,
+      "total_tokens": 7210
+    },
+    "errors": [],
+    "warnings": [
+      "总字数 341 不在配额区间 351~429（目标 390 字，允许上下浮动 10%）"
+    ],
+    "elapsed_s": 12.55,
+    "index": 9,
+    "category": "生活闲聊",
+    "duration_min": 1.5,
+    "ok": true
+  },
+  "script": {
+    "title": "怎么挑一本真正适合自己的书",
+    "summary": "从目的、难度和试读三方面，聊聊怎样找到真正读得进去的那本书。",
+    "total_chars": 341,
+    "line_count": 20,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "很多人都在问，怎么挑一本适合自己的书。"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "我觉得第一步不是挑书，是先看清自己。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "看自己什么呢，是兴趣还是需求？"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "两样都看，先问自己现在想解决什么问题。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "想放松和想学东西，选书差别很大。"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "对，目的不同，判断标准就完全不同。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "那难度怎么把握，太厚太深容易半路放弃。"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "选稍微踮脚够得着的，别一上来就啃经典。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "可有人觉得，读不懂才叫真的有收获。"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "读不懂多半是白读，成就感会先崩掉。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "那怎么判断一本书读不读得进去？"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "先试读十页，读得顺不顺，身体最诚实。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "我还会看目录，结构清楚才敢买回家。"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "对，目录像地图，能看出作者的整体思路。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "那别人的书单，要不要照单全收？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "当参考就好，口味和阶段都不一样。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "同一本书，不同年纪读感受也不同。"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "所以适合当下自己的，才算是好书。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "总结一下，先明确目的，再试读几页。"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "对，别为书单读书，要为自己去读。"
+      }
+    ]
+  }
+}

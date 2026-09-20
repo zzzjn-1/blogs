@@ -1,0 +1,423 @@
+{
+  "cache_path": "D:\\podcast-ai\\data\\cache",
+  "batch": "D:\\podcast-ai\\outputs\\d4_voice_check\\_cache_cleanup\\20260915_voiceb_v2",
+  "groups": {
+    "R_测试残留": 70,
+    "S_陈旧或错标": 19,
+    "L_旧公式遗留": 14
+  },
+  "moved": [
+    {
+      "rel": "gu/guard-t2-1-4141f5ca.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-1-e5f66d7b.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-2-ab54ce1c.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-2-eecda7db.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-3-4e0a3a4e.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-3-76e9a6b6.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-4-b8a4cb67.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-4-e67263bd.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-5-57aba9d3.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t2-5-610ebe5f.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "gu/guard-t5-11a1ef24.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "pr/preview-A-1-472efc35.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "pr/preview-A-2-7d44a55e.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "pr/preview-A-3-3e990352.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "pr/preview-A-4-17c67b91.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "pr/preview-B-1-7897e9f7.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "pr/preview-B-2-77dab546.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "pr/preview-B-3-0b42e4b8.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "pr/preview-B-4-e47cb938.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-A-1-1789453086.676762.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-A-2-1789453103.1390476.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-A-3-1789453120.3592057.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-A-4-1789453136.7278302.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-A-5-1789453152.2151399.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-B-1-1789453092.0102646.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-B-2-1789453109.0008948.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-B-3-1789453125.9346724.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-B-4-1789453142.3972738.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-B-5-1789453156.9884262.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-C-1-1789453097.7796133.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-C-2-1789453114.9335928.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-C-3-1789453131.1942625.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-C-4-1789453147.1331823.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2-C-5-1789453162.3045259.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_full-1-1789453258.5690234.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_full-2-1789453283.4377172.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_full-3-1789453309.411203.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_full-4-1789453334.4760277.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_full-5-1789453370.4927678.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_old-1-1789453249.9719942.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_old-2-1789453275.3793454.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_old-3-1789453300.6265497.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_old-4-1789453327.0600586.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_old-5-1789453363.3228464.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_trim-1-1789453263.859075.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_trim-2-1789453289.1123571.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_trim-3-1789453315.7140133.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_trim-4-1789453351.7896378.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-vb_trim-5-1789453375.7969315.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-voice_a-1-1789453269.7219477.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-voice_a-2-1789453294.9355748.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-voice_a-3-1789453321.8010964.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-voice_a-4-1789453357.4965293.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2b-voice_a-5-1789453393.496827.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-1-B-1-1789453623.2650714.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-A-1-1-1789453733.7576718.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-A-1-2-1789453738.115748.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-A-1-3-1789453743.3442564.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-A-1-4-1789453748.3198917.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-A-1-5-1789453753.1989198.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-1-1-1789453677.3854833.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-1-2-1789453682.8728774.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-1-3-1789453687.8555212.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-1-4-1789453693.4926486.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-1-5-1789453699.617541.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-2-1-1789453705.6200461.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-2-2-1789453710.9526486.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-2-3-1789453716.6185186.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-2-4-1789453721.8372655.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "v2/v2v-B-2-5-1789453727.2712157.wav",
+      "group": "R_测试残留"
+    },
+    {
+      "rel": "06/0602fd64f6fb03cea13e939388aa0da4e9a1c04d.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "08/0813c9f40238554ff33f487e7bb1eab9dd461bd2.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "0d/0dcbfa47afa633b493af737268fe6507a00463b4.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "13/130ee0fe01ab2cd739f84a28f7f29119847a7fa4.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "15/151cd472cd770a1f6bff1ac085733c775cedc5d7.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "19/19d56eb202b02dfeaea101ec3acb13a84041c87a.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "22/2268853a5912047cbed79d45c512233a31a9137f.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "24/242c950daa5f053faaecd90a96cd220dd64c8f90.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "2e/2e0bfed009f6dcb9413d45f3a547b6edb67a795b.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "35/35930fedd423816911ce1d0330a0dca44a8133cc.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "40/405148500db9ca15356df14276e010bfa8d98282.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "49/49c53210a11afa6e75b12702543e5e4a1ade5823.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "5f/5f5055f306c8090e27f41bbf2068596794b30705.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "77/7746863942f97e505db0d89f3965de436698ea45.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "77/77d79aa17e687afcc6c3469b8f357d560a079067.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "84/84d5dba2efbfd9468c7eb993313b663fa9b46590.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "cd/cd817cd05ca95bad0c3cf45671cb9e16884190ce.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "df/dfea2a62e2f4a1203a318f68cc189ead11fd2cf3.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "ee/ee40c6f5a94d5bdb5046247c66eb3c79972cad00.wav",
+      "group": "S_陈旧或错标"
+    },
+    {
+      "rel": "02/02a51cad8d4b398e5461d7339516b0ac357fb216.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "03/039d2652d6c7eb932c7453d3d61203200b7563b2.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "06/063140188c79a472706309945769954897a539f3.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "0a/0aa7a6477471fcef8d4d0773f718c06116387a4f.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "15/151d922720fe8642fd82b8d0ae4e15a6975d7784.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "1f/1fb1295d1a0a32f578de62676a0f816d439a9f8a.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "20/20f26453fdb0d0a78e42f71812c2c27e1e55031a.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "38/384f0a54cd653f7f41486c0822d4b06d77a655d5.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "51/515e2321dbb0e89b754c64388ba5a805bcae4573.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "57/57945aba4b5a51f118a02da298a666f612d9cf2c.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "7e/7eab1ebd413475135af954af77a597d5fd61a0c4.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "b9/b9c0f59dc46e3a82d4f6ad2de69e9e4ce81e85ed.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "dc/dc676cdb5a65ddf30c01b9b732b1bec3c919c950.wav",
+      "group": "L_旧公式遗留"
+    },
+    {
+      "rel": "e7/e7b3aa8de68aadef4e403c9beee39eb0809d17e4.wav",
+      "group": "L_旧公式遗留"
+    }
+  ]
+}

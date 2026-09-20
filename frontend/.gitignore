@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.DS_Store
+coverage
+# vite 在配置热更新/异常退出时留下的临时产物
+*.timestamp-*.mjs

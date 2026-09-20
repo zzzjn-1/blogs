@@ -1,0 +1,20 @@
+{
+  "topic": "爱情",
+  "title": "爱情这门功课怎么修",
+  "summary": "两位主播从心动聊到长久相处，拆解爱情里的期待、磨合与自我成长。",
+  "created": "2026-09-17T11:00:15",
+  "words": 800,
+  "chars": 663,
+  "lines": 50,
+  "status": "DONE",
+  "synth_elapsed_s": 320.27,
+  "sec_per_char": 0.4831,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\爱情这门功课怎么修\\爱情这门功课怎么修.mp3",
+  "mp3_bytes": 3772960,
+  "duration_s": 235.75,
+  "loudness_i": "-16.64",
+  "true_peak": "-1.70",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260917_105452\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 3
+}

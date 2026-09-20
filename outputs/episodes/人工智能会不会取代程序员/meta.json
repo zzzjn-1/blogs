@@ -1,0 +1,20 @@
+{
+  "topic": "人工智能会不会取代程序员",
+  "title": "人工智能会不会取代程序员",
+  "summary": "从工具演进聊到职业分工，说说人工智能与程序员的关系和边界。",
+  "created": "2026-09-20T11:13:28",
+  "words": 900,
+  "chars": 843,
+  "lines": 74,
+  "status": "DONE",
+  "synth_elapsed_s": 403.11,
+  "sec_per_char": 0.4782,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\人工智能会不会取代程序员\\人工智能会不会取代程序员.mp3",
+  "mp3_bytes": 4827889,
+  "duration_s": 301.68,
+  "loudness_i": "-16.63",
+  "true_peak": "-1.83",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260920_110641\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 3
+}

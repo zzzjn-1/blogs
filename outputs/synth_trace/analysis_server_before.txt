@@ -1,0 +1,27 @@
+来源：outputs/synth_trace/server1.jsonl
+段数：30（其中缓存未命中 30）｜逐段总耗时 356.5s｜段均 11884ms
+
+=== 阶段耗时（按未命中段聚合，按总耗时排序）===
+  阶段                                    n      总 s    均值 ms    中位 ms   P90 ms     占比
+  ★ infer 本体（LLM+声码器）                  30    167.1     5572     5237     6412  46.9%
+  SQLite 落库回调 on_progress              30    165.5     5518     5518     5534  46.4%
+  收敛守卫（未触发则近零）                         30     22.3      743        1        1   6.3%
+  收尾 + 命名副本 copy2                      30      0.7       23       22       23   0.2%
+  _write_cache（copy2 + json）           30      0.6       20       20       21   0.2%
+  torchaudio.save（写缓存 wav）             30      0.2        6        5        8   0.1%
+  建缓存目录                                30      0.1        2        1        1   0.0%
+  读显存 vram()                           30      0.0        1        1        1   0.0%
+  查句级缓存（未命中）                           30      0.0        0        0        0   0.0%
+  首打点之前（算缓存键）                          30      0.0        0        0        0   0.0%
+  torch.cuda.empty_cache()（段前）         30      0.0        0        0        0   0.0%
+  torch.cuda.empty_cache()（段后）         30      0.0        0        0        0   0.0%
+  进入 synthesize()                      30      0.0        0        0        0   0.0%
+  末打点之后（返回 + 收尾）                       23      0.0        0        0        0   0.0%
+  engine.load()（已加载则近零）                30      0.0        0        0        0   0.0%
+
+=== infer 内部拆分（LLM 出 token / 声码器 flow+hift）===
+  无样本：日志里没有 `yield speech len`。root logger 级别需为 INFO（uvicorn --log-level info）才能抓到。
+
+=== 段与段之间的残余（未被打点覆盖的循环/调度）===
+  残余: n=29 总 20.8s 均值 716ms 中位 2ms P90 2ms 最大 20723ms
+  → 逐段合计 20.8s

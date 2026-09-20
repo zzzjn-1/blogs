@@ -1,0 +1,20 @@
+{
+  "topic": "小城市正在变成新的机会洼地吗",
+  "title": "小城市正在变成新的机会洼地吗",
+  "summary": "两位主播聊小城市在成本、远程办公和数字游民上的新机会与真实取舍。",
+  "created": "2026-09-20T11:26:19",
+  "words": 900,
+  "chars": 790,
+  "lines": 58,
+  "status": "DONE",
+  "synth_elapsed_s": 362.04,
+  "sec_per_char": 0.4583,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\小城市正在变成新的机会洼地吗\\小城市正在变成新的机会洼地吗.mp3",
+  "mp3_bytes": 4470952,
+  "duration_s": 279.36,
+  "loudness_i": "-16.62",
+  "true_peak": "-1.60",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260920_112014\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 3
+}

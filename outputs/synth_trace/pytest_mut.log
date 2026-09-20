@@ -1,0 +1,82 @@
+D:\anaconda\envs\cosyvoice\lib\site-packages\pytest_asyncio\plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+F                                                                        [100%]
+================================== FAILURES ===================================
+____________ test_synth_does_not_hold_write_lock_across_synthesis _____________
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\base.py:1967: in _exec_single_context
+    self.dialect.do_execute(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\default.py:941: in do_execute
+    cursor.execute(statement, parameters)
+E   sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+tests\test_task_runner.py:368: in test_synth_does_not_hold_write_lock_across_synthesis
+    runner._stage_synthesize("t1")     # 不走线程池，便于直接断言
+api\services\task_runner.py:310: in _stage_synthesize
+    results = engine.synthesize_lines(
+tests\test_task_runner.py:334: in synthesize_lines
+    with session_scope(self.s) as db:
+D:\anaconda\envs\cosyvoice\lib\contextlib.py:142: in __exit__
+    next(self.gen)
+api\db.py:101: in session_scope
+    db.commit()
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\session.py:2028: in commit
+    trans.commit(_to_root=True)
+<string>:2: in commit
+    ???
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\state_changes.py:139: in _go
+    ret_value = fn(self, *arg, **kw)
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\session.py:1313: in commit
+    self._prepare_impl()
+<string>:2: in _prepare_impl
+    ???
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\state_changes.py:139: in _go
+    ret_value = fn(self, *arg, **kw)
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\session.py:1288: in _prepare_impl
+    self.session.flush()
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\session.py:4352: in flush
+    self._flush(objects)
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\session.py:4487: in _flush
+    with util.safe_reraise():
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\util\langhelpers.py:146: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\session.py:4448: in _flush
+    flush_context.execute()
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\unitofwork.py:466: in execute
+    rec.execute(self)
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\unitofwork.py:642: in execute
+    util.preloaded.orm_persistence.save_obj(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\persistence.py:85: in save_obj
+    _emit_update_statements(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\orm\persistence.py:912: in _emit_update_statements
+    c = connection.execute(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\base.py:1418: in execute
+    return meth(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\sql\elements.py:515: in _execute_on_connection
+    return connection._execute_clauseelement(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\base.py:1640: in _execute_clauseelement
+    ret = self._execute_context(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\base.py:1846: in _execute_context
+    return self._exec_single_context(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\base.py:1986: in _exec_single_context
+    self._handle_dbapi_exception(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\base.py:2355: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\base.py:1967: in _exec_single_context
+    self.dialect.do_execute(
+D:\anaconda\envs\cosyvoice\lib\site-packages\sqlalchemy\engine\default.py:941: in do_execute
+    cursor.execute(statement, parameters)
+E   sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) database is locked
+E   [SQL: UPDATE tasks SET stage=?, updated_at=? WHERE tasks.id = ?]
+E   [parameters: ('probe-write', '2026-09-18 03:58:47.906028', 't1')]
+E   (Background on this error at: https://sqlalche.me/e/20/e3q8)
+------------------------------ Captured log call ------------------------------
+WARNING  api.config:config.py:239 JWT_SECRET 疑似占位/强度不足（命中占位关键词 ['xxx']）。本地联调可继续，但**对外部署前必须替换**为随机长串，否则任何人都能伪造登录态。
+WARNING  api.services.task_runner:task_runner.py:361 [FIX-SYNTH-DBLOCK-01] 进度回写失败（第 1 次，忽略）：task=t1 cur=1/2 err=(sqlite3.OperationalError) database is locked
+[SQL: UPDATE tasks SET progress=?, updated_at=? WHERE tasks.id = ?]
+[parameters: (40, '2026-09-18 03:58:42.391946', 't1')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+=========================== short test summary info ===========================
+FAILED tests/test_task_runner.py::test_synth_does_not_hold_write_lock_across_synthesis

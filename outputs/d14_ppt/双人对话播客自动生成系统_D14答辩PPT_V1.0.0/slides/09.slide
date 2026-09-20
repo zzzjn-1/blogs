@@ -1,0 +1,109 @@
+<Slide style={{ width: 1280, height: 720, position: 'relative', background: '#F7F9FC', fontFamily: 'Source Han Sans SC, Noto Sans SC, Microsoft YaHei, sans-serif', overflow: 'hidden' }}>
+
+  <Box style={{ position: 'absolute', top: 0, left: 0, width: 1280, height: 56, background: '#1E4FA8', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px' }}>
+    <Text style={{ fontSize: 18, color: '#FFFFFF', fontWeight: 'bold' }}>双人对话播客自动生成系统</Text>
+    <Text style={{ fontSize: 15, color: '#BFD3EE' }}>D14 项目答辩</Text>
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 80, left: 40, width: 1200, flexDirection: 'column' }}>
+    <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#0E3F8C' }}>五项指标：四项机器证据，一项人证</Text>
+    <Box style={{ width: 88, height: 3, background: '#3D7BD9', marginTop: 12 }} />
+  </Box>
+
+  {/* 左：两个巨型数字锚点 */}
+  <Box style={{ position: 'absolute', top: 172, left: 40, width: 452, height: 488, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+    <Box style={{ height: 232, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '24px 26px', flexDirection: 'column', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 84, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1.02 }}>100.00%</Text>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230', marginTop: 10 }}>逐句一致率</Text>
+      <Text style={{ fontSize: 17, color: '#4A5568', marginTop: 6, lineHeight: 1.5 }}>
+        1120 / 1120 句 · 36 期<br />离线全量普查，非抽样
+      </Text>
+    </Box>
+
+    <Box style={{ height: 232, background: '#0E3F8C', borderRadius: 6, padding: '24px 26px', flexDirection: 'column', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 84, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.02 }}>411</Text>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#D6E4F7', marginTop: 10 }}>后端回归用例</Text>
+      <Text style={{ fontSize: 17, color: '#A9C6EC', marginTop: 6, lineHeight: 1.5 }}>
+        junit 口径：0 失败 · 0 错误<br />另有 35 条变异测试全部如期变红
+      </Text>
+    </Box>
+
+  </Box>
+
+  {/* 右：五项指标逐条 */}
+  <Box style={{ position: 'absolute', top: 172, left: 512, width: 728, height: 488, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+    <Box style={{ height: 92, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '14px 20px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 34, height: 34, background: '#1E4FA8', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 3 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230' }}>脚本一次生成可用率 ≥ 80%</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>12 条主题集抽样 · 最终可用率口径 10/10</Text>
+      </Box>
+      <Box style={{ background: '#E8EFF8', borderRadius: 12, padding: '5px 14px' }}>
+        <Text style={{ fontSize: 15, color: '#0E3F8C', fontWeight: 'bold' }}>机器证据</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ height: 92, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '14px 20px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 34, height: 34, background: '#1E4FA8', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 3 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230' }}>合成文本与脚本逐句一致率 = 100%</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>自动比对 · 判据可被打红（4/4 自证通过）</Text>
+      </Box>
+      <Box style={{ background: '#E8EFF8', borderRadius: 12, padding: '5px 14px' }}>
+        <Text style={{ fontSize: 15, color: '#0E3F8C', fontWeight: 'bold' }}>机器证据</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ height: 92, background: '#FFFFFF', border: '1px solid #D9A3A0', borderRadius: 6, padding: '14px 20px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 34, height: 34, background: '#D9534F', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 3 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230' }}>MOS 自然度 ≥ 3.5 / 5</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>3 位真人听测确认达标 · 无评分表、无均分</Text>
+      </Box>
+      <Box style={{ background: '#FBE9E8', borderRadius: 12, padding: '5px 14px' }}>
+        <Text style={{ fontSize: 15, color: '#B03B37', fontWeight: 'bold' }}>人证</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ height: 92, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '14px 20px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 34, height: 34, background: '#1E4FA8', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 3 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230' }}>1000 字端到端 ≤ 10 分钟</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>实测 5.4~6.2 min · 稳态 RTF 1.037（冷启 1.775）</Text>
+      </Box>
+      <Box style={{ background: '#E8EFF8', borderRadius: 12, padding: '5px 14px' }}>
+        <Text style={{ fontSize: 15, color: '#0E3F8C', fontWeight: 'bold' }}>机器证据</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ height: 92, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '14px 20px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 34, height: 34, background: '#1E4FA8', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>5</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 3 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230' }}>显存峰值双口径达标</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>allocated 3548.5 MB ≤ 3.6 GB · reserved 4156.0 MB ≤ 4.2 GB</Text>
+      </Box>
+      <Box style={{ background: '#E8EFF8', borderRadius: 12, padding: '5px 14px' }}>
+        <Text style={{ fontSize: 15, color: '#0E3F8C', fontWeight: 'bold' }}>机器证据</Text>
+      </Box>
+    </Box>
+
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 668, left: 40, width: 1200, height: 32, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>双人对话播客自动生成系统 · D14 答辩</Text>
+    <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold' }}>09 / 12</Text>
+  </Box>
+
+</Slide>

@@ -1,0 +1,51 @@
+
+=== 1/4 前后端字段契约 ===
+  $ D:\anaconda\envs\cosyvoice\python.exe D:\podcast-ai\scripts\check_frontend_contract.py
+    [ok]   TaskOut / TaskOut: 24 个字段一致
+    [ok]   TaskPageOut / TaskPageOut: 5 个字段一致
+    [ok]   ScriptOut / ScriptOut: 6 个字段一致
+    [ok]   ScriptLineOut / ScriptLineOut: 7 个字段一致
+    [ok]   UserOut / UserOut: 3 个字段一致
+    [ok]   FeedOut / FeedOut: 8 个字段一致
+    结果：全部一致
+  -> PASS
+
+=== 2/4 TypeScript 类型检查 ===
+  $ C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node.EXE D:\podcast-ai\frontend\node_modules\typescript\bin\tsc --noEmit
+  -> PASS
+
+=== 3/4 单元测试 (vitest) ===
+  $ C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node.EXE D:\podcast-ai\frontend\node_modules\vitest\vitest.mjs run
+     RUN  v3.2.7 D:/podcast-ai/frontend
+     ✓ src/lib/taskView.test.ts (21 tests) 6ms
+     ✓ src/pages/History.test.tsx (5 tests) 605ms
+       ✓ History 列表摘要 > PENDING + pos=2 → 显示「前面还有 2 个任务」  438ms
+     ✓ src/pages/TaskDetail.test.tsx (8 tests) 833ms
+       ✓ TaskDetail 队列提示 > 排队中（pos=2）→ 显示「前面还有 2 个任务」  492ms
+     Test Files  3 passed (3)
+          Tests  34 passed (34)
+       Start at  17:06:05
+       Duration  9.64s (transform 188ms, setup 862ms, collect 7.55s, tests 1.44s, environment 5.21s, prepare 353ms)
+  -> PASS
+
+=== 4/4 生产构建 (vite) ===
+  $ C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node.EXE D:\podcast-ai\frontend\node_modules\vite\bin\vite.js build
+    rendering chunks...
+    computing gzip size...
+    dist/index.html                   0.40 kB │ gzip:   0.30 kB
+    dist/assets/index-BsKGnGr-.css    9.85 kB │ gzip:   2.78 kB
+    dist/assets/index-Br6BYN7c.js   931.03 kB │ gzip: 295.12 kB
+    ✓ built in 5.95s
+    (!) Some chunks are larger than 500 kB after minification. Consider:
+    - Using dynamic import() to code-split the application
+    - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+    - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+  -> PASS
+
+========================================================
+  [ok]   1/4 前后端字段契约
+  [ok]   2/4 TypeScript 类型检查
+  [ok]   3/4 单元测试 (vitest)
+  [ok]   4/4 生产构建 (vite)
+========================================================
+结果：全部通过

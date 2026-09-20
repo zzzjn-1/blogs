@@ -1,0 +1,148 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 10:39:13,191 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 10:39:14,312 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 10:39:15,715 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 10:39:15,759 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 10:39:16,513 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 10:39:19,826 INFO text_frontend=wetext | model=CosyVoice2 | 加载 11.2s
+2026-09-18 10:39:19,826 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 10:39:20,931 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 10:39:20,932 INFO 说话人 A → 音色 voice_a
+2026-09-18 10:39:20,932 INFO 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:39:20,939 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 10:39:26,608 INFO yield speech len 4.04, rtf 1.4032146128097382
+100%|██████████| 1/1 [00:05<00:00,  5.69s/it]100%|██████████| 1/1 [00:05<00:00,  5.69s/it]
+2026-09-18 10:39:26,631 INFO 预热耗时 5.69s
+引擎加载 30.2s
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:39:26,636 INFO synthesis text 测甲甲号这是对照实验的探针文本用。
+2026-09-18 10:39:31,859 INFO yield speech len 4.52, rtf 1.155512839292003
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+  [only_a    spk=A]   5.28s  音频  4.52s  RTF 1.168
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:39:31,937 INFO synthesis text 测甲乙号这是对照实验的探针文本用。
+2026-09-18 10:39:51,032 INFO yield speech len 13.6, rtf 1.4040259929264294
+100%|██████████| 1/1 [00:19<00:00, 19.12s/it]100%|██████████| 1/1 [00:19<00:00, 19.12s/it]
+2026-09-18 10:39:51,056 WARNING [PATCH-GUARD-01] 生成未收敛：16 字文本输出 13.60s（上限 12.80s），第 1/2 次重试
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:39:51,058 INFO synthesis text 测甲乙号这是对照实验的探针文本用。
+2026-09-18 10:40:01,829 INFO yield speech len 5.52, rtf 1.9513086996216706
+100%|██████████| 1/1 [00:10<00:00, 10.80s/it]100%|██████████| 1/1 [00:10<00:00, 10.80s/it]
+2026-09-18 10:40:01,854 INFO [PATCH-GUARD-01] 第 1 次重试后收敛：5.52s
+  [only_b    spk=B]  29.99s  音频  5.52s  RTF 5.433
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:40:01,939 INFO synthesis text 测甲丙号这是对照实验的探针文本用。
+2026-09-18 10:40:09,727 INFO yield speech len 4.04, rtf 1.9278470242377554
+100%|██████████| 1/1 [00:07<00:00,  7.81s/it]100%|██████████| 1/1 [00:07<00:00,  7.81s/it]
+  [alternate spk=A]   7.90s  音频  4.04s  RTF 1.954
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:40:09,835 INFO synthesis text 测甲丁号这是对照实验的探针文本用。
+2026-09-18 10:40:18,371 INFO yield speech len 4.6, rtf 1.8557247908219048
+100%|██████████| 1/1 [00:08<00:00,  8.56s/it]100%|██████████| 1/1 [00:08<00:00,  8.56s/it]
+  [only_a    spk=A]   8.64s  音频  4.60s  RTF 1.879
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:40:18,478 INFO synthesis text 测甲戊号这是对照实验的探针文本用。
+2026-09-18 10:40:27,819 INFO yield speech len 5.0, rtf 1.8682262897491455
+100%|██████████| 1/1 [00:09<00:00,  9.37s/it]100%|██████████| 1/1 [00:09<00:00,  9.37s/it]
+  [only_b    spk=B]   9.45s  音频  5.00s  RTF 1.890
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:40:27,925 INFO synthesis text 测甲己号这是对照实验的探针文本用。
+2026-09-18 10:40:35,927 INFO yield speech len 4.08, rtf 1.961184307640674
+100%|██████████| 1/1 [00:08<00:00,  8.02s/it]100%|██████████| 1/1 [00:08<00:00,  8.02s/it]
+  [alternate spk=B]   8.11s  音频  4.08s  RTF 1.987
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:40:36,032 INFO synthesis text 测甲庚号这是对照实验的探针文本用。
+2026-09-18 10:40:44,154 INFO yield speech len 4.24, rtf 1.9153502189888143
+100%|██████████| 1/1 [00:08<00:00,  8.15s/it]100%|██████████| 1/1 [00:08<00:00,  8.15s/it]
+  [only_a    spk=A]   8.23s  音频  4.24s  RTF 1.941
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:40:44,259 INFO synthesis text 测甲辛号这是对照实验的探针文本用。
+2026-09-18 10:40:54,055 INFO yield speech len 5.24, rtf 1.8694274753104638
+100%|██████████| 1/1 [00:09<00:00,  9.82s/it]100%|██████████| 1/1 [00:09<00:00,  9.82s/it]
+  [only_b    spk=B]   9.90s  音频  5.24s  RTF 1.890
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:40:54,167 INFO synthesis text 测甲壬号这是对照实验的探针文本用。
+2026-09-18 10:41:03,021 INFO yield speech len 4.76, rtf 1.859999103706424
+100%|██████████| 1/1 [00:08<00:00,  8.88s/it]100%|██████████| 1/1 [00:08<00:00,  8.88s/it]
+  [alternate spk=A]   8.96s  音频  4.76s  RTF 1.882
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:03,124 INFO synthesis text 测甲癸号这是对照实验的探针文本用。
+2026-09-18 10:41:11,709 INFO yield speech len 4.64, rtf 1.8500476047910495
+100%|██████████| 1/1 [00:08<00:00,  8.61s/it]100%|██████████| 1/1 [00:08<00:00,  8.61s/it]
+  [only_a    spk=A]   8.69s  音频  4.64s  RTF 1.873
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:11,817 INFO synthesis text 测甲子号这是对照实验的探针文本用。
+2026-09-18 10:41:21,639 INFO yield speech len 5.2, rtf 1.8888382269785953
+100%|██████████| 1/1 [00:09<00:00,  9.85s/it]100%|██████████| 1/1 [00:09<00:00,  9.85s/it]
+  [only_b    spk=B]   9.93s  音频  5.20s  RTF 1.909
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:21,746 INFO synthesis text 测甲丑号这是对照实验的探针文本用。
+2026-09-18 10:41:29,298 INFO yield speech len 5.84, rtf 1.2931151341085565
+100%|██████████| 1/1 [00:07<00:00,  7.57s/it]100%|██████████| 1/1 [00:07<00:00,  7.57s/it]
+  [alternate spk=B]   7.64s  音频  5.84s  RTF 1.308
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:29,369 INFO synthesis text 测甲寅号这是对照实验的探针文本用。
+2026-09-18 10:41:34,589 INFO yield speech len 4.84, rtf 1.0784021093825664
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+  [abab      spk=A]   5.30s  音频  4.84s  RTF 1.094
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:34,664 INFO synthesis text 测甲卯号这是对照实验的探针文本用。
+2026-09-18 10:41:39,201 INFO yield speech len 4.08, rtf 1.1120003228094064
+100%|██████████| 1/1 [00:04<00:00,  4.56s/it]100%|██████████| 1/1 [00:04<00:00,  4.56s/it]
+  [abab      spk=B]   4.61s  音频  4.08s  RTF 1.129
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:39,271 INFO synthesis text 测甲辰号这是对照实验的探针文本用。
+2026-09-18 10:41:45,053 INFO yield speech len 5.48, rtf 1.055113721067888
+100%|██████████| 1/1 [00:05<00:00,  5.80s/it]100%|██████████| 1/1 [00:05<00:00,  5.80s/it]
+  [abab      spk=A]   5.85s  音频  5.48s  RTF 1.068
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:45,123 INFO synthesis text 测甲巳号这是对照实验的探针文本用。
+2026-09-18 10:41:51,373 INFO yield speech len 5.84, rtf 1.0701935585230997
+100%|██████████| 1/1 [00:06<00:00,  6.27s/it]100%|██████████| 1/1 [00:06<00:00,  6.27s/it]
+  [abab      spk=B]   6.32s  音频  5.84s  RTF 1.083
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:51,445 INFO synthesis text 测甲午号这是对照实验的探针文本用。
+2026-09-18 10:41:56,302 INFO yield speech len 4.44, rtf 1.0938585341513694
+100%|██████████| 1/1 [00:04<00:00,  4.88s/it]100%|██████████| 1/1 [00:04<00:00,  4.88s/it]
+  [abab      spk=A]   4.93s  音频  4.44s  RTF 1.109
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:41:56,372 INFO synthesis text 测甲未号这是对照实验的探针文本用。
+2026-09-18 10:42:03,642 INFO yield speech len 6.88, rtf 1.0567765596301057
+100%|██████████| 1/1 [00:07<00:00,  7.29s/it]100%|██████████| 1/1 [00:07<00:00,  7.29s/it]
+  [abab      spk=B]   7.34s  音频  6.88s  RTF 1.067
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:03,714 INFO synthesis text 测甲申号这是对照实验的探针文本用。
+2026-09-18 10:42:08,261 INFO yield speech len 4.12, rtf 1.1034707999923854
+100%|██████████| 1/1 [00:04<00:00,  4.57s/it]100%|██████████| 1/1 [00:04<00:00,  4.57s/it]
+  [abab      spk=A]   4.62s  音频  4.12s  RTF 1.122
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:08,339 INFO synthesis text 测甲酉号这是对照实验的探针文本用。
+2026-09-18 10:42:14,612 INFO yield speech len 5.88, rtf 1.0666920619756997
+100%|██████████| 1/1 [00:06<00:00,  6.29s/it]100%|██████████| 1/1 [00:06<00:00,  6.29s/it]
+  [abab      spk=B]   6.35s  音频  5.88s  RTF 1.079
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:14,685 INFO synthesis text 测甲一号这是对照实验的探针文本用。
+2026-09-18 10:42:19,200 INFO yield speech len 4.12, rtf 1.0959250834381695
+100%|██████████| 1/1 [00:04<00:00,  4.54s/it]100%|██████████| 1/1 [00:04<00:00,  4.54s/it]
+  [abab      spk=A]   4.59s  音频  4.12s  RTF 1.114
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:19,272 INFO synthesis text 测甲二号这是对照实验的探针文本用。
+2026-09-18 10:42:23,948 INFO yield speech len 4.12, rtf 1.1350915269944275
+100%|██████████| 1/1 [00:04<00:00,  4.70s/it]100%|██████████| 1/1 [00:04<00:00,  4.70s/it]
+  [abab      spk=B]   4.75s  音频  4.12s  RTF 1.153
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:24,020 INFO synthesis text 测甲三号这是对照实验的探针文本用。
+2026-09-18 10:42:29,902 INFO yield speech len 5.56, rtf 1.0580056005244634
+100%|██████████| 1/1 [00:05<00:00,  5.90s/it]100%|██████████| 1/1 [00:05<00:00,  5.90s/it]
+  [abab      spk=A]   5.95s  音频  5.56s  RTF 1.070
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:29,972 INFO synthesis text 测甲四号这是对照实验的探针文本用。
+2026-09-18 10:42:34,768 INFO yield speech len 4.44, rtf 1.0803039009506636
+100%|██████████| 1/1 [00:04<00:00,  4.82s/it]100%|██████████| 1/1 [00:04<00:00,  4.82s/it]
+  [abab      spk=B]   4.87s  音频  4.44s  RTF 1.097
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:34,842 INFO synthesis text 测甲五号这是对照实验的探针文本用。
+2026-09-18 10:42:39,483 INFO yield speech len 4.28, rtf 1.0842708783729054
+100%|██████████| 1/1 [00:04<00:00,  4.66s/it]100%|██████████| 1/1 [00:04<00:00,  4.66s/it]
+  [abab      spk=A]   4.72s  音频  4.28s  RTF 1.102
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:39,559 INFO synthesis text 测甲六号这是对照实验的探针文本用。
+2026-09-18 10:42:45,585 INFO yield speech len 5.72, rtf 1.053295477286919
+100%|██████████| 1/1 [00:06<00:00,  6.05s/it]100%|██████████| 1/1 [00:06<00:00,  6.05s/it]
+  [abab      spk=B]   6.10s  音频  5.72s  RTF 1.067
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:45,661 INFO synthesis text 测甲七号这是对照实验的探针文本用。
+2026-09-18 10:42:51,561 INFO yield speech len 5.6, rtf 1.0534432530403137
+100%|██████████| 1/1 [00:05<00:00,  5.92s/it]100%|██████████| 1/1 [00:05<00:00,  5.92s/it]
+  [abab      spk=A]   5.97s  音频  5.60s  RTF 1.067
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:42:51,635 INFO synthesis text 测甲八号这是对照实验的探针文本用。
+2026-09-18 10:42:57,723 INFO yield speech len 5.8, rtf 1.0497153216394886
+100%|██████████| 1/1 [00:06<00:00,  6.11s/it]100%|██████████| 1/1 [00:06<00:00,  6.11s/it]
+  [abab      spk=B]   6.16s  音频  5.80s  RTF 1.063
+
+==== 汇总（16 字文本）====
+  only_a   : 均值  7.71s  中位  8.44s  n=4
+  only_b   : 均值 14.82s  中位  9.92s  n=4
+  alternate: 均值  8.15s  中位  8.00s  n=4
+  abab     : 均值  5.53s  中位  5.57s  n=16
+
+  交替 / 单说话人 倍数 = 0.72x

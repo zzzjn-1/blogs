@@ -1,0 +1,9 @@
+{
+  "text_hash": "d4offline-B-1789440296-2",
+  "speaker": "B",
+  "read_text": "另一路声音同样需要实测，否则我们无法判断音色区分度是否真实成立。",
+  "duration_ms": 15560,
+  "sample_rate": 24000,
+  "model_version": "CosyVoice2-0.5B",
+  "created_at": "2026-09-15T10:45:13"
+}

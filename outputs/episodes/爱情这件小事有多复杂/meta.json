@@ -1,0 +1,20 @@
+{
+  "topic": "爱情",
+  "title": "爱情这件小事有多复杂",
+  "summary": "从心动到长久，聊聊爱情里的期待、沟通与自我成长。",
+  "created": "2026-09-17T11:05:18",
+  "words": 800,
+  "chars": 723,
+  "lines": 40,
+  "status": "DONE",
+  "synth_elapsed_s": 271.97,
+  "sec_per_char": 0.3762,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\爱情这件小事有多复杂\\爱情这件小事有多复杂.mp3",
+  "mp3_bytes": 3831056,
+  "duration_s": 239.38,
+  "loudness_i": "-16.59",
+  "true_peak": "-1.81",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260917_110043\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 3
+}

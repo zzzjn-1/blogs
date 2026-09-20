@@ -1,0 +1,542 @@
+{
+  "generated_at": "2026-09-15 16:00:32",
+  "settings": {
+    "llm_base_url": "https://api.deepseek.com",
+    "llm_model": "deepseek-chat",
+    "llm_reasoner_model": "deepseek-v4-pro",
+    "llm_max_retry": 2,
+    "llm_temperature": 0.8,
+    "llm_max_tokens": 4096,
+    "script_max_chars_per_line": 40,
+    "script_word_tolerance": 0.1,
+    "script_word_quota_enforce": false,
+    "script_require_alternating": true,
+    "script_correction_retry": 2,
+    "script_self_check": true
+  },
+  "prompts": {
+    "prompt_dir": "D:\\podcast-ai\\backend\\prompts",
+    "consistency_problems": [],
+    "system_bytes": 3196,
+    "user_template_bytes": 646,
+    "sensitive_word_count": 74
+  },
+  "model_mapping": {
+    "requested": "deepseek-chat",
+    "returned": "deepseek-flash",
+    "mapped": true,
+    "usage": {
+      "prompt_tokens": 38,
+      "completion_tokens": 5,
+      "total_tokens": 43
+    },
+    "content": "{\"ok\":true}",
+    "generator_alive": true
+  },
+  "topics": [
+    {
+      "topic": "为什么天空是蓝色的",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 390,
+      "word_range": [
+        351,
+        429
+      ],
+      "actual_words": 380,
+      "word_quota_ok": true,
+      "word_deviation_pct": -0.0256,
+      "line_count": 22,
+      "avg_chars_per_line": 17.3,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 2,
+      "correction_rounds": 1,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "科普内容，仅讲瑞利散射原理，无政治、低俗、违法或专业建议风险"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 3365,
+        "completion_tokens": 1038,
+        "total_tokens": 4403
+      },
+      "errors": [],
+      "warnings": [
+        "title 长度 9 不在建议区间 12~24：天空为什么是蓝色的",
+        "summary 长度 25 不在建议区间 30~60"
+      ],
+      "elapsed_s": 6.74,
+      "index": 1,
+      "category": "知识科普",
+      "duration_min": 1.5,
+      "ok": true
+    },
+    {
+      "topic": "睡眠是怎样影响记忆的",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 520,
+      "word_range": [
+        468,
+        572
+      ],
+      "actual_words": 504,
+      "word_quota_ok": true,
+      "word_deviation_pct": -0.0308,
+      "line_count": 30,
+      "avg_chars_per_line": 16.8,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 2,
+      "correction_rounds": 1,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为睡眠与记忆的科普对话，无政治敏感、低俗、违法或专业建议风险，表述谨慎。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 3612,
+        "completion_tokens": 1374,
+        "total_tokens": 4986
+      },
+      "errors": [],
+      "warnings": [
+        "title 长度 10 不在建议区间 12~24：夜里睡好，白天记得牢"
+      ],
+      "elapsed_s": 7.75,
+      "index": 2,
+      "category": "知识科普",
+      "duration_min": 2.0,
+      "ok": true
+    },
+    {
+      "topic": "城市地铁隧道是怎么挖出来的",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 520,
+      "word_range": [
+        468,
+        572
+      ],
+      "actual_words": 468,
+      "word_quota_ok": true,
+      "word_deviation_pct": -0.1,
+      "line_count": 26,
+      "avg_chars_per_line": 18.0,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 3,
+      "correction_rounds": 2,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为地铁隧道施工科普，无政治敏感、低俗、违法或专业建议风险。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 6727,
+        "completion_tokens": 2476,
+        "total_tokens": 9203
+      },
+      "errors": [],
+      "warnings": [
+        "title 长度 11 不在建议区间 12~24：地铁隧道是怎么挖出来的"
+      ],
+      "elapsed_s": 11.92,
+      "index": 3,
+      "category": "知识科普",
+      "duration_min": 2.0,
+      "ok": true
+    },
+    {
+      "topic": "咖啡因进入身体之后发生了什么",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 390,
+      "word_range": [
+        351,
+        429
+      ],
+      "actual_words": 367,
+      "word_quota_ok": true,
+      "word_deviation_pct": -0.059,
+      "line_count": 24,
+      "avg_chars_per_line": 15.3,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 2,
+      "correction_rounds": 1,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为咖啡因吸收代谢的科普对话，无政治敏感、低俗、违法或专业建议风险。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 3545,
+        "completion_tokens": 1407,
+        "total_tokens": 4952
+      },
+      "errors": [],
+      "warnings": [],
+      "elapsed_s": 7.55,
+      "index": 4,
+      "category": "知识科普",
+      "duration_min": 1.5,
+      "ok": true
+    },
+    {
+      "topic": "生成式人工智能对内容行业的影响",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 520,
+      "word_range": [
+        468,
+        572
+      ],
+      "actual_words": 494,
+      "word_quota_ok": true,
+      "word_deviation_pct": -0.05,
+      "line_count": 26,
+      "avg_chars_per_line": 19.0,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 2,
+      "correction_rounds": 1,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为生成式人工智能对内容行业的通用讨论，无政治敏感、违法违规或具体专业建议，未涉及真实个人企业。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 3778,
+        "completion_tokens": 1680,
+        "total_tokens": 5458
+      },
+      "errors": [],
+      "warnings": [],
+      "elapsed_s": 10.38,
+      "index": 5,
+      "category": "行业解读",
+      "duration_min": 2.0,
+      "ok": true
+    },
+    {
+      "topic": "预制菜产业链的机会与争议",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 520,
+      "word_range": [
+        468,
+        572
+      ],
+      "actual_words": 478,
+      "word_quota_ok": true,
+      "word_deviation_pct": -0.0808,
+      "line_count": 38,
+      "avg_chars_per_line": 12.6,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 3,
+      "correction_rounds": 2,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为预制菜产业链的客观讨论，无政治敏感、违法违规或具体专业建议，未涉及真实个人或企业。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 7027,
+        "completion_tokens": 2777,
+        "total_tokens": 9804
+      },
+      "errors": [],
+      "warnings": [
+        "summary 长度 22 不在建议区间 30~60"
+      ],
+      "elapsed_s": 11.77,
+      "index": 6,
+      "category": "行业解读",
+      "duration_min": 2.0,
+      "ok": true
+    },
+    {
+      "topic": "国产新能源汽车出海面临哪些门槛",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 650,
+      "word_range": [
+        585,
+        715
+      ],
+      "actual_words": 594,
+      "word_quota_ok": true,
+      "word_deviation_pct": -0.0862,
+      "line_count": 38,
+      "avg_chars_per_line": 15.6,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 3,
+      "correction_rounds": 2,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为新能源车出海的关税、认证、本地化等一般性讨论，无敏感或违规信息。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 7317,
+        "completion_tokens": 3134,
+        "total_tokens": 10451
+      },
+      "errors": [],
+      "warnings": [
+        "title 长度 11 不在建议区间 12~24：国产新能源车出海的门槛"
+      ],
+      "elapsed_s": 15.65,
+      "index": 7,
+      "category": "行业解读",
+      "duration_min": 2.5,
+      "ok": true
+    },
+    {
+      "topic": "一个人旅行的意义",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 390,
+      "word_range": [
+        351,
+        429
+      ],
+      "actual_words": 360,
+      "word_quota_ok": true,
+      "word_deviation_pct": -0.0769,
+      "line_count": 24,
+      "avg_chars_per_line": 15.0,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 3,
+      "correction_rounds": 2,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为个人旅行感受与安全提醒，无政治敏感、低俗、违法或虚假信息。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 5663,
+        "completion_tokens": 1459,
+        "total_tokens": 7122
+      },
+      "errors": [],
+      "warnings": [
+        "title 长度 8 不在建议区间 12~24：一个人旅行的意义"
+      ],
+      "elapsed_s": 7.89,
+      "index": 8,
+      "category": "生活闲聊",
+      "duration_min": 1.5,
+      "ok": true
+    },
+    {
+      "topic": "怎么挑一本真正适合自己的书",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 390,
+      "word_range": [
+        351,
+        429
+      ],
+      "actual_words": 341,
+      "word_quota_ok": false,
+      "word_deviation_pct": -0.1256,
+      "line_count": 20,
+      "avg_chars_per_line": 17.1,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 3,
+      "correction_rounds": 2,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为选书方法的生活类讨论，无政治敏感、低俗、违法或专业建议等风险点。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 5696,
+        "completion_tokens": 1514,
+        "total_tokens": 7210
+      },
+      "errors": [],
+      "warnings": [
+        "总字数 341 不在配额区间 351~429（目标 390 字，允许上下浮动 10%）"
+      ],
+      "elapsed_s": 12.55,
+      "index": 9,
+      "category": "生活闲聊",
+      "duration_min": 1.5,
+      "ok": true
+    },
+    {
+      "topic": "把兴趣做成副业是种什么体验",
+      "style": "轻松自然、信息密度适中",
+      "target_words": 520,
+      "word_range": [
+        468,
+        572
+      ],
+      "actual_words": 525,
+      "word_quota_ok": true,
+      "word_deviation_pct": 0.0096,
+      "line_count": 30,
+      "avg_chars_per_line": 17.5,
+      "model_requested": "deepseek-chat",
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 2,
+      "correction_rounds": 1,
+      "degraded": false,
+      "flagged": false,
+      "usable": true,
+      "first_pass": false,
+      "sensitive_hits": [],
+      "self_check": {
+        "safe": true,
+        "risk": "none",
+        "reason": "内容为兴趣副业的经验分享，无政治敏感、违法违规或专业承诺，表述务实中性。"
+      },
+      "self_check_error": null,
+      "usage": {
+        "prompt_tokens": 3609,
+        "completion_tokens": 1356,
+        "total_tokens": 4965
+      },
+      "errors": [],
+      "warnings": [],
+      "elapsed_s": 7.8,
+      "index": 10,
+      "category": "生活闲聊",
+      "duration_min": 2.0,
+      "ok": true
+    }
+  ],
+  "error_paths": [
+    {
+      "case": "401 无效 Key",
+      "expect": "auth",
+      "raised": "LLMAuthError",
+      "message": "DeepSeek 鉴权失败（401）：API Key 无效、已吊销或复制不全。请在 platform.deepseek.com 重新签发，并更新 .env 的 LLM_API_KEY",
+      "readable": true,
+      "elapsed_s": 0.24
+    },
+    {
+      "case": "连接失败（本机端口不可达）",
+      "expect": "conn",
+      "raised": "LLMRetryable",
+      "message": "无法连接 DeepSeek，已退避重试：Connection error.",
+      "readable": true,
+      "elapsed_s": 5.12
+    },
+    {
+      "case": "请求超时（1s 硬超时）",
+      "expect": "timeout",
+      "raised": "LLMRetryable",
+      "message": "DeepSeek 请求超时（>1 s），已退避重试",
+      "readable": true,
+      "elapsed_s": 3.58
+    },
+    {
+      "case": "400 参数不合法（temperature=99）",
+      "expect": "badrequest",
+      "raised": "LLMBadRequest",
+      "message": "DeepSeek 返回 400（请求不合法，多为提示词或参数问题）：Error code: 400 - {'error': {'message': 'Invalid temperature value, the valid range of temperature is [0, 2]', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}",
+      "readable": true,
+      "elapsed_s": 0.36
+    }
+  ],
+  "capacity": {
+    "ok": true,
+    "actual_words": 302,
+    "completion_tokens": 462,
+    "tokens_per_char": 1.53,
+    "llm_max_tokens": 4096,
+    "single_call_ceiling_words": 2677,
+    "single_call_ceiling_minutes": 10.3
+  },
+  "summary": {
+    "total": 10,
+    "usable": 10,
+    "usable_rate": 1.0,
+    "first_pass": 0,
+    "first_pass_rate": 0.0,
+    "degraded": 0,
+    "flagged": 0,
+    "failed": 0,
+    "usable_target": 8,
+    "done_condition_met": true,
+    "word_quota_ok": 9,
+    "word_quota_rate": 0.9,
+    "word_deviation_min": -0.1256,
+    "word_deviation_median": -0.0679,
+    "word_deviation_max": 0.0096,
+    "model_pairs": {
+      "deepseek-chat→deepseek-flash": 10
+    },
+    "usage_total": {
+      "prompt_tokens": 50339,
+      "completion_tokens": 18215,
+      "total_tokens": 68554
+    },
+    "wall_clock_s": 113.3
+  }
+}

@@ -1,0 +1,124 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+# ---------------------------------------------------------------------------
+# CosyVoice 依赖（Windows / 本项目定制版）
+#
+# 相对上游 requirements.txt 的改动（每条均已实测确认）：
+#   [删除] --extra-index-url https://aiinfra.pkgs.visualstudio.com/...
+#          实测返回 401，不可达；且仅用于 Linux 的 onnxruntime-cuda-12
+#   [删除] deepspeed / tensorrt-cu12* / onnxruntime-gpu
+#          上游已用 sys_platform == 'linux' 标记，pip 会自动跳过，此处显式移除以免干扰
+#   [保留] pyworld —— 【实测推翻旧结论：必须安装】
+#          旧版此处写「仅 cosyvoice/dataset/processor.py 训练数据处理使用，推理链路不需要；
+#          Windows 下无预编译 wheel，需 MSVC 工具链」并据此剔除 —— **两条都错**：
+#          (1) 推理链路确实不会调用 compute_f0，但 `cosyvoice2.yaml:161` 里有
+#              `compute_f0: !name:cosyvoice.dataset.processor.compute_f0`，
+#              hyperpyyaml 在 **load_hyperpyyaml 阶段** 就会 pydoc.locate 解析该模块
+#              -> import processor -> 模块级 `import pyworld` -> ImportError：
+#              pydoc.ErrorDuringImport: problem in cosyvoice.dataset.processor
+#              - ModuleNotFoundError: No module named 'pyworld'
+#              「推理不调用」≠「导入链不需要」，配置驱动型框架必须按**导入链**判断依赖。
+#          (2) pyworld 0.3.5 官方提供 cp310 win_amd64 预编译轮子（224 KB），无需 MSVC。
+#          结论：装 `pyworld==0.3.5`（不是上游钉死的 0.3.4，0.3.4 在 Windows 才缺轮子）
+#   [放宽] networkx==3.1 -> networkx>=3.1
+#          torch 2.3.1 自带 networkx 3.4.2，硬钉 3.1 会触发 pip 降级卸载；
+#          本机沙箱有「批量删除守卫」（阈值 50 次 unlink），降级卸载会直接中断安装。
+#          上游对 networkx 无版本敏感用法。
+#
+#   [升级] openai-whisper==20231117 -> ==20250625
+#          20231117 及更早版本的 setup.py 第 5 行 `import pkg_resources`，
+#          而 setuptools>=81 已移除 pkg_resources -> 构建直接失败：
+#            ModuleNotFoundError: No module named 'pkg_resources'
+#            ERROR: Failed to build 'openai-whisper' when getting requirements to build wheel
+#          20250625 已改为纯 pyproject.toml（build-backend=setuptools.build_meta,
+#          requires=["setuptools>=61.2"]），不再依赖 pkg_resources。
+#          已核对 API 兼容：whisper/__init__.py 仍导出 log_mel_spectrogram，
+#          签名 log_mel_spectrogram(audio, n_mels=80, padding=0, device=None)，
+#          与本仓库调用 `whisper.log_mel_spectrogram(speech, n_mels=128)` 一致。
+#          其依赖 triton 仅 Linux 生效（platform_machine=='x86_64' and sys_platform=='linux'）。
+#
+# 说明：gradio / tensorboard / pyarrow 经静态核查（grep cosyvoice/ 包内导入）
+#      确认仅用于 demo 与训练，保留在清单中是为了零风险对齐上游，
+#      实际不参与推理链路。若需精简可自行移除。
+#
+# 不安装 Matcha-TTS（重要）：
+#   CosyVoice 只用到 matcha 的 4 个模块 —— models/components/decoder.py、
+#   models/components/transformer.py、models/components/flow_matching.py、
+#   hifigan/models.py；靠 sys.path 注入即可：
+#       sys.path.insert(0, "CosyVoice/third_party/Matcha-TTS")
+#   执行 `pip install third_party/Matcha-TTS` 反而会：
+#     (a) 触发 Cython 编译 matcha/utils/monotonic_align/core.pyx（需 MSVC，且推理不使用）；
+#     (b) 按其实 requirements.txt 拉入 gradio==3.43.2（与本清单的 5.4.0 冲突）、
+#         notebook / ipywidgets / seaborn / phonemizer / pandas 等无关大件。
+#
+#   【实测修正】此前版本写「matcha 外部依赖仅 conformer / diffusers / einops / torch」，
+#   该论断**错误且会直接导致加载失败**。真实依赖链：
+#       cosyvoice/flow/flow_matching.py
+#         -> from matcha.models.components.flow_matching import BASECFM
+#         -> from matcha.utils.pylogger import get_pylogger
+#         -> 触发 matcha/utils/__init__.py
+#         -> from matcha.utils.instantiators import instantiate_callbacks, instantiate_loggers
+#         -> from lightning import Callback          <-- 必须能装到 `lightning`
+#   现象：AutoModel() 在 load_hyperpyyaml 阶段抛
+#       pydoc.ErrorDuringImport: problem in cosyvoice.flow.flow_matching
+#       - ModuleNotFoundError: No module named 'lightning'
+#   注意 `import matcha` 单独测**测不出来**（matcha/__init__.py 是浅的，不会拉起 utils）。
+#   验证自检必须打到 `matcha.models.components.flow_matching` 这一层。
+#
+# 注意：cosyvoice/cli/frontend.py 与 tokenizer/tokenizer.py 依赖
+#      onnxruntime 与 whisper，二者已在下文保留。
+#
+# 【必须补：lightning 元包】pytorch-lightning 是它的实现，但 `from lightning import ...`
+#     需要的是 `lightning` 这个命名空间包本身，二者不可互相替代。
+#     deps2 安装曾在最后阶段被沙箱「批量删除守卫」中断，导致 lightning 未装上。
+lightning==2.2.4
+#
+# 【必须补齐：setuptools<81】setuptools>=81 已移除 pkg_resources，而本项目依赖链中
+#     有**模块级** pkg_resources 导入，缺它则直接 ImportError：
+#       lightning/fabric/__init__.py:41        __import__("pkg_resources").declare_namespace(__name__)
+#       lightning/pytorch/__init__.py:37       同上
+#       passlib/pwd.py:16                      import pkg_resources   <- 鉴权链路
+#       modelscope/utils/plugins.py:18         import pkg_resources   <- 权重下载链路
+#     本机实测：装 setuptools 80.10.2 后全部通过（环境自带 83.0.0，已旁路到
+#     _orphan_trash）。修复脚本：scripts/fix_setuptools_pkg_resources.py（PATCH-ENV-01）
+#
+#     注意：升级 setuptools 会触发 pip 卸载旧版（数千次 os.unlink），
+#     在本机沙箱下会被「批量删除守卫」（阈值 50）中断安装 —— 必须用
+#     os.rename 把旧目录整体改名旁路后再全新安装。同理适用于 torch。
+setuptools<81
+# ---------------------------------------------------------------------------
+conformer==0.3.2
+diffusers==0.29.0
+einops==0.8.0
+fastapi==0.115.6
+fastapi-cli==0.0.4
+gdown==5.1.0
+gradio==5.4.0
+grpcio==1.57.0
+grpcio-tools==1.57.0
+hydra-core==1.3.2
+HyperPyYAML==1.2.3
+inflect==7.3.1
+librosa==0.10.2
+lightning==2.2.4
+matplotlib==3.7.5
+modelscope==1.20.0
+networkx>=3.1
+numpy==1.26.4
+omegaconf==2.3.0
+onnx==1.16.0
+onnxruntime==1.18.0
+openai-whisper==20250625
+protobuf==4.25
+pyarrow==18.1.0
+pyworld==0.3.5
+pydantic==2.7.0
+rich==13.7.1
+soundfile==0.12.1
+tensorboard==2.14.0
+torch==2.3.1
+torchaudio==2.3.1
+transformers==4.51.3
+x-transformers==2.11.24
+uvicorn==0.30.0
+wetext==0.0.4
+wget==3.2

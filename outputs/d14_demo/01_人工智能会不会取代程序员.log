@@ -1,0 +1,400 @@
+CMD: D:\anaconda\envs\cosyvoice\python.exe D:\podcast-ai\scripts\make_episode.py --topic 人工智能会不会取代程序员 --words 900
+
+[D4] 网关静默映射模型名：请求 deepseek-chat → 实际 deepseek-flash。凡涉及「本次用了哪个模型」的结论，一律以响应体 model 字段为准（计划书 4.10 ①）
+[D4] 第 1 轮输出未通过校验（共 3 轮）：总字数 581 不在配额区间 810~990（目标 900 字，允许上下浮动 10%）
+[D4] 第 2 轮输出未通过校验（共 3 轮）：总字数 712 不在配额区间 810~990（目标 900 字，允许上下浮动 10%）
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-20 11:07:31,487 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-20 11:07:32,953 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-20 11:07:34,389 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-20 11:07:34,440 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-20 11:07:35,276 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-20 11:07:38,736 INFO text_frontend=wetext | model=CosyVoice2 | 加载 17.5s
+2026-09-20 11:07:38,736 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-20 11:07:39,974 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-20 11:07:39,974 INFO 说话人 A → 音色 voice_a
+2026-09-20 11:07:39,974 INFO 说话人 B → 音色 voice_b
+======================================================================
+生成一期节目：人工智能会不会取代程序员
+======================================================================
+目标字数 : 900
+片头     : 动态模板 '大家好，今天是（日期），今天的主题是（主题）。'
+片尾     : backend/assets/outro.mp3
+
+--- 1/3 脚本生成（DeepSeek）---
+  标题     : 人工智能会不会取代程序员
+  行数     : 74 行 / 843 字
+  模型     : deepseek-flash [映射]（调用 3 次，纠错 2 轮）
+  耗时     : 23.1s
+  [WARN] summary 长度 29 不在建议区间 30~60
+
+--- 2/3 语音合成（CosyVoice，单并发）---
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:07:39,980 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-20 11:07:45,746 INFO yield speech len 4.04, rtf 1.4270316256154882
+100%|██████████| 1/1 [00:05<00:00,  5.79s/it]100%|██████████| 1/1 [00:05<00:00,  5.79s/it]
+2026-09-20 11:07:45,766 INFO 预热耗时 5.79s
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:07:45,769 INFO synthesis text 今天聊一个很多人关心的话题。
+2026-09-20 11:07:50,117 INFO yield speech len 3.44, rtf 1.263886620832044
+100%|██████████| 1/1 [00:04<00:00,  4.37s/it]100%|██████████| 1/1 [00:04<00:00,  4.37s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:07:50,155 INFO synthesis text 你是说人工智能会不会取代程序员。
+2026-09-20 11:07:55,686 INFO yield speech len 4.76, rtf 1.1620571132467574
+100%|██████████| 1/1 [00:05<00:00,  5.55s/it]100%|██████████| 1/1 [00:05<00:00,  5.55s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:07:55,720 INFO synthesis text 对，这问题这两年特别热。
+2026-09-20 11:07:59,623 INFO yield speech len 3.2, rtf 1.2196755409240723
+100%|██████████| 1/1 [00:03<00:00,  3.92s/it]100%|██████████| 1/1 [00:03<00:00,  3.92s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:07:59,657 WARNING synthesis text 热到有点焦虑的味道了。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:07:59,657 INFO synthesis text 热到有点焦虑的味道了。
+2026-09-20 11:08:03,712 INFO yield speech len 3.24, rtf 1.2515252019152228
+100%|██████████| 1/1 [00:04<00:00,  4.08s/it]100%|██████████| 1/1 [00:04<00:00,  4.08s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:03,747 INFO synthesis text 那先给个结论，你觉得会吗。
+2026-09-20 11:08:08,062 INFO yield speech len 3.64, rtf 1.1855351400899363
+100%|██████████| 1/1 [00:04<00:00,  4.34s/it]100%|██████████| 1/1 [00:04<00:00,  4.34s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:08,097 INFO synthesis text 我的答案是会改变，但难取代。
+2026-09-20 11:08:14,620 INFO yield speech len 5.8, rtf 1.1245346480402454
+100%|██████████| 1/1 [00:06<00:00,  6.54s/it]100%|██████████| 1/1 [00:06<00:00,  6.54s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:14,654 WARNING synthesis text 改变和取代是两件事。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:08:14,654 INFO synthesis text 改变和取代是两件事。
+2026-09-20 11:08:18,071 INFO yield speech len 2.56, rtf 1.3347754254937172
+100%|██████████| 1/1 [00:03<00:00,  3.44s/it]100%|██████████| 1/1 [00:03<00:00,  3.44s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:18,106 INFO synthesis text 对，混在一起就容易吓自己。
+2026-09-20 11:08:22,308 INFO yield speech len 3.36, rtf 1.2505294311614263
+100%|██████████| 1/1 [00:04<00:00,  4.23s/it]100%|██████████| 1/1 [00:04<00:00,  4.23s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:22,351 INFO synthesis text 先说说它现在能做什么。
+2026-09-20 11:08:25,867 INFO yield speech len 2.8, rtf 1.2556580134800504
+100%|██████████| 1/1 [00:03<00:00,  3.54s/it]100%|██████████| 1/1 [00:03<00:00,  3.54s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:25,900 INFO synthesis text 写小函数、补测试、改报错都行。
+2026-09-20 11:08:31,684 INFO yield speech len 5.04, rtf 1.147720974589151
+100%|██████████| 1/1 [00:05<00:00,  5.81s/it]100%|██████████| 1/1 [00:05<00:00,  5.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:31,720 WARNING synthesis text 听起来像效率工具。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:08:31,720 INFO synthesis text 听起来像效率工具。
+2026-09-20 11:08:35,078 INFO yield speech len 2.4, rtf 1.3989174365997314
+100%|██████████| 1/1 [00:03<00:00,  3.38s/it]100%|██████████| 1/1 [00:03<00:00,  3.38s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:35,115 INFO synthesis text 更像一个不知疲倦的实习生。
+2026-09-20 11:08:39,105 INFO yield speech len 3.16, rtf 1.2621189220042168
+100%|██████████| 1/1 [00:04<00:00,  4.01s/it]100%|██████████| 1/1 [00:04<00:00,  4.01s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:39,140 INFO synthesis text 那它写出来的代码靠谱吗。
+2026-09-20 11:08:42,787 INFO yield speech len 2.92, rtf 1.2487340463350898
+100%|██████████| 1/1 [00:03<00:00,  3.67s/it]100%|██████████| 1/1 [00:03<00:00,  3.67s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:42,821 INFO synthesis text 短片段常常不错，整体容易跑偏。
+2026-09-20 11:08:49,391 INFO yield speech len 5.92, rtf 1.109754354567141
+100%|██████████| 1/1 [00:06<00:00,  6.59s/it]100%|██████████| 1/1 [00:06<00:00,  6.59s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:49,424 WARNING synthesis text 跑偏在哪，举个例子。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:08:49,424 INFO synthesis text 跑偏在哪，举个例子。
+2026-09-20 11:08:52,725 INFO yield speech len 2.52, rtf 1.3096181173173207
+100%|██████████| 1/1 [00:03<00:00,  3.32s/it]100%|██████████| 1/1 [00:03<00:00,  3.32s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:52,760 INFO synthesis text 它会编出不存在的接口和参数。
+2026-09-20 11:08:57,335 INFO yield speech len 4.0, rtf 1.1436378955841064
+100%|██████████| 1/1 [00:04<00:00,  4.59s/it]100%|██████████| 1/1 [00:04<00:00,  4.59s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:08:57,372 WARNING synthesis text 这个我听过，叫幻觉。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:08:57,373 INFO synthesis text 这个我听过，叫幻觉。
+2026-09-20 11:09:01,455 INFO yield speech len 3.28, rtf 1.2446481280210542
+100%|██████████| 1/1 [00:04<00:00,  4.10s/it]100%|██████████| 1/1 [00:04<00:00,  4.10s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:01,491 INFO synthesis text 对，看着合理，一跑就报错。
+2026-09-20 11:09:06,484 INFO yield speech len 4.4, rtf 1.1348049749027598
+100%|██████████| 1/1 [00:05<00:00,  5.01s/it]100%|██████████| 1/1 [00:05<00:00,  5.01s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:06,522 WARNING synthesis text 所以还得人来兜底。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:06,522 INFO synthesis text 所以还得人来兜底。
+2026-09-20 11:09:10,505 INFO yield speech len 3.28, rtf 1.214213342201419
+100%|██████████| 1/1 [00:04<00:00,  4.00s/it]100%|██████████| 1/1 [00:04<00:00,  4.00s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:10,538 WARNING synthesis text 兜底这件事本身就很重要。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:10,539 INFO synthesis text 兜底这件事本身就很重要。
+2026-09-20 11:09:15,865 INFO yield speech len 4.76, rtf 1.1188648328059863
+100%|██████████| 1/1 [00:05<00:00,  5.35s/it]100%|██████████| 1/1 [00:05<00:00,  5.35s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:15,902 WARNING synthesis text 兜底具体要做什么呢。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:15,903 INFO synthesis text 兜底具体要做什么呢。
+2026-09-20 11:09:19,064 INFO yield speech len 2.4, rtf 1.3169182340304058
+100%|██████████| 1/1 [00:03<00:00,  3.18s/it]100%|██████████| 1/1 [00:03<00:00,  3.18s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:19,095 WARNING synthesis text 要判断它给的方案对不对。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:19,096 INFO synthesis text 要判断它给的方案对不对。
+2026-09-20 11:09:22,927 INFO yield speech len 3.08, rtf 1.2440065284828086
+100%|██████████| 1/1 [00:03<00:00,  3.85s/it]100%|██████████| 1/1 [00:03<00:00,  3.85s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:22,964 WARNING synthesis text 判断的依据从哪来。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:22,964 INFO synthesis text 判断的依据从哪来。
+2026-09-20 11:09:25,979 INFO yield speech len 2.28, rtf 1.3226765289641265
+100%|██████████| 1/1 [00:03<00:00,  3.04s/it]100%|██████████| 1/1 [00:03<00:00,  3.04s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:26,012 INFO synthesis text 从经验，也从对系统的理解。
+2026-09-20 11:09:29,894 INFO yield speech len 3.0, rtf 1.2936201095581055
+100%|██████████| 1/1 [00:03<00:00,  3.90s/it]100%|██████████| 1/1 [00:03<00:00,  3.90s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:29,927 WARNING synthesis text 那程序员的活会少吗。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:29,928 INFO synthesis text 那程序员的活会少吗。
+2026-09-20 11:09:33,124 INFO yield speech len 2.48, rtf 1.288611081338698
+100%|██████████| 1/1 [00:03<00:00,  3.21s/it]100%|██████████| 1/1 [00:03<00:00,  3.21s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:33,156 WARNING synthesis text 写代码的时间可能会减少。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:33,157 INFO synthesis text 写代码的时间可能会减少。
+2026-09-20 11:09:37,210 INFO yield speech len 3.32, rtf 1.2210318841129901
+100%|██████████| 1/1 [00:04<00:00,  4.08s/it]100%|██████████| 1/1 [00:04<00:00,  4.08s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:37,244 WARNING synthesis text 多出来的时间干什么。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:37,244 INFO synthesis text 多出来的时间干什么。
+2026-09-20 11:09:40,272 INFO yield speech len 2.24, rtf 1.3515028570379528
+100%|██████████| 1/1 [00:03<00:00,  3.05s/it]100%|██████████| 1/1 [00:03<00:00,  3.05s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:40,305 INFO synthesis text 想清楚要做什么，怎么拆解。
+2026-09-20 11:09:44,104 INFO yield speech len 3.2, rtf 1.1872891336679459
+100%|██████████| 1/1 [00:03<00:00,  3.82s/it]100%|██████████| 1/1 [00:03<00:00,  3.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:44,138 INFO synthesis text 也就是需求理解和设计。
+2026-09-20 11:09:47,705 INFO yield speech len 2.88, rtf 1.2386332783434126
+100%|██████████| 1/1 [00:03<00:00,  3.59s/it]100%|██████████| 1/1 [00:03<00:00,  3.59s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:47,741 WARNING synthesis text 还有取舍，这块机器很弱。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:47,741 INFO synthesis text 还有取舍，这块机器很弱。
+2026-09-20 11:09:53,864 INFO yield speech len 5.56, rtf 1.101421752421976
+100%|██████████| 1/1 [00:06<00:00,  6.14s/it]100%|██████████| 1/1 [00:06<00:00,  6.14s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:53,897 INFO synthesis text 取舍为什么难交给机器。
+2026-09-20 11:09:57,480 INFO yield speech len 2.88, rtf 1.244169722000758
+100%|██████████| 1/1 [00:03<00:00,  3.60s/it]100%|██████████| 1/1 [00:03<00:00,  3.60s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:09:57,513 WARNING synthesis text 因为它要背责任和成本。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:09:57,513 INFO synthesis text 因为它要背责任和成本。
+2026-09-20 11:10:02,155 INFO yield speech len 4.0, rtf 1.1604495644569397
+100%|██████████| 1/1 [00:04<00:00,  4.66s/it]100%|██████████| 1/1 [00:04<00:00,  4.66s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:02,194 INFO synthesis text 出了事故谁负责，这很现实。
+2026-09-20 11:10:06,583 INFO yield speech len 3.6, rtf 1.219010419315762
+100%|██████████| 1/1 [00:04<00:00,  4.41s/it]100%|██████████| 1/1 [00:04<00:00,  4.41s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:06,619 INFO synthesis text 对，责任没法交给一个模型。
+2026-09-20 11:10:11,636 INFO yield speech len 4.36, rtf 1.150489236236712
+100%|██████████| 1/1 [00:05<00:00,  5.04s/it]100%|██████████| 1/1 [00:05<00:00,  5.04s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:11,674 INFO synthesis text 那初级岗位会不会更少。
+2026-09-20 11:10:14,849 INFO yield speech len 2.52, rtf 1.260245508617825
+100%|██████████| 1/1 [00:03<00:00,  3.20s/it]100%|██████████| 1/1 [00:03<00:00,  3.20s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:14,886 WARNING synthesis text 这是争议最大的地方。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:10:14,887 INFO synthesis text 这是争议最大的地方。
+2026-09-20 11:10:18,654 INFO yield speech len 2.96, rtf 1.272414342777149
+100%|██████████| 1/1 [00:03<00:00,  3.79s/it]100%|██████████| 1/1 [00:03<00:00,  3.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:18,689 WARNING synthesis text 两边都说说。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:10:18,690 INFO synthesis text 两边都说说。
+2026-09-20 11:10:21,513 INFO yield speech len 2.08, rtf 1.3571807971367469
+100%|██████████| 1/1 [00:02<00:00,  2.84s/it]100%|██████████| 1/1 [00:02<00:00,  2.84s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:21,545 INFO synthesis text 一边认为入门活最容易被替代。
+2026-09-20 11:10:25,904 INFO yield speech len 3.64, rtf 1.1975116782136015
+100%|██████████| 1/1 [00:04<00:00,  4.38s/it]100%|██████████| 1/1 [00:04<00:00,  4.38s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:25,939 WARNING synthesis text 他们的依据是什么。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:10:25,940 INFO synthesis text 他们的依据是什么。
+2026-09-20 11:10:28,496 INFO yield speech len 1.76, rtf 1.4521304856647144
+100%|██████████| 1/1 [00:02<00:00,  2.58s/it]100%|██████████| 1/1 [00:02<00:00,  2.58s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:28,533 INFO synthesis text 写样板代码正是模型擅长的。
+2026-09-20 11:10:34,628 INFO yield speech len 5.56, rtf 1.0962436953894528
+100%|██████████| 1/1 [00:06<00:00,  6.12s/it]100%|██████████| 1/1 [00:06<00:00,  6.12s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:34,667 WARNING synthesis text 另一边呢。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:10:34,667 INFO synthesis text 另一边呢。
+2026-09-20 11:10:36,965 INFO yield speech len 1.4, rtf 1.641242163521903
+100%|██████████| 1/1 [00:02<00:00,  2.32s/it]100%|██████████| 1/1 [00:02<00:00,  2.32s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:36,997 INFO synthesis text 另一边说工具降低门槛，需求变多。
+2026-09-20 11:10:42,275 INFO yield speech len 4.48, rtf 1.1780826640980584
+100%|██████████| 1/1 [00:05<00:00,  5.30s/it]100%|██████████| 1/1 [00:05<00:00,  5.30s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:42,310 WARNING synthesis text 这个说法有道理吗。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:10:42,311 INFO synthesis text 这个说法有道理吗。
+2026-09-20 11:10:45,814 INFO yield speech len 2.72, rtf 1.2875932980986202
+100%|██████████| 1/1 [00:03<00:00,  3.52s/it]100%|██████████| 1/1 [00:03<00:00,  3.52s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:45,846 WARNING synthesis text 有，但要看行业和阶段。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:10:45,847 INFO synthesis text 有，但要看行业和阶段。
+2026-09-20 11:10:51,735 INFO yield speech len 5.08, rtf 1.159126739802323
+100%|██████████| 1/1 [00:05<00:00,  5.91s/it]100%|██████████| 1/1 [00:05<00:00,  5.91s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:51,769 INFO synthesis text 历史上好像有类似情况。
+2026-09-20 11:10:55,636 INFO yield speech len 3.24, rtf 1.1936313576168482
+100%|██████████| 1/1 [00:03<00:00,  3.89s/it]100%|██████████| 1/1 [00:03<00:00,  3.89s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:55,672 INFO synthesis text 编译器出来时也有人这么担心。
+2026-09-20 11:10:59,586 INFO yield speech len 3.12, rtf 1.2547937723306508
+100%|██████████| 1/1 [00:03<00:00,  3.94s/it]100%|██████████| 1/1 [00:03<00:00,  3.94s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:10:59,625 INFO synthesis text 结果程序员反而更多了。
+2026-09-20 11:11:03,657 INFO yield speech len 3.2, rtf 1.2599366903305054
+100%|██████████| 1/1 [00:04<00:00,  4.05s/it]100%|██████████| 1/1 [00:04<00:00,  4.05s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:03,690 WARNING synthesis text 因为软件能做的事变多了。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:11:03,691 INFO synthesis text 因为软件能做的事变多了。
+2026-09-20 11:11:07,544 INFO yield speech len 3.16, rtf 1.2192719344851337
+100%|██████████| 1/1 [00:03<00:00,  3.87s/it]100%|██████████| 1/1 [00:03<00:00,  3.87s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:07,580 WARNING synthesis text 这次会不会不一样。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:11:07,580 INFO synthesis text 这次会不会不一样。
+2026-09-20 11:11:10,960 INFO yield speech len 2.68, rtf 1.260886886226597
+100%|██████████| 1/1 [00:03<00:00,  3.40s/it]100%|██████████| 1/1 [00:03<00:00,  3.40s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:10,995 INFO synthesis text 有可能，所以不能只靠乐观。
+2026-09-20 11:11:16,149 INFO yield speech len 4.44, rtf 1.1606736226124805
+100%|██████████| 1/1 [00:05<00:00,  5.17s/it]100%|██████████| 1/1 [00:05<00:00,  5.17s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:16,180 WARNING synthesis text 那普通人该怎么准备。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:11:16,181 INFO synthesis text 那普通人该怎么准备。
+2026-09-20 11:11:18,915 INFO yield speech len 1.92, rtf 1.4235156277815502
+100%|██████████| 1/1 [00:02<00:00,  2.75s/it]100%|██████████| 1/1 [00:02<00:00,  2.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:18,950 INFO synthesis text 把工具用熟，别只当打字员。
+2026-09-20 11:11:23,421 INFO yield speech len 3.72, rtf 1.2018158230730283
+100%|██████████| 1/1 [00:04<00:00,  4.49s/it]100%|██████████| 1/1 [00:04<00:00,  4.49s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:23,456 WARNING synthesis text 具体一点。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:11:23,456 INFO synthesis text 具体一点。
+2026-09-20 11:11:26,187 INFO yield speech len 2.08, rtf 1.3126203647026649
+100%|██████████| 1/1 [00:02<00:00,  2.75s/it]100%|██████████| 1/1 [00:02<00:00,  2.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:26,222 INFO synthesis text 练排查问题，练读懂老代码。
+2026-09-20 11:11:31,162 INFO yield speech len 4.24, rtf 1.1650109066153471
+100%|██████████| 1/1 [00:04<00:00,  4.96s/it]100%|██████████| 1/1 [00:04<00:00,  4.96s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:31,198 INFO synthesis text 这两样机器确实不擅长。
+2026-09-20 11:11:34,788 INFO yield speech len 2.96, rtf 1.2128283848633636
+100%|██████████| 1/1 [00:03<00:00,  3.61s/it]100%|██████████| 1/1 [00:03<00:00,  3.61s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:34,832 INFO synthesis text 还要懂业务，知道为什么做。
+2026-09-20 11:11:38,421 INFO yield speech len 2.88, rtf 1.246086921956804
+100%|██████████| 1/1 [00:03<00:00,  3.61s/it]100%|██████████| 1/1 [00:03<00:00,  3.61s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:38,456 WARNING synthesis text 还有别的建议吗。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:11:38,456 INFO synthesis text 还有别的建议吗。
+2026-09-20 11:11:41,381 INFO yield speech len 2.16, rtf 1.3540663101055004
+100%|██████████| 1/1 [00:02<00:00,  2.94s/it]100%|██████████| 1/1 [00:02<00:00,  2.94s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:41,417 INFO synthesis text 多做完整项目，别只写片段。
+2026-09-20 11:11:46,936 INFO yield speech len 4.8, rtf 1.1498826742172241
+100%|██████████| 1/1 [00:05<00:00,  5.54s/it]100%|██████████| 1/1 [00:05<00:00,  5.54s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:46,974 WARNING synthesis text 为什么强调完整项目。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:11:46,975 INFO synthesis text 为什么强调完整项目。
+2026-09-20 11:11:50,305 INFO yield speech len 2.68, rtf 1.2425781185947247
+100%|██████████| 1/1 [00:03<00:00,  3.35s/it]100%|██████████| 1/1 [00:03<00:00,  3.35s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:50,343 INFO synthesis text 因为真实系统里全是权衡和妥协。
+2026-09-20 11:11:55,942 INFO yield speech len 4.92, rtf 1.1381252509791677
+100%|██████████| 1/1 [00:05<00:00,  5.62s/it]100%|██████████| 1/1 [00:05<00:00,  5.62s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:55,978 WARNING synthesis text 那团队规模会缩小吗。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:11:55,979 INFO synthesis text 那团队规模会缩小吗。
+2026-09-20 11:11:59,332 INFO yield speech len 2.48, rtf 1.3519573596216017
+100%|██████████| 1/1 [00:03<00:00,  3.37s/it]100%|██████████| 1/1 [00:03<00:00,  3.38s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:11:59,366 INFO synthesis text 小团队可能更强，大团队要重排。
+2026-09-20 11:12:04,635 INFO yield speech len 4.76, rtf 1.1067506145028507
+100%|██████████| 1/1 [00:05<00:00,  5.29s/it]100%|██████████| 1/1 [00:05<00:00,  5.29s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:04,673 WARNING synthesis text 重排指的是分工变化。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:04,673 INFO synthesis text 重排指的是分工变化。
+2026-09-20 11:12:08,384 INFO yield speech len 3.16, rtf 1.1745394785192949
+100%|██████████| 1/1 [00:03<00:00,  3.73s/it]100%|██████████| 1/1 [00:03<00:00,  3.73s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:08,417 INFO synthesis text 对，有人管工具，有人管方向。
+2026-09-20 11:12:13,580 INFO yield speech len 4.44, rtf 1.1629347328667168
+100%|██████████| 1/1 [00:05<00:00,  5.18s/it]100%|██████████| 1/1 [00:05<00:00,  5.18s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:13,612 WARNING synthesis text 这听起来像角色升级。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:13,613 INFO synthesis text 这听起来像角色升级。
+2026-09-20 11:12:17,272 INFO yield speech len 3.08, rtf 1.1878510574241736
+100%|██████████| 1/1 [00:03<00:00,  3.68s/it]100%|██████████| 1/1 [00:03<00:00,  3.68s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:17,309 WARNING synthesis text 也可以说是门槛换了位置。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:17,309 INFO synthesis text 也可以说是门槛换了位置。
+2026-09-20 11:12:21,244 INFO yield speech len 3.36, rtf 1.1709417615618025
+100%|██████████| 1/1 [00:03<00:00,  3.96s/it]100%|██████████| 1/1 [00:03<00:00,  3.96s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:21,281 WARNING synthesis text 那新人还有机会吗。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:21,281 INFO synthesis text 那新人还有机会吗。
+2026-09-20 11:12:24,492 INFO yield speech len 2.44, rtf 1.3160890243092522
+100%|██████████| 1/1 [00:03<00:00,  3.23s/it]100%|██████████| 1/1 [00:03<00:00,  3.23s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:24,529 INFO synthesis text 有，但上手方式跟以前不同。
+2026-09-20 11:12:29,376 INFO yield speech len 4.24, rtf 1.1430148808461316
+100%|██████████| 1/1 [00:04<00:00,  4.87s/it]100%|██████████| 1/1 [00:04<00:00,  4.87s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:29,413 WARNING synthesis text 怎么不同。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:29,413 INFO synthesis text 怎么不同。
+2026-09-20 11:12:31,749 INFO yield speech len 1.52, rtf 1.5371586147107577
+100%|██████████| 1/1 [00:02<00:00,  2.36s/it]100%|██████████| 1/1 [00:02<00:00,  2.36s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:31,787 WARNING synthesis text 先学会提问，再学会验证。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:31,789 INFO synthesis text 先学会提问，再学会验证。
+2026-09-20 11:12:35,908 INFO yield speech len 3.44, rtf 1.1974059565122737
+100%|██████████| 1/1 [00:04<00:00,  4.14s/it]100%|██████████| 1/1 [00:04<00:00,  4.14s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:35,943 WARNING synthesis text 验证这一步最花时间。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:35,944 INFO synthesis text 验证这一步最花时间。
+2026-09-20 11:12:39,098 INFO yield speech len 2.36, rtf 1.3369422847941772
+100%|██████████| 1/1 [00:03<00:00,  3.18s/it]100%|██████████| 1/1 [00:03<00:00,  3.18s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:39,133 WARNING synthesis text 对，也最容易被忽略。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:39,133 INFO synthesis text 对，也最容易被忽略。
+2026-09-20 11:12:42,771 INFO yield speech len 2.84, rtf 1.2811312373255341
+100%|██████████| 1/1 [00:03<00:00,  3.66s/it]100%|██████████| 1/1 [00:03<00:00,  3.66s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:42,804 WARNING synthesis text 最后收一句吧。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-20 11:12:42,805 INFO synthesis text 最后收一句吧。
+2026-09-20 11:12:45,685 INFO yield speech len 2.0, rtf 1.4401710033416748
+100%|██████████| 1/1 [00:02<00:00,  2.90s/it]100%|██████████| 1/1 [00:02<00:00,  2.90s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:45,720 INFO synthesis text 工具会换，会思考的人一直稀缺。
+2026-09-20 11:12:51,302 INFO yield speech len 4.88, rtf 1.1437322272629034
+100%|██████████| 1/1 [00:05<00:00,  5.60s/it]100%|██████████| 1/1 [00:05<00:00,  5.60s/it]
+2026-09-20 11:12:51,335 INFO [CACHE] task=ep_20260920_110641 合成段数=74 命中缓存=0（命中率 0.0%）
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-20 11:12:51,473 INFO synthesis text 大家好，今天是二零二六年九月二十日，今天的主题是人工智能会不会取代程序员。
+2026-09-20 11:13:00,893 INFO yield speech len 8.56, rtf 1.1005941116921254
+100%|██████████| 1/1 [00:09<00:00,  9.44s/it]100%|██████████| 1/1 [00:09<00:00,  9.45s/it]
+2026-09-20 11:13:01,444 INFO 动态片头已生成：intro_norm.wav（37 字）
+2026-09-20 11:13:01,444 INFO 后期片头尾：intro=intro_norm.wav outro=outro.mp3
+2026-09-20 11:13:01,451 INFO [1/6] 格式统一 44100 Hz / 1 ch / pcm_s16le
+2026-09-20 11:13:01,564 INFO     seg 1/74 -> seg_0000.wav
+2026-09-20 11:13:01,678 INFO     seg 2/74 -> seg_0001.wav
+2026-09-20 11:13:01,791 INFO     seg 3/74 -> seg_0002.wav
+2026-09-20 11:13:01,906 INFO     seg 4/74 -> seg_0003.wav
+2026-09-20 11:13:02,023 INFO     seg 5/74 -> seg_0004.wav
+2026-09-20 11:13:02,142 INFO     seg 6/74 -> seg_0005.wav
+2026-09-20 11:13:02,265 INFO     seg 7/74 -> seg_0006.wav
+2026-09-20 11:13:02,382 INFO     seg 8/74 -> seg_0007.wav
+2026-09-20 11:13:02,495 INFO     seg 9/74 -> seg_0008.wav
+2026-09-20 11:13:02,612 INFO     seg 10/74 -> seg_0009.wav
+2026-09-20 11:13:02,728 INFO     seg 11/74 -> seg_0010.wav
+2026-09-20 11:13:02,843 INFO     seg 12/74 -> seg_0011.wav
+2026-09-20 11:13:02,961 INFO     seg 13/74 -> seg_0012.wav
+2026-09-20 11:13:03,076 INFO     seg 14/74 -> seg_0013.wav
+2026-09-20 11:13:03,194 INFO     seg 15/74 -> seg_0014.wav
+2026-09-20 11:13:03,309 INFO     seg 16/74 -> seg_0015.wav
+2026-09-20 11:13:03,425 INFO     seg 17/74 -> seg_0016.wav
+2026-09-20 11:13:03,542 INFO     seg 18/74 -> seg_0017.wav
+2026-09-20 11:13:03,658 INFO     seg 19/74 -> seg_0018.wav
+2026-09-20 11:13:03,774 INFO     seg 20/74 -> seg_0019.wav
+2026-09-20 11:13:03,890 INFO     seg 21/74 -> seg_0020.wav
+2026-09-20 11:13:04,003 INFO     seg 22/74 -> seg_0021.wav
+2026-09-20 11:13:04,116 INFO     seg 23/74 -> seg_0022.wav
+2026-09-20 11:13:04,234 INFO     seg 24/74 -> seg_0023.wav
+2026-09-20 11:13:04,355 INFO     seg 25/74 -> seg_0024.wav
+2026-09-20 11:13:04,477 INFO     seg 26/74 -> seg_0025.wav
+2026-09-20 11:13:04,594 INFO     seg 27/74 -> seg_0026.wav
+2026-09-20 11:13:04,708 INFO     seg 28/74 -> seg_0027.wav
+2026-09-20 11:13:04,825 INFO     seg 29/74 -> seg_0028.wav
+2026-09-20 11:13:04,944 INFO     seg 30/74 -> seg_0029.wav
+2026-09-20 11:13:05,064 INFO     seg 31/74 -> seg_0030.wav
+2026-09-20 11:13:05,198 INFO     seg 32/74 -> seg_0031.wav
+2026-09-20 11:13:05,316 INFO     seg 33/74 -> seg_0032.wav
+2026-09-20 11:13:05,432 INFO     seg 34/74 -> seg_0033.wav
+2026-09-20 11:13:05,548 INFO     seg 35/74 -> seg_0034.wav
+2026-09-20 11:13:05,666 INFO     seg 36/74 -> seg_0035.wav
+2026-09-20 11:13:05,780 INFO     seg 37/74 -> seg_0036.wav
+2026-09-20 11:13:05,895 INFO     seg 38/74 -> seg_0037.wav
+2026-09-20 11:13:06,010 INFO     seg 39/74 -> seg_0038.wav
+2026-09-20 11:13:06,126 INFO     seg 40/74 -> seg_0039.wav
+2026-09-20 11:13:06,242 INFO     seg 41/74 -> seg_0040.wav
+2026-09-20 11:13:06,357 INFO     seg 42/74 -> seg_0041.wav
+2026-09-20 11:13:06,473 INFO     seg 43/74 -> seg_0042.wav
+2026-09-20 11:13:06,592 INFO     seg 44/74 -> seg_0043.wav
+2026-09-20 11:13:06,714 INFO     seg 45/74 -> seg_0044.wav
+2026-09-20 11:13:06,836 INFO     seg 46/74 -> seg_0045.wav
+2026-09-20 11:13:06,950 INFO     seg 47/74 -> seg_0046.wav
+2026-09-20 11:13:07,070 INFO     seg 48/74 -> seg_0047.wav
+2026-09-20 11:13:07,185 INFO     seg 49/74 -> seg_0048.wav
+2026-09-20 11:13:07,301 INFO     seg 50/74 -> seg_0049.wav
+2026-09-20 11:13:07,423 INFO     seg 51/74 -> seg_0050.wav
+2026-09-20 11:13:07,539 INFO     seg 52/74 -> seg_0051.wav
+2026-09-20 11:13:07,658 INFO     seg 53/74 -> seg_0052.wav
+2026-09-20 11:13:07,775 INFO     seg 54/74 -> seg_0053.wav
+2026-09-20 11:13:07,892 INFO     seg 55/74 -> seg_0054.wav
+2026-09-20 11:13:08,008 INFO     seg 56/74 -> seg_0055.wav
+2026-09-20 11:13:08,126 INFO     seg 57/74 -> seg_0056.wav
+2026-09-20 11:13:08,241 INFO     seg 58/74 -> seg_0057.wav
+2026-09-20 11:13:08,356 INFO     seg 59/74 -> seg_0058.wav
+2026-09-20 11:13:08,471 INFO     seg 60/74 -> seg_0059.wav
+2026-09-20 11:13:08,586 INFO     seg 61/74 -> seg_0060.wav
+2026-09-20 11:13:08,705 INFO     seg 62/74 -> seg_0061.wav
+2026-09-20 11:13:08,827 INFO     seg 63/74 -> seg_0062.wav
+2026-09-20 11:13:08,947 INFO     seg 64/74 -> seg_0063.wav
+2026-09-20 11:13:09,068 INFO     seg 65/74 -> seg_0064.wav
+2026-09-20 11:13:09,181 INFO     seg 66/74 -> seg_0065.wav
+2026-09-20 11:13:09,298 INFO     seg 67/74 -> seg_0066.wav
+2026-09-20 11:13:09,414 INFO     seg 68/74 -> seg_0067.wav
+2026-09-20 11:13:09,532 INFO     seg 69/74 -> seg_0068.wav
+2026-09-20 11:13:09,649 INFO     seg 70/74 -> seg_0069.wav
+2026-09-20 11:13:09,764 INFO     seg 71/74 -> seg_0070.wav
+2026-09-20 11:13:09,887 INFO     seg 72/74 -> seg_0071.wav
+2026-09-20 11:13:10,003 INFO     seg 73/74 -> seg_0072.wav
+2026-09-20 11:13:10,122 INFO     seg 74/74 -> seg_0073.wav
+2026-09-20 11:13:10,569 INFO [2/6] 片头/片尾微淡化 30 ms（必须在拼接之前）
+2026-09-20 11:13:10,947 INFO [3/6] 停顿：话轮 500 ms / 句间 250 ms
+2026-09-20 11:13:11,199 INFO [4/6] 拼接 149 个片段（含 73 处停顿）
+2026-09-20 11:13:12,344 INFO [5/6] 两遍 loudnorm -> I=-16 LUFS / TP=-1.5 dBTP
+2026-09-20 11:13:23,065 INFO     实测 -18.95 -> -16.19 LUFS（目标 -16）
+2026-09-20 11:13:23,065 INFO [6/6] 导出 mp3（libmp3lame 128k）
+2026-09-20 11:13:24,862 INFO 完成：D:\podcast-ai\data\work\ep_20260920_110641\ep_20260920_110641.mp3（301.7 s，4.60 MB）
+  合成耗时 : 403.1s（843 字，0.478 s/字）
+
+--- 3/3 后期与导出 ---
+  成片     : 人工智能会不会取代程序员.mp3（301.68 s / 4827889 B）
+  响度     : -16.63 LUFS / 真峰 -1.83 dBTP
+  文稿     : script.md
+
+输出目录：D:\podcast-ai\outputs\episodes\人工智能会不会取代程序员
+RESULT: DONE
+2026-09-20 11:13:29,034 DEBUG close.started
+2026-09-20 11:13:29,036 DEBUG close.complete

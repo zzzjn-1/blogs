@@ -1,0 +1,42 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 12:12:40,956 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 12:12:42,096 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 12:12:43,467 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 12:12:43,519 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 12:12:44,278 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 12:12:47,681 INFO text_frontend=wetext | model=CosyVoice2 | 加载 11.6s
+2026-09-18 12:12:47,681 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 12:12:48,829 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 12:12:48,829 INFO 说话人 A → 音色 voice_a
+2026-09-18 12:12:48,829 INFO 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:12:48,839 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 12:12:54,487 INFO yield speech len 4.04, rtf 1.3981146977679564
+100%|██████████| 1/1 [00:05<00:00,  5.67s/it]100%|██████████| 1/1 [00:05<00:00,  5.67s/it]
+2026-09-18 12:12:54,510 INFO 预热耗时 5.68s
+root.level=INFO enabled_for_INFO=True
+tracer.enabled = True tracer.path = D:\podcast-ai\outputs\synth_trace\probe_llm_end2.jsonl
+  root handler: StreamHandler level=NOTSET
+  root handler: _YieldLenHandler level=INFO  sink_is_tracer_list=True
+
+调用 synthesize_lines() …
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:12:54,518 INFO synthesis text 诊断探针甲乙丙丁戊己四千七百四十三甲号这条用于复核阶段标记。
+2026-09-18 12:13:01,977 INFO yield speech len 7.28, rtf 1.0245846195535344
+100%|██████████| 1/1 [00:07<00:00,  7.48s/it]100%|██████████| 1/1 [00:07<00:00,  7.48s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:13:02,093 INFO synthesis text 诊断探针甲乙丙丁戊己四千七百四十三乙号另一句不该命中缓存。
+2026-09-18 12:13:15,918 INFO yield speech len 13.52, rtf 1.0225398653357691
+100%|██████████| 1/1 [00:13<00:00, 13.85s/it]100%|██████████| 1/1 [00:13<00:00, 13.85s/it]
+段数 = 2  cached = [False, False]
+合成后 tracer._yield_events = [(678653.4595549, 'yield speech len 4.04, rtf 1.3981146977679564'), (678660.9496673, '')]
+
+本次写出 2 条记录：
+  seg=1 chars=30 dur=7532.5 llm_end=SET
+  seg=2 chars=29 dur=13923.83 llm_end=NULL
+
+结论：1/2 条抓到 llm_end

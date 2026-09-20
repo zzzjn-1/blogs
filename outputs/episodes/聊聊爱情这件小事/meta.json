@@ -1,0 +1,20 @@
+{
+  "topic": "爱情",
+  "title": "聊聊爱情这件小事",
+  "summary": "从心动到相处，聊聊爱情里那些真实又微妙的瞬间与思考。",
+  "created": "2026-09-17T09:53:02",
+  "words": 800,
+  "chars": 752,
+  "lines": 48,
+  "status": "DONE",
+  "synth_elapsed_s": 321.14,
+  "sec_per_char": 0.4271,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\聊聊爱情这件小事\\聊聊爱情这件小事.mp3",
+  "mp3_bytes": 4146198,
+  "duration_s": 259.07,
+  "loudness_i": "-16.60",
+  "true_peak": "-1.81",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260917_094738\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 2
+}

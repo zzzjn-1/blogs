@@ -1,0 +1,9 @@
+{
+  "id": "voice_a",
+  "name": "女声·知性沉稳",
+  "wav": "voice_a.wav",
+  "prompt_text": "希望你以后能够做的比我还好呦。",
+  "gender": "female",
+  "style": "calm",
+  "description": "D2 占位音色A（CosyVoice 官方示例音色，3.5s）。正式交付前应替换为主播真人录音 5~10s。"
+}

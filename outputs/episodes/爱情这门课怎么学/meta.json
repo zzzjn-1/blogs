@@ -1,0 +1,20 @@
+{
+  "topic": "爱情",
+  "title": "爱情这门课怎么学",
+  "summary": "从心动到长久，聊聊爱情里那些说不清却躲不开的事。",
+  "created": "2026-09-17T09:47:22",
+  "words": 800,
+  "chars": 718,
+  "lines": 46,
+  "status": "DONE",
+  "synth_elapsed_s": 298.61,
+  "sec_per_char": 0.4159,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\爱情这门课怎么学\\爱情这门课怎么学.mp3",
+  "mp3_bytes": 3959370,
+  "duration_s": 247.38,
+  "loudness_i": "-16.64",
+  "true_peak": "-1.64",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260917_094220\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 3
+}

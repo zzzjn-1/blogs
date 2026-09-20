@@ -1,0 +1,9 @@
+{
+  "text_hash": "0813c9f40238554ff33f487e7bb1eab9dd461bd2",
+  "speaker": "B",
+  "read_text": "顺便说一句，我们也在用这套流水线做自己的节目。",
+  "duration_ms": 5200,
+  "sample_rate": 24000,
+  "model_version": "CosyVoice2-0.5B",
+  "created_at": "2026-09-15T09:24:44"
+}

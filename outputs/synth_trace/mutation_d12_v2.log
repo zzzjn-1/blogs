@@ -1,0 +1,76 @@
+========================================================================
+D12 变异测试：注入缺陷 → 该红必须红 → 还原 → 复跑必须绿
+========================================================================
+
+[M1] 恢复扫描不再跳过 SCRIPT_READY —— 会把「等用户确认」的任务误判为被中断
+      锚点 api/services/task_runner.py
+      测试 tests/test_d12_resilience.py::test_recover_skips_script_ready
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M2] 命中读数改成累加 —— 续跑重跑整个合成阶段时同一批段被算两遍，命中率虚高
+      锚点 api/services/task_runner.py
+      测试 tests/test_d12_resilience.py::test_cache_hit_counters_recomputed_not_accumulated
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M3] OOM 识别失效 —— 真 OOM 不再重试，直接冒泡成裸 RuntimeError
+      锚点 api/services/tts.py
+      测试 tests/test_d12_resilience.py::test_oom_retried_once_then_succeeds
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M4] 重试额度失效 —— 配了 TTS_OOM_RETRY 也不生效
+      锚点 api/services/tts.py
+      测试 tests/test_d12_resilience.py::test_oom_retried_once_then_succeeds
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M5] 排队位次差一 —— 前端「前面还有 N 个」会少报 1，且与 0=正在跑 语义撞车
+      锚点 api/services/task_runner.py
+      测试 tests/test_d12_resilience.py::test_queue_position_running_and_waiting
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M6] seg=0 时把命中率算成 0.0 而非 null —— 「没测过」被误报成「命中率 0%」
+      锚点 api/models.py
+      测试 tests/test_d12_resilience.py::test_task_to_dict_exposes_cache_rate_and_timestamps
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M7] 自动续跑失效 —— 崩溃后任务只被标 FAILED，不恢复，等于没做 D12 的续跑能力
+      锚点 api/services/task_runner.py
+      测试 tests/test_d12_resilience.py::test_recover_auto_resumes_to_done
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M8] R21 回潮 —— 写事务再次横跨合成段，进度回写会撞 SQLite 写锁忙等
+      锚点 api/services/task_runner.py
+      测试 tests/test_task_runner.py::test_synth_does_not_hold_write_lock_across_synthesis
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M9] 工作目录删不掉却不再告警 —— 又回到 except: pass 那一族（D12 主题缺陷的回潮）
+      锚点 api/services/task_runner.py
+      测试 tests/test_task_runner.py::test_cleanup_work_warns_when_delete_blocked
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+[M10] 把「清理失败」升级成任务级异常 —— 运维问题会污染成片结果（成片其实已经 DONE）
+      锚点 api/services/task_runner.py
+      测试 tests/test_task_runner.py::test_cleanup_work_failure_does_not_fail_the_task
+      注入后 = FAIL ✓ 如期变红
+      还原后 = PASS ✓
+      判定 OK
+
+========================================================================
+变异测试全部通过：10/10 —— 每条测试都确实会因缺陷变红。

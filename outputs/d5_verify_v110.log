@@ -1,0 +1,43 @@
+D5 验收：音频后期与 mp3 导出
+==============================================================================
+
+P1 FFmpeg 能力与片头片尾素材
+  ffmpeg  = C:\Users\zzz\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+  [PASS] ffmpeg 可执行                                   ffmpeg version 9.0.1-full_build-www.gyan.dev Copyright (c) 2000-2026 t
+  [PASS] 滤镜 loudnorm 可用                               
+  [PASS] 滤镜 concat 可用                                 
+  [PASS] 滤镜 afade 可用                                  
+  [PASS] 滤镜 amix 可用                                   
+  [PASS] 滤镜 volumedetect 可用                           
+  [PASS] 编码器 libmp3lame 可用                            
+  [PASS] 片头/片尾 intro.mp3 规格                           intro.mp3  2.40 s / mp3 / 44100 Hz / 1 ch
+  [PASS] 片头/片尾 outro.mp3 规格                           outro.mp3  2.20 s / mp3 / 44100 Hz / 1 ch
+
+P2 R12 混合采样率/声道 → 成片（纯 FFmpeg，无模型）
+  [PASS] 时长守恒（R12）                                    实测 2.55 s / 预期 2.55 s（3 段 + 句间 250 + 话轮 500）
+  [PASS] mp3 规格 44.1k / 单声道                           mp3 / 44100 Hz / 1 ch
+  [PASS] 码率接近 128k                                    131.3 kbps
+  [PASS] 无削波                                          峰值 -10.40 dB
+  [PASS] 响度落到 -16 LUFS ±1                             实测 -16.00 LUFS（目标 -16.0）
+  [PASS] 中间产物齐全                                       D:\podcast-ai\data\work\d5_verify\mixed\out\build_d5_mixed
+
+P3 端到端：10 行固定脚本 → 真实 TTS → mp3（不经 LLM）
+  [PASS] CLI 端到端返回 0                                  109.3 s
+  [PASS] 成片存在                                         D:\podcast-ai\data\work\d5_verify\e2e\d5_verify_e2e.mp3
+  [PASS] 成片规格 mp3 / 44.1k / 单声道                       mp3 / 44100 Hz / 1 ch
+  [PASS] 成片时长 ≈ 语音 + 停顿 + 片头尾                         成片 63.94 s；语音 54.84 s + 片头尾 4.60 s + 9 处停顿 [2.25, 4.50] s
+  [PASS] 无削波                                          峰值 -1.9 dB
+  [PASS] 响度落到 -16 LUFS ±1                             实测 -16.12 LUFS
+  [PASS] 片头片尾均已用上                                     intro=True outro=True
+  [PASS] 分句数 ≥ 10                                     10 段（缓存命中 0）
+
+P4 复核 CLI「主题 → mp3」全链路摘要（LLM）
+  [PASS] 全链路成功                                        总耗时 213.04 s
+  [PASS] 脚本可用                                         26 行 / 偏差 -11.0% / 模型 deepseek-flash
+  [PASS] 成片无削波且响度达标                                   峰值 -1.9 dB / -16.46 LUFS
+  [PASS] 端到端时长合理                                      142.6 s（27 段语音 125.2 s）
+
+==============================================================================
+结果：27 项通过 / 0 项失败；总耗时 112.1 s
+报告：D:\podcast-ai\outputs\d5_verify_result.json
+判定：PASS

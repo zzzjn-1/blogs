@@ -1,0 +1,9 @@
+{
+  "text_hash": "039d2652d6c7eb932c7453d3d61203200b7563b2",
+  "speaker": "A",
+  "read_text": "超过三十分钟之后，完播率会掉到百分之四十以下。",
+  "duration_ms": 5000,
+  "sample_rate": 24000,
+  "model_version": "CosyVoice2-0.5B",
+  "created_at": "2026-09-15T09:24:25"
+}

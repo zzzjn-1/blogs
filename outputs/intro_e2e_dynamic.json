@@ -1,0 +1,28 @@
+{
+  "mode": "dynamic_intro",
+  "status": "DONE",
+  "elapsed_s": 68.16,
+  "final_mp3": "C:\\Users\\zzz\\AppData\\Local\\Temp\\verify_intro_mhhlt767\\data\\audio\\e2e_intro\\final.mp3",
+  "final_bytes": 621966,
+  "duration_s": 38.8,
+  "intro_arg": "C:\\Users\\zzz\\AppData\\Local\\Temp\\verify_intro_mhhlt767\\data\\work\\e2e_intro\\intro_norm.wav",
+  "outro_arg": "D:\\podcast-ai\\backend\\assets\\outro.mp3",
+  "intro_used": true,
+  "outro_used": true,
+  "segments": 4,
+  "dynamic_intro_path": "C:\\Users\\zzz\\AppData\\Local\\Temp\\verify_intro_mhhlt767\\data\\work\\e2e_intro\\intro_norm.wav",
+  "loudness_after": {
+    "input_i": "-16.07",
+    "input_tp": "-1.50",
+    "input_lra": "5.10",
+    "input_thresh": "-26.77",
+    "output_i": "-16.13",
+    "output_tp": "-1.50",
+    "output_lra": "4.80",
+    "output_thresh": "-26.90",
+    "normalization_type": "dynamic",
+    "target_offset": "0.13"
+  },
+  "clipped": false,
+  "warnings": []
+}

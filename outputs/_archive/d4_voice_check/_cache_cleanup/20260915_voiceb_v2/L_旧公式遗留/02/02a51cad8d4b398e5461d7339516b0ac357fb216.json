@@ -1,0 +1,9 @@
+{
+  "text_hash": "02a51cad8d4b398e5461d7339516b0ac357fb216",
+  "speaker": "A",
+  "read_text": "运动、做家务这类碎片时间反而上升到了百分之三十一。",
+  "duration_ms": 5360,
+  "sample_rate": 24000,
+  "model_version": "CosyVoice2-0.5B",
+  "created_at": "2026-09-15T09:23:35"
+}

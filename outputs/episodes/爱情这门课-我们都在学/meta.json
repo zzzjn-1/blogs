@@ -1,0 +1,20 @@
+{
+  "topic": "爱情",
+  "title": "爱情这门课，我们都在学",
+  "summary": "从心动到相处，聊聊爱情里那些说不清却很重要的事，轻松又有料。",
+  "created": "2026-09-17T11:40:04",
+  "words": 800,
+  "chars": 766,
+  "lines": 48,
+  "status": "DONE",
+  "synth_elapsed_s": 311.3,
+  "sec_per_char": 0.4064,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\爱情这门课-我们都在学\\爱情这门课-我们都在学.mp3",
+  "mp3_bytes": 4080160,
+  "duration_s": 254.94,
+  "loudness_i": "-16.65",
+  "true_peak": "-1.72",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260917_113449\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 3
+}

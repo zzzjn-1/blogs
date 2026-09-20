@@ -1,0 +1,10 @@
+{
+  "text_hash": "0602fd64f6fb03cea13e939388aa0da4e9a1c04d",
+  "speaker": "B",
+  "read_text": "缓存指纹复核句。",
+  "duration_ms": 3720,
+  "sample_rate": 24000,
+  "model_version": "CosyVoice2-0.5B",
+  "voice_fingerprint": "033dbc46b44d",
+  "created_at": "2026-09-15T14:37:37"
+}

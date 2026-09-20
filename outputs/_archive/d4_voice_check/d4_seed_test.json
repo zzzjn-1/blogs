@@ -1,0 +1,76 @@
+{
+  "ts": "2026-09-15T14:55:42",
+  "cases": [
+    {
+      "seed": 42,
+      "runs": 3,
+      "durations": [
+        4.24,
+        4.24,
+        4.24
+      ],
+      "identical_duration": true,
+      "identical_waveform": true,
+      "PASS": true,
+      "case": "T1_fixed_seed_reproducible"
+    },
+    {
+      "seed": -1,
+      "runs": 3,
+      "durations": [
+        3.64,
+        3.6,
+        3.76
+      ],
+      "waveform_varies": true,
+      "PASS": true,
+      "case": "T2_seed_disabled_nondeterministic"
+    },
+    {
+      "seed_a": 42,
+      "seed_b": 43,
+      "dur_a": 4.24,
+      "dur_b": 3.4,
+      "waveform_differs": true,
+      "PASS": true,
+      "case": "T3_different_seed_differs"
+    },
+    {
+      "seed": 42,
+      "offset0_dur": 4.24,
+      "offset1_dur": 3.4,
+      "waveform_differs": true,
+      "PASS": true,
+      "case": "T4_retry_offset_changes_output"
+    },
+    {
+      "key_42": "d4f931ebe1f59dd25af085fcd148f6bfff8924ee",
+      "key_42_again": "d4f931ebe1f59dd25af085fcd148f6bfff8924ee",
+      "key_43": "d7b189eb11ee6cc2cb84ac2bab2be7fcbb85f107",
+      "key_off": "0b13a1dfc20cb1667d69c62a6d73b746802cddd9",
+      "stable": true,
+      "seed_changes_key": true,
+      "off_differs_from_42": true,
+      "PASS": true,
+      "case": "T5_cache_key_includes_seed"
+    },
+    {
+      "probe": "缓存语义验证用的探针句子4907。",
+      "first_cached": false,
+      "second_cached": true,
+      "same_duration": true,
+      "same_file": true,
+      "first_dur_ms": 4920,
+      "second_dur_ms": 4920,
+      "PASS": true,
+      "case": "T6_cache_semantics_consistent"
+    }
+  ],
+  "summary": {
+    "model": "CosyVoice2",
+    "peak_alloc_mb": 3507.6,
+    "peak_reserved_mb": 3956.0,
+    "all_pass": true,
+    "failures": []
+  }
+}

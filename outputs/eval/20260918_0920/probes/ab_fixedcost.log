@@ -1,0 +1,113 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 10:35:05,724 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 10:35:06,785 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 10:35:08,119 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 10:35:08,166 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 10:35:08,919 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 10:35:12,159 INFO text_frontend=wetext | model=CosyVoice2 | 加载 11.0s
+2026-09-18 10:35:12,161 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 10:35:13,256 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 10:35:13,258 INFO 说话人 A → 音色 voice_a
+2026-09-18 10:35:13,258 INFO 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:35:13,263 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 10:35:18,777 INFO yield speech len 4.04, rtf 1.3649467784579437
+100%|██████████| 1/1 [00:05<00:00,  5.54s/it]100%|██████████| 1/1 [00:05<00:00,  5.54s/it]
+2026-09-18 10:35:18,799 INFO 预热耗时 5.54s
+引擎加载 30.0s  常驻 2498.6MB
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:35:18,804 WARNING synthesis text 探针甲甲号对照实。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-18 10:35:18,805 INFO synthesis text 探针甲甲号对照实。
+2026-09-18 10:35:23,782 INFO yield speech len 4.6, rtf 1.0819744027179221
+100%|██████████| 1/1 [00:04<00:00,  5.00s/it]100%|██████████| 1/1 [00:05<00:00,  5.00s/it]
+  [ 8字][on ]   5.03s  音频  4.60s  RTF 1.093  s/字 0.629
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:35:23,853 WARNING synthesis text 探针甲乙号对照实。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-18 10:35:23,853 INFO synthesis text 探针甲乙号对照实。
+2026-09-18 10:35:28,094 INFO yield speech len 3.84, rtf 1.1044789105653763
+100%|██████████| 1/1 [00:04<00:00,  4.26s/it]100%|██████████| 1/1 [00:04<00:00,  4.26s/it]
+  [ 8字][off]   4.31s  音频  3.84s  RTF 1.123  s/字 0.539
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:35:28,165 INFO synthesis text 探针甲丙号对照实验的探针文本用于。
+2026-09-18 10:35:33,998 INFO yield speech len 5.48, rtf 1.0645272958017613
+100%|██████████| 1/1 [00:05<00:00,  5.85s/it]100%|██████████| 1/1 [00:05<00:00,  5.85s/it]
+  [16字][on ]   5.90s  音频  5.48s  RTF 1.077  s/字 0.369
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:35:34,066 INFO synthesis text 探针甲丁号对照实验的探针文本用于。
+2026-09-18 10:35:39,281 INFO yield speech len 4.84, rtf 1.0775115371735629
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+  [16字][off]   5.29s  音频  4.84s  RTF 1.092  s/字 0.330
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:35:39,354 INFO synthesis text 探针甲戊号对照实验的探针文本用于测量合成耗时不关注语义内容对照实。
+2026-09-18 10:35:46,937 INFO yield speech len 7.52, rtf 1.0083891609881788
+100%|██████████| 1/1 [00:07<00:00,  7.61s/it]100%|██████████| 1/1 [00:07<00:00,  7.61s/it]
+  [32字][on ]   7.65s  音频  7.52s  RTF 1.018  s/字 0.239
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:35:47,008 INFO synthesis text 探针甲己号对照实验的探针文本用于测量合成耗时不关注语义内容对照实。
+2026-09-18 10:35:57,003 INFO yield speech len 10.08, rtf 0.9915251343969315
+100%|██████████| 1/1 [00:10<00:00, 10.02s/it]100%|██████████| 1/1 [00:10<00:00, 10.02s/it]
+  [32字][off]  10.07s  音频 10.08s  RTF 0.999  s/字 0.315
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:35:57,072 WARNING synthesis text 探针甲庚号对照实。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-18 10:35:57,073 INFO synthesis text 探针甲庚号对照实。
+2026-09-18 10:36:01,501 INFO yield speech len 3.96, rtf 1.118257912722501
+100%|██████████| 1/1 [00:04<00:00,  4.45s/it]100%|██████████| 1/1 [00:04<00:00,  4.45s/it]
+  [ 8字][on ]   4.50s  音频  3.96s  RTF 1.136  s/字 0.562
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:01,571 WARNING synthesis text 探针甲辛号对照实。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-18 10:36:01,572 INFO synthesis text 探针甲辛号对照实。
+2026-09-18 10:36:05,864 INFO yield speech len 3.92, rtf 1.0949576995810684
+100%|██████████| 1/1 [00:04<00:00,  4.31s/it]100%|██████████| 1/1 [00:04<00:00,  4.31s/it]
+  [ 8字][off]   4.36s  音频  3.92s  RTF 1.113  s/字 0.545
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:05,932 INFO synthesis text 探针甲壬号对照实验的探针文本用于。
+2026-09-18 10:36:10,752 INFO yield speech len 4.4, rtf 1.0953172770413484
+100%|██████████| 1/1 [00:04<00:00,  4.84s/it]100%|██████████| 1/1 [00:04<00:00,  4.84s/it]
+  [16字][on ]   4.89s  音频  4.40s  RTF 1.111  s/字 0.305
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:10,820 INFO synthesis text 探针甲癸号对照实验的探针文本用于。
+2026-09-18 10:36:15,685 INFO yield speech len 4.52, rtf 1.0763169389910403
+100%|██████████| 1/1 [00:04<00:00,  4.89s/it]100%|██████████| 1/1 [00:04<00:00,  4.89s/it]
+  [16字][off]   4.94s  音频  4.52s  RTF 1.092  s/字 0.309
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:15,758 INFO synthesis text 探针甲子号对照实验的探针文本用于测量合成耗时不关注语义内容对照实。
+2026-09-18 10:36:23,853 INFO yield speech len 7.88, rtf 1.0272562201253048
+100%|██████████| 1/1 [00:08<00:00,  8.12s/it]100%|██████████| 1/1 [00:08<00:00,  8.12s/it]
+  [32字][on ]   8.16s  音频  7.88s  RTF 1.036  s/字 0.255
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:23,922 INFO synthesis text 探针甲丑号对照实验的探针文本用于测量合成耗时不关注语义内容对照实。
+2026-09-18 10:36:31,688 INFO yield speech len 7.68, rtf 1.0111871796349685
+100%|██████████| 1/1 [00:07<00:00,  7.79s/it]100%|██████████| 1/1 [00:07<00:00,  7.79s/it]
+  [32字][off]   7.84s  音频  7.68s  RTF 1.020  s/字 0.245
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:31,759 WARNING synthesis text 探针甲寅号对照实。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-18 10:36:31,759 INFO synthesis text 探针甲寅号对照实。
+2026-09-18 10:36:36,309 INFO yield speech len 4.0, rtf 1.1376225352287292
+100%|██████████| 1/1 [00:04<00:00,  4.57s/it]100%|██████████| 1/1 [00:04<00:00,  4.57s/it]
+  [ 8字][on ]   4.62s  音频  4.00s  RTF 1.155  s/字 0.578
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:36,379 WARNING synthesis text 探针甲卯号对照实。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-18 10:36:36,380 INFO synthesis text 探针甲卯号对照实。
+2026-09-18 10:36:40,566 INFO yield speech len 3.88, rtf 1.0787542947788828
+100%|██████████| 1/1 [00:04<00:00,  4.21s/it]100%|██████████| 1/1 [00:04<00:00,  4.21s/it]
+  [ 8字][off]   4.26s  音频  3.88s  RTF 1.098  s/字 0.532
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:40,639 INFO synthesis text 探针甲辰号对照实验的探针文本用于。
+2026-09-18 10:36:46,382 INFO yield speech len 5.44, rtf 1.055746481699102
+100%|██████████| 1/1 [00:05<00:00,  5.76s/it]100%|██████████| 1/1 [00:05<00:00,  5.76s/it]
+  [16字][on ]   5.82s  音频  5.44s  RTF 1.069  s/字 0.363
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:46,454 INFO synthesis text 探针甲巳号对照实验的探针文本用于。
+2026-09-18 10:36:51,490 INFO yield speech len 4.84, rtf 1.0403544449609174
+100%|██████████| 1/1 [00:05<00:00,  5.06s/it]100%|██████████| 1/1 [00:05<00:00,  5.06s/it]
+  [16字][off]   5.10s  音频  4.84s  RTF 1.054  s/字 0.319
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:51,558 INFO synthesis text 探针甲午号对照实验的探针文本用于测量合成耗时不关注语义内容对照实。
+2026-09-18 10:36:59,667 INFO yield speech len 8.08, rtf 1.0035475586900617
+100%|██████████| 1/1 [00:08<00:00,  8.13s/it]100%|██████████| 1/1 [00:08<00:00,  8.13s/it]
+  [32字][on ]   8.18s  音频  8.08s  RTF 1.013  s/字 0.256
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 10:36:59,743 INFO synthesis text 探针甲未号对照实验的探针文本用于测量合成耗时不关注语义内容对照实。
+2026-09-18 10:37:08,324 INFO yield speech len 8.32, rtf 1.031377911567688
+100%|██████████| 1/1 [00:08<00:00,  8.60s/it]100%|██████████| 1/1 [00:08<00:00,  8.60s/it]
+  [32字][off]   8.66s  音频  8.32s  RTF 1.041  s/字 0.271
+
+==== 汇总（按行长 × empty_cache）====
+   8字 empty_cache=on  : 均值  4.72s  音频  4.19s  RTF 1.127  s/字 0.590
+   8字 empty_cache=off : 均值  4.31s  音频  3.88s  RTF 1.111  s/字 0.539
+  16字 empty_cache=on  : 均值  5.54s  音频  5.11s  RTF 1.084  s/字 0.346
+  16字 empty_cache=off : 均值  5.11s  音频  4.73s  RTF 1.079  s/字 0.319
+  32字 empty_cache=on  : 均值  8.00s  音频  7.83s  RTF 1.022  s/字 0.250
+  32字 empty_cache=off : 均值  8.85s  音频  8.69s  RTF 1.018  s/字 0.277
+
+==== 固定开销估计 ====
+  empty_cache=on  : T = 0.137 s/字 × 字数 + 3.62 s   （8字=4.72s, 32字=8.00s）
+  empty_cache=off : T = 0.189 s/字 × 字数 + 2.80 s   （8字=4.31s, 32字=8.85s）

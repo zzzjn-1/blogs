@@ -1,0 +1,107 @@
+[serve_trace] root level=INFO handlers=1
+INFO:     Started server process [182204]
+INFO:     Waiting for application startup.
+2026-09-18 15:28:49,092 INFO API 启动：数据库=D:\podcast-ai\data\podcast.db，数据目录=D:\podcast-ai\data
+2026-09-18 15:28:49,110 WARNING [RECOVER] 扫描到 4 个非终态任务：脚本重投 0、续跑 1、仅标记失败 0、跳过（等待用户确认）3
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 15:29:05,356 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 15:29:06,408 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 15:29:07,947 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 15:29:07,968 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 15:29:08,723 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 15:29:12,044 INFO text_frontend=wetext | model=CosyVoice2 | 加载 11.1s
+2026-09-18 15:29:12,045 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 15:29:13,192 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 15:29:13,192 INFO 说话人 A → 音色 voice_a
+2026-09-18 15:29:13,192 INFO 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:29:13,198 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 15:29:18,756 INFO yield speech len 4.04, rtf 1.37588369964373
+100%|██████████| 1/1 [00:05<00:00,  5.58s/it]100%|██████████| 1/1 [00:05<00:00,  5.58s/it]
+2026-09-18 15:29:18,779 INFO 预热耗时 5.59s
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:29:18,819 INFO synthesis text 那续跑的成本就很低了，只补没做完的那部分，别等到线上才发现。
+2026-09-18 15:29:32,048 INFO yield speech len 12.88, rtf 1.0271065168499205
+100%|██████████| 1/1 [00:13<00:00, 13.25s/it]100%|██████████| 1/1 [00:13<00:00, 13.25s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:29:32,086 INFO synthesis text 而且这个机制还有一个好处，就是重放是幂等的，经验告诉我们越早暴露越好。
+2026-09-18 15:29:41,061 INFO yield speech len 8.96, rtf 1.0016755067876406
+100%|██████████| 1/1 [00:08<00:00,  9.00s/it]100%|██████████| 1/1 [00:08<00:00,  9.00s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:29:41,098 INFO synthesis text 幂等意味着重复执行也不会产生错误的结果，所以在设计的时候要提前想清楚。
+2026-09-18 15:29:49,936 INFO yield speech len 8.32, rtf 1.062159354870136
+100%|██████████| 1/1 [00:08<00:00,  8.86s/it]100%|██████████| 1/1 [00:08<00:00,  8.86s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:29:49,976 INFO synthesis text 正是如此，所以我们可以放心地自动续跑，不用怕把事情搞坏，所以文档和代码同样重要。
+2026-09-18 15:29:59,183 INFO yield speech len 9.12, rtf 1.0095692778888503
+100%|██████████| 1/1 [00:09<00:00,  9.23s/it]100%|██████████| 1/1 [00:09<00:00,  9.23s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:29:59,222 INFO synthesis text 不过有一个细节要注意，等待用户确认的任务不能动，这样才不会出现前后矛盾。
+2026-09-18 15:30:07,114 INFO yield speech len 7.4, rtf 1.0664569687198948
+100%|██████████| 1/1 [00:07<00:00,  7.91s/it]100%|██████████| 1/1 [00:07<00:00,  7.91s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:30:07,152 INFO synthesis text 对，那种状态不是被中断，而是本来就在等人工编辑，这一点在处理边界条件时尤其重要。
+2026-09-18 15:30:19,533 INFO yield speech len 11.88, rtf 1.0421246591240467
+100%|██████████| 1/1 [00:12<00:00, 12.40s/it]100%|██████████| 1/1 [00:12<00:00, 12.40s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:30:19,569 INFO synthesis text 把它误判成中断会让用户丢掉刚改好的脚本，把不确定的东西变成确定的。
+2026-09-18 15:30:28,422 INFO yield speech len 8.4, rtf 1.0538500547409058
+100%|██████████| 1/1 [00:08<00:00,  8.87s/it]100%|██████████| 1/1 [00:08<00:00,  8.87s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:30:28,460 INFO synthesis text 所以我们只处理真正处于中间态的那几种状态，但收益明显大于额外的复杂度。
+2026-09-18 15:30:36,660 INFO yield speech len 8.0, rtf 1.0250234305858612
+100%|██████████| 1/1 [00:08<00:00,  8.22s/it]100%|██████████| 1/1 [00:08<00:00,  8.22s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:30:36,695 INFO synthesis text 还有一个问题，续跑会不会陷入无限循环，这一点往往被大家忽略掉。
+2026-09-18 15:30:44,496 INFO yield speech len 7.56, rtf 1.0318691137606506
+100%|██████████| 1/1 [00:07<00:00,  7.82s/it]100%|██████████| 1/1 [00:07<00:00,  7.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:30:44,536 INFO synthesis text 不会，因为恢复扫描只看非终态，失败之后就不会再被扫到，否则这些坑还要再踩一遍。
+2026-09-18 15:30:54,169 INFO yield speech len 9.36, rtf 1.0291110246609418
+100%|██████████| 1/1 [00:09<00:00,  9.65s/it]100%|██████████| 1/1 [00:09<00:00,  9.65s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:30:54,209 INFO synthesis text 这样同一份中断最多只会自动续跑一次，很安全，性能是可以后面慢慢补的。
+2026-09-18 15:31:02,984 INFO yield speech len 8.4, rtf 1.0446643829345703
+100%|██████████| 1/1 [00:08<00:00,  8.80s/it]100%|██████████| 1/1 [00:08<00:00,  8.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:31:03,021 INFO synthesis text 总结一下，关键是幂等、可观测，还有明确的处置边界，我的建议是两者一起维护。
+2026-09-18 15:31:15,198 INFO yield speech len 11.88, rtf 1.0250330974758675
+100%|██████████| 1/1 [00:12<00:00, 12.20s/it]100%|██████████| 1/1 [00:12<00:00, 12.20s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:31:15,235 INFO synthesis text 感谢收听，我们下期再见，先保证正确，再谈优化。
+2026-09-18 15:31:22,473 INFO yield speech len 6.68, rtf 1.0835419158021848
+100%|██████████| 1/1 [00:07<00:00,  7.26s/it]100%|██████████| 1/1 [00:07<00:00,  7.26s/it]
+2026-09-18 15:31:22,511 INFO [CACHE] task=700ae951-ef23-4dbd-ad87-9a548478fe64 合成段数=27 命中缓存=14（命中率 51.9%）
+2026-09-18 15:31:23,064 INFO 动态片头已生成：intro_norm.wav（40 字）
+2026-09-18 15:31:23,064 INFO 后期片头尾：intro=intro_norm.wav outro=outro.mp3
+2026-09-18 15:31:23,068 INFO [1/6] 格式统一 44100 Hz / 1 ch / pcm_s16le
+2026-09-18 15:31:23,187 INFO     seg 1/27 -> seg_0000.wav
+2026-09-18 15:31:23,303 INFO     seg 2/27 -> seg_0001.wav
+2026-09-18 15:31:23,425 INFO     seg 3/27 -> seg_0002.wav
+2026-09-18 15:31:23,544 INFO     seg 4/27 -> seg_0003.wav
+2026-09-18 15:31:23,663 INFO     seg 5/27 -> seg_0004.wav
+2026-09-18 15:31:23,786 INFO     seg 6/27 -> seg_0005.wav
+2026-09-18 15:31:23,905 INFO     seg 7/27 -> seg_0006.wav
+2026-09-18 15:31:24,025 INFO     seg 8/27 -> seg_0007.wav
+2026-09-18 15:31:24,145 INFO     seg 9/27 -> seg_0008.wav
+2026-09-18 15:31:24,268 INFO     seg 10/27 -> seg_0009.wav
+2026-09-18 15:31:24,387 INFO     seg 11/27 -> seg_0010.wav
+2026-09-18 15:31:24,509 INFO     seg 12/27 -> seg_0011.wav
+2026-09-18 15:31:24,629 INFO     seg 13/27 -> seg_0012.wav
+2026-09-18 15:31:24,748 INFO     seg 14/27 -> seg_0013.wav
+2026-09-18 15:31:24,869 INFO     seg 15/27 -> seg_0014.wav
+2026-09-18 15:31:24,987 INFO     seg 16/27 -> seg_0015.wav
+2026-09-18 15:31:25,104 INFO     seg 17/27 -> seg_0016.wav
+2026-09-18 15:31:25,223 INFO     seg 18/27 -> seg_0017.wav
+2026-09-18 15:31:25,341 INFO     seg 19/27 -> seg_0018.wav
+2026-09-18 15:31:25,456 INFO     seg 20/27 -> seg_0019.wav
+2026-09-18 15:31:25,574 INFO     seg 21/27 -> seg_0020.wav
+2026-09-18 15:31:25,693 INFO     seg 22/27 -> seg_0021.wav
+2026-09-18 15:31:25,810 INFO     seg 23/27 -> seg_0022.wav
+2026-09-18 15:31:25,928 INFO     seg 24/27 -> seg_0023.wav
+2026-09-18 15:31:26,047 INFO     seg 25/27 -> seg_0024.wav
+2026-09-18 15:31:26,167 INFO     seg 26/27 -> seg_0025.wav
+2026-09-18 15:31:26,287 INFO     seg 27/27 -> seg_0026.wav
+2026-09-18 15:31:26,756 INFO [2/6] 片头/片尾微淡化 30 ms（必须在拼接之前）
+2026-09-18 15:31:27,118 INFO [3/6] 停顿：话轮 500 ms / 句间 250 ms
+2026-09-18 15:31:27,371 INFO [4/6] 拼接 55 个片段（含 26 处停顿）
+2026-09-18 15:31:27,897 INFO [5/6] 两遍 loudnorm -> I=-16 LUFS / TP=-1.5 dBTP
+2026-09-18 15:31:36,765 INFO     实测 -18.01 -> -16.15 LUFS（目标 -16）
+2026-09-18 15:31:36,765 INFO [6/6] 导出 mp3（libmp3lame 128k）
+2026-09-18 15:31:38,327 INFO 完成：D:\podcast-ai\data\work\700ae951-ef23-4dbd-ad87-9a548478fe64\700ae951-ef23-4dbd-ad87-9a548478fe64.mp3（253.8 s，3.87 MB）
+[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":279,"threshold":50,"scope":"turn","targets":["D:\\podcast-ai\\data\\work\\700ae951-ef23-4dbd-ad87-9a548478fe64"],"targetCount":1}

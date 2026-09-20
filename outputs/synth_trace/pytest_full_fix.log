@@ -1,0 +1,30 @@
+D:\anaconda\envs\cosyvoice\lib\site-packages\pytest_asyncio\plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+........................................................................ [ 21%]
+........................................................................ [ 42%]
+........................................................................ [ 64%]
+........................................................................ [ 85%]
+...............................................                          [100%]
+----- generated xml file: D:\podcast-ai\outputs\synth_trace\junit_fix.xml -----
+[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":724,"threshold":50,"scope":"turn","targets":["\\\\?\\C:\\Users\\zzz\\AppData\\Local\\Temp\\pytest-of-zzz\\garbage-3e891013-df3f-4b58-9ae9-fa9f974cc7f9"],"targetCount":1}
+Exception ignored in atexit callback: <function cleanup_numbered_dir at 0x00000259EFFFA320>
+Traceback (most recent call last):
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\_pytest\pathlib.py", line 370, in cleanup_numbered_dir
+    try_cleanup(path, consider_lock_dead_if_created_before)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\_pytest\pathlib.py", line 341, in try_cleanup
+    maybe_delete_a_numbered_dir(path)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\_pytest\pathlib.py", line 293, in maybe_delete_a_numbered_dir
+    rm_rf(garbage)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\_pytest\pathlib.py", line 170, in rm_rf
+    shutil.rmtree(str(path), onerror=onerror)
+  File "D:\新建文件夹\workbuddy\resources\app.asar.unpacked\cli\vendor\shim\sitecustomize.py", line 1144, in _safe_shutil_rmtree
+    _try_trash(abs_path, recursive=True)
+  File "D:\新建文件夹\workbuddy\resources\app.asar.unpacked\cli\vendor\shim\sitecustomize.py", line 967, in _try_trash
+    _check_bulk_delete_guard(abs_path)
+  File "D:\新建文件夹\workbuddy\resources\app.asar.unpacked\cli\vendor\shim\sitecustomize.py", line 851, in _check_bulk_delete_guard
+    _exit_bulk_guard_control(
+  File "D:\新建文件夹\workbuddy\resources\app.asar.unpacked\cli\vendor\shim\sitecustomize.py", line 826, in _exit_bulk_guard_control
+    raise SystemExit(1)
+SystemExit: 1

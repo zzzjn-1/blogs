@@ -1,0 +1,16 @@
+{
+  "version": "probe-2",
+  "stage": "R21 修复后对照（非交付主题集）",
+  "description": "与 probe_topics.json（R21，351 字/20 行）同档同长的全新主题，保证句级缓存全未命中，用于与修复前逐段打点做 A/B。",
+  "spec": {
+    "categories": ["诊断"],
+    "per_category": 1,
+    "lengths": {"short": 1.5},
+    "per_category_split": {"short": 1, "long": 0},
+    "words_per_minute": 260
+  },
+  "notes": "主题必须是修复前后都从未合成过的，否则命中缓存后 infer 近零，A/B 失效。",
+  "topics": [
+    {"id": "R21F", "category": "诊断", "length": "short", "topic": "为什么飞机起飞前要收起小桌板", "duration_min": 1.5}
+  ]
+}

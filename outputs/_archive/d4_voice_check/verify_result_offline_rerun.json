@@ -1,0 +1,70 @@
+{
+  "test": "D4 regression (forced offline)",
+  "sabotage": "snapshot_download disabled",
+  "voices": [
+    {
+      "id": "voice_a",
+      "name": "女声·知性沉稳",
+      "gender": "female",
+      "style": "calm",
+      "description": "D2 占位音色A（CosyVoice 官方示例音色，3.5s）。正式交付前应替换为主播真人录音 5~10s。",
+      "prompt_text": "希望你以后能够做的比我还好呦。",
+      "wav": "voice_a.wav"
+    },
+    {
+      "id": "voice_b",
+      "name": "男声·B（录音素材）",
+      "gender": "male",
+      "style": "neutral",
+      "description": "来源：微信录音「录音机-20260915-1012.m4a」(8.93s, 48kHz 立体声 AAC)，已转 16kHz 单声道；F0 中位数 100 Hz（男声区间）；prompt_text 为 whisper small 初稿，尾段约 1.9s 未转写，待人工校正后重跑。",
+      "prompt_text": "哈啰你好，请问你是哪个？这里是",
+      "wav": "voice_b.wav"
+    }
+  ],
+  "load_seconds": 20.6,
+  "engine_load_seconds": 11.3,
+  "text_frontend": "wetext",
+  "model_class": "CosyVoice2",
+  "registered_spks": [
+    "voice_a",
+    "voice_b"
+  ],
+  "normalize_probe": {
+    "input": "订单编号是 2026，金额 3.5 元，共 12 件。",
+    "output": "订单编号是两千零二十六，金额三点五元，共十二件。",
+    "changed": true
+  },
+  "synthesis": {
+    "A": {
+      "voice": "voice_a",
+      "wav": "D:\\podcast-ai\\outputs\\d4_voice_check\\regress_spkA_voice_a.wav",
+      "elapsed_s": 0.0,
+      "duration_s": 5.8,
+      "rtf": 0.0,
+      "cached": true,
+      "f0_median": 242.4
+    },
+    "B": {
+      "voice": "voice_b",
+      "wav": "D:\\podcast-ai\\outputs\\d4_voice_check\\regress_spkB_voice_b.wav",
+      "elapsed_s": 0.0,
+      "duration_s": 7.84,
+      "rtf": 0.0,
+      "cached": true,
+      "f0_median": 100.0
+    }
+  },
+  "f0_diff_hz": 142.4,
+  "vram": {
+    "cuda": true,
+    "allocated_mb": 2498.6,
+    "reserved_mb": 2700.0,
+    "peak_alloc_mb": 3448.6,
+    "peak_reserved_mb": 3946.0,
+    "system_used_mb": 3826.5,
+    "system_total_mb": 6140.5
+  },
+  "budget_ok": true,
+  "budget_msg": "peak_allocated=3448.6 MB（≤3600 达标） / peak_reserved=3946.0 MB （≤4200 达标）",
+  "verdict": "PASS"
+}

@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# 双人对话播客自动生成系统 —— 应用层依赖
+#
+# 与 requirements-win.txt 的分工：
+#   requirements-win.txt  = CosyVoice 推理引擎依赖（跟随上游，Windows 定制）
+#   requirements-app.txt  = 本项目应用层（FastAPI 服务 / 数据库 / RSS / LLM 客户端）
+#
+# 安装顺序：先 requirements-win.txt，再本文件。
+# 环境：conda env `cosyvoice`（Python 3.10.21），项目根 D:\podcast-ai
+# ---------------------------------------------------------------------------
+
+# --- Web 服务（任务书指定 FastAPI；与上游 gradio 的 fastapi 版本保持一致）---
+fastapi==0.115.6
+uvicorn==0.30.0
+python-multipart==0.0.20
+
+# --- 数据校验与配置 ---
+pydantic==2.7.0
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# --- 数据库（任务书指定 sqlite3；用 SQLAlchemy 做 ORM，无需额外数据库服务）---
+SQLAlchemy==2.0.36
+
+# --- 鉴权（JWT）---
+PyJWT==2.10.1
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.1
+
+# --- 大模型客户端（DeepSeek 走 OpenAI 兼容协议）---
+openai==1.59.6
+tenacity==9.0.0
+httpx==0.27.2
+
+# --- 音频后期（FFmpeg 走外部可执行文件；pydub 做轻量封装）---
+pydub==0.25.1
+soundfile==0.12.1
+
+# --- RSS 订阅（feedgen 提供 podcast / atom 扩展）---
+feedgen==1.0.0
+
+# --- 工程配套 ---
+pytest==8.3.4
+pytest-asyncio==0.25.0
+ruff==0.8.4

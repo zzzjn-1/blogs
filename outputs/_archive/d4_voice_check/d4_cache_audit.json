@@ -1,0 +1,35 @@
+{
+  "cache_audit": {
+    "total": 90,
+    "by_speaker": {
+      "A": 43,
+      "B": 40,
+      "voice_a": 1,
+      "C": 5,
+      "1": 1
+    },
+    "by_key_shape": {
+      "sha1": 28,
+      "non_sha1": 62
+    },
+    "by_date": {
+      "2026-09-15": 90
+    }
+  },
+  "cache_fingerprint_defect": {
+    "cache_key_formula": "sha1(voice_id|text|speed|tone|model_version)",
+    "wav_digest_before": "033c4af63494",
+    "wav_digest_after": "57639d2aa26c",
+    "cache_key_unchanged": true,
+    "second_call_cached": true,
+    "duration_new_s": 8.88,
+    "duration_after_swap_s": 8.88,
+    "defect_confirmed": true
+  },
+  "previews": [
+    "D:\\podcast-ai\\outputs\\d4_voice_check\\preview_v2\\试听_女声A.mp3",
+    "D:\\podcast-ai\\outputs\\d4_voice_check\\preview_v2\\试听_新男声B.mp3",
+    "D:\\podcast-ai\\outputs\\d4_voice_check\\preview_v2\\试听_AB对比.mp3",
+    "D:\\podcast-ai\\outputs\\d4_voice_check\\preview_v2\\参考素材_你的录音.mp3"
+  ]
+}

@@ -1,0 +1,70 @@
+<Slide style={{ width: 1280, height: 720, position: 'relative', background: '#F7F9FC', fontFamily: 'Source Han Sans SC, Noto Sans SC, Microsoft YaHei, sans-serif', overflow: 'hidden' }}>
+
+  <Box style={{ position: 'absolute', top: 0, left: 0, width: 1280, height: 56, background: '#1E4FA8', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px' }}>
+    <Text style={{ fontSize: 18, color: '#FFFFFF', fontWeight: 'bold' }}>双人对话播客自动生成系统</Text>
+    <Text style={{ fontSize: 15, color: '#BFD3EE' }}>D14 项目答辩</Text>
+  </Box>
+
+  {/* 左：深蓝标题栏 */}
+  <Box style={{ position: 'absolute', top: 80, left: 40, width: 360, height: 580, background: '#0E3F8C', padding: '48px 36px', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <Box>
+      <Box style={{ width: 40, height: 3, background: '#3D7BD9', marginBottom: 22 }} />
+      <Text style={{ fontSize: 46, fontWeight: 'bold', color: '#FFFFFF', letterSpacing: 4 }}>目录</Text>
+      <Text style={{ fontSize: 16, color: '#8FB4E4', letterSpacing: 3, marginTop: 10 }}>CONTENTS</Text>
+    </Box>
+    <Text style={{ fontSize: 17, color: '#9FC0EA', lineHeight: 1.7 }}>
+      四章：从「这是什么」讲起，落到「指标是否可信」，最后交代三个真实缺陷
+    </Text>
+  </Box>
+
+  {/* 右：四条编号条目 */}
+  <Box style={{ position: 'absolute', top: 80, left: 420, width: 820, height: 580, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 26, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '26px 30px', height: 118 }}>
+      <Box style={{ width: 62, height: 62, background: '#1E4FA8', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column', gap: 8 }}>
+        <Text style={{ fontSize: 27, fontWeight: 'bold', color: '#1A2230' }}>项目概况</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568' }}>一句话形态 · 技术栈 · 工程量</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 26, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '26px 30px', height: 118 }}>
+      <Box style={{ width: 62, height: 62, background: '#1E4FA8', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column', gap: 8 }}>
+        <Text style={{ fontSize: 27, fontWeight: 'bold', color: '#1A2230' }}>技术方案与实现</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568' }}>五段流水线 · 单并发队列 · 句级缓存</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 26, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '26px 30px', height: 118 }}>
+      <Box style={{ width: 62, height: 62, background: '#1E4FA8', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column', gap: 8 }}>
+        <Text style={{ fontSize: 27, fontWeight: 'bold', color: '#1A2230' }}>目标达成</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568' }}>五项量化指标 · 证据级别 · 未达成项</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 26, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '26px 30px', height: 118 }}>
+      <Box style={{ width: 62, height: 62, background: '#1E4FA8', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column', gap: 8 }}>
+        <Text style={{ fontSize: 27, fontWeight: 'bold', color: '#1A2230' }}>难点与应对</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568' }}>显存紧平衡 · 订阅源缺陷 · 摆设断言</Text>
+      </Box>
+    </Box>
+
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 668, left: 40, width: 1200, height: 32, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>双人对话播客自动生成系统 · D14 答辩</Text>
+    <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold' }}>02 / 12</Text>
+  </Box>
+
+</Slide>

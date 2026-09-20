@@ -1,0 +1,16 @@
+{
+  "version": "probe-1",
+  "stage": "R21 诊断用（非交付主题集）",
+  "description": "只为在服务端环境下取一条未命中缓存的样本，对齐「日志口径」与「插桩口径」。不是 D10 交付主题集。",
+  "spec": {
+    "categories": ["诊断"],
+    "per_category": 1,
+    "lengths": {"short": 1.5},
+    "per_category_split": {"short": 1, "long": 0},
+    "words_per_minute": 260
+  },
+  "notes": "主题必须是从未合成过的，否则全程命中句级缓存，拿不到 infer 耗时。",
+  "topics": [
+    {"id": "R21", "category": "诊断", "length": "short", "topic": "为什么我们会对老歌产生强烈的记忆", "duration_min": 1.5}
+  ]
+}

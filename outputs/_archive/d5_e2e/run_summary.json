@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "stages": {
+    "script": {
+      "topic": "为什么天空是蓝色的",
+      "title": "天空为什么是蓝色的",
+      "lines": 26,
+      "usable": true,
+      "first_pass": false,
+      "target_words": 520,
+      "actual_words": 463,
+      "word_deviation": -0.1096,
+      "word_deviation_pct": -10.96,
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 3,
+      "correction_rounds": 2,
+      "degraded": false,
+      "flagged": false,
+      "elapsed_s": 11.87
+    },
+    "tts": {
+      "segments": 27,
+      "cached": 0,
+      "audio_s": 125.2,
+      "elapsed_s": 183.93,
+      "vram": {
+        "cuda": true,
+        "allocated_mb": 2506.7,
+        "reserved_mb": 2700.0,
+        "peak_alloc_mb": 3548.5,
+        "peak_reserved_mb": 4156.0,
+        "system_used_mb": 3834.5,
+        "system_total_mb": 6140.5
+      }
+    },
+    "postprocess": {
+      "mp3": "D:\\podcast-ai\\outputs\\d5_e2e\\d5_e2e.mp3",
+      "merged_wav": "D:\\podcast-ai\\outputs\\d5_e2e\\build_d5_e2e\\merged.wav",
+      "duration_s": 142.55,
+      "size_bytes": 2281682,
+      "segments": 27,
+      "pause_count": 26,
+      "intro_used": true,
+      "outro_used": true,
+      "loudness_applied": true,
+      "loudness_measured": {
+        "input_i": "-20.05",
+        "input_tp": "-0.03",
+        "input_lra": "7.40",
+        "input_thresh": "-31.41",
+        "output_i": "-17.15",
+        "output_tp": "-1.50",
+        "output_lra": "5.40",
+        "output_thresh": "-28.25",
+        "normalization_type": "dynamic",
+        "target_offset": "1.15"
+      },
+      "loudness_after": {
+        "input_i": "-16.46",
+        "input_tp": "-1.50",
+        "input_lra": "5.20",
+        "input_thresh": "-27.71",
+        "output_i": "-16.32",
+        "output_tp": "-1.50",
+        "output_lra": "4.90",
+        "output_thresh": "-27.35",
+        "normalization_type": "dynamic",
+        "target_offset": "0.32"
+      },
+      "level_after": {
+        "mean_volume": -17.9,
+        "max_volume": -1.9
+      },
+      "max_volume_db": -1.9,
+      "clipped": false,
+      "build_dir": "D:\\podcast-ai\\outputs\\d5_e2e\\build_d5_e2e",
+      "elapsed_s": 16.3,
+      "warnings": []
+    }
+  },
+  "output": {
+    "dir": "D:\\podcast-ai\\outputs\\d5_e2e",
+    "mp3": "D:\\podcast-ai\\outputs\\d5_e2e\\d5_e2e.mp3",
+    "name": "d5_e2e"
+  },
+  "elapsed_s": 213.04
+}

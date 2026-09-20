@@ -1,0 +1,629 @@
+{
+  "ts": "2026-09-15T15:07:50",
+  "seed": 42,
+  "gates": {
+    "alloc_mb": 3600,
+    "reserved_mb": 4200
+  },
+  "pass_a_ratio20": {
+    "label": "A_ratio20_current",
+    "ratio": 20,
+    "cap_20char_s": 16.0,
+    "any_cached": false,
+    "cap_hit_seqs": [
+      12
+    ],
+    "cap_hit_count": 1,
+    "cap_hit_first_durs": [
+      16.0
+    ],
+    "duration_final_mean_s": 5.177,
+    "duration_final_max_s": 6.08,
+    "elapsed_total_s": 83.5,
+    "peak_alloc_mb": 3551.7,
+    "peak_reserved_mb": 4212.0,
+    "worst_seq": 12,
+    "worst_text": "那正好，可以让他讲讲算法到底能看见多少。",
+    "alloc_gate_ok": true,
+    "reserved_gate_ok": false,
+    "rows": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "chars": 26,
+        "cached": false,
+        "cap_s": 20.8,
+        "first_attempt_dur_s": 4.88,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 4.88,
+        "elapsed_s": 5.41,
+        "sentence_peak_alloc_mb": 3512.4,
+        "sentence_peak_reserved_mb": 3954.0,
+        "per_attempt": [
+          {
+            "text": "我们把这一期的话题定在了人工智能与日常生活的关系上。",
+            "seed_offset": 0,
+            "dur_s": 4.88,
+            "peak_alloc_mb": 3512.4,
+            "peak_reserved_mb": 3954.0
+          }
+        ]
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "chars": 24,
+        "cached": false,
+        "cap_s": 19.2,
+        "first_attempt_dur_s": 6.04,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 6.04,
+        "elapsed_s": 6.43,
+        "sentence_peak_alloc_mb": 3551.7,
+        "sentence_peak_reserved_mb": 4046.0,
+        "per_attempt": [
+          {
+            "text": "这个角度很好，不过我担心听众会觉得离自己太远了。",
+            "seed_offset": 0,
+            "dur_s": 6.04,
+            "peak_alloc_mb": 3551.7,
+            "peak_reserved_mb": 4046.0
+          }
+        ]
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "chars": 26,
+        "cached": false,
+        "cap_s": 20.8,
+        "first_attempt_dur_s": 5.36,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.36,
+        "elapsed_s": 5.75,
+        "sentence_peak_alloc_mb": 3512.4,
+        "sentence_peak_reserved_mb": 3956.0,
+        "per_attempt": [
+          {
+            "text": "那就从最具体的场景切入，比如早上闹钟是怎么叫醒你的。",
+            "seed_offset": 0,
+            "dur_s": 5.36,
+            "peak_alloc_mb": 3512.4,
+            "peak_reserved_mb": 3956.0
+          }
+        ]
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "chars": 23,
+        "cached": false,
+        "cap_s": 18.4,
+        "first_attempt_dur_s": 5.88,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.88,
+        "elapsed_s": 6.27,
+        "sentence_peak_alloc_mb": 3550.3,
+        "sentence_peak_reserved_mb": 4044.0,
+        "per_attempt": [
+          {
+            "text": "你是说语音助手？它确实已经介入很多人的清晨了。",
+            "seed_offset": 0,
+            "dur_s": 5.88,
+            "peak_alloc_mb": 3550.3,
+            "peak_reserved_mb": 4044.0
+          }
+        ]
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "chars": 23,
+        "cached": false,
+        "cap_s": 18.4,
+        "first_attempt_dur_s": 5.12,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.12,
+        "elapsed_s": 5.74,
+        "sentence_peak_alloc_mb": 3508.9,
+        "sentence_peak_reserved_mb": 3958.0,
+        "per_attempt": [
+          {
+            "text": "不只是助手，还有推荐算法在决定你看到什么新闻。",
+            "seed_offset": 0,
+            "dur_s": 5.12,
+            "peak_alloc_mb": 3508.9,
+            "peak_reserved_mb": 3958.0
+          }
+        ]
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "chars": 20,
+        "cached": false,
+        "cap_s": 16.0,
+        "first_attempt_dur_s": 4.16,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 4.16,
+        "elapsed_s": 4.66,
+        "sentence_peak_alloc_mb": 3548.5,
+        "sentence_peak_reserved_mb": 4002.0,
+        "per_attempt": [
+          {
+            "text": "这么一说，我们其实一直在和算法共同生活。",
+            "seed_offset": 0,
+            "dur_s": 4.16,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4002.0
+          }
+        ]
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "chars": 24,
+        "cached": false,
+        "cap_s": 19.2,
+        "first_attempt_dur_s": 5.76,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.76,
+        "elapsed_s": 6.08,
+        "sentence_peak_alloc_mb": 3512.2,
+        "sentence_peak_reserved_mb": 3958.0,
+        "per_attempt": [
+          {
+            "text": "对，所以这期节目我们想聊的是这种共同生活的边界。",
+            "seed_offset": 0,
+            "dur_s": 5.76,
+            "peak_alloc_mb": 3512.2,
+            "peak_reserved_mb": 3958.0
+          }
+        ]
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "chars": 23,
+        "cached": false,
+        "cap_s": 18.4,
+        "first_attempt_dur_s": 5.08,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.08,
+        "elapsed_s": 5.47,
+        "sentence_peak_alloc_mb": 3550.3,
+        "sentence_peak_reserved_mb": 4020.0,
+        "per_attempt": [
+          {
+            "text": "边界这个词用得挺准，既有协作也有被塑造的成分。",
+            "seed_offset": 0,
+            "dur_s": 5.08,
+            "peak_alloc_mb": 3550.3,
+            "peak_reserved_mb": 4020.0
+          }
+        ]
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "chars": 17,
+        "cached": false,
+        "cap_s": 13.6,
+        "first_attempt_dur_s": 3.8,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 3.8,
+        "elapsed_s": 4.25,
+        "sentence_peak_alloc_mb": 3507.4,
+        "sentence_peak_reserved_mb": 3946.0,
+        "per_attempt": [
+          {
+            "text": "那我们就从一次真实的对话开始讲起。",
+            "seed_offset": 0,
+            "dur_s": 3.8,
+            "peak_alloc_mb": 3507.4,
+            "peak_reserved_mb": 3946.0
+          }
+        ]
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "chars": 20,
+        "cached": false,
+        "cap_s": 16.0,
+        "first_attempt_dur_s": 5.24,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.24,
+        "elapsed_s": 5.63,
+        "sentence_peak_alloc_mb": 3548.5,
+        "sentence_peak_reserved_mb": 4022.0,
+        "per_attempt": [
+          {
+            "text": "好，我想听众会喜欢这种从细节出发的讲法。",
+            "seed_offset": 0,
+            "dur_s": 5.24,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4022.0
+          }
+        ]
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "chars": 22,
+        "cached": false,
+        "cap_s": 17.6,
+        "first_attempt_dur_s": 4.72,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 4.72,
+        "elapsed_s": 5.4,
+        "sentence_peak_alloc_mb": 3508.5,
+        "sentence_peak_reserved_mb": 3956.0,
+        "per_attempt": [
+          {
+            "text": "接下来我们会请一位做推荐系统的工程师来分享。",
+            "seed_offset": 0,
+            "dur_s": 4.72,
+            "peak_alloc_mb": 3508.5,
+            "peak_reserved_mb": 3956.0
+          }
+        ]
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "chars": 20,
+        "cached": false,
+        "cap_s": 16.0,
+        "first_attempt_dur_s": 16.0,
+        "attempts": 2,
+        "cap_hit": true,
+        "final_dur_s": 6.08,
+        "elapsed_s": 22.41,
+        "sentence_peak_alloc_mb": 3548.5,
+        "sentence_peak_reserved_mb": 4212.0,
+        "per_attempt": [
+          {
+            "text": "那正好，可以让他讲讲算法到底能看见多少。",
+            "seed_offset": 0,
+            "dur_s": 16.0,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4212.0
+          },
+          {
+            "text": "那正好，可以让他讲讲算法到底能看见多少。",
+            "seed_offset": 1,
+            "dur_s": 6.08,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4044.0
+          }
+        ]
+      }
+    ]
+  },
+  "pass_b_ratio12": {
+    "label": "B_ratio12_proposal",
+    "ratio": 12,
+    "cap_20char_s": 9.6,
+    "any_cached": false,
+    "cap_hit_seqs": [
+      12
+    ],
+    "cap_hit_count": 1,
+    "cap_hit_first_durs": [
+      16.0
+    ],
+    "duration_final_mean_s": 5.177,
+    "duration_final_max_s": 6.08,
+    "elapsed_total_s": 82.8,
+    "peak_alloc_mb": 3551.7,
+    "peak_reserved_mb": 4212.0,
+    "worst_seq": 12,
+    "worst_text": "那正好，可以让他讲讲算法到底能看见多少。",
+    "alloc_gate_ok": true,
+    "reserved_gate_ok": false,
+    "rows": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "chars": 26,
+        "cached": false,
+        "cap_s": 12.48,
+        "first_attempt_dur_s": 4.88,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 4.88,
+        "elapsed_s": 5.28,
+        "sentence_peak_alloc_mb": 3512.4,
+        "sentence_peak_reserved_mb": 3954.0,
+        "per_attempt": [
+          {
+            "text": "我们把这一期的话题定在了人工智能与日常生活的关系上。",
+            "seed_offset": 0,
+            "dur_s": 4.88,
+            "peak_alloc_mb": 3512.4,
+            "peak_reserved_mb": 3954.0
+          }
+        ]
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "chars": 24,
+        "cached": false,
+        "cap_s": 11.52,
+        "first_attempt_dur_s": 6.04,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 6.04,
+        "elapsed_s": 6.46,
+        "sentence_peak_alloc_mb": 3551.7,
+        "sentence_peak_reserved_mb": 4046.0,
+        "per_attempt": [
+          {
+            "text": "这个角度很好，不过我担心听众会觉得离自己太远了。",
+            "seed_offset": 0,
+            "dur_s": 6.04,
+            "peak_alloc_mb": 3551.7,
+            "peak_reserved_mb": 4046.0
+          }
+        ]
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "chars": 26,
+        "cached": false,
+        "cap_s": 12.48,
+        "first_attempt_dur_s": 5.36,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.36,
+        "elapsed_s": 5.63,
+        "sentence_peak_alloc_mb": 3512.4,
+        "sentence_peak_reserved_mb": 3956.0,
+        "per_attempt": [
+          {
+            "text": "那就从最具体的场景切入，比如早上闹钟是怎么叫醒你的。",
+            "seed_offset": 0,
+            "dur_s": 5.36,
+            "peak_alloc_mb": 3512.4,
+            "peak_reserved_mb": 3956.0
+          }
+        ]
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "chars": 23,
+        "cached": false,
+        "cap_s": 11.04,
+        "first_attempt_dur_s": 5.88,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.88,
+        "elapsed_s": 6.19,
+        "sentence_peak_alloc_mb": 3550.3,
+        "sentence_peak_reserved_mb": 4044.0,
+        "per_attempt": [
+          {
+            "text": "你是说语音助手？它确实已经介入很多人的清晨了。",
+            "seed_offset": 0,
+            "dur_s": 5.88,
+            "peak_alloc_mb": 3550.3,
+            "peak_reserved_mb": 4044.0
+          }
+        ]
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "chars": 23,
+        "cached": false,
+        "cap_s": 11.04,
+        "first_attempt_dur_s": 5.12,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.12,
+        "elapsed_s": 5.52,
+        "sentence_peak_alloc_mb": 3508.9,
+        "sentence_peak_reserved_mb": 3958.0,
+        "per_attempt": [
+          {
+            "text": "不只是助手，还有推荐算法在决定你看到什么新闻。",
+            "seed_offset": 0,
+            "dur_s": 5.12,
+            "peak_alloc_mb": 3508.9,
+            "peak_reserved_mb": 3958.0
+          }
+        ]
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "chars": 20,
+        "cached": false,
+        "cap_s": 9.6,
+        "first_attempt_dur_s": 4.16,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 4.16,
+        "elapsed_s": 4.63,
+        "sentence_peak_alloc_mb": 3548.5,
+        "sentence_peak_reserved_mb": 4002.0,
+        "per_attempt": [
+          {
+            "text": "这么一说，我们其实一直在和算法共同生活。",
+            "seed_offset": 0,
+            "dur_s": 4.16,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4002.0
+          }
+        ]
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "chars": 24,
+        "cached": false,
+        "cap_s": 11.52,
+        "first_attempt_dur_s": 5.76,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.76,
+        "elapsed_s": 6.09,
+        "sentence_peak_alloc_mb": 3512.2,
+        "sentence_peak_reserved_mb": 3958.0,
+        "per_attempt": [
+          {
+            "text": "对，所以这期节目我们想聊的是这种共同生活的边界。",
+            "seed_offset": 0,
+            "dur_s": 5.76,
+            "peak_alloc_mb": 3512.2,
+            "peak_reserved_mb": 3958.0
+          }
+        ]
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "chars": 23,
+        "cached": false,
+        "cap_s": 11.04,
+        "first_attempt_dur_s": 5.08,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.08,
+        "elapsed_s": 5.48,
+        "sentence_peak_alloc_mb": 3550.3,
+        "sentence_peak_reserved_mb": 4020.0,
+        "per_attempt": [
+          {
+            "text": "边界这个词用得挺准，既有协作也有被塑造的成分。",
+            "seed_offset": 0,
+            "dur_s": 5.08,
+            "peak_alloc_mb": 3550.3,
+            "peak_reserved_mb": 4020.0
+          }
+        ]
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "chars": 17,
+        "cached": false,
+        "cap_s": 8.16,
+        "first_attempt_dur_s": 3.8,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 3.8,
+        "elapsed_s": 4.27,
+        "sentence_peak_alloc_mb": 3507.4,
+        "sentence_peak_reserved_mb": 3946.0,
+        "per_attempt": [
+          {
+            "text": "那我们就从一次真实的对话开始讲起。",
+            "seed_offset": 0,
+            "dur_s": 3.8,
+            "peak_alloc_mb": 3507.4,
+            "peak_reserved_mb": 3946.0
+          }
+        ]
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "chars": 20,
+        "cached": false,
+        "cap_s": 9.6,
+        "first_attempt_dur_s": 5.24,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 5.24,
+        "elapsed_s": 5.6,
+        "sentence_peak_alloc_mb": 3548.5,
+        "sentence_peak_reserved_mb": 4022.0,
+        "per_attempt": [
+          {
+            "text": "好，我想听众会喜欢这种从细节出发的讲法。",
+            "seed_offset": 0,
+            "dur_s": 5.24,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4022.0
+          }
+        ]
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "chars": 22,
+        "cached": false,
+        "cap_s": 10.56,
+        "first_attempt_dur_s": 4.72,
+        "attempts": 1,
+        "cap_hit": false,
+        "final_dur_s": 4.72,
+        "elapsed_s": 5.0,
+        "sentence_peak_alloc_mb": 3508.5,
+        "sentence_peak_reserved_mb": 3956.0,
+        "per_attempt": [
+          {
+            "text": "接下来我们会请一位做推荐系统的工程师来分享。",
+            "seed_offset": 0,
+            "dur_s": 4.72,
+            "peak_alloc_mb": 3508.5,
+            "peak_reserved_mb": 3956.0
+          }
+        ]
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "chars": 20,
+        "cached": false,
+        "cap_s": 9.6,
+        "first_attempt_dur_s": 16.0,
+        "attempts": 2,
+        "cap_hit": true,
+        "final_dur_s": 6.08,
+        "elapsed_s": 22.68,
+        "sentence_peak_alloc_mb": 3548.5,
+        "sentence_peak_reserved_mb": 4212.0,
+        "per_attempt": [
+          {
+            "text": "那正好，可以让他讲讲算法到底能看见多少。",
+            "seed_offset": 0,
+            "dur_s": 16.0,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4212.0
+          },
+          {
+            "text": "那正好，可以让他讲讲算法到底能看见多少。",
+            "seed_offset": 1,
+            "dur_s": 6.08,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4044.0
+          }
+        ]
+      }
+    ]
+  },
+  "delta": {
+    "peak_alloc_mb": 0.0,
+    "peak_reserved_mb": 0.0,
+    "duration_mean_s": 0.0,
+    "cap_hit_set_identical": true,
+    "final_durations_identical": true
+  }
+}

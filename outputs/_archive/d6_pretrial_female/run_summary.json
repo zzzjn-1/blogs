@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "stages": {
+    "script": {
+      "topic": "为什么城市里越来越难看见星星",
+      "title": "城市灯光下的星空去哪儿了",
+      "lines": 26,
+      "usable": true,
+      "first_pass": false,
+      "target_words": 520,
+      "actual_words": 484,
+      "word_deviation": -0.0692,
+      "word_deviation_pct": -6.92,
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 3,
+      "correction_rounds": 2,
+      "degraded": false,
+      "flagged": false,
+      "elapsed_s": 10.53
+    },
+    "tts": {
+      "segments": 26,
+      "cached": 0,
+      "audio_s": 132.6,
+      "elapsed_s": 176.55,
+      "vram": {
+        "cuda": true,
+        "allocated_mb": 2506.8,
+        "reserved_mb": 2700.0,
+        "peak_alloc_mb": 3549.1,
+        "peak_reserved_mb": 4062.0,
+        "system_used_mb": 3834.5,
+        "system_total_mb": 6140.5
+      }
+    },
+    "postprocess": {
+      "mp3": "outputs\\d6_pretrial_female\\试跑_新女声.mp3",
+      "merged_wav": "outputs\\d6_pretrial_female\\build_试跑_新女声\\merged.wav",
+      "duration_s": 149.7,
+      "size_bytes": 2396203,
+      "segments": 26,
+      "pause_count": 25,
+      "intro_used": true,
+      "outro_used": true,
+      "loudness_applied": true,
+      "loudness_measured": {
+        "input_i": "-18.83",
+        "input_tp": "-0.05",
+        "input_lra": "5.70",
+        "input_thresh": "-30.37",
+        "output_i": "-16.34",
+        "output_tp": "-1.50",
+        "output_lra": "5.00",
+        "output_thresh": "-27.82",
+        "normalization_type": "dynamic",
+        "target_offset": "0.34"
+      },
+      "loudness_after": {
+        "input_i": "-16.11",
+        "input_tp": "-1.50",
+        "input_lra": "5.20",
+        "input_thresh": "-27.65",
+        "output_i": "-16.08",
+        "output_tp": "-1.50",
+        "output_lra": "4.80",
+        "output_thresh": "-27.49",
+        "normalization_type": "dynamic",
+        "target_offset": "0.08"
+      },
+      "level_after": {
+        "mean_volume": -17.8,
+        "max_volume": -1.9
+      },
+      "max_volume_db": -1.9,
+      "clipped": false,
+      "build_dir": "outputs\\d6_pretrial_female\\build_试跑_新女声",
+      "elapsed_s": 15.4,
+      "warnings": []
+    }
+  },
+  "output": {
+    "dir": "outputs\\d6_pretrial_female",
+    "mp3": "outputs\\d6_pretrial_female\\试跑_新女声.mp3",
+    "name": "试跑_新女声"
+  },
+  "elapsed_s": 203.55
+}

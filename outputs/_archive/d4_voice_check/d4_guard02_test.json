@@ -1,0 +1,33 @@
+{
+  "ts": "2026-09-15T15:09:44",
+  "cases": [
+    {
+      "case": "T1_ratio20_matches_upstream",
+      "ratio": 20,
+      "guard": true,
+      "load_ok": true,
+      "error_head": "",
+      "PASS": true
+    },
+    {
+      "case": "T2_ratio12_mismatch_failfast",
+      "ratio": 12,
+      "guard": true,
+      "load_ok": false,
+      "error_head": "[PATCH-GUARD-02] tts_max_token_text_ratio=12 与上游实际生效值 20 不一致。该配置目前**不控制**生成长度上限，只影响守卫阈值；两者不一致会让守卫把合法长句误判为未收敛。要真正下调上限，必须在 CosyVoice 的 cli → model → llm 三层透传该参数（P2 决策②）。请把配置改回 20，或先完成透传补丁。",
+      "PASS": true
+    },
+    {
+      "case": "T3_guard_off_skips_check",
+      "ratio": 12,
+      "guard": false,
+      "load_ok": true,
+      "error_head": "",
+      "PASS": true
+    }
+  ],
+  "summary": {
+    "all_pass": true,
+    "failures": []
+  }
+}

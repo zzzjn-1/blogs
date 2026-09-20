@@ -1,0 +1,97 @@
+[serve_trace] root level=INFO handlers=1
+INFO:     Started server process [194508]
+INFO:     Waiting for application startup.
+2026-09-18 15:39:19,271 INFO API 启动：数据库=D:\podcast-ai\data\podcast.db，数据目录=D:\podcast-ai\data
+2026-09-18 15:39:19,284 WARNING [RECOVER] 扫描到 3 个非终态任务：脚本重投 0、续跑 0、仅标记失败 0、跳过（等待用户确认）3
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-09-18 15:39:50,546 WARNING [D4] 第 1 次调用失败，1.0s 后重试：无法连接 DeepSeek，已退避重试：Connection error.
+2026-09-18 15:39:53,594 WARNING [D4] 第 2 次调用失败，2.0s 后重试：无法连接 DeepSeek，已退避重试：Connection error.
+2026-09-18 15:39:57,663 ERROR 脚本生成失败 task=a4bff1a1-3853-4600-8f96-e41ef341b8e4
+Traceback (most recent call last):
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\anaconda\envs\cosyvoice\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\openai\_base_client.py", line 996, in _request
+    response = self._client.send(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\anaconda\envs\cosyvoice\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\podcast-ai\api\services\script_gen.py", line 667, in _once
+    return self.client.with_options(timeout=timeout).chat.completions.create(**kwargs)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\openai\resources\chat\completions.py", line 859, in create
+    return self._post(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\openai\_base_client.py", line 1283, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\openai\_base_client.py", line 960, in request
+    return self._request(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\openai\_base_client.py", line 1030, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\podcast-ai\api\services\task_runner.py", line 363, in _run_script_inner
+    result = gen.generate(
+  File "D:\podcast-ai\api\services\script_gen.py", line 790, in generate
+    resp, n = self._invoke(
+  File "D:\podcast-ai\api\services\script_gen.py", line 683, in _invoke
+    return retryer(_once), counter["n"]
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\tenacity\__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\tenacity\__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\tenacity\__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\tenacity\__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+  File "D:\anaconda\envs\cosyvoice\lib\concurrent\futures\_base.py", line 451, in result
+    return self.__get_result()
+  File "D:\anaconda\envs\cosyvoice\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\tenacity\__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\podcast-ai\api\services\script_gen.py", line 669, in _once
+    raise _classify(exc, timeout) from exc
+api.services.script_gen.LLMRetryable: 无法连接 DeepSeek，已退避重试：Connection error.

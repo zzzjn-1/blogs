@@ -1,0 +1,9 @@
+{
+  "id": "voice_a",
+  "name": "voice_a",
+  "wav": "voice_a.wav",
+  "prompt_text": "生活就像海洋只有意志坚强的人才能到达彼岸。",
+  "gender": "female",
+  "style": "calm",
+  "description": "由 scripts/make_voice_profile.py 生成；源=life.m4a；处理=16k单声道+不裁静音+峰值-3dBFS，未降噪"
+}

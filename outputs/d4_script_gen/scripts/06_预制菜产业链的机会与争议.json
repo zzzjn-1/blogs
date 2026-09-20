@@ -1,0 +1,244 @@
+{
+  "result": {
+    "topic": "预制菜产业链的机会与争议",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 520,
+    "word_range": [
+      468,
+      572
+    ],
+    "actual_words": 478,
+    "word_quota_ok": true,
+    "word_deviation_pct": -0.0808,
+    "line_count": 38,
+    "avg_chars_per_line": 12.6,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 3,
+    "correction_rounds": 2,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为预制菜产业链的客观讨论，无政治敏感、违法违规或具体专业建议，未涉及真实个人或企业。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 7027,
+      "completion_tokens": 2777,
+      "total_tokens": 9804
+    },
+    "errors": [],
+    "warnings": [
+      "summary 长度 22 不在建议区间 30~60"
+    ],
+    "elapsed_s": 11.77,
+    "index": 6,
+    "category": "行业解读",
+    "duration_min": 2.0,
+    "ok": true
+  },
+  "script": {
+    "title": "预制菜产业链的机会与争议",
+    "summary": "从冷链到餐桌，聊聊预制菜的机会、争议与选择。",
+    "total_chars": 478,
+    "line_count": 38,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "今天聊聊预制菜产业链的机会与争议。"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "好，这个话题最近讨论很多。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "先问一句，预制菜到底指什么？"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "简单说，就是提前加工好的菜品。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "范围是不是比想象中要宽？"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "对，有的开袋即食，有的需要加热。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "从净菜到料理包，都算在里面。"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "基本是这样，分类方式还不少。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "那产业链上都有哪些环节？"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "上游是种养和初加工。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "中游呢，是不是工厂生产？"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "中游是工厂生产与冷链。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "下游就更好理解了。"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "下游是餐饮、商超和外卖。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "机会主要集中在中游吗？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "中游确实关键，但不止中游。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "还有哪些环节值得关注？"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "冷链和调味也是重要环节。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "对餐饮店来说，好处很直接。"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "省人工、省后厨，出餐也稳定。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "但消费者最担心的是什么呢？"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "一是添加剂，二是知情权。"
+      },
+      {
+        "seq": 23,
+        "speaker": "A",
+        "text": "口感上是不是也有落差？"
+      },
+      {
+        "seq": 24,
+        "speaker": "B",
+        "text": "对，还有口感和营养的落差。"
+      },
+      {
+        "seq": 25,
+        "speaker": "A",
+        "text": "有观点认为，标准还不够细。"
+      },
+      {
+        "seq": 26,
+        "speaker": "B",
+        "text": "也有观点认为，规范正在完善。"
+      },
+      {
+        "seq": 27,
+        "speaker": "A",
+        "text": "所以透明标注特别重要。"
+      },
+      {
+        "seq": 28,
+        "speaker": "B",
+        "text": "对，让顾客知道自己吃的是什么。"
+      },
+      {
+        "seq": 29,
+        "speaker": "A",
+        "text": "那成本和价格会怎么走？"
+      },
+      {
+        "seq": 30,
+        "speaker": "B",
+        "text": "规模上去后，成本有望下降。"
+      },
+      {
+        "seq": 31,
+        "speaker": "A",
+        "text": "但过低的价格也让人担心。"
+      },
+      {
+        "seq": 32,
+        "speaker": "B",
+        "text": "对，品质和价格要平衡。"
+      },
+      {
+        "seq": 33,
+        "speaker": "A",
+        "text": "预制菜会取代现炒吗？"
+      },
+      {
+        "seq": 34,
+        "speaker": "B",
+        "text": "我觉得不会，各有各的场景。"
+      },
+      {
+        "seq": 35,
+        "speaker": "A",
+        "text": "快餐和团餐可能用得多。"
+      },
+      {
+        "seq": 36,
+        "speaker": "B",
+        "text": "对，正餐和家宴还是爱现做。"
+      },
+      {
+        "seq": 37,
+        "speaker": "A",
+        "text": "总结一句，机会在效率与冷链。"
+      },
+      {
+        "seq": 38,
+        "speaker": "B",
+        "text": "争议在信任，关键还是透明。"
+      }
+    ]
+  }
+}

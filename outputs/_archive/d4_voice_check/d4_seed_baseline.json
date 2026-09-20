@@ -1,0 +1,197 @@
+{
+  "ts": "2026-09-15T14:59:21",
+  "summary": {
+    "seed": 42,
+    "guard": true,
+    "model": "CosyVoice2",
+    "load_plus_warmup_s": 31.7,
+    "n": 12,
+    "cap_seconds_20char": 16.0,
+    "cap_hit_count": 0,
+    "duration_mean_s": 5.177,
+    "duration_std_s": 0.687,
+    "duration_min_s": 3.8,
+    "duration_max_s": 6.08,
+    "rtf_mean": 1.319,
+    "rtf_min": 1.071,
+    "rtf_max": 3.73,
+    "by_speaker": {
+      "A": {
+        "n": 6,
+        "mean_s": 4.94,
+        "std_s": 0.61,
+        "mean_rtf": 1.099,
+        "peak_alloc_mb": 3551.7
+      },
+      "B": {
+        "n": 6,
+        "mean_s": 5.413,
+        "std_s": 0.679,
+        "mean_rtf": 1.54,
+        "peak_alloc_mb": 3551.7
+      }
+    },
+    "peak_alloc_mb": 3551.7,
+    "peak_reserved_mb": 4212.0,
+    "budget_ok": false,
+    "budget_msg": "peak_allocated=3551.7 MB（≤3600 达标） / peak_reserved=4212.0 MB （≤4200 超限）",
+    "recheck": [
+      {
+        "seq": 1,
+        "bytes_equal": true,
+        "sha256": "8e487dce7a97b88b"
+      },
+      {
+        "seq": 6,
+        "bytes_equal": true,
+        "sha256": "9deabb13f72fb593"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "seq": 1,
+      "speaker": "A",
+      "chars": 26,
+      "text": "我们把这一期的话题定在了人工智能与日常生活的关系上。",
+      "duration_s": 4.88,
+      "elapsed_s": 5.38,
+      "rtf": 1.102,
+      "cached": false,
+      "peak_alloc_mb": 3512.4,
+      "key": "4bd1a0a1672a53af1d1ea02b4f66785e920a2264"
+    },
+    {
+      "seq": 2,
+      "speaker": "B",
+      "chars": 24,
+      "text": "这个角度很好，不过我担心听众会觉得离自己太远了。",
+      "duration_s": 6.04,
+      "elapsed_s": 6.5,
+      "rtf": 1.075,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "7c4957a4a55ae4e90ae0c62eaa5948128b1045bd"
+    },
+    {
+      "seq": 3,
+      "speaker": "A",
+      "chars": 26,
+      "text": "那就从最具体的场景切入，比如早上闹钟是怎么叫醒你的。",
+      "duration_s": 5.36,
+      "elapsed_s": 5.74,
+      "rtf": 1.071,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "ced26008663b665e3914151a1077cbacc2b509b4"
+    },
+    {
+      "seq": 4,
+      "speaker": "B",
+      "chars": 23,
+      "text": "你是说语音助手？它确实已经介入很多人的清晨了。",
+      "duration_s": 5.88,
+      "elapsed_s": 6.32,
+      "rtf": 1.076,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "38409ea52f4adf8213efbfdb41b58439a184e0c1"
+    },
+    {
+      "seq": 5,
+      "speaker": "A",
+      "chars": 23,
+      "text": "不只是助手，还有推荐算法在决定你看到什么新闻。",
+      "duration_s": 5.12,
+      "elapsed_s": 5.54,
+      "rtf": 1.083,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "bc9fd90f952bbf378c21091bc288ad28de725e27"
+    },
+    {
+      "seq": 6,
+      "speaker": "B",
+      "chars": 20,
+      "text": "这么一说，我们其实一直在和算法共同生活。",
+      "duration_s": 4.16,
+      "elapsed_s": 4.74,
+      "rtf": 1.138,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "3617ee3bd1d06642835f6bbab888295334c4898c"
+    },
+    {
+      "seq": 7,
+      "speaker": "A",
+      "chars": 24,
+      "text": "对，所以这期节目我们想聊的是这种共同生活的边界。",
+      "duration_s": 5.76,
+      "elapsed_s": 6.18,
+      "rtf": 1.073,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "78a4675dc404fef1f958f4f06e4f11c5d7c0dde4"
+    },
+    {
+      "seq": 8,
+      "speaker": "B",
+      "chars": 23,
+      "text": "边界这个词用得挺准，既有协作也有被塑造的成分。",
+      "duration_s": 5.08,
+      "elapsed_s": 5.63,
+      "rtf": 1.108,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "652595460a480fbf3f68ac7bd7fbfad5cf7d9e97"
+    },
+    {
+      "seq": 9,
+      "speaker": "A",
+      "chars": 17,
+      "text": "那我们就从一次真实的对话开始讲起。",
+      "duration_s": 3.8,
+      "elapsed_s": 4.41,
+      "rtf": 1.162,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "67f53a594daafe306acc7111211070c766d923c1"
+    },
+    {
+      "seq": 10,
+      "speaker": "B",
+      "chars": 20,
+      "text": "好，我想听众会喜欢这种从细节出发的讲法。",
+      "duration_s": 5.24,
+      "elapsed_s": 5.82,
+      "rtf": 1.11,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "03f143f9cbdec03c57eeb321ba9548ef31d0ba47"
+    },
+    {
+      "seq": 11,
+      "speaker": "A",
+      "chars": 22,
+      "text": "接下来我们会请一位做推荐系统的工程师来分享。",
+      "duration_s": 4.72,
+      "elapsed_s": 5.22,
+      "rtf": 1.105,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "a19a4818e911ddc65618548876d00ac73350c69f"
+    },
+    {
+      "seq": 12,
+      "speaker": "B",
+      "chars": 20,
+      "text": "那正好，可以让他讲讲算法到底能看见多少。",
+      "duration_s": 6.08,
+      "elapsed_s": 22.68,
+      "rtf": 3.73,
+      "cached": false,
+      "peak_alloc_mb": 3551.7,
+      "key": "abd96021a091f1544f3abddd45d5161dd1868c43"
+    }
+  ]
+}

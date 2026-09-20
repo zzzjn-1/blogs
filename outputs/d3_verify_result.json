@@ -1,0 +1,274 @@
+{
+  "ok": true,
+  "steps": {
+    "normalize": {
+      "orig_chars": 547,
+      "read_chars": 532,
+      "lines": 24,
+      "segments": 25,
+      "max_seg_chars": 40,
+      "reversible": true,
+      "warnings": [],
+      "frontend": "wetext",
+      "speaker_voice_map": {
+        "A": "voice_a",
+        "B": "voice_b"
+      }
+    },
+    "load": {
+      "model_class": "CosyVoice2",
+      "load_s": 12.9,
+      "text_frontend": "wetext",
+      "resident_alloc_mb": 2498.5
+    },
+    "synthesize": {
+      "segments": 25,
+      "wav_files": 25,
+      "wall_s": 130.7,
+      "audio_s": 119.9,
+      "rtf": 1.09,
+      "avg_sentence_s": 5.23
+    },
+    "cache": {
+      "hit": true,
+      "latency_ms": 1.0,
+      "cache_files": 25
+    },
+    "memory_stability": {
+      "sentences": 25,
+      "spread_mb": 0.0,
+      "drift_mb": 0.0,
+      "trace": [
+        {
+          "seq": 1,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3507.3,
+          "elapsed_s": 4.45,
+          "chars": 17
+        },
+        {
+          "seq": 2,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3507.6,
+          "elapsed_s": 5.78,
+          "chars": 20
+        },
+        {
+          "seq": 3,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3507.6,
+          "elapsed_s": 2.34,
+          "chars": 7
+        },
+        {
+          "seq": 4,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 7.82,
+          "chars": 34
+        },
+        {
+          "seq": 5,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.59,
+          "chars": 21
+        },
+        {
+          "seq": 6,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 4.6,
+          "chars": 20
+        },
+        {
+          "seq": 7,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2702.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.48,
+          "chars": 17
+        },
+        {
+          "seq": 8,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 4.1,
+          "chars": 15
+        },
+        {
+          "seq": 9,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2702.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.9,
+          "chars": 25
+        },
+        {
+          "seq": 10,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.92,
+          "chars": 25
+        },
+        {
+          "seq": 11,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.48,
+          "chars": 20
+        },
+        {
+          "seq": 12,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 4.23,
+          "chars": 18
+        },
+        {
+          "seq": 13,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.3,
+          "chars": 24
+        },
+        {
+          "seq": 14,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 4.79,
+          "chars": 22
+        },
+        {
+          "seq": 15,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.32,
+          "chars": 20
+        },
+        {
+          "seq": 16,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.01,
+          "chars": 21
+        },
+        {
+          "seq": 17,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 4.15,
+          "chars": 18
+        },
+        {
+          "seq": 18,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.21,
+          "chars": 17
+        },
+        {
+          "seq": 19,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.51,
+          "chars": 24
+        },
+        {
+          "seq": 20,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 5.29,
+          "chars": 23
+        },
+        {
+          "seq": 21,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3513.9,
+          "elapsed_s": 4.87,
+          "chars": 21
+        },
+        {
+          "seq": 22,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3516.3,
+          "elapsed_s": 8.18,
+          "chars": 40
+        },
+        {
+          "seq": 23,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3516.3,
+          "elapsed_s": 5.54,
+          "chars": 23
+        },
+        {
+          "seq": 24,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3516.3,
+          "elapsed_s": 4.84,
+          "chars": 20
+        },
+        {
+          "seq": 25,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3516.3,
+          "elapsed_s": 4.77,
+          "chars": 20
+        },
+        {
+          "seq": 26,
+          "allocated_mb": 2506.6,
+          "reserved_mb": 2700.0,
+          "peak_alloc_mb": 3516.3,
+          "elapsed_s": 7.54,
+          "chars": 18
+        }
+      ]
+    },
+    "budget": {
+      "ok": true,
+      "message": "peak_allocated=3516.3 MB（≤3600 达标） / peak_reserved=4000.0 MB （≤4200 达标）",
+      "vram": {
+        "cuda": true,
+        "allocated_mb": 2506.6,
+        "reserved_mb": 2700.0,
+        "peak_alloc_mb": 3516.3,
+        "peak_reserved_mb": 4000.0,
+        "system_used_mb": 3834.5,
+        "system_total_mb": 6140.5
+      }
+    },
+    "instruct2": {
+      "ok": true,
+      "duration_ms": 7640
+    }
+  },
+  "summary": {
+    "rtf": 1.09,
+    "est_1000_chars_min": 4.19
+  }
+}

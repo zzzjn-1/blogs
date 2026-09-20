@@ -1,0 +1,184 @@
+{
+  "result": {
+    "topic": "城市地铁隧道是怎么挖出来的",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 520,
+    "word_range": [
+      468,
+      572
+    ],
+    "actual_words": 468,
+    "word_quota_ok": true,
+    "word_deviation_pct": -0.1,
+    "line_count": 26,
+    "avg_chars_per_line": 18.0,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 3,
+    "correction_rounds": 2,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为地铁隧道施工科普，无政治敏感、低俗、违法或专业建议风险。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 6727,
+      "completion_tokens": 2476,
+      "total_tokens": 9203
+    },
+    "errors": [],
+    "warnings": [
+      "title 长度 11 不在建议区间 12~24：地铁隧道是怎么挖出来的"
+    ],
+    "elapsed_s": 11.92,
+    "index": 3,
+    "category": "知识科普",
+    "duration_min": 2.0,
+    "ok": true
+  },
+  "script": {
+    "title": "地铁隧道是怎么挖出来的",
+    "summary": "聊聊城市地铁隧道施工的两种主流方法，以及盾构机如何在地下悄悄向前推进。",
+    "total_chars": 468,
+    "line_count": 26,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "每天坐地铁，你有没有想过隧道到底是怎么挖的？"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "想过，那么长的隧道，总不能全靠人一锹一锹挖吧。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "对，今天咱们就聊聊地下的那些大家伙。"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "好，我先说个大概，方法主要分两大类。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "哪两类？你先别急着用专业词，说人话。"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "一类是明挖，先把地面挖开，修好再盖回去。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "那不就是把马路开膛破肚嘛，我见过。"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "对，便宜但扰民，适合郊区或者新城区。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "市中心怎么办？总不能把楼都拆了吧。"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "所以有第二类，叫暗挖，在地下悄悄干。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "暗挖里最有名的，就是盾构机了吧。"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "没错，它像个会往前钻的钢铁圆筒。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "圆筒最前面，是不是有个转动的刀盘？"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "对，刀盘切土，后面再把渣土运出去。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "一边挖一边拼管片，隧道就成型了？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "是这样，管片拼成一圈，把四周撑住。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "那地面上的楼房，会不会跟着往下沉？"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "会有影响，所以要控制好出土的压力和速度。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "听说还要监测，盯着地面有没有变形。"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "对，测点很密，数据一超标就马上调整。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "那遇到岩石或者软泥，机器能应付吗？"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "不同地层配不同刀盘，得提前做地质勘察。"
+      },
+      {
+        "seq": 23,
+        "speaker": "A",
+        "text": "所以修地铁，其实是地质和机械的配合。"
+      },
+      {
+        "seq": 24,
+        "speaker": "B",
+        "text": "没错，每往前挖一米，背后都是一堆计算。"
+      },
+      {
+        "seq": 25,
+        "speaker": "A",
+        "text": "那盾构机挖完一段，还能回头再用吗？"
+      },
+      {
+        "seq": 26,
+        "speaker": "B",
+        "text": "有的能拆出来再用，有的就留在地下了。"
+      }
+    ]
+  }
+}

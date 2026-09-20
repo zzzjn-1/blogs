@@ -1,0 +1,10 @@
+{
+  "text_hash": "130ee0fe01ab2cd739f84a28f7f29119847a7fa4",
+  "speaker": "B",
+  "read_text": "缓存指纹复核dc4927，用于确认替换档案后是否仍命中旧缓存。",
+  "duration_ms": 9680,
+  "sample_rate": 24000,
+  "model_version": "CosyVoice2-0.5B",
+  "voice_fingerprint": "033dbc46b44d",
+  "created_at": "2026-09-15T14:40:53"
+}

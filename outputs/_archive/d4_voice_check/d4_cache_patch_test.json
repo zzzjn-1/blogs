@@ -1,0 +1,17 @@
+{
+  "patch": "PATCH-CACHE-01",
+  "fingerprints": {
+    "voice_a": "ec027b0a8044",
+    "voice_b": "033dbc46b44d"
+  },
+  "k_new": "130ee0fe01ab2cd739f84a28f7f29119847a7fa4",
+  "k_old": "5f5055f306c8090e27f41bbf2068596794b30705",
+  "T1": true,
+  "T2": true,
+  "T3": true,
+  "T4": true,
+  "T5": true,
+  "failed": [],
+  "all_pass": true,
+  "note": "cache_key 公式变更 -> 既有缓存键全部失效（含落库 audio_cache.text_hash）"
+}

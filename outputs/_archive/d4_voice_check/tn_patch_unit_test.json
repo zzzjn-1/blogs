@@ -1,0 +1,51 @@
+{
+  "test": "PATCH-TN-01 offline wiring",
+  "steps": {
+    "0_sabotage": "OK: 联网入口已禁用（modelscope + wetext.wetext 双绑定）",
+    "1_resolve_offline": {
+      "wetext_dir": "C:\\Users\\zzz\\.cache\\modelscope\\hub\\pengzhendong\\wetext",
+      "ok": true
+    },
+    "2_normalize_explicit": {
+      "zh": {
+        "我有123个苹果": "我有一百二十三个苹果",
+        "价格是3.5元": "价格是三点五元",
+        "2026年9月15日": "二零二六年九月十五日",
+        "第1章共12节": "第一章共十二节",
+        "2000万的预算": "两千万的预算"
+      },
+      "en": {
+        "I have 123 apples": "I have one hundred and twenty three apples",
+        "The price is $3.50": "The price is three point five dollars",
+        "September 15, 2026": "the fifteenth of september, twenty twenty six",
+        "chapter 7": "chapter seven"
+      },
+      "zh_changed_count": 5,
+      "zh_probe_count": 5
+    },
+    "3_equivalence": {
+      "zh_diff": {},
+      "en_diff": {},
+      "zh_probes": 5,
+      "en_probes": 4,
+      "auto_branch_zh": {
+        "我有123个苹果": "我有一百二十三个苹果",
+        "价格是3.5元": "价格是三点五元",
+        "2026年9月15日": "二零二六年九月十五日",
+        "第1章共12节": "第一章共十二节",
+        "2000万的预算": "两千万的预算"
+      },
+      "auto_branch_en": {
+        "I have 123 apples": "I have one hundred and twenty three apples",
+        "The price is $3.50": "The price is three point five dollars",
+        "September 15, 2026": "the fifteenth of september, twenty twenty six",
+        "chapter 7": "chapter seven"
+      }
+    },
+    "4_original_path_live": {
+      "result": "OK",
+      "note": "本次未复现（限流为间歇性，缓存已热时可偶然成功）"
+    }
+  },
+  "verdict": "PASS"
+}

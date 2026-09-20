@@ -1,0 +1,211 @@
+INFO:     Started server process [187256]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56202 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "POST /api/auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/feeds/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "POST /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+[D4] 网关静默映射模型名：请求 deepseek-chat → 实际 deepseek-flash。凡涉及「本次用了哪个模型」的结论，一律以响应体 model 字段为准（计划书 4.10 ①）
+[D4] 第 1 轮输出未通过校验（共 3 轮）：总字数 92 不在配额区间 117~143（目标 130 字，允许上下浮动 10%）
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c/script HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "POST /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c/synthesize HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+2026-09-18 11:52:56,012 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.75s/it]100%|██████████| 1/1 [00:05<00:00,  5.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.04s/it]100%|██████████| 1/1 [00:05<00:00,  5.04s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:06<00:00,  6.20s/it]100%|██████████| 1/1 [00:06<00:00,  6.20s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:02<00:00,  2.74s/it]100%|██████████| 1/1 [00:02<00:00,  2.74s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:04<00:00,  4.16s/it]100%|██████████| 1/1 [00:04<00:00,  4.16s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:06<00:00,  6.14s/it]100%|██████████| 1/1 [00:06<00:00,  6.14s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.23s/it]100%|██████████| 1/1 [00:05<00:00,  5.23s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:04<00:00,  4.76s/it]100%|██████████| 1/1 [00:04<00:00,  4.76s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:03<00:00,  3.41s/it]100%|██████████| 1/1 [00:03<00:00,  3.41s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:03<00:00,  3.00s/it]100%|██████████| 1/1 [00:03<00:00,  3.00s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.59s/it]100%|██████████| 1/1 [00:05<00:00,  5.59s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":705,"threshold":50,"scope":"turn","targets":["D:\\podcast-ai\\data\\work\\487557a2-2f04-41a3-85e5-a541dbc7178c"],"targetCount":1}
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/487557a2-2f04-41a3-85e5-a541dbc7178c/audio HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "POST /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa/script HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "POST /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa/synthesize HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.11s/it]100%|██████████| 1/1 [00:05<00:00,  5.11s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:06<00:00,  6.41s/it]100%|██████████| 1/1 [00:06<00:00,  6.41s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:04<00:00,  4.51s/it]100%|██████████| 1/1 [00:04<00:00,  4.51s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:06<00:00,  6.36s/it]100%|██████████| 1/1 [00:06<00:00,  6.36s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.82s/it]100%|██████████| 1/1 [00:05<00:00,  5.82s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:06<00:00,  6.21s/it]100%|██████████| 1/1 [00:06<00:00,  6.21s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.60s/it]100%|██████████| 1/1 [00:05<00:00,  5.60s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:04<00:00,  4.94s/it]100%|██████████| 1/1 [00:04<00:00,  4.94s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.44s/it]100%|██████████| 1/1 [00:05<00:00,  5.44s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.00s/it]100%|██████████| 1/1 [00:05<00:00,  5.00s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.44s/it]100%|██████████| 1/1 [00:05<00:00,  5.44s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.64s/it]100%|██████████| 1/1 [00:05<00:00,  5.64s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:16<00:00, 16.49s/it]100%|██████████| 1/1 [00:16<00:00, 16.49s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:16<00:00, 16.30s/it]100%|██████████| 1/1 [00:16<00:00, 16.30s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.96s/it]100%|██████████| 1/1 [00:05<00:00,  5.96s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:04<00:00,  4.58s/it]100%|██████████| 1/1 [00:04<00:00,  4.58s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.31s/it]100%|██████████| 1/1 [00:05<00:00,  5.31s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:04<00:00,  4.64s/it]100%|██████████| 1/1 [00:04<00:00,  4.64s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:05<00:00,  5.07s/it]100%|██████████| 1/1 [00:05<00:00,  5.07s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:04<00:00,  4.73s/it]100%|██████████| 1/1 [00:04<00:00,  4.73s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:08<00:00,  8.26s/it]100%|██████████| 1/1 [00:08<00:00,  8.26s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+  0%|          | 0/1 [00:00<?, ?it/s]INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+100%|██████████| 1/1 [00:09<00:00,  9.53s/it]100%|██████████| 1/1 [00:09<00:00,  9.53s/it]
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":759,"threshold":50,"scope":"turn","targets":["D:\\podcast-ai\\data\\work\\9b0fe050-c6f0-4240-ad9f-4a288b7915fa"],"targetCount":1}
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/tasks/9b0fe050-c6f0-4240-ad9f-4a288b7915fa/audio HTTP/1.1" 200 OK

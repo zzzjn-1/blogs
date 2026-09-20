@@ -1,0 +1,22 @@
+{
+  "out": "D:\\podcast-ai\\outputs\\d5_voice_a_swap\\试听_女声换档_同句A-B.mp3",
+  "target_lufs": -18.0,
+  "peak_ceiling_dbfs": -3.0,
+  "items": [
+    {
+      "label": "1声｜旧 voice_a（换档前：CosyVoice 官方示例档）",
+      "path": "D:\\podcast-ai\\data\\cache\\98\\988efc8aa2f7d3f38a504050880a8dee8c95f334.wav",
+      "note": "同一句探针；SHA1 e85615978be5…（与 D5 报告 12.5 节一致）"
+    },
+    {
+      "label": "2声｜新 voice_a（换档后：life.m4a 真人女声）",
+      "path": "D:\\podcast-ai\\data\\cache\\d2\\d25137c9462f1d68fe54426fa397b4d0fe9a6676.wav",
+      "note": "同一句探针；SHA1 c5d73c38cf86…（与 D5 报告 12.5 节一致）"
+    },
+    {
+      "label": "3声｜life.m4a 参考录音原声",
+      "path": "C:\\Users\\zzz\\Documents\\xwechat_files\\wxid_e1e23tkak56w12_250d\\temp\\RWTemp\\2026-09\\28d60d403fa655b40167dc07f01376b0\\life.m4a",
+      "note": "供对照音色；原文「生活就像海洋只有意志坚强的人才能到达彼岸。」"
+    }
+  ]
+}

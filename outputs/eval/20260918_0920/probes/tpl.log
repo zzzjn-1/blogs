@@ -1,0 +1,60 @@
+  822  <N>%|██████████| <N>/<N> [<N>:<N><<N>:<N>,  <N>s/it]
+  415  <T> INFO yield speech len <N>, rtf <N>
+  401  <T> INFO     seg <N>/<N> -> seg_<N>.wav
+  255  INFO:     <N>.<N>:<N> - "GET /api/tasks/bd<N>a<N>b<N>-a<N>-<N>f<N>-be<N>-e<N>de<N>d<N> HTTP/<N>" <N> OK
+  239  INFO:     <N>.<N>:<N> - "GET /api/tasks/ab<N>fd<N>-d<N>ea-<N>af<N>-<N>-<N>cf<N>aa<N>ee HTTP/<N>" <N> OK
+  229  INFO:     <N>.<N>:<N> - "GET /api/tasks/d<N>b<N>a<N>-b<N>-<N>-aaf<N>-dd<N>e<N>e<N>cb HTTP/<N>" <N> OK
+  219  INFO:     <N>.<N>:<N> - "GET /api/tasks/b<N>a-<N>ebc-<N>-<N>bb<N>-<N>b<N>f<N>d<N> HTTP/<N>" <N> OK
+  219  INFO:     <N>.<N>:<N> - "GET /api/tasks/dfe<N>c<N>-af<N>e-<N>e<N>-a<N>d<N>-f<N> HTTP/<N>" <N> OK
+  102  INFO:     <N>.<N>:<N> - "GET /api/tasks/<N>-<N>a<N>-<N>a<N>c-aec<N>-a<N>b<N>a<N>a<N> HTTP/<N>" <N> OK
+   95  INFO:     <N>.<N>:<N> - "GET /api/tasks/<N>c<N>dad-<N>ed<N>-<N>-b<N>b-<N>bac<N>e<N>d<N> HTTP/<N>" <N> OK
+   91  INFO:     <N>.<N>:<N> - "GET /api/tasks/<N>f<N>b<N>d<N>-<N>a<N>-<N>b<N>-<N>d<N>-d<N>e<N>d<N>af HTTP/<N>" <N> O
+   85  INFO:     <N>.<N>:<N> - "GET /api/tasks/<N>db<N>fd-<N>c-<N>-<N>f-<N>c<N>f<N>a<N>d<N>a<N> HTTP/<N>" <N> OK
+   67  INFO:     <N>.<N>:<N> - "GET /api/tasks/bd<N>a<N>b<N>-a<N>-<N>f<N>-be<N>-e<N>de<N>d<N>/segments/<N>/audio HTTP
+   63  INFO:     <N>.<N>:<N> - "GET /api/tasks/ab<N>fd<N>-d<N>ea-<N>af<N>-<N>-<N>cf<N>aa<N>ee/segments/<N>/audio HTTP
+   59  INFO:     <N>.<N>:<N> - "GET /api/tasks/d<N>b<N>a<N>-b<N>-<N>-aaf<N>-dd<N>e<N>e<N>cb/segments/<N>/audio HTTP/<
+   57  INFO:     <N>.<N>:<N> - "GET /api/tasks/b<N>c<N>ba<N>-ecc<N>-<N>e<N>b-b<N>ac-f<N>cd<N>cfa<N>b<N> HTTP/<N>" <N>
+   57  INFO:     <N>.<N>:<N> - "GET /api/tasks/dfe<N>c<N>-af<N>e-<N>e<N>-a<N>d<N>-f<N>/segments/<N>/audio HTTP/<N>" <
+   55  INFO:     <N>.<N>:<N> - "GET /api/tasks/b<N>a-<N>ebc-<N>-<N>bb<N>-<N>b<N>f<N>d<N>/segments/<N>/audio HTTP/<N>"
+   45  <T> DEBUG send_request_headers.complete
+   45  <T> DEBUG send_request_body.complete
+   36  <T> DEBUG Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messag
+   36  <T> DEBUG Sending HTTP Request: POST https://api.deepseek.com/chat/completions
+   36  <T> DEBUG send_request_headers.started request=<Request [b'POST']>
+   36  <T> DEBUG send_request_body.started request=<Request [b'POST']>
+   36  <T> DEBUG receive_response_headers.started request=<Request [b'POST']>
+   36  <T> DEBUG receive_response_headers.complete return_value=(b'HTTP/<N>', <N>, b'OK', [(b'Server', b'openresty'),
+   36  <T> INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/<N> <N> OK"
+   36  <T> DEBUG receive_response_body.started request=<Request [b'POST']>
+   36  <T> DEBUG receive_response_body.complete
+   36  <T> DEBUG response_closed.started
+   36  <T> DEBUG response_closed.complete
+   36  <T> DEBUG HTTP Response: POST https://api.deepseek.com/chat/completions "<N> OK" Headers({'server': 'openresty
+   36  <T> DEBUG request_id: None
+   27  <T> DEBUG load_ssl_context verify=True cert=None trust_env=True http<N>=False
+   27  <T> DEBUG load_verify_locations cafile='D:\\anaconda\\envs\\cosyvoice\\lib\\site-packages\\certifi\\cacert.pem
+   26  INFO:     <N>.<N>:<N> - "GET /api/tasks/<N>-<N>a<N>-<N>a<N>c-aec<N>-a<N>b<N>a<N>a<N>/segments/<N>/audio HTTP/<
+   22  INFO:     <N>.<N>:<N> - "GET /api/tasks/<N>f<N>b<N>d<N>-<N>a<N>-<N>b<N>-<N>d<N>-d<N>e<N>d<N>af/segments/<N>/au
+   22  INFO:     <N>.<N>:<N> - "GET /api/tasks/<N>c<N>dad-<N>ed<N>-<N>-b<N>b-<N>bac<N>e<N>d<N>/segments/<N>/audio HTT
+   20  INFO:     <N>.<N>:<N> - "GET /api/tasks/<N>db<N>fd-<N>c-<N>-<N>f-<N>c<N>f<N>a<N>d<N>a<N>/segments/<N>/audio HT
+   19  <T> WARNING [D<N>] 第 <N> 轮输出未通过校验（共 <N> 轮）：总字数 <N> 不在配额区间 <N>~<N>（目标 <N> 字，允许上下浮动 <N>%）
+   10  INFO:     <N>.<N>:<N> - "POST /api/tasks HTTP/<N>" <N> OK
+   10  <T> INFO 动态片头已生成：intro_norm.wav（<N> 字）
+   10  <T> INFO 后期片头尾：intro=intro_norm.wav outro=outro.mp<N>
+   10  <T> INFO [<N>/<N>] 格式统一 <N> Hz / <N> ch / pcm_s<N>le
+   10  <T> INFO [<N>/<N>] 片头/片尾微淡化 <N> ms（必须在拼接之前）
+   10  <T> INFO [<N>/<N>] 停顿：话轮 <N> ms / 句间 <N> ms
+   10  <T> INFO [<N>/<N>] 拼接 <N> 个片段（含 <N> 处停顿）
+   10  <T> INFO [<N>/<N>] 两遍 loudnorm -> I=-<N> LUFS / TP=-<N> dBTP
+   10  <T> INFO     实测 -<N> -> -<N> LUFS（目标 -<N>）
+   10  <T> INFO [<N>/<N>] 导出 mp<N>（libmp<N>lame <N>k）
+   10  [safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":<N>,"threshold":<N>,"scope":"turn","targets":["D:\\p
+    9  <T> DEBUG connect_tcp.started host='<N>.<N>' port=<N> local_address=None timeout=<N> socket_options=None
+    9  <T> DEBUG send_request_headers.started request=<Request [b'CONNECT']>
+    9  <T> DEBUG send_request_body.started request=<Request [b'CONNECT']>
+    9  <T> DEBUG receive_response_headers.started request=<Request [b'CONNECT']>
+    9  <T> DEBUG receive_response_headers.complete return_value=(b'HTTP/<N>', <N>, b'Connection Established', [])
+    9  <T> WARNING [D<N>] 网关静默映射模型名：请求 deepseek-chat → 实际 deepseek-flash。凡涉及「本次用了哪个模型」的结论，一律以响应体 model 字段为准（计划书 <N> ①
+    8  <N>%|██████████| <N>/<N> [<N>:<N><<N>:<N>, <N>s/it]
+    3  INFO:     <N>.<N>:<N> - "POST /api/auth/register HTTP/<N>" <N> OK
+    3  <T> WARNING [PATCH-GUARD-<N>] 生成未收敛：<N> 字文本输出 <N>s（上限 <N>s），第 <N>/<N> 次重试

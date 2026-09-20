@@ -1,0 +1,174 @@
+{
+  "result": {
+    "topic": "一个人旅行的意义",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 390,
+    "word_range": [
+      351,
+      429
+    ],
+    "actual_words": 360,
+    "word_quota_ok": true,
+    "word_deviation_pct": -0.0769,
+    "line_count": 24,
+    "avg_chars_per_line": 15.0,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 3,
+    "correction_rounds": 2,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为个人旅行感受与安全提醒，无政治敏感、低俗、违法或虚假信息。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 5663,
+      "completion_tokens": 1459,
+      "total_tokens": 7122
+    },
+    "errors": [],
+    "warnings": [
+      "title 长度 8 不在建议区间 12~24：一个人旅行的意义"
+    ],
+    "elapsed_s": 7.89,
+    "index": 8,
+    "category": "生活闲聊",
+    "duration_min": 1.5,
+    "ok": true
+  },
+  "script": {
+    "title": "一个人旅行的意义",
+    "summary": "聊聊独自出发的自由与孤独，以及它带给人的真实收获和必要准备。",
+    "total_chars": 360,
+    "line_count": 24,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "一个人旅行，最近被聊得很多。"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "对，但真正走过的人感受不太一样。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "你觉得它最吸引人的地方是什么？"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "大概是节奏完全由自己定下来。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "不用迁就别人，这点确实省心。"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "想早走就早走，想赖床就赖床。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "那一个人吃饭会不会有点尴尬？"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "一开始会，后来发现没人看你。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "这点我也有体会，问路都能聊起来。"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "因为没人替你开口，只能自己上。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "那孤独感呢，会不会突然冒出来？"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "会，尤其傍晚和一个人吃饭的时候。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "听起来那段时间反而最难熬。"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "但那种孤独不算难受，更像安静。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "安静久了，反而能想清一些事情。"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "对，平时太吵，听不见自己的想法。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "那独自旅行会不会让人更了解自己？"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "会，你得不断决定下一步去哪。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "做决定这件事，平时都有人替你分担。"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "一个人时，选择权全回到自己手里。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "不过安全这块还是得提前做点准备。"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "住正规住处，行程告诉家里人。"
+      },
+      {
+        "seq": 23,
+        "speaker": "A",
+        "text": "所以独自出发，不是逃离，是练习。"
+      },
+      {
+        "seq": 24,
+        "speaker": "B",
+        "text": "练习跟自己相处，也练习做决定。"
+      }
+    ]
+  }
+}

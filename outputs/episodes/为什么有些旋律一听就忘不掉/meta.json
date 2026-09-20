@@ -1,0 +1,20 @@
+{
+  "topic": "为什么有些旋律一听就忘不掉",
+  "title": "为什么有些旋律一听就忘不掉",
+  "summary": "从重复、期待和情绪三个角度，聊聊洗脑旋律背后的听觉规律。",
+  "created": "2026-09-18T11:41:10",
+  "words": 420,
+  "chars": 296,
+  "lines": 22,
+  "status": "DONE",
+  "synth_elapsed_s": 168.52,
+  "sec_per_char": 0.5693,
+  "mp3": "D:\\podcast-ai\\outputs\\episodes\\为什么有些旋律一听就忘不掉\\为什么有些旋律一听就忘不掉.mp3",
+  "mp3_bytes": 1790998,
+  "duration_s": 111.88,
+  "loudness_i": "-16.58",
+  "true_peak": "-1.89",
+  "dynamic_intro": "D:\\podcast-ai\\data\\work\\ep_20260918_113820\\intro_norm.wav",
+  "model": "deepseek-flash",
+  "llm_calls": 3
+}

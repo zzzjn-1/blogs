@@ -1,0 +1,87 @@
+<Slide style={{ width: 1280, height: 720, position: 'relative', background: '#F7F9FC', fontFamily: 'Source Han Sans SC, Noto Sans SC, Microsoft YaHei, sans-serif', overflow: 'hidden' }}>
+
+  <Box style={{ position: 'absolute', top: 0, left: 0, width: 1280, height: 56, background: '#1E4FA8', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px' }}>
+    <Text style={{ fontSize: 18, color: '#FFFFFF', fontWeight: 'bold' }}>双人对话播客自动生成系统</Text>
+    <Text style={{ fontSize: 15, color: '#BFD3EE' }}>D14 项目答辩</Text>
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 80, left: 40, width: 1200, flexDirection: 'column' }}>
+    <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#0E3F8C' }}>实现过程：14 天，单人全栈</Text>
+    <Box style={{ width: 88, height: 3, background: '#3D7BD9', marginTop: 12 }} />
+  </Box>
+
+  {/* 左窄栏 */}
+  <Box style={{ position: 'absolute', top: 166, left: 40, width: 356, height: 488, background: '#0E3F8C', borderRadius: 6, padding: '34px 28px', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'column' }}>
+      <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.06 }}>D0</Text>
+      <Text style={{ fontSize: 24, color: '#7FA8E0', lineHeight: 1.2, marginTop: 4 }}>~</Text>
+      <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.06 }}>D14</Text>
+      <Text style={{ fontSize: 17, color: '#9FC0EA', marginTop: 16 }}>2026-09-14 起 · 全程含周末</Text>
+    </Box>
+    <Box style={{ background: '#1E4FA8', borderRadius: 4, padding: '16px 18px' }}>
+      <Text style={{ fontSize: 17, color: '#E8EFF8', lineHeight: 1.6 }}>
+        阶段划分的依据不是日历，
+        <span style={{ fontWeight: 'bold', color: '#FFC107' }}>而是每段结束时必须有一个可复算的验收动作</span>。
+      </Text>
+    </Box>
+  </Box>
+
+  {/* 右：四个阶段 */}
+  <Box style={{ position: 'absolute', top: 166, left: 416, width: 824, height: 488, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+    <Box style={{ height: 112, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+      <Box style={{ width: 96, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8' }}>D0~D2</Text>
+        <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 4 }}>环境与定稿</Text>
+      </Box>
+      <Box style={{ width: 1, height: 74, background: '#E5E7EB' }} />
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 20, color: '#1A2230' }}>CosyVoice2-0.5B 定稿（CV3 显存超限出局）· 双音色档案就位</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>验收动作：显存峰值与 RTF 基线成文</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ height: 112, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+      <Box style={{ width: 96, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8' }}>D3~D6</Text>
+        <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 4 }}>主链路与后端</Text>
+      </Box>
+      <Box style={{ width: 1, height: 74, background: '#E5E7EB' }} />
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 20, color: '#1A2230' }}>合成服务封装 · 脚本生成 · 后期与订阅源 · 21 端点 API 上线</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>验收动作：CLI 一条命令产出成片；接口端到端脚本全绿</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ height: 112, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+      <Box style={{ width: 96, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8' }}>D7~D11</Text>
+        <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 4 }}>前端与评测</Text>
+      </Box>
+      <Box style={{ width: 1, height: 74, background: '#E5E7EB' }} />
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 20, color: '#1A2230' }}>5 个页面贯通 · 34 条前端用例 · 一致率全量普查 · MOS 真人听测</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>验收动作：浏览器内完成「主题 → 成片 → 下载 → 订阅」</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ height: 112, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+      <Box style={{ width: 96, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8' }}>D12~D14</Text>
+        <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 4 }}>加固与交付</Text>
+      </Box>
+      <Box style={{ width: 1, height: 74, background: '#E5E7EB' }} />
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 20, color: '#1A2230' }}>崩溃恢复与断点续跑 · 22 份交付文档 · 演示数据与答辩材料</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>验收动作：实机杀进程后续跑成功；文档全部过机械校验</Text>
+      </Box>
+    </Box>
+
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 668, left: 40, width: 1200, height: 32, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>双人对话播客自动生成系统 · D14 答辩</Text>
+    <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold' }}>07 / 12</Text>
+  </Box>
+
+</Slide>

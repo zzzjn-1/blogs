@@ -1,0 +1,18 @@
+{
+  "A(voice_a)": {
+    "file": "D:\\podcast-ai\\outputs\\d4_voice_check\\spkA_voice_a.wav",
+    "sr": 16000,
+    "duration_s": 5.8,
+    "voiced_frames": 236,
+    "f0_median": 242.4,
+    "size_kb": 543
+  },
+  "B(voice_b)": {
+    "file": "D:\\podcast-ai\\outputs\\d4_voice_check\\spkB_voice_b.wav",
+    "sr": 16000,
+    "duration_s": 7.84,
+    "voiced_frames": 374,
+    "f0_median": 100.0,
+    "size_kb": 735
+  }
+}

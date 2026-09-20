@@ -1,0 +1,59 @@
+{
+  "steps": [
+    {
+      "step": "register",
+      "ok": true,
+      "status": 200,
+      "has_token": true
+    },
+    {
+      "step": "create_task",
+      "ok": true,
+      "status": 200,
+      "task_id": "e8913123-a563-45e0-885e-f446fb36fd68"
+    },
+    {
+      "step": "script_ready",
+      "ok": true,
+      "status": "SCRIPT_READY"
+    },
+    {
+      "step": "synthesize_accepted",
+      "ok": true,
+      "status": 202
+    },
+    {
+      "step": "pipeline_done",
+      "ok": true,
+      "status": "DONE"
+    },
+    {
+      "step": "audio_range",
+      "ok": true,
+      "status": 206,
+      "bytes": 100
+    },
+    {
+      "step": "public_rss",
+      "ok": true,
+      "feed_token": "DhJsxKyqpwxZHcpAhldwQg",
+      "rss_status": 200,
+      "has_rss_tag": true
+    },
+    {
+      "step": "reset_token",
+      "ok": true,
+      "old_token": "DhJsxKyqpwxZHcpAhldwQg",
+      "new_token": "qkIbERWZpY5CohcXlcaj5A",
+      "old_status": 404,
+      "new_status": 200
+    },
+    {
+      "step": "delete_task",
+      "ok": true,
+      "delete_status": 200,
+      "get_after": "404"
+    }
+  ],
+  "ok": true
+}

@@ -1,0 +1,111 @@
+{
+  "hypothesis": "voice_b 时长失控源于 参考音频 与 prompt_text 长度不匹配",
+  "prompt_text": "哈啰你好，请问你是哪个？这里是",
+  "cut_seconds": 7.1,
+  "rows": [
+    {
+      "spk": "A",
+      "variant": "full",
+      "idx": 1,
+      "chars": 20,
+      "duration_s": 4.44,
+      "chars_per_s": 4.5
+    },
+    {
+      "spk": "B",
+      "variant": "cut",
+      "idx": 1,
+      "chars": 20,
+      "duration_s": 5.76,
+      "chars_per_s": 3.47
+    },
+    {
+      "spk": "A",
+      "variant": "full",
+      "idx": 2,
+      "chars": 20,
+      "duration_s": 7.92,
+      "chars_per_s": 2.53
+    },
+    {
+      "spk": "B",
+      "variant": "cut",
+      "idx": 2,
+      "chars": 20,
+      "duration_s": 7.48,
+      "chars_per_s": 2.67
+    },
+    {
+      "spk": "A",
+      "variant": "full",
+      "idx": 3,
+      "chars": 20,
+      "duration_s": 15.6,
+      "chars_per_s": 1.28
+    },
+    {
+      "spk": "B",
+      "variant": "cut",
+      "idx": 3,
+      "chars": 20,
+      "duration_s": 6.48,
+      "chars_per_s": 3.09
+    },
+    {
+      "spk": "A",
+      "variant": "full",
+      "idx": 4,
+      "chars": 20,
+      "duration_s": 6.32,
+      "chars_per_s": 3.16
+    },
+    {
+      "spk": "B",
+      "variant": "cut",
+      "idx": 4,
+      "chars": 20,
+      "duration_s": 6.36,
+      "chars_per_s": 3.14
+    },
+    {
+      "spk": "A",
+      "variant": "full",
+      "idx": 5,
+      "chars": 20,
+      "duration_s": 7.32,
+      "chars_per_s": 2.73
+    },
+    {
+      "spk": "B",
+      "variant": "cut",
+      "idx": 5,
+      "chars": 20,
+      "duration_s": 7.08,
+      "chars_per_s": 2.82
+    }
+  ],
+  "stats": {
+    "full": {
+      "n": 5,
+      "mean_s": 8.32,
+      "min_s": 4.44,
+      "max_s": 15.6,
+      "stdev_s": 4.28,
+      "cps_mean": 2.84,
+      "cps_min": 1.28,
+      "cps_max": 4.5
+    },
+    "cut": {
+      "n": 5,
+      "mean_s": 6.63,
+      "min_s": 5.76,
+      "max_s": 7.48,
+      "stdev_s": 0.67,
+      "cps_mean": 3.04,
+      "cps_min": 2.67,
+      "cps_max": 3.47
+    }
+  },
+  "ratio_full_over_cut": 1.25,
+  "conclusion": "未观察到显著改善，根因不成立或不止此一项"
+}

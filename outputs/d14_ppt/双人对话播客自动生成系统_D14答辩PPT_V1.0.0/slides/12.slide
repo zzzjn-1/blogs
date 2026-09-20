@@ -1,0 +1,54 @@
+<Slide style={{ width: 1280, height: 720, position: 'relative', background: '#0E3F8C', fontFamily: 'Source Han Sans SC, Noto Sans SC, Microsoft YaHei, sans-serif', overflow: 'hidden' }}>
+
+  <svg width={1280} height={720} viewBox='0 0 1280 720' style={{ position: 'absolute', top: 0, left: 0 }}>
+    <rect x='0' y='0' width='1280' height='720' fill='#0E3F8C' />
+    <rect x='0' y='712' width='1280' height='8' fill='#3D7BD9' />
+    <g opacity='0.22' stroke='#7FA8E0' strokeWidth='2' fill='none'>
+      <path d='M60 560 L200 560 L200 500 L340 500 L340 620 L480 620 L480 460 L620 460' />
+      <path d='M60 640 L160 640 L160 600 L300 600 L300 680 L440 680 L440 560 L580 560' />
+    </g>
+    <g opacity='0.14' stroke='#7FA8E0' strokeWidth='1.5' fill='none'>
+      <circle cx='1080' cy='140' r='70' />
+      <circle cx='1080' cy='140' r='118' />
+      <circle cx='1080' cy='140' r='166' />
+    </g>
+  </svg>
+
+  <Box style={{ position: 'absolute', top: 208, left: 88, width: 1104, flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 24 }}>
+      <Box style={{ width: 44, height: 3, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 18, color: '#9FC0EA', letterSpacing: 3 }}>谢谢</Text>
+    </Box>
+
+    <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.18 }}>
+      所有指标均可复算
+    </Text>
+
+    <Text style={{ fontSize: 23, color: '#A9C6EC', marginTop: 20, lineHeight: 1.65, width: 940 }}>
+      演示中出现的每一个数字，都对应一个可以重新执行的脚本或一份可以翻开的证据文件。
+      需要复现任何一项，我可以在现场把它跑一遍。
+    </Text>
+
+    <Box style={{ width: 120, height: 2, background: '#3D7BD9', marginTop: 34, marginBottom: 28 }} />
+
+    <Box style={{ flexDirection: 'row', gap: 20 }}>
+      <Box style={{ background: '#1E4FA8', borderRadius: 6, padding: '16px 26px', flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF' }}>411</Text>
+        <Text style={{ fontSize: 17, color: '#BFD3EE' }}>项回归全绿</Text>
+      </Box>
+      <Box style={{ background: '#1E4FA8', borderRadius: 6, padding: '16px 26px', flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF' }}>35</Text>
+        <Text style={{ fontSize: 17, color: '#BFD3EE' }}>条变异全红</Text>
+      </Box>
+      <Box style={{ background: '#1E4FA8', borderRadius: 6, padding: '16px 26px', flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF' }}>1120 / 1120</Text>
+        <Text style={{ fontSize: 17, color: '#BFD3EE' }}>句一致</Text>
+      </Box>
+      <Box style={{ background: '#1E4FA8', borderRadius: 6, padding: '16px 26px', flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF' }}>22</Text>
+        <Text style={{ fontSize: 17, color: '#BFD3EE' }}>份交付文档</Text>
+      </Box>
+    </Box>
+  </Box>
+
+</Slide>

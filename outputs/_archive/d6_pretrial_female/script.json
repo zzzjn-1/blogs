@@ -1,0 +1,148 @@
+{
+  "topic": "为什么城市里越来越难看见星星",
+  "style": "轻松自然、信息密度适中",
+  "target_words": 520,
+  "word_range": [
+    468,
+    572
+  ],
+  "actual_words": 484,
+  "word_quota_ok": true,
+  "word_deviation": -0.0692,
+  "word_deviation_pct": -6.92,
+  "line_count": 26,
+  "avg_chars_per_line": 18.6,
+  "model_requested": "deepseek-chat",
+  "model_returned": "deepseek-flash",
+  "model_mapped": true,
+  "calls": 3,
+  "correction_rounds": 2,
+  "degraded": false,
+  "flagged": false,
+  "usable": true,
+  "first_pass": false,
+  "sensitive_hits": [],
+  "self_check": {
+    "safe": true,
+    "risk": "none",
+    "reason": "内容为光污染科普，无政治敏感、低俗或违规信息，表述客观谨慎。"
+  },
+  "self_check_error": null,
+  "usage": {
+    "prompt_tokens": 6141,
+    "completion_tokens": 1884,
+    "total_tokens": 8025
+  },
+  "errors": [],
+  "warnings": [],
+  "elapsed_s": 10.53,
+  "script": {
+    "title": "城市灯光下的星空去哪儿了",
+    "lines": [
+      {
+        "speaker": "A",
+        "text": "你有没有发现，城市里越来越难看见星星了？"
+      },
+      {
+        "speaker": "B",
+        "text": "确实，很多人一整年都看不到几颗星星。"
+      },
+      {
+        "speaker": "A",
+        "text": "小时候抬头就是满天星，现在只剩几颗亮的。"
+      },
+      {
+        "speaker": "B",
+        "text": "这不是错觉，最主要的原因就是光污染。"
+      },
+      {
+        "speaker": "A",
+        "text": "光污染这个词，具体指的是什么呢？"
+      },
+      {
+        "speaker": "B",
+        "text": "就是人造光跑进夜空，把微弱的星光盖住了。"
+      },
+      {
+        "speaker": "A",
+        "text": "听起来像是城市灯光太多太亮的问题。"
+      },
+      {
+        "speaker": "B",
+        "text": "对，而且很多灯是往上照的，浪费得很厉害。"
+      },
+      {
+        "speaker": "A",
+        "text": "那除了灯多，还有别的原因吗？"
+      },
+      {
+        "speaker": "B",
+        "text": "空气里的颗粒物也会散射光，让整片天更亮。"
+      },
+      {
+        "speaker": "A",
+        "text": "所以雾霾天的晚上，天空会泛着一层灰光。"
+      },
+      {
+        "speaker": "B",
+        "text": "没错，云层也会把地面的光反射回来。"
+      },
+      {
+        "speaker": "A",
+        "text": "这么说，城市越大，这种影响就越明显。"
+      },
+      {
+        "speaker": "B",
+        "text": "是的，越靠近市中心，肉眼能看到的星越少。"
+      },
+      {
+        "speaker": "A",
+        "text": "那光污染只是看不见星星这么简单吗？"
+      },
+      {
+        "speaker": "B",
+        "text": "不止，它还会影响动物的作息和迁徙路线。"
+      },
+      {
+        "speaker": "A",
+        "text": "比如说，候鸟会被灯光吸引，偏离原来的方向。"
+      },
+      {
+        "speaker": "B",
+        "text": "还有些昆虫和鸟类，会被灯光绕得团团转。"
+      },
+      {
+        "speaker": "A",
+        "text": "那对我们人的睡眠，是不是也有影响？"
+      },
+      {
+        "speaker": "B",
+        "text": "有研究认为，夜间过亮会干扰人的生物钟。"
+      },
+      {
+        "speaker": "A",
+        "text": "那有没有办法，把星空找回来一点呢？"
+      },
+      {
+        "speaker": "B",
+        "text": "可以换成向下照的灯，减少向上浪费的光。"
+      },
+      {
+        "speaker": "A",
+        "text": "有些地方还建了暗夜保护区，专门用来看星星。"
+      },
+      {
+        "speaker": "B",
+        "text": "对，关掉不必要的灯，星空就会慢慢回来一些。"
+      },
+      {
+        "speaker": "A",
+        "text": "听起来，这件事其实和我们每个人都有关。"
+      },
+      {
+        "speaker": "B",
+        "text": "是的，少一点浪费的光，就多一片夜空。"
+      }
+    ]
+  }
+}

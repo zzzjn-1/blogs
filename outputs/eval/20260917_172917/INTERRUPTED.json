@@ -1,0 +1,22 @@
+{
+  "interrupted": true,
+  "interrupted_at": "2026-09-17T17:55",
+  "cases_done": [
+    "K1",
+    "K2",
+    "K3"
+  ],
+  "cases_missing": [
+    "K4",
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+  ],
+  "reason": "用户主动暂停，下次再跑；不完整",
+  "resume_cmd": "python scripts/eval_batch.py --ids K4,I1,I2,I3,I4,L1,L2,L3,L4 --out outputs/eval/<新时间戳> --merge-from outputs/eval/20260917_172917"
+}

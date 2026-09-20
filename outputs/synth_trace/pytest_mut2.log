@@ -1,0 +1,16 @@
+D:\anaconda\envs\cosyvoice\lib\site-packages\pytest_asyncio\plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+F                                                                        [100%]
+================================== FAILURES ===================================
+________________ test_yield_events_list_identity_survives_end _________________
+tests\test_synth_trace.py:222: in test_yield_events_list_identity_survives_end
+    assert t._yield_events is sink_before, "列表被重新赋值，handler 将写进孤儿列表"
+E   AssertionError: 列表被重新赋值，handler 将写进孤儿列表
+E   assert [] is []
+E    +  where [] = <api.services.synth_trace.SynthTracer object at 0x000001E8BBF31ED0>._yield_events
+------------------------------ Captured log call ------------------------------
+INFO     root:test_synth_trace.py:53 synthesis text 命中缓存，无 yield
+=========================== short test summary info ===========================
+FAILED tests/test_synth_trace.py::test_yield_events_list_identity_survives_end

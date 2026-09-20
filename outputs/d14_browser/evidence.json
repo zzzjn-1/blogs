@@ -1,0 +1,98 @@
+{
+  "engine": {
+    "engine": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "viewport": [
+      1440,
+      900
+    ],
+    "base": "http://127.0.0.1:5173",
+    "browser": "Edg/153.0.4234.32",
+    "login_status": 200,
+    "localStorage_user": {
+      "id": 1,
+      "username": "local",
+      "created_at": "2026-09-16T09:27:21.619061"
+    },
+    "pages": {
+      "01_login": {
+        "route": "/login",
+        "label": "登录页",
+        "bytes": 13287,
+        "px": [
+          1440,
+          900
+        ],
+        "text_len": 33,
+        "expects": [
+          "登录"
+        ]
+      },
+      "02_register": {
+        "route": "/register",
+        "label": "注册页",
+        "bytes": 15293,
+        "px": [
+          1440,
+          900
+        ],
+        "text_len": 60,
+        "expects": [
+          "注册"
+        ]
+      },
+      "03_submit": {
+        "route": "/new",
+        "label": "新建节目",
+        "bytes": 21529,
+        "px": [
+          1440,
+          900
+        ],
+        "text_len": 79,
+        "expects": [
+          "新建节目"
+        ]
+      },
+      "04_history": {
+        "route": "/history",
+        "label": "历史列表",
+        "bytes": 51700,
+        "px": [
+          1440,
+          900
+        ],
+        "text_len": 512,
+        "expects": [
+          "历史"
+        ]
+      },
+      "05_task_detail": {
+        "route": "/tasks/ep_20260920_110641",
+        "label": "任务详情",
+        "bytes": 55791,
+        "px": [
+          1440,
+          900
+        ],
+        "text_len": 1120,
+        "expects": [
+          "脚本"
+        ]
+      },
+      "06_feed": {
+        "route": "/feed",
+        "label": "频道设置",
+        "bytes": 33646,
+        "px": [
+          1440,
+          900
+        ],
+        "text_len": 225,
+        "expects": [
+          "频道设置"
+        ]
+      }
+    }
+  },
+  "problems": []
+}

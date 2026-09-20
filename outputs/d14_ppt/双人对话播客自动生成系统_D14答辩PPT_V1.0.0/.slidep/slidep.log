@@ -1,0 +1,32 @@
+=== boot pid=74888 ts=2026-09-20 11:14:44.960 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js create 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx ===
+[2026-09-20 11:14:44.959] [INFO ] [pid=74888] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+=== boot pid=76040 ts=2026-09-20 11:15:17.842 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js upsert-dsl 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --dsl-file slides/01.slide ===
+[2026-09-20 11:15:17.842] [INFO ] [pid=76040] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:15:17.873] [INFO ] [pid=76040] [slide-version] fileId=3A829B6B version=0 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=70588 ts=2026-09-20 11:15:19.497 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js screenshot 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --page-index 0 --out /d/podcast-ai/outputs/d14_ppt/preview_01.png ===
+[2026-09-20 11:15:19.496] [INFO ] [pid=70588] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:15:19.533] [INFO ] [pid=70588] [slide-version] fileId=3A829B6B version=1 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=67932 ts=2026-09-20 11:15:28.424 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js screenshot 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --page-index 0 --out D:\podcast-ai\outputs\d14_ppt\preview_01.png ===
+[2026-09-20 11:15:28.423] [INFO ] [pid=67932] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:15:28.460] [INFO ] [pid=67932] [slide-version] fileId=3A829B6B version=1 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=63172 ts=2026-09-20 11:16:06.372 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js upsert-dsl 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --dsl-file slides/02.slide ===
+[2026-09-20 11:16:06.372] [INFO ] [pid=63172] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:16:06.404] [INFO ] [pid=63172] [slide-version] fileId=3A829B6B version=1 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=64896 ts=2026-09-20 11:16:11.926 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js upsert-dsl 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --dsl-file slides/03.slide ===
+[2026-09-20 11:16:11.926] [INFO ] [pid=64896] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:16:11.966] [INFO ] [pid=64896] [slide-version] fileId=3A829B6B version=2 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=39192 ts=2026-09-20 11:16:17.406 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js upsert-dsl 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --dsl-file slides/04.slide ===
+[2026-09-20 11:16:17.405] [INFO ] [pid=39192] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:16:17.468] [INFO ] [pid=39192] [slide-version] fileId=3A829B6B version=3 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=62336 ts=2026-09-20 11:18:05.411 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js upsert-dsl 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --dsl-file slides/09.slide ===
+[2026-09-20 11:18:05.411] [INFO ] [pid=62336] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:18:05.444] [INFO ] [pid=62336] [slide-version] fileId=3A829B6B version=4 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=77372 ts=2026-09-20 11:18:11.165 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js upsert-dsl 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --dsl-file slides/10.slide ===
+[2026-09-20 11:18:11.164] [INFO ] [pid=77372] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:18:11.200] [INFO ] [pid=77372] [slide-version] fileId=3A829B6B version=5 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=59280 ts=2026-09-20 11:18:16.845 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js upsert-dsl 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --dsl-file slides/11.slide ===
+[2026-09-20 11:18:16.844] [INFO ] [pid=59280] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:18:16.883] [INFO ] [pid=59280] [slide-version] fileId=3A829B6B version=6 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx
+=== boot pid=76828 ts=2026-09-20 11:18:22.329 cwd=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0 argv=C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node_modules\@tencent\slidep\dist\index.js upsert-dsl 双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx --dsl-file slides/12.slide ===
+[2026-09-20 11:18:22.328] [INFO ] [pid=76828] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-09-20 11:18:22.361] [INFO ] [pid=76828] [slide-version] fileId=3A829B6B version=7 filePath=D:\podcast-ai\outputs\d14_ppt\双人对话播客自动生成系统_D14答辩PPT_V1.0.0\双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx

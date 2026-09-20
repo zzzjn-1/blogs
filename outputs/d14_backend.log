@@ -1,0 +1,74 @@
+INFO:     Started server process [61540]
+INFO:     Waiting for application startup.
+[RECOVER] 扫描到 3 个非终态任务：脚本重投 0、续跑 0、仅标记失败 0、跳过（等待用户确认）3
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:65278 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65297 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65299 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65301 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65303 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64546 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:61773 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:52499 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:52500 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49953 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49954 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57555 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51080 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51081 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58767 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58768 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55071 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55072 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59598 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59599 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61431 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61432 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61433 - "GET /feed HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58026 - "GET /feed/nhW21FPDYhHTXqQzFOfxrQ.xml HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51821 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:51822 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57431 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55770 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55771 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62611 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62612 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50637 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50638 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55819 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55820 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55821 - "GET /api/tasks?page=1&page_size=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "GET /api/tasks?page=1&page_size=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51284 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51285 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51286 - "GET /api/tasks/ep_20260920_110641 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51287 - "GET /api/tasks/ep_20260920_110641 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51288 - "GET /api/tasks/ep_20260920_110641/audio HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:54325 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54326 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54327 - "GET /api/feeds/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54328 - "GET /api/feeds/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61534 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:54040 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65370 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62059 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62060 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64557 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59390 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59391 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54952 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54953 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54954 - "GET /api/tasks?page=1&page_size=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54955 - "GET /api/tasks?page=1&page_size=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61536 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "GET /api/tasks/ep_20260920_110641 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61538 - "GET /api/tasks/ep_20260920_110641 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61539 - "GET /api/tasks/ep_20260920_110641/script HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61540 - "GET /api/tasks/ep_20260920_110641/audio HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:53406 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53407 - "GET /api/tasks?page=1&page_size=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53408 - "GET /api/feeds/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53409 - "GET /api/feeds/me HTTP/1.1" 200 OK

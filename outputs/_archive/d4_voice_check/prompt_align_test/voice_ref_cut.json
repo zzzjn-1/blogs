@@ -1,0 +1,9 @@
+{
+  "id": "voice_ref_cut",
+  "name": "裁齐 7.1s 参考",
+  "wav": "voice_ref_cut.wav",
+  "prompt_text": "哈啰你好，请问你是哪个？这里是",
+  "gender": "male",
+  "style": "neutral",
+  "description": "裁齐 7.1s 参考"
+}

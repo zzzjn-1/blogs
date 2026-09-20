@@ -1,0 +1,165 @@
+{
+  "result": {
+    "topic": "为什么天空是蓝色的",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 390,
+    "word_range": [
+      351,
+      429
+    ],
+    "actual_words": 380,
+    "word_quota_ok": true,
+    "word_deviation_pct": -0.0256,
+    "line_count": 22,
+    "avg_chars_per_line": 17.3,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 2,
+    "correction_rounds": 1,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "科普内容，仅讲瑞利散射原理，无政治、低俗、违法或专业建议风险"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 3365,
+      "completion_tokens": 1038,
+      "total_tokens": 4403
+    },
+    "errors": [],
+    "warnings": [
+      "title 长度 9 不在建议区间 12~24：天空为什么是蓝色的",
+      "summary 长度 25 不在建议区间 30~60"
+    ],
+    "elapsed_s": 6.74,
+    "index": 1,
+    "category": "知识科普",
+    "duration_min": 1.5,
+    "ok": true
+  },
+  "script": {
+    "title": "天空为什么是蓝色的",
+    "summary": "从阳光散射讲起，聊清楚天空为什么蓝、傍晚为什么红。",
+    "total_chars": 380,
+    "line_count": 22,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "抬头看天，你有没有想过它为什么是蓝的？"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "想过，答案藏在阳光和空气的互动里。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "可阳光明明是白色的，怎么变成蓝色了？"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "白光其实混着各种颜色的光，波长各不同。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "那空气又是怎么把它们分开的呢？"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "空气分子会散射阳光，这叫瑞利散射。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "散射这件事有什么讲究吗？"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "波长越短，散射越强，蓝光就比红光强得多。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "所以蓝光被撒得到处都是，铺满整个天空。"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "对，我们看到的其实是散射之后的蓝光。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "那紫光波长更短，天怎么不发紫呢？"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "紫光一部分被高层大气吸收，太阳里也少。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "再加上眼睛对蓝光更敏感，就看成蓝色。"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "没错，是大气和视觉一起决定的结果。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "那傍晚天边的红色又是怎么回事？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "太阳低时，光要穿过更厚的大气层。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "蓝光半路就散没了，只剩红橙到我们眼里。"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "所以同一个原理，早晚给出两种颜色。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "那我再问，高空和地面看到的一样吗？"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "不一样，越往高处空气越稀薄，散射越弱。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "所以高山上的天会更深，接近暗蓝。"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "对，颜色深浅其实反映了大气的厚度。"
+      }
+    ]
+  }
+}

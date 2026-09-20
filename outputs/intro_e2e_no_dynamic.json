@@ -1,0 +1,30 @@
+{
+  "mode": "no_dynamic",
+  "status": "DONE",
+  "elapsed_s": 51.22,
+  "final_mp3": "C:\\Users\\zzz\\AppData\\Local\\Temp\\verify_intro_mhyf350c\\data\\audio\\e2e_intro\\final.mp3",
+  "final_bytes": 408807,
+  "duration_s": 25.48,
+  "intro_arg": null,
+  "outro_arg": "D:\\podcast-ai\\backend\\assets\\outro.mp3",
+  "intro_used": false,
+  "outro_used": true,
+  "segments": 4,
+  "dynamic_intro_path": null,
+  "loudness_after": {
+    "input_i": "-15.89",
+    "input_tp": "-1.50",
+    "input_lra": "5.00",
+    "input_thresh": "-26.83",
+    "output_i": "-15.80",
+    "output_tp": "-1.50",
+    "output_lra": "4.90",
+    "output_thresh": "-26.85",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.20"
+  },
+  "clipped": false,
+  "warnings": [
+    "片头素材缺失，已跳过：D:\\podcast-ai"
+  ]
+}

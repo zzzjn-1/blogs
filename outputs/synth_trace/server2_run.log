@@ -1,0 +1,183 @@
+[serve_trace] root level=INFO handlers=1
+INFO:     Started server process [193548]
+INFO:     Waiting for application startup.
+2026-09-18 12:05:22,009 INFO API 启动：数据库=D:\podcast-ai\data\podcast.db，数据目录=D:\podcast-ai\data
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-09-18 12:05:32,364 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 12:05:33,435 WARNING [D4] 网关静默映射模型名：请求 deepseek-chat → 实际 deepseek-flash。凡涉及「本次用了哪个模型」的结论，一律以响应体 model 字段为准（计划书 4.10 ①）
+2026-09-18 12:05:33,435 WARNING [D4] 第 1 轮输出未通过校验（共 3 轮）：总字数 90 不在配额区间 117~143（目标 130 字，允许上下浮动 10%）
+2026-09-18 12:05:33,552 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 12:05:35,072 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 12:05:35,802 INFO [D4] 脚本生成完成：主题=开播前先热一下嗓子 | 8 行 / 134 字（配额 130）| 模型 deepseek-chat→deepseek-flash | 请求 2 次 / 纠错 1 轮 | 降级=False 命中=False | 3.8s | tokens={'prompt_tokens': 2911, 'completion_tokens': 436, 'total_tokens': 3347}
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 12:05:54,493 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 12:05:55,572 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 12:05:56,895 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 12:05:56,946 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 12:05:57,696 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 12:06:01,130 INFO text_frontend=wetext | model=CosyVoice2 | 加载 11.1s
+2026-09-18 12:06:01,131 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 12:06:02,257 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 12:06:02,257 INFO 说话人 A → 音色 voice_a
+2026-09-18 12:06:02,257 INFO 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:06:02,261 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 12:06:07,811 INFO yield speech len 4.04, rtf 1.3736191952582633
+100%|██████████| 1/1 [00:05<00:00,  5.57s/it]100%|██████████| 1/1 [00:05<00:00,  5.57s/it]
+2026-09-18 12:06:07,834 INFO 预热耗时 5.58s
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:06:07,888 INFO synthesis text 这一步很关键，能少很多干涩和紧张。
+2026-09-18 12:06:13,607 INFO yield speech len 5.24, rtf 1.0914352103954053
+100%|██████████| 1/1 [00:05<00:00,  5.74s/it]100%|██████████| 1/1 [00:05<00:00,  5.74s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:06:13,723 INFO synthesis text 你一般怎么做，是先喝温水吗？
+2026-09-18 12:06:17,913 INFO yield speech len 3.56, rtf 1.1771729822908894
+100%|██████████| 1/1 [00:04<00:00,  4.21s/it]100%|██████████| 1/1 [00:04<00:00,  4.21s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:06:18,009 INFO synthesis text 先喝温水，再轻轻哼几声，别用力喊。
+2026-09-18 12:06:25,614 INFO yield speech len 7.04, rtf 1.0802361775528302
+100%|██████████| 1/1 [00:07<00:00,  7.63s/it]100%|██████████| 1/1 [00:07<00:00,  7.63s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:06:25,711 INFO synthesis text 我还会慢慢念一段绕口令，找找节奏。
+2026-09-18 12:06:29,764 INFO yield speech len 3.32, rtf 1.2209204306085426
+100%|██████████| 1/1 [00:04<00:00,  4.07s/it]100%|██████████| 1/1 [00:04<00:00,  4.07s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:06:29,859 INFO synthesis text 对，放松比飙高音重要，舒服就够了。
+2026-09-18 12:06:35,769 INFO yield speech len 5.4, rtf 1.094612722043638
+100%|██████████| 1/1 [00:05<00:00,  5.93s/it]100%|██████████| 1/1 [00:05<00:00,  5.93s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:06:35,879 INFO synthesis text 那时间紧的时候，有没有更快的办法？
+2026-09-18 12:06:39,986 INFO yield speech len 3.44, rtf 1.193916866945666
+100%|██████████| 1/1 [00:04<00:00,  4.13s/it]100%|██████████| 1/1 [00:04<00:00,  4.13s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:06:40,084 INFO synthesis text 深呼吸几次，再念一句话，也能应急。
+2026-09-18 12:06:45,305 INFO yield speech len 4.6, rtf 1.1351458922676418
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+2026-09-18 12:06:46,136 INFO 动态片头已生成：intro_norm.wav（34 字）
+2026-09-18 12:06:46,136 INFO 后期片头尾：intro=intro_norm.wav outro=outro.mp3
+2026-09-18 12:06:46,157 INFO [1/6] 格式统一 44100 Hz / 1 ch / pcm_s16le
+2026-09-18 12:06:46,382 INFO     seg 1/8 -> seg_0000.wav
+2026-09-18 12:06:46,610 INFO     seg 2/8 -> seg_0001.wav
+2026-09-18 12:06:46,837 INFO     seg 3/8 -> seg_0002.wav
+2026-09-18 12:06:47,066 INFO     seg 4/8 -> seg_0003.wav
+2026-09-18 12:06:47,297 INFO     seg 5/8 -> seg_0004.wav
+2026-09-18 12:06:47,524 INFO     seg 6/8 -> seg_0005.wav
+2026-09-18 12:06:47,751 INFO     seg 7/8 -> seg_0006.wav
+2026-09-18 12:06:48,013 INFO     seg 8/8 -> seg_0007.wav
+2026-09-18 12:06:48,817 INFO [2/6] 片头/片尾微淡化 30 ms（必须在拼接之前）
+2026-09-18 12:06:49,541 INFO [3/6] 停顿：话轮 500 ms / 句间 250 ms
+2026-09-18 12:06:50,014 INFO [4/6] 拼接 17 个片段（含 7 处停顿）
+2026-09-18 12:06:50,397 INFO [5/6] 两遍 loudnorm -> I=-16 LUFS / TP=-1.5 dBTP
+2026-09-18 12:06:53,012 INFO     实测 -18.22 -> -16.10 LUFS（目标 -16）
+2026-09-18 12:06:53,012 INFO [6/6] 导出 mp3（libmp3lame 128k）
+2026-09-18 12:06:53,994 INFO 完成：D:\podcast-ai\data\work\e44c680d-1a4a-45ad-be1d-451d08863e91\e44c680d-1a4a-45ad-be1d-451d08863e91.mp3（56.9 s，0.87 MB）
+[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":735,"threshold":50,"scope":"turn","targets":["D:\\podcast-ai\\data\\work\\e44c680d-1a4a-45ad-be1d-451d08863e91"],"targetCount":1}
+2026-09-18 12:06:58,532 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 12:07:01,209 WARNING [D4] 网关静默映射模型名：请求 deepseek-chat → 实际 deepseek-flash。凡涉及「本次用了哪个模型」的结论，一律以响应体 model 字段为准（计划书 4.10 ①）
+2026-09-18 12:07:01,210 WARNING [D4] 第 1 轮输出未通过校验（共 3 轮）：第 5 行与第 4 行说话人相同（B），必须 A/B 交替；总字数 294 不在配额区间 351~429（目标 390 字，允许上下浮动 10%）
+2026-09-18 12:07:01,347 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 12:07:03,538 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 12:07:04,240 INFO [D4] 脚本生成完成：主题=为什么飞机起飞前要收起小桌板 | 21 行 / 373 字（配额 390）| 模型 deepseek-chat→deepseek-flash | 请求 2 次 / 纠错 1 轮 | 降级=False 命中=False | 5.9s | tokens={'prompt_tokens': 3381, 'completion_tokens': 1003, 'total_tokens': 4384}
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:04,432 INFO synthesis text 你有没有想过，飞机起飞前为什么非要收小桌板？
+2026-09-18 12:07:09,432 INFO yield speech len 4.6, rtf 1.0869719152865203
+100%|██████████| 1/1 [00:05<00:00,  5.02s/it]100%|██████████| 1/1 [00:05<00:00,  5.02s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:09,533 INFO synthesis text 很多人以为是怕挡路，其实核心是安全考虑。
+2026-09-18 12:07:15,133 INFO yield speech len 5.24, rtf 1.068718424280181
+100%|██████████| 1/1 [00:05<00:00,  5.62s/it]100%|██████████| 1/1 [00:05<00:00,  5.62s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:15,233 WARNING synthesis text 安全？ too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-18 12:07:15,234 INFO synthesis text 安全？
+2026-09-18 12:07:17,525 INFO yield speech len 1.24, rtf 1.847202354861844
+100%|██████████| 1/1 [00:02<00:00,  2.31s/it]100%|██████████| 1/1 [00:02<00:00,  2.31s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:17,620 INFO synthesis text 一块小小的板子能有多大影响呢？
+2026-09-18 12:07:21,431 INFO yield speech len 3.32, rtf 1.147808152509023
+100%|██████████| 1/1 [00:03<00:00,  3.83s/it]100%|██████████| 1/1 [00:03<00:00,  3.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:21,532 INFO synthesis text 起降是飞行中最容易出状况的阶段。
+2026-09-18 12:07:26,904 INFO yield speech len 4.8, rtf 1.1190601686636608
+100%|██████████| 1/1 [00:05<00:00,  5.39s/it]100%|██████████| 1/1 [00:05<00:00,  5.39s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:27,003 INFO synthesis text 我听说这段时间特别短，也特别紧张。
+2026-09-18 12:07:32,209 INFO yield speech len 4.76, rtf 1.0937052614548628
+100%|██████████| 1/1 [00:05<00:00,  5.23s/it]100%|██████████| 1/1 [00:05<00:00,  5.23s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:32,306 INFO synthesis text 一旦要紧急刹车或撤离，留给你的时间很紧。
+2026-09-18 12:07:37,471 INFO yield speech len 4.64, rtf 1.1131496778849899
+100%|██████████| 1/1 [00:05<00:00,  5.19s/it]100%|██████████| 1/1 [00:05<00:00,  5.19s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:37,572 INFO synthesis text 所以桌板收起来，是为了让人能快速站起来。
+2026-09-18 12:07:43,828 INFO yield speech len 5.76, rtf 1.0862106664313211
+100%|██████████| 1/1 [00:06<00:00,  6.28s/it]100%|██████████| 1/1 [00:06<00:00,  6.28s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:43,926 INFO synthesis text 对，还怕它顶住你的身体，造成不必要的内伤。
+2026-09-18 12:07:49,140 INFO yield speech len 4.72, rtf 1.1046737432479858
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:49,241 INFO synthesis text 我懂了，就像坐车要系安全带一样。
+2026-09-18 12:07:54,126 INFO yield speech len 4.48, rtf 1.090471286858831
+100%|██████████| 1/1 [00:04<00:00,  4.91s/it]100%|██████████| 1/1 [00:04<00:00,  4.91s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:07:54,223 INFO synthesis text 还有个原因，是给逃生通道让出空间。
+2026-09-18 12:08:00,246 INFO yield speech len 5.6, rtf 1.0754692554473877
+100%|██████████| 1/1 [00:06<00:00,  6.05s/it]100%|██████████| 1/1 [00:06<00:00,  6.05s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:00,344 INFO synthesis text 过道本来就窄，桌板一放就更挤了。
+2026-09-18 12:08:05,151 INFO yield speech len 4.28, rtf 1.1231289845760737
+100%|██████████| 1/1 [00:04<00:00,  4.83s/it]100%|██████████| 1/1 [00:04<00:00,  4.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:05,251 INFO synthesis text 是的，撤离的时候，每一秒都很关键。
+2026-09-18 12:08:10,563 INFO yield speech len 4.8, rtf 1.10672265291214
+100%|██████████| 1/1 [00:05<00:00,  5.34s/it]100%|██████████| 1/1 [00:05<00:00,  5.34s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:10,660 INFO synthesis text 那椅背为什么也一定要调直呢？
+2026-09-18 12:08:14,597 INFO yield speech len 3.36, rtf 1.171693205833435
+100%|██████████| 1/1 [00:03<00:00,  3.96s/it]100%|██████████| 1/1 [00:03<00:00,  3.96s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:14,693 INFO synthesis text 调直能让后排的人更快离开自己的座位。
+2026-09-18 12:08:20,241 INFO yield speech len 4.96, rtf 1.1185406196501948
+100%|██████████| 1/1 [00:05<00:00,  5.57s/it]100%|██████████| 1/1 [00:05<00:00,  5.57s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:20,340 INFO synthesis text 原来这些规定，都是一整套配合起来的。
+2026-09-18 12:08:25,083 INFO yield speech len 4.08, rtf 1.1626407796261358
+100%|██████████| 1/1 [00:04<00:00,  4.77s/it]100%|██████████| 1/1 [00:04<00:00,  4.77s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:25,183 INFO synthesis text 对，还有遮光板和行李架，道理是相通的。
+2026-09-18 12:08:30,672 INFO yield speech len 4.96, rtf 1.1066569435981013
+100%|██████████| 1/1 [00:05<00:00,  5.51s/it]100%|██████████| 1/1 [00:05<00:00,  5.51s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:30,767 INFO synthesis text 都是为了关键时刻，少一点阻碍。
+2026-09-18 12:08:34,804 INFO yield speech len 3.48, rtf 1.159968732417315
+100%|██████████| 1/1 [00:04<00:00,  4.06s/it]100%|██████████| 1/1 [00:04<00:00,  4.06s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:34,904 INFO synthesis text 所以下次收桌板，别再觉得是小题大做。
+2026-09-18 12:08:40,491 INFO yield speech len 5.16, rtf 1.0827346365581187
+100%|██████████| 1/1 [00:05<00:00,  5.61s/it]100%|██████████| 1/1 [00:05<00:00,  5.61s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:40,586 INFO synthesis text 一个小动作，换来的是全机人的安全。
+2026-09-18 12:08:45,152 INFO yield speech len 4.0, rtf 1.1413070559501648
+100%|██████████| 1/1 [00:04<00:00,  4.59s/it]100%|██████████| 1/1 [00:04<00:00,  4.59s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:45,253 INFO synthesis text 这也是这么多年飞行经验换来的规矩。
+2026-09-18 12:08:50,441 INFO yield speech len 4.76, rtf 1.0899166099163664
+100%|██████████| 1/1 [00:05<00:00,  5.21s/it]100%|██████████| 1/1 [00:05<00:00,  5.21s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:50,539 INFO synthesis text 那我们就从收好桌板这件小事做起吧。
+2026-09-18 12:08:54,828 INFO yield speech len 3.68, rtf 1.1653167398079582
+100%|██████████| 1/1 [00:04<00:00,  4.31s/it]100%|██████████| 1/1 [00:04<00:00,  4.31s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:08:54,991 INFO synthesis text 大家好，今天是二零二六年九月十八日，今天的主题是小桌板背后的安全逻辑。
+2026-09-18 12:09:03,572 INFO yield speech len 7.92, rtf 1.083499464121732
+100%|██████████| 1/1 [00:08<00:00,  8.60s/it]100%|██████████| 1/1 [00:08<00:00,  8.60s/it]
+2026-09-18 12:09:04,278 INFO 动态片头已生成：intro_norm.wav（35 字）
+2026-09-18 12:09:04,279 INFO 后期片头尾：intro=intro_norm.wav outro=outro.mp3
+2026-09-18 12:09:04,299 INFO [1/6] 格式统一 44100 Hz / 1 ch / pcm_s16le
+2026-09-18 12:09:04,528 INFO     seg 1/22 -> seg_0000.wav
+2026-09-18 12:09:04,757 INFO     seg 2/22 -> seg_0001.wav
+2026-09-18 12:09:04,981 INFO     seg 3/22 -> seg_0002.wav
+2026-09-18 12:09:05,214 INFO     seg 4/22 -> seg_0003.wav
+2026-09-18 12:09:05,453 INFO     seg 5/22 -> seg_0004.wav
+2026-09-18 12:09:05,680 INFO     seg 6/22 -> seg_0005.wav
+2026-09-18 12:09:05,908 INFO     seg 7/22 -> seg_0006.wav
+2026-09-18 12:09:06,169 INFO     seg 8/22 -> seg_0007.wav
+2026-09-18 12:09:06,415 INFO     seg 9/22 -> seg_0008.wav
+2026-09-18 12:09:06,645 INFO     seg 10/22 -> seg_0009.wav
+2026-09-18 12:09:06,877 INFO     seg 11/22 -> seg_0010.wav
+2026-09-18 12:09:07,108 INFO     seg 12/22 -> seg_0011.wav
+2026-09-18 12:09:07,338 INFO     seg 13/22 -> seg_0012.wav
+2026-09-18 12:09:07,588 INFO     seg 14/22 -> seg_0013.wav
+2026-09-18 12:09:07,817 INFO     seg 15/22 -> seg_0014.wav
+2026-09-18 12:09:08,044 INFO     seg 16/22 -> seg_0015.wav
+2026-09-18 12:09:08,277 INFO     seg 17/22 -> seg_0016.wav
+2026-09-18 12:09:08,508 INFO     seg 18/22 -> seg_0017.wav
+2026-09-18 12:09:08,742 INFO     seg 19/22 -> seg_0018.wav
+2026-09-18 12:09:08,981 INFO     seg 20/22 -> seg_0019.wav
+2026-09-18 12:09:09,209 INFO     seg 21/22 -> seg_0020.wav
+2026-09-18 12:09:09,438 INFO     seg 22/22 -> seg_0021.wav
+2026-09-18 12:09:10,236 INFO [2/6] 片头/片尾微淡化 30 ms（必须在拼接之前）
+2026-09-18 12:09:10,930 INFO [3/6] 停顿：话轮 500 ms / 句间 250 ms
+2026-09-18 12:09:11,441 INFO [4/6] 拼接 45 个片段（含 21 处停顿）
+2026-09-18 12:09:12,009 INFO [5/6] 两遍 loudnorm -> I=-16 LUFS / TP=-1.5 dBTP
+2026-09-18 12:09:16,826 INFO     实测 -18.65 -> -16.14 LUFS（目标 -16）
+2026-09-18 12:09:16,826 INFO [6/6] 导出 mp3（libmp3lame 128k）
+2026-09-18 12:09:18,071 INFO 完成：D:\podcast-ai\data\work\bf40a90f-f251-40b7-a7ba-905dd152192a\bf40a90f-f251-40b7-a7ba-905dd152192a.mp3（122.3 s，1.87 MB）
+[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":763,"threshold":50,"scope":"turn","targets":["D:\\podcast-ai\\data\\work\\bf40a90f-f251-40b7-a7ba-905dd152192a"],"targetCount":1}

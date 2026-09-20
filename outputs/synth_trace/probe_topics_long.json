@@ -1,0 +1,16 @@
+{
+  "version": "probe-4",
+  "stage": "R21 修复后长档复核（非交付主题集）",
+  "description": "修复后补一条 long 档实机例，把「M4 达标」从外推变成实测：短档千字已 380~390s，长档固定开销被摊薄，须 ≤ 600s。",
+  "spec": {
+    "categories": ["诊断"],
+    "per_category": 1,
+    "lengths": {"short": 1.5, "long": 4.0},
+    "per_category_split": {"short": 0, "long": 1},
+    "words_per_minute": 260
+  },
+  "notes": "全新主题；后端已在上一轮热机，可用 --no-warmup。",
+  "topics": [
+    {"id": "R21L", "category": "诊断", "length": "long", "topic": "人为什么会习惯性地拖延重要的事", "duration_min": 4.0}
+  ]
+}

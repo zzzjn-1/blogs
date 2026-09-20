@@ -1,0 +1,41 @@
+{
+  "code": "NOT_RECYCLED",
+  "note": "**未回收**：没有读到任何有效评分表。（发现 1 份未填写的模板：mos_scoresheet.csv） MOS 无法判定，M4 该指标待人工回收。",
+  "summary": {
+    "sheets_total": 1,
+    "sheets_valid": 0,
+    "sheets_blank": 1,
+    "sheets_invalid": 0,
+    "raters": [],
+    "per_dim": {
+      "自然度": {
+        "n": 0,
+        "mean": null,
+        "sd": 0.0,
+        "min": null,
+        "max": null
+      },
+      "停顿节奏": {
+        "n": 0,
+        "mean": null,
+        "sd": 0.0,
+        "min": null,
+        "max": null
+      },
+      "音色区分度": {
+        "n": 0,
+        "mean": null,
+        "sd": 0.0,
+        "min": null,
+        "max": null
+      }
+    },
+    "rater_means": [],
+    "rater_spread": 0.0,
+    "polyphone_flagged": [],
+    "errors": [],
+    "blank_files": [
+      "mos_scoresheet.csv"
+    ]
+  }
+}

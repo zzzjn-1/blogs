@@ -1,0 +1,42 @@
+{
+  "topic": "为什么天空是蓝色的",
+  "style": "轻松科普，像朋友聊天",
+  "target_words": 520,
+  "word_range": [
+    468,
+    572
+  ],
+  "actual_words": 463,
+  "word_quota_ok": false,
+  "word_deviation": -0.1096,
+  "word_deviation_pct": -10.96,
+  "line_count": 26,
+  "avg_chars_per_line": 17.8,
+  "model_requested": "deepseek-chat",
+  "model_returned": "deepseek-flash",
+  "model_mapped": true,
+  "calls": 3,
+  "correction_rounds": 2,
+  "degraded": false,
+  "flagged": false,
+  "usable": true,
+  "first_pass": false,
+  "sensitive_hits": [],
+  "self_check": {
+    "safe": true,
+    "risk": "none",
+    "reason": "内容为光的散射科普，无政治、低俗、违法或专业建议等风险点。"
+  },
+  "self_check_error": null,
+  "usage": {
+    "prompt_tokens": 6708,
+    "completion_tokens": 2476,
+    "total_tokens": 9184
+  },
+  "errors": [],
+  "warnings": [
+    "title 长度 9 不在建议区间 12~24：天空为什么是蓝色的",
+    "总字数 463 不在配额区间 468~572（目标 520 字，允许上下浮动 10%）"
+  ],
+  "elapsed_s": 11.87
+}

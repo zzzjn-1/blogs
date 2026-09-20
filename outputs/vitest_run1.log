@@ -1,0 +1,44 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mD:/podcast-ai/frontend[39m
+
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mqueueLabel —— 0 是「正在跑」，不是「前面还有 0 个」[2m > [22mpos=0 → 正在合成[32m 2[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mqueueLabel —— 0 是「正在跑」，不是「前面还有 0 个」[2m > [22mpos=1 → 前面还有 1 个任务[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mqueueLabel —— 0 是「正在跑」，不是「前面还有 0 个」[2m > [22mpos=3 → 前面还有 3 个任务[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mqueueLabel —— 0 是「正在跑」，不是「前面还有 0 个」[2m > [22mnull + 等待确认（SCRIPT_READY）→ 不显示[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mqueueLabel —— 0 是「正在跑」，不是「前面还有 0 个」[2m > [22mnull + 终态 → 不显示[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mqueueLabel —— 0 是「正在跑」，不是「前面还有 0 个」[2m > [22mnull + PENDING → 排队中（唯一例外）[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mqueueLabel —— 0 是「正在跑」，不是「前面还有 0 个」[2m > [22m字段缺失（旧后端）→ 不炸[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mcacheLabel —— rate=null 是「还没算」，不是「命中 0%」[2m > [22mrate=null → 不显示[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mcacheLabel —— rate=null 是「还没算」，不是「命中 0%」[2m > [22mrate=0 且 seg>0 → 显示（与 null 严格区分）[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mcacheLabel —— rate=null 是「还没算」，不是「命中 0%」[2m > [22mD12 实测值 14/27 → 与实施报告口径一致[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mcacheLabel —— rate=null 是「还没算」，不是「命中 0%」[2m > [22m全命中 12/12 → 100.0%[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mcacheLabel —— rate=null 是「还没算」，不是「命中 0%」[2m > [22mseg=0 兜底：rate 有值也不显示[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mshowQueue / showCache —— 不该出现的地方不出现[2m > [22m终态不显示队列[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mshowQueue / showCache —— 不该出现的地方不出现[2m > [22m排队中显示队列[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mshowQueue / showCache —— 不该出现的地方不出现[2m > [22m列表页对正在跑也显示[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mshowQueue / showCache —— 不该出现的地方不出现[2m > [22m脚本阶段不显示缓存[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mshowQueue / showCache —— 不该出现的地方不出现[2m > [22m成片显示缓存[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/taskView.test.ts[2m > [22mshowQueue / showCache —— 不该出现的地方不出现[2m > [22m未开始算不显示缓存[32m 0[2mms[22m[39m
+[90mstderr[2m | src/pages/TaskDetail.test.tsx[2m > [22m[2mTaskDetail 队列提示[2m > [22m[2m排队中（pos=2）→ 显示「前面还有 2 个任务」
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[90mstderr[2m | src/pages/History.test.tsx[2m > [22m[2mHistory 列表摘要[2m > [22m[2mPENDING + pos=2 → 显示「前面还有 2 个任务」
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32m✓[39m src/pages/History.test.tsx[2m > [22mHistory 列表摘要[2m > [22mPENDING + pos=2 → 显示「前面还有 2 个任务」[33m 438[2mms[22m[39m
+ [32m✓[39m src/pages/History.test.tsx[2m > [22mHistory 列表摘要[2m > [22mSYNTHESIZING + pos=0 → 列表页仍显示「正在合成」[32m 46[2mms[22m[39m
+ [32m✓[39m src/pages/History.test.tsx[2m > [22mHistory 列表摘要[2m > [22mDONE 且 seg=0 → 不显示缓存文案（未算 ≠ 0%）[32m 46[2mms[22m[39m
+ [32m✓[39m src/pages/History.test.tsx[2m > [22mHistory 列表摘要[2m > [22mDONE 且 14/27 → 显示缓存文案[32m 47[2mms[22m[39m
+ [32m✓[39m src/pages/TaskDetail.test.tsx[2m > [22mTaskDetail 队列提示[2m > [22m排队中（pos=2）→ 显示「前面还有 2 个任务」[33m 489[2mms[22m[39m
+ [32m✓[39m src/pages/TaskDetail.test.tsx[2m > [22mTaskDetail 队列提示[2m > [22mpos=null 且 PENDING → 显示「已提交，排队中…」[32m 60[2mms[22m[39m
+ [32m✓[39m src/pages/TaskDetail.test.tsx[2m > [22mTaskDetail 队列提示[2m > [22mpos=0（自己正在跑）→ 不弹队列提示，避免与阶段/进度条重复[32m 43[2mms[22m[39m
+ [32m✓[39m src/pages/TaskDetail.test.tsx[2m > [22mTaskDetail 句级缓存读数[2m > [22m成片且 14/27 → 详情里出现「句级缓存」项[32m 56[2mms[22m[39m
+ [32m✓[39m src/pages/TaskDetail.test.tsx[2m > [22mTaskDetail 句级缓存读数[2m > [22m合成中但 seg=0（还没算）→ 不出现「句级缓存」项[32m 39[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m27 passed[39m[22m[90m (27)[39m
+[2m   Start at [22m 16:55:29
+[2m   Duration [22m 9.30s[2m (transform 184ms, setup 948ms, collect 7.57s, tests 1.27s, environment 5.28s, prepare 446ms)[22m
+

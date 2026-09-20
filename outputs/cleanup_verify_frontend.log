@@ -1,0 +1,37 @@
+（跳过生产构建；加 --full 可一并跑）
+
+=== 1/4 前后端字段契约 ===
+  $ D:\anaconda\envs\cosyvoice\python.exe D:\podcast-ai\scripts\check_frontend_contract.py
+    [ok]   TaskOut / TaskOut: 24 个字段一致
+    [ok]   TaskPageOut / TaskPageOut: 5 个字段一致
+    [ok]   ScriptOut / ScriptOut: 6 个字段一致
+    [ok]   ScriptLineOut / ScriptLineOut: 7 个字段一致
+    [ok]   UserOut / UserOut: 3 个字段一致
+    [ok]   FeedOut / FeedOut: 8 个字段一致
+    结果：全部一致
+  -> PASS
+
+=== 2/4 TypeScript 类型检查 ===
+  $ C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node.EXE D:\podcast-ai\frontend\node_modules\typescript\bin\tsc --noEmit
+  -> PASS
+
+=== 3/4 单元测试 (vitest) ===
+  $ C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node.EXE D:\podcast-ai\frontend\node_modules\vitest\vitest.mjs run
+     RUN  v3.2.7 D:/podcast-ai/frontend
+     ✓ src/lib/taskView.test.ts (21 tests) 7ms
+     ✓ src/pages/History.test.tsx (5 tests) 766ms
+       ✓ History 列表摘要 > PENDING + pos=2 → 显示「前面还有 2 个任务」  531ms
+     ✓ src/pages/TaskDetail.test.tsx (8 tests) 1042ms
+       ✓ TaskDetail 队列提示 > 排队中（pos=2）→ 显示「前面还有 2 个任务」  612ms
+     Test Files  3 passed (3)
+          Tests  34 passed (34)
+       Start at  10:00:14
+       Duration  6.78s (transform 178ms, setup 873ms, collect 6.10s, tests 1.82s, environment 4.78s, prepare 371ms)
+  -> PASS
+
+========================================================
+  [ok]   1/4 前后端字段契约
+  [ok]   2/4 TypeScript 类型检查
+  [ok]   3/4 单元测试 (vitest)
+========================================================
+结果：全部通过

@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-09-17T17:28:59",
+  "eval_dir": "outputs\\eval\\20260917_172236",
+  "pack": "outputs\\eval\\20260917_172236\\mos\\mos_pack.mp3",
+  "target_lufs": -17.29,
+  "ceiling_dbfs": -1.5,
+  "clip_policy": "offset=20.0s, seg=45.0s",
+  "final_peak_dbfs": -2.25,
+  "final_true_peak_dbtp": -2.2,
+  "loudness_spread_lu": 0.0,
+  "items": [
+    {
+      "序号": 1,
+      "编号": "K1",
+      "主题": "为什么打哈欠会传染",
+      "类别": "知识科普",
+      "源文件": "K1_为什么打哈欠会传染.mp3",
+      "源SHA1": "489350ae4845f548",
+      "源时长s": 117.2,
+      "片段起s": 20.0,
+      "片段长s": 45.0,
+      "源响度LUFS": -17.2,
+      "源采样峰值dBFS": -1.91,
+      "施加静态增益dB": -0.09,
+      "受限项": "响度",
+      "最终响度LUFS": -17.3,
+      "最终采样峰值dBFS": -2.0
+    }
+  ]
+}

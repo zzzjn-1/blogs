@@ -1,0 +1,9 @@
+{
+  "id": "voice_b",
+  "name": "男声·沉稳",
+  "wav": "voice_b.wav",
+  "prompt_text": "你好，生活就像海洋，只有意志坚强的人才能到达彼岸。",
+  "gender": "male",
+  "style": "calm",
+  "description": "用户 2026-09-15 提供第 2 版录音（原始 8.148s，裁掉尾部 1.4s 静音至 6.70s）。prompt_text 由用户提供的准确原文确定，替代 v1 的 whisper 初稿。"
+}

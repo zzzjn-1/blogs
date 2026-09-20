@@ -1,0 +1,202 @@
+{
+  "result": {
+    "topic": "把兴趣做成副业是种什么体验",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 520,
+    "word_range": [
+      468,
+      572
+    ],
+    "actual_words": 525,
+    "word_quota_ok": true,
+    "word_deviation_pct": 0.0096,
+    "line_count": 30,
+    "avg_chars_per_line": 17.5,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 2,
+    "correction_rounds": 1,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为兴趣副业的经验分享，无政治敏感、违法违规或专业承诺，表述务实中性。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 3609,
+      "completion_tokens": 1356,
+      "total_tokens": 4965
+    },
+    "errors": [],
+    "warnings": [],
+    "elapsed_s": 7.8,
+    "index": 10,
+    "category": "生活闲聊",
+    "duration_min": 2.0,
+    "ok": true
+  },
+  "script": {
+    "title": "把兴趣做成副业是种什么体验",
+    "summary": "两位主播聊兴趣变副业的真实感受，从时间成本到收入预期，给出务实建议。",
+    "total_chars": 525,
+    "line_count": 30,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "把兴趣做成副业，到底是一种什么体验？"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "我先给结论，甜和累是同时来的。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "先说甜的那部分，你最有感触的是什么？"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "有人愿意为你的爱好买单，那种感觉特别。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "我懂，等于兴趣被外界认真认可了一次。"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "对，而且做喜欢的事，坚持起来不太费劲。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "那累的部分呢，是不是时间被切碎了？"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "这是最大的成本，下班后还要接着干活。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "主业已经消耗精力，副业再压上来很吃力。"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "所以很多人做几个月就停了，不是不热爱。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "收入这块，现实和想象差距大吗？"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "起步期往往很低，别指望马上覆盖开销。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "我见过有人第一年基本没什么收入进账。"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "正常，前期更像在攒作品和攒口碑。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "那怎么判断自己适不适合继续做下去？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "看两点，一是做完还愿不愿意接着做。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "二是它有没有挤掉你原本的生活节奏。"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "没错，如果只剩疲惫，就该停下来想想。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "还有人担心，兴趣一旦变现就不纯粹了。"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "这担心有道理，接单会带来妥协和重复。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "但也有人因此把爱好练得更专业了。"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "两种结果都存在，关键看你怎么定边界。"
+      },
+      {
+        "seq": 23,
+        "speaker": "A",
+        "text": "边界具体怎么定，能不能举个例子？"
+      },
+      {
+        "seq": 24,
+        "speaker": "B",
+        "text": "比如只接喜欢的类型，价格不合适就拒绝。"
+      },
+      {
+        "seq": 25,
+        "speaker": "A",
+        "text": "这样既能保住热情，也不至于太被动。"
+      },
+      {
+        "seq": 26,
+        "speaker": "B",
+        "text": "对，先把规则想清楚，再决定要不要接。"
+      },
+      {
+        "seq": 27,
+        "speaker": "A",
+        "text": "所以别急着辞职，先用业余时间试水。"
+      },
+      {
+        "seq": 28,
+        "speaker": "B",
+        "text": "把它当成一次低成本的自我测试更稳妥。"
+      },
+      {
+        "seq": 29,
+        "speaker": "A",
+        "text": "试多久比较合适，有没有参考的周期？"
+      },
+      {
+        "seq": 30,
+        "speaker": "B",
+        "text": "我建议至少半年，跨过最初的新鲜期。"
+      }
+    ]
+  }
+}

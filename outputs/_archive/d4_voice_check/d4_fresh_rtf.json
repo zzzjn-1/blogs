@@ -1,0 +1,56 @@
+{
+  "test": "D4 offline regression (cache-miss 口径)",
+  "load_seconds": 20.5,
+  "text_frontend": "wetext",
+  "registered_spks": [
+    "voice_a",
+    "voice_b"
+  ],
+  "vram_after_load": {
+    "cuda": true,
+    "allocated_mb": 2498.6,
+    "reserved_mb": 2700.0,
+    "peak_alloc_mb": 3448.6,
+    "peak_reserved_mb": 3946.0,
+    "system_used_mb": 3826.5,
+    "system_total_mb": 6140.5
+  },
+  "synth": {
+    "A": {
+      "voice": "voice_a",
+      "chars": 33,
+      "cached": false,
+      "elapsed_s": 7.857,
+      "duration_s": 7.6,
+      "rtf": 1.034,
+      "f0_median": 250.0,
+      "peak_alloc_mb": 3514.0,
+      "wav": "D:\\podcast-ai\\outputs\\d4_voice_check\\fresh_spkA_voice_a.wav"
+    },
+    "B": {
+      "voice": "voice_b",
+      "chars": 32,
+      "cached": false,
+      "elapsed_s": 16.728,
+      "duration_s": 15.56,
+      "rtf": 1.075,
+      "f0_median": 108.8,
+      "peak_alloc_mb": 3600.0,
+      "wav": "D:\\podcast-ai\\outputs\\d4_voice_check\\fresh_spkB_voice_b.wav"
+    }
+  },
+  "f0_diff_hz": 141.2,
+  "rtf_mean": 1.054,
+  "vram_final": {
+    "cuda": true,
+    "allocated_mb": 2506.8,
+    "reserved_mb": 2700.0,
+    "peak_alloc_mb": 3600.0,
+    "peak_reserved_mb": 4310.0,
+    "system_used_mb": 3834.5,
+    "system_total_mb": 6140.5
+  },
+  "budget_ok": false,
+  "budget_msg": "peak_allocated=3600.0 MB（≤3600 达标） / peak_reserved=4310.0 MB （≤4200 超限）",
+  "verdict": "FAIL"
+}

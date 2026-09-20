@@ -1,0 +1,57 @@
+[15:11:21] 后端就绪（1.7s）
+[15:11:21] 用户 d12chk15479 就绪
+[15:11:21] 任务 134fd48e-a01e-407c-83ba-8097013140ba 已建，等脚本生成…
+[15:11:30] 已触发合成，等进度到 40%…
+[15:14:07] 进度 40%，已 DONE 行 0 —— 现在杀进程
+[15:14:08] 进程已杀（taskkill /F /T）
+[15:14:11] 杀后库内状态：{'status': 'SYNTHESIZING', 'stage': '合成', 'progress': 40}
+[15:14:13] 重启就绪（2.1s），观察恢复…
+Traceback (most recent call last):
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\http11.py", line 136, in handle_request
+    raise exc
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpcore\_sync\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\podcast-ai\scripts\verify_d12_crash_recover.py", line 297, in <module>
+    raise SystemExit(main())
+  File "D:\podcast-ai\scripts\verify_d12_crash_recover.py", line 231, in main
+    st = poll_task(cli, tid, until=lambda d: d["status"] in ("DONE", "FAILED"),
+  File "D:\podcast-ai\scripts\verify_d12_crash_recover.py", line 124, in poll_task
+    r = cli.get(f"/api/tasks/{tid}")
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 1066, in get
+    return self.request(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 837, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\anaconda\envs\cosyvoice\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\anaconda\envs\cosyvoice\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.

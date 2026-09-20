@@ -1,0 +1,14 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mD:/podcast-ai/frontend[39m
+
+ [32m✓[39m src/lib/taskView.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m src/pages/History.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 554[2mms[22m[39m
+   [33m[2m✓[22m[39m History 列表摘要[2m > [22mPENDING + pos=2 → 显示「前面还有 2 个任务」 [33m 420[2mms[22m[39m
+ [32m✓[39m src/pages/TaskDetail.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 663[2mms[22m[39m
+   [33m[2m✓[22m[39m TaskDetail 队列提示[2m > [22m排队中（pos=2）→ 显示「前面还有 2 个任务」 [33m 474[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m27 passed[39m[22m[90m (27)[39m
+[2m   Start at [22m 16:56:47
+[2m   Duration [22m 9.15s[2m (transform 161ms, setup 868ms, collect 7.92s, tests 1.22s, environment 4.99s, prepare 346ms)[22m
+

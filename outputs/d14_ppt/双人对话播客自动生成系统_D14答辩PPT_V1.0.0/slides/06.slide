@@ -1,0 +1,94 @@
+<Slide style={{ width: 1280, height: 720, position: 'relative', background: '#F7F9FC', fontFamily: 'Source Han Sans SC, Noto Sans SC, Microsoft YaHei, sans-serif', overflow: 'hidden' }}>
+
+  <Box style={{ position: 'absolute', top: 0, left: 0, width: 1280, height: 56, background: '#1E4FA8', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px' }}>
+    <Text style={{ fontSize: 18, color: '#FFFFFF', fontWeight: 'bold' }}>双人对话播客自动生成系统</Text>
+    <Text style={{ fontSize: 15, color: '#BFD3EE' }}>D14 项目答辩</Text>
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 80, left: 40, width: 1200, flexDirection: 'column' }}>
+    <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#0E3F8C' }}>五段流水线：状态机是唯一权威</Text>
+    <Box style={{ width: 88, height: 3, background: '#3D7BD9', marginTop: 12 }} />
+  </Box>
+
+  {/* 上大图：五段流水线（L1 主视觉，占上部 60%） */}
+  <Box style={{ position: 'absolute', top: 166, left: 40, width: 1200, height: 272, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '24px 30px', flexDirection: 'column', justifyContent: 'center' }}>
+    <svg width={1140} height={176} viewBox='0 0 1140 176'>
+      {/* 五个节点 */}
+      <rect x='0' y='26' width='186' height='96' rx='6' fill='#E8EFF8' stroke='#1E4FA8' strokeWidth='1.5' />
+      <text x='93' y='62' textAnchor='middle' fontSize='19' fontWeight='bold' fill='#0E3F8C'>1 脚本</text>
+      <text x='93' y='90' textAnchor='middle' fontSize='14' fill='#4A5568'>LLM 生成 + Schema 校验</text>
+      <text x='93' y='110' textAnchor='middle' fontSize='13' fill='#8B97A8'>SCRIPT_READY</text>
+
+      <path d='M192 74 L226 74' stroke='#1E4FA8' strokeWidth='2.5' />
+      <path d='M220 67 L232 74 L220 81 Z' fill='#1E4FA8' />
+
+      <rect x='238' y='26' width='186' height='96' rx='6' fill='#E8EFF8' stroke='#1E4FA8' strokeWidth='1.5' />
+      <text x='331' y='62' textAnchor='middle' fontSize='19' fontWeight='bold' fill='#0E3F8C'>2 待确认</text>
+      <text x='331' y='90' textAnchor='middle' fontSize='14' fill='#4A5568'>可在线改稿 / 换说话人</text>
+      <text x='331' y='110' textAnchor='middle' fontSize='13' fill='#8B97A8'>等用户点「确认合成」</text>
+
+      <path d='M430 74 L464 74' stroke='#1E4FA8' strokeWidth='2.5' />
+      <path d='M458 67 L470 74 L458 81 Z' fill='#1E4FA8' />
+
+      <rect x='476' y='26' width='186' height='96' rx='6' fill='#0E3F8C' />
+      <text x='569' y='62' textAnchor='middle' fontSize='19' fontWeight='bold' fill='#FFFFFF'>3 合成</text>
+      <text x='569' y='90' textAnchor='middle' fontSize='14' fill='#A9C6EC'>单并发 · 句级缓存</text>
+      <text x='569' y='110' textAnchor='middle' fontSize='13' fill='#7FA8E0'>SYNTHESIZING</text>
+
+      <path d='M668 74 L702 74' stroke='#1E4FA8' strokeWidth='2.5' />
+      <path d='M696 67 L708 74 L696 81 Z' fill='#1E4FA8' />
+
+      <rect x='714' y='26' width='186' height='96' rx='6' fill='#E8EFF8' stroke='#1E4FA8' strokeWidth='1.5' />
+      <text x='807' y='62' textAnchor='middle' fontSize='19' fontWeight='bold' fill='#0E3F8C'>4 后期</text>
+      <text x='807' y='90' textAnchor='middle' fontSize='14' fill='#4A5568'>动态片头 + 拼接 + 响度</text>
+      <text x='807' y='110' textAnchor='middle' fontSize='13' fill='#8B97A8'>POSTPROCESSING</text>
+
+      <path d='M906 74 L940 74' stroke='#1E4FA8' strokeWidth='2.5' />
+      <path d='M934 67 L946 74 L934 81 Z' fill='#1E4FA8' />
+
+      <rect x='952' y='26' width='188' height='96' rx='6' fill='#E8EFF8' stroke='#1E4FA8' strokeWidth='1.5' />
+      <text x='1046' y='62' textAnchor='middle' fontSize='19' fontWeight='bold' fill='#0E3F8C'>5 打包</text>
+      <text x='1046' y='90' textAnchor='middle' fontSize='14' fill='#4A5568'>写库 + 写订阅源</text>
+      <text x='1046' y='110' textAnchor='middle' fontSize='13' fill='#8B97A8'>PACKAGING → DONE</text>
+
+      {/* 底部旁注 */}
+      <path d='M0 142 L1140 142' stroke='#E5E7EB' strokeWidth='1' />
+      <text x='0' y='168' fontSize='14' fill='#D9534F' fontWeight='bold'>非法跃迁一律被拒绝</text>
+      <text x='176' y='168' fontSize='14' fill='#4A5568'>状态机是唯一权威：任何绕过它直接改库状态的路径都会在下一次流转时被挡下</text>
+    </svg>
+  </Box>
+
+  {/* 下方两卡 */}
+  <Box style={{ position: 'absolute', top: 456, left: 40, width: 588, height: 198, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '20px 24px', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+      <Box style={{ width: 5, height: 24, background: '#1E4FA8' }} />
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1A2230' }}>单并发队列</Text>
+    </Box>
+    <Text style={{ fontSize: 19, color: '#4A5568', lineHeight: 1.62 }}>
+      第二个任务进入排队而非并行推理：<br />
+      只有一张净可用 4.32 GB 的消费级显卡，
+      <span style={{ fontWeight: 'bold', color: '#D9534F' }}>并行必然 OOM</span>。
+      页面会显示「前面还有 N 个任务」。
+    </Text>
+    <Text style={{ fontSize: 15, color: '#8B97A8' }}>max_workers=1 + 显存互斥锁</Text>
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 456, left: 652, width: 588, height: 198, background: '#FFFFFF', border: '1px solid #D6DCE5', borderRadius: 6, padding: '20px 24px', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+      <Box style={{ width: 5, height: 24, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1A2230' }}>句级缓存（8 字段 SHA1）</Text>
+    </Box>
+    <Text style={{ fontSize: 19, color: '#4A5568', lineHeight: 1.62 }}>
+      音色 id · 参考音频指纹 · 模型版本 · 随机种子 · 长度上限系数 · 文本 · 语速 · 情绪。
+      <span style={{ fontWeight: 'bold', color: '#0E3F8C' }}>后四字段都是踩坑后补进键的</span>，
+      补之前换音色会静默命中旧音频。
+    </Text>
+    <Text style={{ fontSize: 15, color: '#8B97A8' }}>改一句话 → 只重烧那一句</Text>
+  </Box>
+
+  <Box style={{ position: 'absolute', top: 668, left: 40, width: 1200, height: 32, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>双人对话播客自动生成系统 · D14 答辩</Text>
+    <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold' }}>06 / 12</Text>
+  </Box>
+
+</Slide>

@@ -1,0 +1,9 @@
+{
+  "id": "voice_ref_full",
+  "name": "原样 8.92s 参考",
+  "wav": "voice_ref_full.wav",
+  "prompt_text": "哈啰你好，请问你是哪个？这里是",
+  "gender": "male",
+  "style": "neutral",
+  "description": "原样 8.92s 参考"
+}

@@ -1,0 +1,182 @@
+{
+  "result": {
+    "topic": "生成式人工智能对内容行业的影响",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 520,
+    "word_range": [
+      468,
+      572
+    ],
+    "actual_words": 494,
+    "word_quota_ok": true,
+    "word_deviation_pct": -0.05,
+    "line_count": 26,
+    "avg_chars_per_line": 19.0,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 2,
+    "correction_rounds": 1,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为生成式人工智能对内容行业的通用讨论，无政治敏感、违法违规或具体专业建议，未涉及真实个人企业。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 3778,
+      "completion_tokens": 1680,
+      "total_tokens": 5458
+    },
+    "errors": [],
+    "warnings": [],
+    "elapsed_s": 10.38,
+    "index": 5,
+    "category": "行业解读",
+    "duration_min": 2.0,
+    "ok": true
+  },
+  "script": {
+    "title": "生成式人工智能如何改写内容行业",
+    "summary": "从写稿到配图，聊聊生成式人工智能给内容行业带来的机会与烦恼。",
+    "total_chars": 494,
+    "line_count": 26,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "今天咱们聊聊生成式人工智能对内容行业的影响。"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "这话题最近特别热，几乎每个做内容的人都在讨论。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "先说说你观察到的最直接变化是什么。"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "最明显是写稿和配图的速度，快得有点不真实。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "我也有同感，过去一天的活现在一小时能出草稿。"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "对，尤其适合起标题、列提纲这种重复劳动。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "那问题来了，内容质量真的跟着提高了吗？"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "不一定，工具只负责生成，判断还得靠人。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "我见过不少文章，读着顺，但信息很空。"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "这就是所谓的正确废话，看着完整其实没料。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "所以有人担心，内容会变得千篇一律。"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "有这种风险，但另一面是创作门槛降低了。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "对，小团队也能做出过去做不起的视觉效果。"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "比如独立作者用工具做封面和短视频剪辑。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "那版权和事实核查这块，你觉得怎么处理？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "这是目前最麻烦的部分，模型可能编造细节。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "我了解到，不少平台要求标注人工智能生成。"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "对，透明标注能帮读者建立基本信任。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "从业者的角色会不会因此被重新定义？"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "我觉得会，从写手慢慢变成策划和把关人。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "会提问、会判断，可能比会写更值钱。"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "没错，工具越强，人的品味就越关键。"
+      },
+      {
+        "seq": 23,
+        "speaker": "A",
+        "text": "那普通读者该怎么适应这种变化呢？"
+      },
+      {
+        "seq": 24,
+        "speaker": "B",
+        "text": "多留个心眼，看到数据先想想来源在哪。"
+      },
+      {
+        "seq": 25,
+        "speaker": "A",
+        "text": "总结一句，人工智能是放大器，不是替代品。"
+      },
+      {
+        "seq": 26,
+        "speaker": "B",
+        "text": "用好它的人，会比不用它的人走得更远。"
+      }
+    ]
+  }
+}

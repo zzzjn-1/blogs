@@ -1,0 +1,172 @@
+{
+  "result": {
+    "topic": "咖啡因进入身体之后发生了什么",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 390,
+    "word_range": [
+      351,
+      429
+    ],
+    "actual_words": 367,
+    "word_quota_ok": true,
+    "word_deviation_pct": -0.059,
+    "line_count": 24,
+    "avg_chars_per_line": 15.3,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 2,
+    "correction_rounds": 1,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为咖啡因吸收代谢的科普对话，无政治敏感、低俗、违法或专业建议风险。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 3545,
+      "completion_tokens": 1407,
+      "total_tokens": 4952
+    },
+    "errors": [],
+    "warnings": [],
+    "elapsed_s": 7.55,
+    "index": 4,
+    "category": "知识科普",
+    "duration_min": 1.5,
+    "ok": true
+  },
+  "script": {
+    "title": "咖啡因进入身体之后发生了什么",
+    "summary": "从喝下咖啡到提神再到代谢，轻松聊清咖啡因在体内的旅程与半衰期。",
+    "total_chars": 367,
+    "line_count": 24,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "喝下一杯咖啡，身体里到底发生了什么？"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "这趟旅程其实很快，几分钟就开始了。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "先说说它怎么被吸收的吧。"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "主要在小肠吸收，半小时到一小时达峰。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "难怪喝完要等一会儿才有感觉。"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "对，空腹会快一些，饭后会慢一些。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "那它提神的原理是什么？"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "关键是它挡住了让人犯困的腺苷。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "所以困意不是消失了，只是被推迟。"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "没错，腺苷还在积累，只是暂时被屏蔽。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "它还会带来哪些身体变化？"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "心跳略快、血压微升，也会让人更清醒。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "有人喝完反而心慌，这正常吗？"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "个体差异很大，敏感的人反应更明显。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "那它多久能被代谢掉？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "半衰期大约三到五小时，因人而异。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "所以下午喝，晚上可能还留着。"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "对，睡前六小时最好就别再喝了。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "那经常喝，是不是会越来越不管用？"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "长期喝会形成耐受，同样的量效果变弱。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "所以有人越喝越多，其实是在追平。"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "对，停几天耐受会慢慢回落一些。"
+      },
+      {
+        "seq": 23,
+        "speaker": "A",
+        "text": "看来关键是了解自己的节奏和耐受。"
+      },
+      {
+        "seq": 24,
+        "speaker": "B",
+        "text": "适量享受，别用它硬撑睡眠就好。"
+      }
+    ]
+  }
+}

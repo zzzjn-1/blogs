@@ -1,0 +1,102 @@
+{
+  "check": "D4 前置检查：DeepSeek Key 换发 + voice_b 音色档案落地与生产路径验证",
+  "date": "2026-09-15",
+  "env": {
+    "python_env": "D:\\anaconda\\envs\\cosyvoice (Python 3.10.21)",
+    "project_root": "D:\\podcast-ai",
+    "gpu": "RTX 4050 Laptop 6140.5 MB 总量",
+    "text_frontend": "wetext",
+    "model_class": "CosyVoice2",
+    "fp16": true,
+    "onnx_device": "cpu"
+  },
+  "llm": {
+    "base_url": "https://api.deepseek.com",
+    "old_key_status": "HTTP 401 authentication_error（D0/P-3 遗留，已废除）",
+    "new_key_status": "HTTP 200 可用（/models 与 /chat/completions 均通过）",
+    "gateway_model_list": ["deepseek-flash", "deepseek-v4-pro"],
+    "verified_mapping": {
+      "deepseek-chat": "deepseek-flash",
+      "deepseek-reasoner": "deepseek-flash",
+      "deepseek-v4-pro": "deepseek-v4-pro",
+      "deepseek-flash": "deepseek-flash"
+    },
+    "finding": "deepseek-chat 与 deepseek-reasoner 被网关静默映射为 deepseek-flash；推理槽名不副实",
+    "decision": "LLM_MODEL 保持 deepseek-chat；LLM_REASONER_MODEL 改为 deepseek-v4-pro",
+    "probe_note": "探测方式一：直连 api.deepseek.com 未附加任何自定义头；响应体 model 字段即足以判定映射"
+  },
+  "voice_b": {
+    "source_file": "录音机-20260915-1012.m4a",
+    "source_spec": "AAC 48kHz 立体声 196kbps 8.932s 226106 B（Android 16 录音）",
+    "converted": "16000 Hz / 单声道 / 16bit PCM / 8.916s",
+    "quality": {
+      "peak_dbfs": -3.35,
+      "rms_dbfs": -20.90,
+      "near_clip_samples": 0,
+      "leading_silence_ms": 220,
+      "trailing_silence_ms": 0,
+      "internal_pause_ge_300ms": 0,
+      "voiced_ratio_pct": 96.5
+    },
+    "f0_median_source_hz": 100.0,
+    "gender_verdict": "男声区间（典型男声 85~155 Hz）",
+    "prompt_text": "哈啰你好，请问你是哪个？这里是",
+    "prompt_text_status": "DRAFT（草稿）：whisper small 初稿；ASR 仅覆盖 0~7.0s，7.0~8.92s 存在实测人声（RMS 峰值 3000，过零率 829/s）但未转写，需人工校正后重跑 make_voice_profile.py --force",
+    "profile_files": ["backend/voices/voice_b.wav", "backend/voices/voice_b.json"]
+  },
+  "registration": {
+    "speaker_voice_map": {"A": "voice_a", "B": "voice_b"},
+    "available_spks": ["voice_a", "voice_b"],
+    "fallback_triggered": false,
+    "load_seconds": 14.4,
+    "load_plus_register_seconds": 32.4,
+    "warmup_seconds": 5.78
+  },
+  "synthesis": {
+    "A": {"voice": "voice_a", "chars": 22, "elapsed_s": 6.39, "audio_s": 5.80, "rtf": 1.101, "cached": false},
+    "B": {"voice": "voice_b", "chars": 24, "elapsed_s": 8.73, "audio_s": 7.84, "rtf": 1.114, "cached": false}
+  },
+  "vram": {
+    "resident_allocated_mb": 2498.6,
+    "resident_reserved_mb": 2700.0,
+    "peak_allocated_mb": 3448.6,
+    "peak_reserved_mb": 3946.0,
+    "threshold_allocated_mb": 3600,
+    "threshold_reserved_mb": 4200,
+    "verdict": "双口径达标"
+  },
+  "timbre_separation": {
+    "f0_median_a_hz": 242.4,
+    "f0_median_b_hz": 100.0,
+    "delta_hz": 142.4,
+    "verdict": "区分度显著，一男一女成立；voice_b 输出 F0 与源素材 F0(100.0) 完全一致，音色克隆有效"
+  },
+  "issues_found": [
+    {
+      "id": "R14-REGRESSION",
+      "severity": "P1",
+      "title": "wetext 文本规范化前端间歇性加载失败，导致服务启动失败",
+      "root_cause": "wetext.Normalizer.__init__ 无条件调用 modelscope.snapshot_download('pengzhendong/wetext')；CosyVoice frontend.py:78-85 连续构造 ZhNormalizer 与 EnNormalizer，背靠背两次 snapshot_download 触发 ModelScope 匿名限流，第二次返回 HTTP 403 (Authentication token does not exist)，异常被 except 吞掉后 text_frontend 置空",
+      "evidence": "首次运行：/revisions 200 -> /revisions 403 -> 'no frontend is avaliable' -> 被 api/services/tts.py:240 TextFrontendUnavailable 拦截；单独调用 snapshot_download 复测 0.8s 成功，确认是间歇性限流",
+      "impact": "服务启动成功率依赖外部限流状态；若 R14 fail-fast 被移除则退化为静默不规范化（数字原样朗读）",
+      "existing_cache": "C:\\Users\\zzz\\.cache\\modelscope\\hub\\pengzhendong\\wetext 完整 51.19 MB（含 zh/en 的 tn/itn FST）",
+      "suggested_fix": "改造为离线加载：以显式 tagger_path/verbalizer_path + lang 构造 Normalizer（该分支不触发 snapshot_download），随部署包固化缓存；或对 frontend.py 打 patch，纳入项目 patches/ 现有机制",
+      "status": "OPEN（本次仅复现与定位，未改动第三方源码）"
+    },
+    {
+      "id": "ENV-SENSEVOICE-BROKEN",
+      "severity": "P3",
+      "title": "conda 环境 sensevoice 的 torchaudio 无法加载",
+      "detail": "torch 2.3.0+cpu 与已装 torchaudio 不匹配，import torchaudio 抛 OSError [WinError 127] 找不到指定的程序，funasr 因此不可用",
+      "impact": "本项目不受影响（转写走 cosyvoice 环境的 whisper）；仅影响该环境自身的 ASR 用途",
+      "status": "OPEN（未擅自修改用户既有 conda 环境）"
+    }
+  ],
+  "artifacts": {
+    "wav_a": "D:\\podcast-ai\\outputs\\d4_voice_check\\spkA_voice_a.wav",
+    "wav_b": "D:\\podcast-ai\\outputs\\d4_voice_check\\spkB_voice_b.wav",
+    "f0_compare": "D:\\podcast-ai\\outputs\\d4_voice_check\\f0_compare.json",
+    "source_copy": "D:\\podcast-ai\\data\\work\\d4_voice\\source_raw.m4a",
+    "source_16k": "D:\\podcast-ai\\data\\work\\d4_voice\\source_16k_mono.wav"
+  }
+}

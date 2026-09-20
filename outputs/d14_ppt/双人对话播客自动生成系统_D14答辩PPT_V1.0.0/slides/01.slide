@@ -1,0 +1,54 @@
+<Slide style={{ width: 1280, height: 720, position: 'relative', background: '#0E3F8C', fontFamily: 'Source Han Sans SC, Noto Sans SC, Microsoft YaHei, sans-serif', overflow: 'hidden' }}>
+
+  {/* 右上角声波线稿（装饰） */}
+  <svg width={1280} height={720} viewBox='0 0 1280 720' style={{ position: 'absolute', top: 0, left: 0 }}>
+    <rect x='0' y='0' width='1280' height='720' fill='#0E3F8C' />
+    <rect x='0' y='0' width='1280' height='8' fill='#3D7BD9' />
+    <g opacity='0.30' stroke='#7FA8E0' strokeWidth='2' fill='none'>
+      <path d='M880 300 L960 300 L960 240 L1040 240 L1040 360 L1120 360 L1120 200 L1200 200' />
+      <path d='M880 380 L980 380 L980 320 L1060 320 L1060 440 L1140 440 L1140 300 L1240 300' />
+      <path d='M880 460 L940 460 L940 420 L1020 420 L1020 500 L1100 500 L1100 400 L1200 400' />
+    </g>
+    <g opacity='0.18' stroke='#7FA8E0' strokeWidth='1.5' fill='none'>
+      <circle cx='1120' cy='150' r='60' />
+      <circle cx='1120' cy='150' r='104' />
+      <circle cx='1120' cy='150' r='148' />
+    </g>
+    <path d='M880 560 L1240 560' stroke='#3D7BD9' strokeWidth='2' opacity='0.5' />
+  </svg>
+
+  {/* 左侧标题区 */}
+  <Box style={{ position: 'absolute', top: 150, left: 88, width: 800, flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 26 }}>
+      <Box style={{ width: 44, height: 3, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 18, color: '#9FC0EA', letterSpacing: 3 }}>项目答辩 · 2026</Text>
+    </Box>
+
+    <Text style={{ fontSize: 74, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.16 }}>
+      双人对话播客
+      <br />
+      自动生成系统
+    </Text>
+
+    <Text style={{ fontSize: 24, color: '#A9C6EC', marginTop: 22, letterSpacing: 0.5 }}>
+      Dual-Host Podcast Auto-Generation System
+    </Text>
+
+    <Box style={{ width: 120, height: 2, background: '#3D7BD9', marginTop: 30, marginBottom: 26 }} />
+
+    <Text style={{ fontSize: 26, color: '#D6E4F7', lineHeight: 1.6 }}>
+      从一句主题，到一期可直接订阅的播客
+    </Text>
+  </Box>
+
+  {/* 底部信息条 */}
+  <Box style={{ position: 'absolute', top: 596, left: 88, width: 1104, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+    <Text style={{ fontSize: 18, color: '#9FC0EA' }}>
+      汇报人：单人全栈开发　|　周期：D0 ~ D14（2026-09-14 起）
+    </Text>
+    <Text style={{ fontSize: 18, color: '#7FA8E0' }}>
+      CosyVoice2-0.5B · DeepSeek · FFmpeg · FastAPI · React
+    </Text>
+  </Box>
+
+</Slide>

@@ -1,0 +1,195 @@
+{
+  "topic": "为什么天空是蓝色的",
+  "style": "轻松自然、信息密度适中",
+  "target_words": 520,
+  "word_range": [
+    468,
+    572
+  ],
+  "actual_words": 472,
+  "word_quota_ok": true,
+  "word_deviation": -0.0923,
+  "word_deviation_pct": -9.23,
+  "line_count": 37,
+  "avg_chars_per_line": 12.8,
+  "model_requested": "deepseek-chat",
+  "model_returned": "deepseek-flash",
+  "model_mapped": true,
+  "calls": 3,
+  "correction_rounds": 2,
+  "degraded": false,
+  "flagged": false,
+  "usable": true,
+  "first_pass": false,
+  "sensitive_hits": [],
+  "self_check": {
+    "safe": true,
+    "risk": "none",
+    "reason": "内容为瑞利散射科普，无政治敏感、低俗、违法或虚假信息，可发布。"
+  },
+  "self_check_error": null,
+  "usage": {
+    "prompt_tokens": 6891,
+    "completion_tokens": 2795,
+    "total_tokens": 9686
+  },
+  "errors": [],
+  "warnings": [
+    "title 长度 9 不在建议区间 12~24：天空为什么是蓝色的",
+    "summary 长度 27 不在建议区间 30~60"
+  ],
+  "elapsed_s": 11.3,
+  "script": {
+    "title": "天空为什么是蓝色的",
+    "lines": [
+      {
+        "speaker": "A",
+        "text": "你有没有想过，天空为什么是蓝色的？"
+      },
+      {
+        "speaker": "B",
+        "text": "这个问题看着简单，其实挺有讲究。"
+      },
+      {
+        "speaker": "A",
+        "text": "那今天咱们就把它聊透。"
+      },
+      {
+        "speaker": "B",
+        "text": "好，先从太阳光本身说起。"
+      },
+      {
+        "speaker": "A",
+        "text": "太阳光不是白的吗？"
+      },
+      {
+        "speaker": "B",
+        "text": "白光其实是各种颜色混在一起。"
+      },
+      {
+        "speaker": "A",
+        "text": "就像彩虹那样，红橙黄绿蓝靛紫。"
+      },
+      {
+        "speaker": "B",
+        "text": "对，不同颜色的波长不一样。"
+      },
+      {
+        "speaker": "A",
+        "text": "那这和天空颜色有什么关系？"
+      },
+      {
+        "speaker": "B",
+        "text": "关键在空气分子对光的散射。"
+      },
+      {
+        "speaker": "A",
+        "text": "散射，就是光被弹开的意思吧。"
+      },
+      {
+        "speaker": "B",
+        "text": "差不多，光的方向被改变了。"
+      },
+      {
+        "speaker": "A",
+        "text": "哪种颜色更容易被弹开呢？"
+      },
+      {
+        "speaker": "B",
+        "text": "波长越短，散射就越强烈。"
+      },
+      {
+        "speaker": "A",
+        "text": "蓝光波长短，所以被弹得最多。"
+      },
+      {
+        "speaker": "B",
+        "text": "对，蓝光就洒满了整个天空。"
+      },
+      {
+        "speaker": "A",
+        "text": "那紫光波长更短，怎么不紫？"
+      },
+      {
+        "speaker": "B",
+        "text": "太阳里紫光少，眼睛也不敏感。"
+      },
+      {
+        "speaker": "A",
+        "text": "所以综合起来看就是蓝色。"
+      },
+      {
+        "speaker": "B",
+        "text": "没错，这是最常见的解释。"
+      },
+      {
+        "speaker": "A",
+        "text": "那傍晚天空为什么变红？"
+      },
+      {
+        "speaker": "B",
+        "text": "太阳斜射，光要穿过更厚大气。"
+      },
+      {
+        "speaker": "A",
+        "text": "蓝光半路就被散射掉了。"
+      },
+      {
+        "speaker": "B",
+        "text": "剩下红橙光，就染红了天边。"
+      },
+      {
+        "speaker": "A",
+        "text": "原来早晚的红霞是同一个道理。"
+      },
+      {
+        "speaker": "B",
+        "text": "对，都是散射在起作用。"
+      },
+      {
+        "speaker": "A",
+        "text": "那为什么云是白的，海是蓝的？"
+      },
+      {
+        "speaker": "B",
+        "text": "云里水滴大，各种光都被散射。"
+      },
+      {
+        "speaker": "A",
+        "text": "混在一起又变回白色了。"
+      },
+      {
+        "speaker": "B",
+        "text": "对，海水的蓝还和吸收有关。"
+      },
+      {
+        "speaker": "A",
+        "text": "所以蓝天不是天本身有颜色。"
+      },
+      {
+        "speaker": "B",
+        "text": "是光和大气的共同作品。"
+      },
+      {
+        "speaker": "A",
+        "text": "在太空看，天空就是黑的。"
+      },
+      {
+        "speaker": "B",
+        "text": "因为没有空气来散射阳光。"
+      },
+      {
+        "speaker": "A",
+        "text": "这么一说，蓝天其实很珍贵。"
+      },
+      {
+        "speaker": "B",
+        "text": "下次抬头，可以想想这束光。"
+      },
+      {
+        "speaker": "A",
+        "text": "好，今天就聊到这里。"
+      }
+    ]
+  }
+}

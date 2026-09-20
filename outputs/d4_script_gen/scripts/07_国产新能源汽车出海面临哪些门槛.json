@@ -1,0 +1,244 @@
+{
+  "result": {
+    "topic": "国产新能源汽车出海面临哪些门槛",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 650,
+    "word_range": [
+      585,
+      715
+    ],
+    "actual_words": 594,
+    "word_quota_ok": true,
+    "word_deviation_pct": -0.0862,
+    "line_count": 38,
+    "avg_chars_per_line": 15.6,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 3,
+    "correction_rounds": 2,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为新能源车出海的关税、认证、本地化等一般性讨论，无敏感或违规信息。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 7317,
+      "completion_tokens": 3134,
+      "total_tokens": 10451
+    },
+    "errors": [],
+    "warnings": [
+      "title 长度 11 不在建议区间 12~24：国产新能源车出海的门槛"
+    ],
+    "elapsed_s": 15.65,
+    "index": 7,
+    "category": "行业解读",
+    "duration_min": 2.5,
+    "ok": true
+  },
+  "script": {
+    "title": "国产新能源车出海的门槛",
+    "summary": "聊聊国产新能源车出海要跨过哪些门槛，关税、认证、本地化一个都不能少。",
+    "total_chars": 594,
+    "line_count": 38,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "最近国产新能源车出海很热，今天聊聊门槛。"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "好，这个话题挺实在，门槛还真不少。"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "先从最直接的关税说起吧，这块最敏感。"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "对，关税是第一道坎，有些地区加得挺高。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "听说有的地方加到百分之百，是这样吗？"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "据我了解，确实有地区对电动车加征高关税。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "那车企怎么应对，绕道建厂？"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "很多选择当地建厂，或者找第三国组装。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "建厂可不只是钱的问题吧，牵扯挺多。"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "对，还有供应链、人工和当地法规。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "除了关税，还有哪些硬门槛？"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "认证标准，欧洲和北美各有各的规矩。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "比如碰撞安全和电池法规？"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "对，电池回收和碳足迹也在要求里。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "这些认证周期长吗，会不会拖慢节奏？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "有的要一两年，得提前布局才行。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "那品牌认知算不算门槛？"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "算，海外消费者认老牌子，需要时间。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "渠道和售后也得跟上吧，不然用户担心。"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "没错，维修网点少，用户就不敢买。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "还有数据合规这块，容易被忽略。"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "对，智能车收集数据，各地管得不一样。"
+      },
+      {
+        "seq": 23,
+        "speaker": "A",
+        "text": "那本地化生产是不是万能解？"
+      },
+      {
+        "seq": 24,
+        "speaker": "B",
+        "text": "不全是，本地化也有成本和风险。"
+      },
+      {
+        "seq": 25,
+        "speaker": "A",
+        "text": "比如当地政策变动，或者工会问题。"
+      },
+      {
+        "seq": 26,
+        "speaker": "B",
+        "text": "对，所以不少车企是多条腿走路。"
+      },
+      {
+        "seq": 27,
+        "speaker": "A",
+        "text": "还有汇率波动和结算风险吧。"
+      },
+      {
+        "seq": 28,
+        "speaker": "B",
+        "text": "对，跨国经营这些都得算进成本。"
+      },
+      {
+        "seq": 29,
+        "speaker": "A",
+        "text": "那专利和知识产权呢？"
+      },
+      {
+        "seq": 30,
+        "speaker": "B",
+        "text": "也有讲究，出海前得做专利排查。"
+      },
+      {
+        "seq": 31,
+        "speaker": "A",
+        "text": "这么看，门槛是一环扣一环的。"
+      },
+      {
+        "seq": 32,
+        "speaker": "B",
+        "text": "对，任何一环掉链子，都可能前功尽弃。"
+      },
+      {
+        "seq": 33,
+        "speaker": "A",
+        "text": "那对消费者来说，这算好事吗？"
+      },
+      {
+        "seq": 34,
+        "speaker": "B",
+        "text": "竞争多了，选择多，价格也可能更实在。"
+      },
+      {
+        "seq": 35,
+        "speaker": "A",
+        "text": "总结一下，出海是系统工程。"
+      },
+      {
+        "seq": 36,
+        "speaker": "B",
+        "text": "关税、认证、品牌、渠道，缺一不可。"
+      },
+      {
+        "seq": 37,
+        "speaker": "A",
+        "text": "而且每个市场规则都在变。"
+      },
+      {
+        "seq": 38,
+        "speaker": "B",
+        "text": "对，得持续投入，没有一劳永逸。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "vb_trim",
+  "name": "vb_trim",
+  "wav": "vb_trim.wav",
+  "prompt_text": "你好，生活就像海洋，只有意志坚强的人才能到达彼岸。",
+  "gender": "male",
+  "style": "calm",
+  "description": "对照实验 vb_trim"
+}

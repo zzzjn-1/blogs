@@ -1,0 +1,74 @@
+[
+  {
+    "cand": "r1_现役voice_b(原样)",
+    "test": 1,
+    "floor": -41.193726710962224,
+    "speech": -13.159607812607735,
+    "gap_s": 1.34,
+    "dur": 6.72,
+    "wav": "D:\\podcast-ai\\outputs\\d5_denoise_probe\\exp\\lab01_t1.wav"
+  },
+  {
+    "cand": "r1_现役voice_b(原样)",
+    "test": 2,
+    "floor": -45.504433206920766,
+    "speech": -18.443189461010736,
+    "gap_s": 0.2,
+    "dur": 19.24,
+    "wav": "D:\\podcast-ai\\outputs\\d5_denoise_probe\\exp\\lab01_t2.wav"
+  },
+  {
+    "cand": "r2_新素材life(原样)",
+    "test": 1,
+    "floor": -57.61565897436406,
+    "speech": -16.479702349528655,
+    "gap_s": 1.58,
+    "dur": 6.8,
+    "wav": "D:\\podcast-ai\\outputs\\d5_denoise_probe\\exp\\lab02_t1.wav"
+  },
+  {
+    "cand": "r2_新素材life(原样)",
+    "test": 2,
+    "floor": -58.367040150476235,
+    "speech": -15.799347523692745,
+    "gap_s": 1.44,
+    "dur": 7.0,
+    "wav": "D:\\podcast-ai\\outputs\\d5_denoise_probe\\exp\\lab02_t2.wav"
+  },
+  {
+    "cand": "r3_新素材life(净化)",
+    "test": 1,
+    "floor": -46.70424942415427,
+    "speech": -15.311055554799232,
+    "gap_s": 0.6,
+    "dur": 6.12,
+    "wav": "D:\\podcast-ai\\outputs\\d5_denoise_probe\\exp\\lab03_t1.wav"
+  },
+  {
+    "cand": "r3_新素材life(净化)",
+    "test": 2,
+    "floor": -56.92278495826537,
+    "speech": -15.79207998832546,
+    "gap_s": 0.8,
+    "dur": 5.96,
+    "wav": "D:\\podcast-ai\\outputs\\d5_denoise_probe\\exp\\lab03_t2.wav"
+  },
+  {
+    "cand": "r4_现役voice_b(净化)",
+    "test": 1,
+    "floor": -43.91486030006113,
+    "speech": -14.872481546775415,
+    "gap_s": 0.62,
+    "dur": 6.24,
+    "wav": "D:\\podcast-ai\\outputs\\d5_denoise_probe\\exp\\lab04_t1.wav"
+  },
+  {
+    "cand": "r4_现役voice_b(净化)",
+    "test": 2,
+    "floor": -41.23482970693687,
+    "speech": -14.532433807802207,
+    "gap_s": 0.54,
+    "dur": 7.32,
+    "wav": "D:\\podcast-ai\\outputs\\d5_denoise_probe\\exp\\lab04_t2.wav"
+  }
+]

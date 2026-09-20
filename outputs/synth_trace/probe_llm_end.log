@@ -1,0 +1,40 @@
+2026-09-18 12:11:01,126 INFO yield speech len 1.23, rtf 1.0
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 12:11:18,326 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 12:11:19,412 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 12:11:20,842 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 12:11:20,890 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 12:11:21,647 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 12:11:25,000 INFO text_frontend=wetext | model=CosyVoice2 | 加载 11.5s
+2026-09-18 12:11:25,000 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 12:11:26,114 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 12:11:26,115 INFO 说话人 A → 音色 voice_a
+2026-09-18 12:11:26,115 INFO 说话人 B → 音色 voice_b
+=== A. 纯 tracer 自测 ===
+  tracer.enabled = True  path = D:\podcast-ai\outputs\synth_trace\probe_llm_end.jsonl
+[A root] root.level=INFO enabled_for_INFO=True handlers=['StreamHandler', '_YieldLenHandler']
+  sink 收到 = [(678540.0982252, 'yield speech len 1.23, rtf 1.0')]
+  A 记录 llm_end = 678540.098225
+
+=== B. 真实引擎自测 ===
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:11:26,120 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 12:11:31,556 INFO yield speech len 4.04, rtf 1.3455218017691433
+100%|██████████| 1/1 [00:05<00:00,  5.46s/it]100%|██████████| 1/1 [00:05<00:00,  5.46s/it]
+2026-09-18 12:11:31,580 INFO 预热耗时 5.46s
+[B root after load] root.level=INFO enabled_for_INFO=True handlers=['StreamHandler', '_YieldLenHandler', '_YieldLenHandler']
+  engine tracer is 同上？ False  tracer.enabled = True
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 12:11:31,584 INFO synthesis text 诊断探针甲乙丙丁戊己庚辛壬癸用。
+2026-09-18 12:11:40,561 INFO yield speech len 8.96, rtf 1.0019071134073392
+100%|██████████| 1/1 [00:08<00:00,  9.00s/it]100%|██████████| 1/1 [00:08<00:00,  9.00s/it]
+  合成完成 cached=False dur=8960ms
+  B 记录 llm_end = 678540.098225  seg = 999
+  marks = []
+
+结论：A=True  B=True

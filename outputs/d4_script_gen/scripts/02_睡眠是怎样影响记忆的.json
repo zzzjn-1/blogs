@@ -1,0 +1,204 @@
+{
+  "result": {
+    "topic": "睡眠是怎样影响记忆的",
+    "style": "轻松自然、信息密度适中",
+    "target_words": 520,
+    "word_range": [
+      468,
+      572
+    ],
+    "actual_words": 504,
+    "word_quota_ok": true,
+    "word_deviation_pct": -0.0308,
+    "line_count": 30,
+    "avg_chars_per_line": 16.8,
+    "model_requested": "deepseek-chat",
+    "model_returned": "deepseek-flash",
+    "model_mapped": true,
+    "calls": 2,
+    "correction_rounds": 1,
+    "degraded": false,
+    "flagged": false,
+    "usable": true,
+    "first_pass": false,
+    "sensitive_hits": [],
+    "self_check": {
+      "safe": true,
+      "risk": "none",
+      "reason": "内容为睡眠与记忆的科普对话，无政治敏感、低俗、违法或专业建议风险，表述谨慎。"
+    },
+    "self_check_error": null,
+    "usage": {
+      "prompt_tokens": 3612,
+      "completion_tokens": 1374,
+      "total_tokens": 4986
+    },
+    "errors": [],
+    "warnings": [
+      "title 长度 10 不在建议区间 12~24：夜里睡好，白天记得牢"
+    ],
+    "elapsed_s": 7.75,
+    "index": 2,
+    "category": "知识科普",
+    "duration_min": 2.0,
+    "ok": true
+  },
+  "script": {
+    "title": "夜里睡好，白天记得牢",
+    "summary": "聊聊睡眠如何帮大脑整理和巩固记忆，以及熬夜为什么会让记忆变差。",
+    "total_chars": 504,
+    "line_count": 30,
+    "lines": [
+      {
+        "seq": 1,
+        "speaker": "A",
+        "text": "今天咱们聊个跟每个人都有关的话题。"
+      },
+      {
+        "seq": 2,
+        "speaker": "B",
+        "text": "好啊，是关于睡眠，还是关于记忆？"
+      },
+      {
+        "seq": 3,
+        "speaker": "A",
+        "text": "是睡眠怎么影响记忆，这两个连在一起。"
+      },
+      {
+        "seq": 4,
+        "speaker": "B",
+        "text": "这个我很有兴趣，很多人确实没意识到。"
+      },
+      {
+        "seq": 5,
+        "speaker": "A",
+        "text": "那先说说，睡眠到底对记忆做了什么？"
+      },
+      {
+        "seq": 6,
+        "speaker": "B",
+        "text": "简单讲，睡眠像是给记忆做整理和归档。"
+      },
+      {
+        "seq": 7,
+        "speaker": "A",
+        "text": "整理和归档，这个比喻挺形象的。"
+      },
+      {
+        "seq": 8,
+        "speaker": "B",
+        "text": "白天学的东西先临时存着，晚上再转成长期。"
+      },
+      {
+        "seq": 9,
+        "speaker": "A",
+        "text": "所以熬夜复习，反而可能记得更差？"
+      },
+      {
+        "seq": 10,
+        "speaker": "B",
+        "text": "对，省下的那点时间，往往抵不过损失。"
+      },
+      {
+        "seq": 11,
+        "speaker": "A",
+        "text": "那是不是睡得越久，记得就越牢呢？"
+      },
+      {
+        "seq": 12,
+        "speaker": "B",
+        "text": "也不是，关键是睡够，还要睡得完整。"
+      },
+      {
+        "seq": 13,
+        "speaker": "A",
+        "text": "完整指的是睡眠的不同阶段吗？"
+      },
+      {
+        "seq": 14,
+        "speaker": "B",
+        "text": "对，深睡和快速眼动期，作用不太一样。"
+      },
+      {
+        "seq": 15,
+        "speaker": "A",
+        "text": "能分别说说它们各自管什么吗？"
+      },
+      {
+        "seq": 16,
+        "speaker": "B",
+        "text": "据我了解，深睡偏重事实和知识的巩固。"
+      },
+      {
+        "seq": 17,
+        "speaker": "A",
+        "text": "那快速眼动期呢，跟什么有关？"
+      },
+      {
+        "seq": 18,
+        "speaker": "B",
+        "text": "它更多和情绪、还有技能类记忆有关。"
+      },
+      {
+        "seq": 19,
+        "speaker": "A",
+        "text": "所以被闹钟打断，影响可能不小。"
+      },
+      {
+        "seq": 20,
+        "speaker": "B",
+        "text": "是的，睡够一个完整周期，比睡得碎更好。"
+      },
+      {
+        "seq": 21,
+        "speaker": "A",
+        "text": "有人睡前背单词，第二天好像更清楚。"
+      },
+      {
+        "seq": 22,
+        "speaker": "B",
+        "text": "这挺常见，睡前学的东西更容易被保留。"
+      },
+      {
+        "seq": 23,
+        "speaker": "A",
+        "text": "那是不是所有内容都适合睡前记？"
+      },
+      {
+        "seq": 24,
+        "speaker": "B",
+        "text": "不一定，太烧脑的反而让人难以入睡。"
+      },
+      {
+        "seq": 25,
+        "speaker": "A",
+        "text": "咖啡和手机，是不是也会拖后腿？"
+      },
+      {
+        "seq": 26,
+        "speaker": "B",
+        "text": "会，它们让入睡变慢，深度睡眠也变少。"
+      },
+      {
+        "seq": 27,
+        "speaker": "A",
+        "text": "那午睡短一点，有没有帮助？"
+      },
+      {
+        "seq": 28,
+        "speaker": "B",
+        "text": "短睡能提神，但别太长，免得晚上难入睡。"
+      },
+      {
+        "seq": 29,
+        "speaker": "A",
+        "text": "看来规律作息，才是对记忆最实在的支持。"
+      },
+      {
+        "seq": 30,
+        "speaker": "B",
+        "text": "对，今晚早点睡，比多刷几道题更划算。"
+      }
+    ]
+  }
+}

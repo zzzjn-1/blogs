@@ -1,0 +1,35 @@
+{
+  "phase": 2,
+  "task_id": "700ae951-ef23-4dbd-ad87-9a548478fe64",
+  "started_at": "2026-09-18T15:38:24",
+  "user": "d12p116388",
+  "recover_log": [
+    "[RECOVER] 扫描到 4 个非终态任务：脚本重投 0、续跑 1、仅标记失败 0、跳过（等待用户确认）3"
+  ],
+  "cache_log": [
+    "[CACHE] task=700ae951-ef23-4dbd-ad87-9a548478fe64 合成段数=27 命中缓存=14（命中率 51.9%）"
+  ],
+  "cache_hit_on_resume": 14,
+  "segments_on_resume": 27,
+  "final_status": "DONE",
+  "final_progress": 100,
+  "error_msg": "服务进程重启，该任务在上一次运行中被中断（已自动恢复）",
+  "resume_wall_sec": 0.0,
+  "cache_hit_count_final": 14,
+  "cache_seg_count_final": 27,
+  "cache_hit_rate_final": 0.5185,
+  "line_states": {
+    "DONE": 24
+  },
+  "episode": {
+    "mp3_path": "D:\\podcast-ai\\data\\audio\\700ae951-ef23-4dbd-ad87-9a548478fe64\\final.mp3",
+    "exists": true,
+    "ffprobe": [
+      "duration=253.770000",
+      "size=4061352"
+    ],
+    "lufs": -16.6,
+    "true_peak_db": -1.8
+  },
+  "finished_at": "2026-09-18T15:38:27"
+}

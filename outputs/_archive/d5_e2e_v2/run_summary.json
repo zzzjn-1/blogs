@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "stages": {
+    "script": {
+      "topic": "为什么天空是蓝色的",
+      "title": "天空为什么是蓝色的",
+      "lines": 37,
+      "usable": true,
+      "first_pass": false,
+      "target_words": 520,
+      "actual_words": 472,
+      "word_deviation": -0.0923,
+      "word_deviation_pct": -9.23,
+      "model_returned": "deepseek-flash",
+      "model_mapped": true,
+      "calls": 3,
+      "correction_rounds": 2,
+      "degraded": false,
+      "flagged": false,
+      "elapsed_s": 11.3
+    },
+    "tts": {
+      "segments": 37,
+      "cached": 0,
+      "audio_s": 146.88,
+      "elapsed_s": 209.85,
+      "vram": {
+        "cuda": true,
+        "allocated_mb": 2506.8,
+        "reserved_mb": 2700.0,
+        "peak_alloc_mb": 3546.1,
+        "peak_reserved_mb": 4100.0,
+        "system_used_mb": 3834.5,
+        "system_total_mb": 6140.5
+      }
+    },
+    "postprocess": {
+      "mp3": "outputs\\d5_e2e_v2\\d5_e2e_v2.mp3",
+      "merged_wav": "outputs\\d5_e2e_v2\\build_d5_e2e_v2\\merged.wav",
+      "duration_s": 169.48,
+      "size_bytes": 2712598,
+      "segments": 37,
+      "pause_count": 36,
+      "intro_used": true,
+      "outro_used": true,
+      "loudness_applied": true,
+      "loudness_measured": {
+        "input_i": "-19.40",
+        "input_tp": "-0.42",
+        "input_lra": "5.20",
+        "input_thresh": "-31.41",
+        "output_i": "-16.41",
+        "output_tp": "-1.50",
+        "output_lra": "4.90",
+        "output_thresh": "-28.38",
+        "normalization_type": "dynamic",
+        "target_offset": "0.41"
+      },
+      "loudness_after": {
+        "input_i": "-16.15",
+        "input_tp": "-1.50",
+        "input_lra": "5.00",
+        "input_thresh": "-28.18",
+        "output_i": "-16.01",
+        "output_tp": "-1.50",
+        "output_lra": "5.00",
+        "output_thresh": "-27.91",
+        "normalization_type": "dynamic",
+        "target_offset": "0.01"
+      },
+      "level_after": {
+        "mean_volume": -18.3,
+        "max_volume": -1.9
+      },
+      "max_volume_db": -1.9,
+      "clipped": false,
+      "build_dir": "outputs\\d5_e2e_v2\\build_d5_e2e_v2",
+      "elapsed_s": 13.28,
+      "warnings": []
+    }
+  },
+  "output": {
+    "dir": "outputs\\d5_e2e_v2",
+    "mp3": "outputs\\d5_e2e_v2\\d5_e2e_v2.mp3",
+    "name": "d5_e2e_v2"
+  },
+  "elapsed_s": 235.49
+}

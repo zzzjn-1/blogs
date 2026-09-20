@@ -1,0 +1,293 @@
+[1/3] 生成脚本：为什么天空是蓝色的
+INFO httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+WARNING api.services.script_gen: [D4] 网关静默映射模型名：请求 deepseek-chat → 实际 deepseek-flash。凡涉及「本次用了哪个模型」的结论，一律以响应体 model 字段为准（计划书 4.10 ①）
+WARNING api.services.script_gen: [D4] 第 1 轮输出未通过校验（共 3 轮）：总字数 332 不在配额区间 468~572（目标 520 字，允许上下浮动 10%）
+INFO httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+WARNING api.services.script_gen: [D4] 第 2 轮输出未通过校验（共 3 轮）：总字数 462 不在配额区间 468~572（目标 520 字，允许上下浮动 10%）
+INFO httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+INFO httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+INFO api.services.script_gen: [D4] 脚本生成完成：主题=为什么天空是蓝色的 | 37 行 / 472 字（配额 520）| 模型 deepseek-chat→deepseek-flash | 请求 3 次 / 纠错 2 轮 | 降级=False 命中=False | 11.3s | tokens={'prompt_tokens': 6891, 'completion_tokens': 2795, 'total_tokens': 9686}
+      脚本已落盘：outputs\d5_e2e_v2\script.json（可用 --turns-json 复现本轮，跳过 LLM）
+      标题：天空为什么是蓝色的
+      37 行 / 472 字（目标 520，偏差 -9.2%）；模型返回 deepseek-flash；调用 3 次；11.3 s
+[2/3] 语音合成 37 轮（首次加载模型约 20 s，请稍候）
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+INFO root: input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+INFO root: [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+INFO root: [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-16 09:40:58,331 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+INFO root: [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+INFO api.services.tts: text_frontend=wetext | model=CosyVoice2 | 加载 11.1s
+INFO api.services.tts: [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+INFO api.services.tts: 已注册音色档案：['voice_a', 'voice_b']
+INFO api.services.tts: 说话人 A → 音色 voice_a
+INFO api.services.tts: 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+INFO root: yield speech len 4.04, rtf 1.3968326077602877
+100%|██████████| 1/1 [00:05<00:00,  5.66s/it]100%|██████████| 1/1 [00:05<00:00,  5.66s/it]
+INFO api.services.tts: 预热耗时 5.67s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 你有没有想过，天空为什么是蓝色的？
+INFO root: yield speech len 3.36, rtf 1.180585509254819
+100%|██████████| 1/1 [00:03<00:00,  3.99s/it]100%|██████████| 1/1 [00:03<00:00,  3.99s/it]
+      1/37 A 合成 你有没有想过，天空为什么是蓝色的？ 3.99s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 这个问题看着简单，其实挺有讲究。
+INFO root: yield speech len 4.0, rtf 1.1351512670516968
+100%|██████████| 1/1 [00:04<00:00,  4.56s/it]100%|██████████| 1/1 [00:04<00:00,  4.56s/it]
+      2/37 B 合成 这个问题看着简单，其实挺有讲究。 4.56s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 那今天咱们就把它聊透。
+INFO root: yield speech len 2.92, rtf 1.2710435749733284
+100%|██████████| 1/1 [00:03<00:00,  3.73s/it]100%|██████████| 1/1 [00:03<00:00,  3.73s/it]
+      3/37 A 合成 那今天咱们就把它聊透。 3.73s
+  0%|          | 0/1 [00:00<?, ?it/s]WARNING root: synthesis text 好，先从太阳光本身说起。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+INFO root: synthesis text 好，先从太阳光本身说起。
+INFO root: yield speech len 5.16, rtf 1.0667480701623961
+100%|██████████| 1/1 [00:05<00:00,  5.53s/it]100%|██████████| 1/1 [00:05<00:00,  5.53s/it]
+      4/37 B 合成 好，先从太阳光本身说起。 5.53s
+  0%|          | 0/1 [00:00<?, ?it/s]WARNING root: synthesis text 太阳光不是白的吗？ too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+INFO root: synthesis text 太阳光不是白的吗？
+INFO root: yield speech len 2.0, rtf 1.391634464263916
+100%|██████████| 1/1 [00:02<00:00,  2.81s/it]100%|██████████| 1/1 [00:02<00:00,  2.81s/it]
+      5/37 A 合成 太阳光不是白的吗？ 2.81s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 白光其实是各种颜色混在一起。
+INFO root: yield speech len 3.4, rtf 1.1591909913455738
+100%|██████████| 1/1 [00:03<00:00,  3.96s/it]100%|██████████| 1/1 [00:03<00:00,  3.96s/it]
+      6/37 B 合成 白光其实是各种颜色混在一起。 3.96s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 就像彩虹那样，红橙黄绿蓝靛紫。
+INFO root: yield speech len 6.36, rtf 1.0101976259699408
+100%|██████████| 1/1 [00:06<00:00,  6.45s/it]100%|██████████| 1/1 [00:06<00:00,  6.45s/it]
+      7/37 A 合成 就像彩虹那样，红橙黄绿蓝靛紫。 6.45s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 对，不同颜色的波长不一样。
+INFO root: yield speech len 4.52, rtf 1.1109472376055423
+100%|██████████| 1/1 [00:05<00:00,  5.04s/it]100%|██████████| 1/1 [00:05<00:00,  5.04s/it]
+      8/37 B 合成 对，不同颜色的波长不一样。 5.04s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 那这和天空颜色有什么关系？
+INFO root: yield speech len 3.16, rtf 1.2216644196570674
+100%|██████████| 1/1 [00:03<00:00,  3.88s/it]100%|██████████| 1/1 [00:03<00:00,  3.88s/it]
+      9/37 A 合成 那这和天空颜色有什么关系？ 3.89s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 关键在空气分子对光的散射。
+INFO root: yield speech len 3.92, rtf 1.1332229692108777
+100%|██████████| 1/1 [00:04<00:00,  4.46s/it]100%|██████████| 1/1 [00:04<00:00,  4.46s/it]
+      10/37 B 合成 关键在空气分子对光的散射。 4.47s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 散射，就是光被弹开的意思吧。
+INFO root: yield speech len 3.48, rtf 1.1568918995473576
+100%|██████████| 1/1 [00:04<00:00,  4.05s/it]100%|██████████| 1/1 [00:04<00:00,  4.05s/it]
+      11/37 A 合成 散射，就是光被弹开的意思吧。 4.05s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 差不多，光的方向被改变了。
+INFO root: yield speech len 10.4, rtf 1.0316874430729792
+100%|██████████| 1/1 [00:10<00:00, 10.75s/it]100%|██████████| 1/1 [00:10<00:00, 10.75s/it]
+WARNING api.services.tts: [PATCH-GUARD-01] 生成未收敛：13 字文本输出 10.40s（上限 10.40s），第 1/2 次重试
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 差不多，光的方向被改变了。
+INFO root: yield speech len 5.52, rtf 1.067422956660174
+100%|██████████| 1/1 [00:05<00:00,  5.91s/it]100%|██████████| 1/1 [00:05<00:00,  5.91s/it]
+INFO api.services.tts: [PATCH-GUARD-01] 第 1 次重试后收敛：5.52s
+      12/37 B 合成 差不多，光的方向被改变了。 16.67s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 哪种颜色更容易被弹开呢？
+INFO root: yield speech len 3.08, rtf 1.1778779618151776
+100%|██████████| 1/1 [00:03<00:00,  3.65s/it]100%|██████████| 1/1 [00:03<00:00,  3.65s/it]
+      13/37 A 合成 哪种颜色更容易被弹开呢？ 3.65s
+  0%|          | 0/1 [00:00<?, ?it/s]WARNING root: synthesis text 波长越短，散射就越强烈。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+INFO root: synthesis text 波长越短，散射就越强烈。
+INFO root: yield speech len 3.12, rtf 1.2379150360058515
+100%|██████████| 1/1 [00:03<00:00,  3.88s/it]100%|██████████| 1/1 [00:03<00:00,  3.88s/it]
+      14/37 B 合成 波长越短，散射就越强烈。 3.88s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 蓝光波长短，所以被弹得最多。
+INFO root: yield speech len 4.8, rtf 1.1113365987936656
+100%|██████████| 1/1 [00:05<00:00,  5.36s/it]100%|██████████| 1/1 [00:05<00:00,  5.36s/it]
+      15/37 A 合成 蓝光波长短，所以被弹得最多。 5.36s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 对，蓝光就洒满了整个天空。
+INFO root: yield speech len 4.04, rtf 1.1053552131841677
+100%|██████████| 1/1 [00:04<00:00,  4.49s/it]100%|██████████| 1/1 [00:04<00:00,  4.49s/it]
+      16/37 B 合成 对，蓝光就洒满了整个天空。 4.49s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 那紫光波长更短，怎么不紫？
+INFO root: yield speech len 4.92, rtf 1.1129241164137678
+100%|██████████| 1/1 [00:05<00:00,  5.50s/it]100%|██████████| 1/1 [00:05<00:00,  5.50s/it]
+      17/37 A 合成 那紫光波长更短，怎么不紫？ 5.50s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 太阳里紫光少，眼睛也不敏感。
+INFO root: yield speech len 4.92, rtf 1.1748939025692824
+100%|██████████| 1/1 [00:05<00:00,  5.80s/it]100%|██████████| 1/1 [00:05<00:00,  5.80s/it]
+      18/37 B 合成 太阳里紫光少，眼睛也不敏感。 5.80s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 所以综合起来看就是蓝色。
+INFO root: yield speech len 3.8, rtf 1.2507190829829167
+100%|██████████| 1/1 [00:04<00:00,  4.78s/it]100%|██████████| 1/1 [00:04<00:00,  4.78s/it]
+      19/37 A 合成 所以综合起来看就是蓝色。 4.78s
+  0%|          | 0/1 [00:00<?, ?it/s]WARNING root: synthesis text 没错，这是最常见的解释。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+INFO root: synthesis text 没错，这是最常见的解释。
+INFO root: yield speech len 3.88, rtf 1.2445255653145388
+100%|██████████| 1/1 [00:04<00:00,  4.85s/it]100%|██████████| 1/1 [00:04<00:00,  4.85s/it]
+      20/37 B 合成 没错，这是最常见的解释。 4.85s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 那傍晚天空为什么变红？
+INFO root: yield speech len 3.0, rtf 1.224924643834432
+100%|██████████| 1/1 [00:03<00:00,  3.70s/it]100%|██████████| 1/1 [00:03<00:00,  3.70s/it]
+      21/37 A 合成 那傍晚天空为什么变红？ 3.70s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 太阳斜射，光要穿过更厚大气。
+INFO root: yield speech len 4.48, rtf 1.1279243975877762
+100%|██████████| 1/1 [00:05<00:00,  5.07s/it]100%|██████████| 1/1 [00:05<00:00,  5.07s/it]
+      22/37 B 合成 太阳斜射，光要穿过更厚大气。 5.07s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 蓝光半路就被散射掉了。
+INFO root: yield speech len 3.0, rtf 1.1761359373728435
+100%|██████████| 1/1 [00:03<00:00,  3.55s/it]100%|██████████| 1/1 [00:03<00:00,  3.55s/it]
+      23/37 A 合成 蓝光半路就被散射掉了。 3.55s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 剩下红橙光，就染红了天边。
+INFO root: yield speech len 6.56, rtf 1.0242849588394165
+100%|██████████| 1/1 [00:06<00:00,  6.74s/it]100%|██████████| 1/1 [00:06<00:00,  6.74s/it]
+      24/37 B 合成 剩下红橙光，就染红了天边。 6.74s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 原来早晚的红霞是同一个道理。
+INFO root: yield speech len 3.44, rtf 1.1820843053418537
+100%|██████████| 1/1 [00:04<00:00,  4.09s/it]100%|██████████| 1/1 [00:04<00:00,  4.09s/it]
+      25/37 A 合成 原来早晚的红霞是同一个道理。 4.09s
+  0%|          | 0/1 [00:00<?, ?it/s]WARNING root: synthesis text 对，都是散射在起作用。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+INFO root: synthesis text 对，都是散射在起作用。
+INFO root: yield speech len 3.2, rtf 1.1845500767230988
+100%|██████████| 1/1 [00:03<00:00,  3.81s/it]100%|██████████| 1/1 [00:03<00:00,  3.81s/it]
+      26/37 B 合成 对，都是散射在起作用。 3.81s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 那为什么云是白的，海是蓝的？
+INFO root: yield speech len 3.68, rtf 1.1603379379148069
+100%|██████████| 1/1 [00:04<00:00,  4.29s/it]100%|██████████| 1/1 [00:04<00:00,  4.29s/it]
+      27/37 A 合成 那为什么云是白的，海是蓝的？ 4.29s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 云里水滴大，各种光都被散射。
+INFO root: yield speech len 3.88, rtf 1.0911963035150902
+100%|██████████| 1/1 [00:04<00:00,  4.25s/it]100%|██████████| 1/1 [00:04<00:00,  4.25s/it]
+      28/37 B 合成 云里水滴大，各种光都被散射。 4.26s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 混在一起又变回白色了。
+INFO root: yield speech len 3.84, rtf 1.137311321993669
+100%|██████████| 1/1 [00:04<00:00,  4.39s/it]100%|██████████| 1/1 [00:04<00:00,  4.39s/it]
+      29/37 A 合成 混在一起又变回白色了。 4.39s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 对，海水的蓝还和吸收有关。
+INFO root: yield speech len 4.36, rtf 1.118918296393998
+100%|██████████| 1/1 [00:04<00:00,  4.90s/it]100%|██████████| 1/1 [00:04<00:00,  4.90s/it]
+      30/37 B 合成 对，海水的蓝还和吸收有关。 4.90s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 所以蓝天不是天本身有颜色。
+INFO root: yield speech len 4.24, rtf 1.2123128715551124
+100%|██████████| 1/1 [00:05<00:00,  5.16s/it]100%|██████████| 1/1 [00:05<00:00,  5.16s/it]
+      31/37 A 合成 所以蓝天不是天本身有颜色。 5.16s
+  0%|          | 0/1 [00:00<?, ?it/s]WARNING root: synthesis text 是光和大气的共同作品。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+INFO root: synthesis text 是光和大气的共同作品。
+INFO root: yield speech len 4.08, rtf 1.162665848638497
+100%|██████████| 1/1 [00:04<00:00,  4.76s/it]100%|██████████| 1/1 [00:04<00:00,  4.76s/it]
+      32/37 B 合成 是光和大气的共同作品。 4.77s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 在太空看，天空就是黑的。
+INFO root: yield speech len 3.88, rtf 1.1445102617912686
+100%|██████████| 1/1 [00:04<00:00,  4.46s/it]100%|██████████| 1/1 [00:04<00:00,  4.47s/it]
+      33/37 A 合成 在太空看，天空就是黑的。 4.47s
+  0%|          | 0/1 [00:00<?, ?it/s]WARNING root: synthesis text 因为没有空气来散射阳光。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+INFO root: synthesis text 因为没有空气来散射阳光。
+INFO root: yield speech len 4.36, rtf 1.0702918975725086
+100%|██████████| 1/1 [00:04<00:00,  4.69s/it]100%|██████████| 1/1 [00:04<00:00,  4.69s/it]
+      34/37 B 合成 因为没有空气来散射阳光。 4.69s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 这么一说，蓝天其实很珍贵。
+INFO root: yield speech len 3.84, rtf 1.1314882586399715
+100%|██████████| 1/1 [00:04<00:00,  4.37s/it]100%|██████████| 1/1 [00:04<00:00,  4.37s/it]
+      35/37 A 合成 这么一说，蓝天其实很珍贵。 4.37s
+  0%|          | 0/1 [00:00<?, ?it/s]INFO root: synthesis text 下次抬头，可以想想这束光。
+INFO root: yield speech len 3.8, rtf 1.1558544008355391
+100%|██████████| 1/1 [00:04<00:00,  4.41s/it]100%|██████████| 1/1 [00:04<00:00,  4.41s/it]
+      36/37 B 合成 下次抬头，可以想想这束光。 4.41s
+  0%|          | 0/1 [00:00<?, ?it/s]WARNING root: synthesis text 好，今天就聊到这里。 too short than prompt text 生活就像海洋只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+INFO root: synthesis text 好，今天就聊到这里。
+INFO root: yield speech len 2.88, rtf 1.2635830375883315
+100%|██████████| 1/1 [00:03<00:00,  3.66s/it]100%|██████████| 1/1 [00:03<00:00,  3.66s/it]
+      37/37 A 合成 好，今天就聊到这里。 3.66s
+      共 37 段（缓存命中 0）；语音总长 146.9 s；耗时 209.8 s
+[3/3] 后期处理与 mp3 导出
+INFO api.services.postprocess: [1/6] 格式统一 44100 Hz / 1 ch / pcm_s16le
+      [1/6] 格式统一 44100 Hz / 1 ch / pcm_s16le
+INFO api.services.postprocess:     seg 1/37 -> seg_0000.wav
+          seg 1/37 -> seg_0000.wav
+INFO api.services.postprocess:     seg 2/37 -> seg_0001.wav
+          seg 2/37 -> seg_0001.wav
+INFO api.services.postprocess:     seg 3/37 -> seg_0002.wav
+          seg 3/37 -> seg_0002.wav
+INFO api.services.postprocess:     seg 4/37 -> seg_0003.wav
+          seg 4/37 -> seg_0003.wav
+INFO api.services.postprocess:     seg 5/37 -> seg_0004.wav
+          seg 5/37 -> seg_0004.wav
+INFO api.services.postprocess:     seg 6/37 -> seg_0005.wav
+          seg 6/37 -> seg_0005.wav
+INFO api.services.postprocess:     seg 7/37 -> seg_0006.wav
+          seg 7/37 -> seg_0006.wav
+INFO api.services.postprocess:     seg 8/37 -> seg_0007.wav
+          seg 8/37 -> seg_0007.wav
+INFO api.services.postprocess:     seg 9/37 -> seg_0008.wav
+          seg 9/37 -> seg_0008.wav
+INFO api.services.postprocess:     seg 10/37 -> seg_0009.wav
+          seg 10/37 -> seg_0009.wav
+INFO api.services.postprocess:     seg 11/37 -> seg_0010.wav
+          seg 11/37 -> seg_0010.wav
+INFO api.services.postprocess:     seg 12/37 -> seg_0011.wav
+          seg 12/37 -> seg_0011.wav
+INFO api.services.postprocess:     seg 13/37 -> seg_0012.wav
+          seg 13/37 -> seg_0012.wav
+INFO api.services.postprocess:     seg 14/37 -> seg_0013.wav
+          seg 14/37 -> seg_0013.wav
+INFO api.services.postprocess:     seg 15/37 -> seg_0014.wav
+          seg 15/37 -> seg_0014.wav
+INFO api.services.postprocess:     seg 16/37 -> seg_0015.wav
+          seg 16/37 -> seg_0015.wav
+INFO api.services.postprocess:     seg 17/37 -> seg_0016.wav
+          seg 17/37 -> seg_0016.wav
+INFO api.services.postprocess:     seg 18/37 -> seg_0017.wav
+          seg 18/37 -> seg_0017.wav
+INFO api.services.postprocess:     seg 19/37 -> seg_0018.wav
+          seg 19/37 -> seg_0018.wav
+INFO api.services.postprocess:     seg 20/37 -> seg_0019.wav
+          seg 20/37 -> seg_0019.wav
+INFO api.services.postprocess:     seg 21/37 -> seg_0020.wav
+          seg 21/37 -> seg_0020.wav
+INFO api.services.postprocess:     seg 22/37 -> seg_0021.wav
+          seg 22/37 -> seg_0021.wav
+INFO api.services.postprocess:     seg 23/37 -> seg_0022.wav
+          seg 23/37 -> seg_0022.wav
+INFO api.services.postprocess:     seg 24/37 -> seg_0023.wav
+          seg 24/37 -> seg_0023.wav
+INFO api.services.postprocess:     seg 25/37 -> seg_0024.wav
+          seg 25/37 -> seg_0024.wav
+INFO api.services.postprocess:     seg 26/37 -> seg_0025.wav
+          seg 26/37 -> seg_0025.wav
+INFO api.services.postprocess:     seg 27/37 -> seg_0026.wav
+          seg 27/37 -> seg_0026.wav
+INFO api.services.postprocess:     seg 28/37 -> seg_0027.wav
+          seg 28/37 -> seg_0027.wav
+INFO api.services.postprocess:     seg 29/37 -> seg_0028.wav
+          seg 29/37 -> seg_0028.wav
+INFO api.services.postprocess:     seg 30/37 -> seg_0029.wav
+          seg 30/37 -> seg_0029.wav
+INFO api.services.postprocess:     seg 31/37 -> seg_0030.wav
+          seg 31/37 -> seg_0030.wav
+INFO api.services.postprocess:     seg 32/37 -> seg_0031.wav
+          seg 32/37 -> seg_0031.wav
+INFO api.services.postprocess:     seg 33/37 -> seg_0032.wav
+          seg 33/37 -> seg_0032.wav
+INFO api.services.postprocess:     seg 34/37 -> seg_0033.wav
+          seg 34/37 -> seg_0033.wav
+INFO api.services.postprocess:     seg 35/37 -> seg_0034.wav
+          seg 35/37 -> seg_0034.wav
+INFO api.services.postprocess:     seg 36/37 -> seg_0035.wav
+          seg 36/37 -> seg_0035.wav
+INFO api.services.postprocess:     seg 37/37 -> seg_0036.wav
+          seg 37/37 -> seg_0036.wav
+INFO api.services.postprocess: [2/6] 片头/片尾微淡化 30 ms（必须在拼接之前）
+      [2/6] 片头/片尾微淡化 30 ms（必须在拼接之前）
+INFO api.services.postprocess: [3/6] 停顿：话轮 500 ms / 句间 250 ms
+      [3/6] 停顿：话轮 500 ms / 句间 250 ms
+INFO api.services.postprocess: [4/6] 拼接 75 个片段（含 36 处停顿）
+      [4/6] 拼接 75 个片段（含 36 处停顿）
+INFO api.services.postprocess: [5/6] 两遍 loudnorm -> I=-16 LUFS / TP=-1.5 dBTP
+      [5/6] 两遍 loudnorm -> I=-16 LUFS / TP=-1.5 dBTP
+INFO api.services.postprocess:     实测 -19.40 -> -16.15 LUFS（目标 -16）
+          实测 -19.40 -> -16.15 LUFS（目标 -16）
+INFO api.services.postprocess: [6/6] 导出 mp3（libmp3lame 128k）
+      [6/6] 导出 mp3（libmp3lame 128k）
+INFO api.services.postprocess: 完成：outputs\d5_e2e_v2\d5_e2e_v2.mp3（169.5 s，2.59 MB）
+      完成：outputs\d5_e2e_v2\d5_e2e_v2.mp3（169.5 s，2.59 MB）
+
+完成 → outputs\d5_e2e_v2\d5_e2e_v2.mp3
+  时长 169.5 s / 2.59 MB / 37 段 / 36 处停顿
+  响度归一 已应用；片头 有、片尾 有；峰值 -1.90 dB
+  摘要：outputs\d5_e2e_v2\run_summary.json
