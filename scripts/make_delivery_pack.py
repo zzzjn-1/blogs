@@ -46,6 +46,17 @@ DOCS_SRC = r"D:\新建文件夹\blogs\双人对话播客自动生成系统"
 OUT_ROOT = r"D:\新建文件夹\blogs"
 PACK_NAME = "双人对话播客自动生成系统_交付包"
 
+# 答辩 PPT：真源在工作区（与交付文档同级），成品按版本号命名
+PPT_SRC = r"D:\新建文件夹\blogs\双人对话播客自动生成系统_答辩PPT"
+PPT_FILE = "双人对话播客自动生成系统_答辩PPT_V2.0.0.pptx"
+# 被 V2.0.0 取代的 D14 版：入包时归到 archive/，保留版本沿革
+D14_PPT = os.path.join(
+    REPO, "outputs", "d14_ppt",
+    "双人对话播客自动生成系统_D14答辩PPT_V1.0.0",
+    "双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx")
+# 页面上真正引用到的截图（`assets/cover.jpg` 全篇未使用，不入包）
+PPT_SHOTS = ("ui_submit", "ui_detail", "ui_feed", "ui_history", "ui_login", "ui_register")
+
 # ---------------------------------------------------------------- 排除规则
 EXCL_DIR = {
     "node_modules", "dist", ".git", "__pycache__", ".pytest_cache",
@@ -81,10 +92,17 @@ PLAN: list[tuple[str, str, str]] = [
     ("02_演示产物/界面截图（Edge）", os.path.join(REPO, "demo", "screenshots"), "tree"),
     ("02_演示产物/演示台账", os.path.join(REPO, "demo", "demo_pack.json"), "file"),
     ("02_演示产物/演示台账", os.path.join(REPO, "outputs", "d14_demo"), "tree"),
-    ("02_演示产物/答辩PPT", os.path.join(
-        REPO, "outputs", "d14_ppt",
-        "双人对话播客自动生成系统_D14答辩PPT_V1.0.0",
-        "双人对话播客自动生成系统_D14答辩PPT_V1.0.0.pptx"), "file"),
+    # 答辩 PPT：当前版 V2.0.0（13 页 / 白底口语化 / 备注讲稿齐全）
+    # —— 连同设计稿（STORY/DESIGN，PPT 的真源说明）、slides 源、视觉取证一起入包；
+    # 被取代的 D14 版归入 archive/，保留版本沿革。任务书点名「演示 PPT」，
+    # 包内只允许存在一份**当前版**，避免验收方在两份之间不知道该看哪份。
+    ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, PPT_FILE), "file"),
+    ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, "STORY.md"), "file"),
+    ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, "DESIGN.md"), "file"),
+    ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, "预览_13页总览.png"), "file"),
+    ("02_演示产物/答辩PPT/slides", os.path.join(PPT_SRC, "slides"), "tree"),
+    ("02_演示产物/答辩PPT/preview", os.path.join(PPT_SRC, "preview"), "tree"),
+    ("02_演示产物/答辩PPT/archive", D14_PPT, "file"),
 
     # ---- 3. 源代码（不含依赖与构建产物）
     ("03_源代码/api", os.path.join(REPO, "api"), "tree"),
@@ -122,6 +140,13 @@ PLAN: list[tuple[str, str, str]] = [
     ("05_验收证据/环境与冒烟", os.path.join(REPO, "outputs", "cli_selftest"), "tree"),
     ("05_验收证据/环境与冒烟", os.path.join(REPO, "outputs", "d12_crash_recover"), "tree"),
     ("05_验收证据/文档终检", os.path.join(REPO, "outputs", "check_spec_docs_final.log"), "file"),
+]
+
+# 截图逐张列出（不用 tree）：这样 `assets/cover.jpg`（全篇未引用的氛围图）不会被顺手带进包。
+# 「只取被引用的子集」这条纪律，靠 tree 是守不住的 —— 它会把目录里的一切都带走。
+PLAN += [
+    ("02_演示产物/答辩PPT/assets", os.path.join(PPT_SRC, "assets", n + ".png"), "file")
+    for n in PPT_SHOTS
 ]
 
 
@@ -330,7 +355,7 @@ def render_readme(manifest: list[dict], pack: str) -> str:
 README_TMPL = """# 双人对话播客自动生成系统 · 交付包
 
 > 本包按《双人对话播客自动生成系统项目任务书 V1.0.0》逐条对账后归集，
-> 对账过程与结论见 `01_交付文档/双人对话播客自动生成系统_任务书交付物对照与查漏补缺报告_V1.0.0.md`。
+> 对账过程与结论见 `01_交付文档/双人对话播客自动生成系统_任务书交付物对照与查漏补缺报告_V1.1.0.md`。
 
 包内共 **{{DOC_COUNT}} 份当前版交付文档**（另含 `archive/` 历史版本，供版本沿革追溯），
 全部通过 `scripts/check_spec_docs.py` 的 Mermaid 语法校验与机械 lint。
@@ -342,7 +367,7 @@ README_TMPL = """# 双人对话播客自动生成系统 · 交付包
 | 目录 | 内容 | 说明 |
 | --- | --- | --- |
 | `01_交付文档/` | 交付文档真源镜像 | 32 份当前版；`archive/` 为被取代的历史版本 |
-| `02_演示产物/` | 成片 3 期（mp3）、Edge 界面截图 6 张、答辩 PPT、演示台账与运行日志 | 成片由生产链路实跑，非手工剪辑 |
+| `02_演示产物/` | 成片 3 期（mp3）、Edge 界面截图 6 张、答辩 PPT（当前版 V2.0.0 ＋ STORY/DESIGN 设计稿 ＋ slides 源 ＋ 逐页视觉取证；`archive/` 存被取代的 D14 版）、演示台账与运行日志 | 成片由生产链路实跑，非手工剪辑 |
 | `03_源代码/` | `api/ backend/ frontend/ scripts/ tests/ patches/` + 依赖清单与配置样例 | **不含** `node_modules` / `dist` / 模型权重 / 数据库 |
 | `04_部署与启动脚本/` | `start_dev.bat` / `stop_dev.bat` | 一键起停前后端，绑定 `127.0.0.1` |
 | `05_验收证据/` | 回归与变异、一致率普查、订阅源核对、演示核验、浏览器取证、环境冒烟、文档终检 | 均为报告正文引用的原始证据 |
@@ -361,6 +386,10 @@ README_TMPL = """# 双人对话播客自动生成系统 · 交付包
   合成基线报告、MOS 评测报告、一致率比对报告、前端组件库清单。
 * **顺带修掉 2 处既有文档缺陷**（K5 / K6，详见对照报告），其中 K6 属**安全相关漂移**
   （手册把后端描述成绑 `0.0.0.0`，实物已改为 `127.0.0.1`）。
+* **答辩 PPT（V2.0.0，13 页）对任务书「项目汇报 PPT」六段要求逐一对撞 —— 6/6**：
+  概况 P1~P5 ／ 技术方案 P7~P8 ／ 实现过程 P9 ／ 目标 P11 ／ 难点 P7·P8·P12 ／ 应对 P8·P12。
+  逐段对照表见 `02_演示产物/答辩PPT/STORY.md` §①，判据未放宽（原 12 页版缺「实现过程」一段，
+  已按 §① 补页补齐后入包）。
 
 ### 有意未闭合、如实声明
 
@@ -411,7 +440,7 @@ python scripts\\make_episode.py --topic "人工智能会不会取代程序员" -
 | --- |
 {{DOC_LIST}}
 
-> 以上 32 份当前版文档，连同 `archive/` 历史版本、演示产物（3 期成片 + 6 张截图 + 答辩 PPT）、
+> 以上 32 份当前版文档，连同 `archive/` 历史版本、演示产物（3 期成片 + 6 张截图 + 13 页答辩 PPT 及其设计稿 / slides 源 / 逐页视觉取证）、
 > 源代码与依赖清单、启动脚本、验收证据，**全部入包，共 {{N_SRC}} 个文件、约 {{TOTAL}}**；
 > 另附本说明与 `交付清单_MANIFEST.json`（前者已计入 `MANIFEST` 的 `文件数` / `总字节`，
 > 清单自身自然不计）。
