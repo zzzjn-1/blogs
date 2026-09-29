@@ -92,14 +92,14 @@ PLAN: list[tuple[str, str, str]] = [
     ("02_演示产物/界面截图（Edge）", os.path.join(REPO, "demo", "screenshots"), "tree"),
     ("02_演示产物/演示台账", os.path.join(REPO, "demo", "demo_pack.json"), "file"),
     ("02_演示产物/演示台账", os.path.join(REPO, "outputs", "d14_demo"), "tree"),
-    # 答辩 PPT：当前版 V2.0.0（13 页 / 白底口语化 / 备注讲稿齐全）
+    # 答辩 PPT：当前版 V2.0.0（17 页 / 白底口语化 / 备注讲稿齐全）
     # —— 连同设计稿（STORY/DESIGN，PPT 的真源说明）、slides 源、视觉取证一起入包；
     # 被取代的 D14 版归入 archive/，保留版本沿革。任务书点名「演示 PPT」，
     # 包内只允许存在一份**当前版**，避免验收方在两份之间不知道该看哪份。
     ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, PPT_FILE), "file"),
     ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, "STORY.md"), "file"),
     ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, "DESIGN.md"), "file"),
-    ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, "预览_13页总览.png"), "file"),
+    ("02_演示产物/答辩PPT", os.path.join(PPT_SRC, "预览_17页总览.png"), "file"),
     ("02_演示产物/答辩PPT/slides", os.path.join(PPT_SRC, "slides"), "tree"),
     ("02_演示产物/答辩PPT/preview", os.path.join(PPT_SRC, "preview"), "tree"),
     ("02_演示产物/答辩PPT/archive", D14_PPT, "file"),
@@ -291,9 +291,15 @@ def build(check_only: bool) -> int:
             print("   ~ %s" % s)
 
     # 5) 交付说明
+    #    README 也在计数内：先按「manifest + 说明自身」的规模渲染，
+    #    使正文里的 {{N_SRC}} / {{TOTAL}} 与最终 MANIFEST 的「文件数 / 总字节」逐字一致。
     readme = os.path.join(pack, "交付说明.md")
     with open(readme, "w", encoding="utf-8", newline="\n") as f:
-        f.write(render_readme(manifest, pack))
+        f.write(render_readme(manifest, pack, self_bytes=0))
+    # 尺寸与内容唯一：回代真实字节后正文数字才稳定（说明长度不随 N_SRC 变化，故一次即收敛）
+    self_bytes = os.path.getsize(readme)
+    with open(readme, "w", encoding="utf-8", newline="\n") as f:
+        f.write(render_readme(manifest, pack, self_bytes=self_bytes))
     manifest.append({
         "path": "交付说明.md",
         "bytes": os.path.getsize(readme),
@@ -337,25 +343,29 @@ def verify(tasks: list[tuple[str, str, str]], pack: str) -> list[str]:
     return problems
 
 
-def render_readme(manifest: list[dict], pack: str) -> str:
+def render_readme(manifest: list[dict], pack: str, self_bytes: int = 0) -> str:
+    """渲染交付说明。`self_bytes` = 本说明自身的字节数，计入「共 N 个文件 / 约 X MB」，
+    与最终 `交付清单_MANIFEST.json` 的口径保持一致（MANIFEST 自身仍不计）。"""
     docs = sorted({m["path"].split("/")[-1] for m in manifest if m["path"].startswith("01_交付文档/") and m["path"].count("/") == 1})
     buckets: dict[str, int] = {}
     for m in manifest:
         top = m["path"].split("/")[0]
         buckets[top] = buckets.get(top, 0) + 1
     breakdown = " · ".join("%s %d" % (k.split("_", 1)[-1], buckets[k]) for k in sorted(buckets))
+    n_total = len(manifest) + 1                       # +1 = 本说明自身
+    b_total = sum(m["bytes"] for m in manifest) + self_bytes
     return (README_TMPL
             .replace("{{DOC_COUNT}}", str(len(docs)))
             .replace("{{DOC_LIST}}", "\n".join("| `%s` |" % d for d in docs))
-            .replace("{{N_SRC}}", str(len(manifest)))
+            .replace("{{N_SRC}}", str(n_total))
             .replace("{{BREAKDOWN}}", breakdown)
-            .replace("{{TOTAL}}", "%.2f MB" % (sum(m["bytes"] for m in manifest) / 1048576)))
+            .replace("{{TOTAL}}", "%.2f MB" % (b_total / 1048576)))
 
 
 README_TMPL = """# 双人对话播客自动生成系统 · 交付包
 
 > 本包按《双人对话播客自动生成系统项目任务书 V1.0.0》逐条对账后归集，
-> 对账过程与结论见 `01_交付文档/双人对话播客自动生成系统_任务书交付物对照与查漏补缺报告_V1.1.0.md`。
+> 对账过程与结论见 `01_交付文档/双人对话播客自动生成系统_任务书交付物对照与查漏补缺报告_V1.2.1.md`。
 
 包内共 **{{DOC_COUNT}} 份当前版交付文档**（另含 `archive/` 历史版本，供版本沿革追溯），
 全部通过 `scripts/check_spec_docs.py` 的 Mermaid 语法校验与机械 lint。
@@ -386,10 +396,13 @@ README_TMPL = """# 双人对话播客自动生成系统 · 交付包
   合成基线报告、MOS 评测报告、一致率比对报告、前端组件库清单。
 * **顺带修掉 2 处既有文档缺陷**（K5 / K6，详见对照报告），其中 K6 属**安全相关漂移**
   （手册把后端描述成绑 `0.0.0.0`，实物已改为 `127.0.0.1`）。
-* **答辩 PPT（V2.0.0，13 页）对任务书「项目汇报 PPT」六段要求逐一对撞 —— 6/6**：
-  概况 P1~P5 ／ 技术方案 P7~P8 ／ 实现过程 P9 ／ 目标 P11 ／ 难点 P7·P8·P12 ／ 应对 P8·P12。
-  逐段对照表见 `02_演示产物/答辩PPT/STORY.md` §①，判据未放宽（原 12 页版缺「实现过程」一段，
-  已按 §① 补页补齐后入包）。
+* **答辩 PPT（V2.0.0，17 页）对任务书「项目汇报 PPT」两类要求逐一对撞 —— 全绿**：
+  * 任务书点名五项内容 **5/5**：项目背景 P3 ／ 开发目的 P3 ／ 过程·步骤·流程 P8·P9·P11 ／
+    运行效果截图 P6 ／ 项目心得 P16。
+  * 评分六段 **6/6**：概况 P1~P6 ／ 技术方案 P8·P9·P10·P12 ／ 实现过程 P11 ／
+    目标 P14 ／ 难点 P9·P10·P15 ／ 应对 P10·P15。
+  逐段对照表见 `02_演示产物/答辩PPT/STORY.md` §①，判据未放宽（上一版对「项目背景 / 开发目的 /
+  项目过程步骤流程 / 运行效果截图」四项内容要求无独立承担页，已按 §① 补 3 页后达标）。
 
 ### 有意未闭合、如实声明
 
@@ -440,7 +453,7 @@ python scripts\\make_episode.py --topic "人工智能会不会取代程序员" -
 | --- |
 {{DOC_LIST}}
 
-> 以上 32 份当前版文档，连同 `archive/` 历史版本、演示产物（3 期成片 + 6 张截图 + 13 页答辩 PPT 及其设计稿 / slides 源 / 逐页视觉取证）、
+> 以上 32 份当前版文档，连同 `archive/` 历史版本、演示产物（3 期成片 + 6 张截图 + 17 页答辩 PPT 及其设计稿 / slides 源 / 逐页视觉取证）、
 > 源代码与依赖清单、启动脚本、验收证据，**全部入包，共 {{N_SRC}} 个文件、约 {{TOTAL}}**；
 > 另附本说明与 `交付清单_MANIFEST.json`（前者已计入 `MANIFEST` 的 `文件数` / `总字节`，
 > 清单自身自然不计）。
@@ -532,6 +545,17 @@ def self_test() -> int:
     # T7 打包范围内每个源路径都必须存在 —— 防止源文件改名后「静默少打」
     missing = [s for _d, s, _k in PLAN if not os.path.exists(s)]
     check("T7 PLAN 内 %d 个源路径全部存在" % len(PLAN), not missing, str(missing))
+
+    # T8 说明里的「共 N 个文件」必须 = MANIFEST 的文件数（说明自身也已计入）
+    #    这里模拟 render_readme 的计数口径：manifest 有 k 条 + 说明自身 1 条 → N = k+1
+    fake = [{"path": "a.md", "bytes": 100, "sha256": ""}, {"path": "b.md", "bytes": 200, "sha256": ""}]
+    txt = render_readme(fake, "pack", self_bytes=50)
+    note_line = next((l for l in txt.splitlines() if "共 " in l and "个文件" in l), "")
+    check(
+        "T8 说明文件数 = MANIFEST 条数 + 1（说明自身计入）",
+        "共 3 个文件" in txt and "约 0.00 MB" in txt,
+        note_line.strip()[:80],
+    )
 
     n_ok = sum(1 for r in results if r)
     print("\n自检结论：%d/%d 如期通过" % (n_ok, len(results)))
