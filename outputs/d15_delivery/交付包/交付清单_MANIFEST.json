@@ -1,7 +1,7 @@
 {
- "打包时间": "2026-09-29 16:47:16",
+ "打包时间": "2026-10-10 14:34:52",
  "文件数": 337,
- "总字节": 26242602,
+ "总字节": 26225770,
  "文件": [
   {
    "path": "01_交付文档/D0环境验证报告_V1.1.1.md",
@@ -25,8 +25,8 @@
   },
   {
    "path": "01_交付文档/D1环境基线与冒烟测试报告_V1.0.1.md",
-   "bytes": 20376,
-   "sha256": "afe7d1809ce12c5ef045602460f0883b2e7d0985c4977c21b198a5f4f1feaf35"
+   "bytes": 20079,
+   "sha256": "578fe3131a2c908791a5444d8e2abc142ea969aed689552aa635b232082499ee"
   },
   {
    "path": "01_交付文档/D2-D3模型定稿与合成服务实施报告_V1.1.0.md",
@@ -100,8 +100,8 @@
   },
   {
    "path": "01_交付文档/archive/D1环境基线与冒烟测试报告_V1.0.0.md",
-   "bytes": 18214,
-   "sha256": "0264e2cfa21379ead7130ab930f9976cf19e2beb0cc7aca717685d8ba87bccca"
+   "bytes": 17929,
+   "sha256": "cf1021587a126baaedf7e9e27cf40c7b1ba06c012b0a4f0750f6aeb9f59c16dc"
   },
   {
    "path": "01_交付文档/archive/D2-D3模型定稿与合成服务实施报告_V1.0.0.md",
@@ -180,13 +180,13 @@
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.10.0.md",
-   "bytes": 189341,
-   "sha256": "96350512a8f4a9014ddd0a4a6677f11c7964c7ca8222d4a069a43493d8e5d4ec"
+   "bytes": 187742,
+   "sha256": "ac69eba3197ac3617a7ad45290f895889b6389dcacb6b2a1c3551f8200fa39c4"
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.11.0.md",
-   "bytes": 194436,
-   "sha256": "43e9a3789ca2e12c18dfa8ee018c23b8f4153b8c80fe445e14033d234f9a7ad2"
+   "bytes": 192837,
+   "sha256": "05dc643fb28100a358d30207aeff91259dce1cfaa5f7660480e2c8bd32c8c5e2"
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.12.0.md",
@@ -240,33 +240,33 @@
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.4.0.md",
-   "bytes": 106026,
-   "sha256": "6305cc42fe8a40ee11ca4cdb2a39b2743dbb9501d047e6d20fa0830c1b57a23c"
+   "bytes": 104760,
+   "sha256": "0ed2ff5a013df7c95a09f6a001ff7f9b9a4a345fc13fff7159ea56c739470304"
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.5.0.md",
-   "bytes": 115253,
-   "sha256": "e9ce6ff63acd89e26a3ca2da02ea4f031e2245244cd355fe90d1096023ec2faf"
+   "bytes": 113940,
+   "sha256": "c836b02ff25fde7b3eb71b12b1ad682e8467960af9644e11ac4d3c6cdd6bba68"
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.6.0.md",
-   "bytes": 138172,
-   "sha256": "5695e3e7805f5eca0ef7c70ce2556ab10063defaf729e2b41f1e23e288f23b7d"
+   "bytes": 136723,
+   "sha256": "4c53e2561d674c14be6a3328cfa37916ec0ac351fbfdc876fee942a4f51b41a7"
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.7.0.md",
-   "bytes": 152493,
-   "sha256": "ceec436d374b1695c3a9a5513d29a430d93634a7d4012effad1ab22444ff37ad"
+   "bytes": 150971,
+   "sha256": "a4f473aded4fac948d8cf4ae5fdaf6d4a218e79f6cef4b1dfb7b5371c17a8b56"
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.8.0.md",
-   "bytes": 172192,
-   "sha256": "2117724194aeb463a9060fadb8832d8ddbdb46815176bbdb56954bf9d48ee738"
+   "bytes": 170608,
+   "sha256": "a7904fff3c8a1396224854dfa402cb17300eb49c16f0b4c134a50ce03a0ea9d6"
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_开发计划书_V1.9.0.md",
-   "bytes": 183519,
-   "sha256": "3d8d15ca786283b5e693ead199a006237215c8749dc38f3fbe0eddda7ceebaac"
+   "bytes": 181925,
+   "sha256": "8ee1c1637567f91f3f23a85bf30f68a531b92c9935727381c8afc2cb4a88f78a"
   },
   {
    "path": "01_交付文档/archive/双人对话播客自动生成系统_测试报告_V1.0.0.md",
@@ -405,18 +405,18 @@
   },
   {
    "path": "02_演示产物/演示台账/01_人工智能会不会取代程序员.log",
-   "bytes": 42218,
-   "sha256": "d8835ae3e700fb614346505259f1e25bc520e04ce8abfd7da6d2943e3099eaf9"
+   "bytes": 41818,
+   "sha256": "4eda304f570946289fc92093856bbb60742ba2d6a5900739aaf6ae0c151d48c8"
   },
   {
    "path": "02_演示产物/演示台账/02_为什么周末休息完反而更累.log",
-   "bytes": 26501,
-   "sha256": "fa4f5bb88f97fdf31e7f83fd3d5f5db1c6d274f7f3aba973492f0aec5347356d"
+   "bytes": 26232,
+   "sha256": "968ca0ec88fbee23fcbd498e761df5138a6fde9f47bb8681e71a0bec41904270"
   },
   {
    "path": "02_演示产物/演示台账/03_小城市正在变成新的机会洼地吗.log",
-   "bytes": 31614,
-   "sha256": "edec6e0155391c3ef2ecfce8df3a5bef390120cef7697d070a1cb9a0dac32459"
+   "bytes": 31296,
+   "sha256": "bb61aa67e73bab6f7d1ad1e287ec14f6b0fdcd53c522269794be7a884cad215c"
   },
   {
    "path": "02_演示产物/演示台账/demo_pack.json",
@@ -425,8 +425,8 @@
   },
   {
    "path": "02_演示产物/演示台账/demo_pack_run.json",
-   "bytes": 1067,
-   "sha256": "b3ede9d03b904c948049dfbad6cd0537f5600c37e5c0ed861a3696dd23f0cebc"
+   "bytes": 1028,
+   "sha256": "06ed649d0cb5e16d63c7ecf86a954e1736d9fc67c4e5e127f703d72f146a27fb"
   },
   {
    "path": "02_演示产物/界面截图（Edge）/edge_01_login.png",
@@ -510,8 +510,8 @@
   },
   {
    "path": "02_演示产物/答辩PPT/preview/_shot_report.json",
-   "bytes": 5996,
-   "sha256": "86f126db23bef4cb37d06c9d2d922ac2e73884a66500bb0f1d92cb46d37075c2"
+   "bytes": 5706,
+   "sha256": "87c28a596ae0b1e890797522f9b05cedc900ff723a7d111fa4ae50f135422851"
   },
   {
    "path": "02_演示产物/答辩PPT/preview/p01.png",
@@ -700,13 +700,13 @@
   },
   {
    "path": "03_源代码/.gitignore",
-   "bytes": 1265,
-   "sha256": "d3975bda015f5fd044d633bf47c043b047dc83e8ab96c21c0e0f359f3877ffdb"
+   "bytes": 1657,
+   "sha256": "fb2a7577f7e313260465ed2385b0354146a6bff512b0a4f103be719fb9e0c938"
   },
   {
    "path": "03_源代码/README.md",
-   "bytes": 9191,
-   "sha256": "f2148b14f508a3e5eb60b6119e748f59136e7016b09e3754608e19488549e637"
+   "bytes": 9610,
+   "sha256": "350b49fc28b3c1240802b3ca8ec264e982348cc82b4c611cd10e8391551bf1d4"
   },
   {
    "path": "03_源代码/api/__init__.py",
@@ -735,8 +735,8 @@
   },
   {
    "path": "03_源代码/api/models.py",
-   "bytes": 14102,
-   "sha256": "a219ea5a7c0b6f0f094bf9264e9c8d2f3e9dc154e27137ba078b13356d311d55"
+   "bytes": 13814,
+   "sha256": "bd1442b37f6d36f1cc0083e04a3c1872a350fa3fd94edc99446b78f7e2a57b6b"
   },
   {
    "path": "03_源代码/api/routers/__init__.py",
@@ -785,13 +785,13 @@
   },
   {
    "path": "03_源代码/api/services/normalize.py",
-   "bytes": 20134,
-   "sha256": "ae4d9cf0c3ff9984d06b04cf48d75453555c05e8633f4df689acbe10589d16be"
+   "bytes": 19620,
+   "sha256": "b6644f10ade54676e692562986c67232646e306b054992789a2a1de6e06cff70"
   },
   {
    "path": "03_源代码/api/services/podcast_rss.py",
-   "bytes": 16025,
-   "sha256": "56765908bacd815f2a25c8b472a52529087816c85608dbcdb67b08f598d9eb4f"
+   "bytes": 15679,
+   "sha256": "e0cf44a28471ca794c8e7f730297b3ce0909bb1fcf502d898ce292a1e8434f1b"
   },
   {
    "path": "03_源代码/api/services/postprocess.py",
@@ -810,13 +810,13 @@
   },
   {
    "path": "03_源代码/api/services/task_runner.py",
-   "bytes": 37899,
-   "sha256": "29942ab5a879ba8cd40396cdc2cf1c5ed559a94b4b280f7f738a824588ecec78"
+   "bytes": 37141,
+   "sha256": "7c06eb2590d52e82c709e51ae3b03c56812c968349443a509fb0f8a8ee289ade"
   },
   {
    "path": "03_源代码/api/services/tts.py",
-   "bytes": 40332,
-   "sha256": "07390db9331576cba0cfc4304724c80c2bea57ddecfd162ea789a8a0a87fb934"
+   "bytes": 39539,
+   "sha256": "910601aee077dc359a938debc66c36862ebc39dd060b7a8d130886ac3e7e5dde"
   },
   {
    "path": "03_源代码/backend/assets/README.md",
@@ -925,8 +925,8 @@
   },
   {
    "path": "03_源代码/backend/voices/_archive/20260916_093656_voice_a/voice_a.json",
-   "bytes": 329,
-   "sha256": "53aa86655158a3e315baf371ca28cdfcff4fd3f4c124579641fdc6436a043fa9"
+   "bytes": 321,
+   "sha256": "dea0b8e4449fa76a16a3841305e50dc4d2079a18e893e5acea6433dd434ae000"
   },
   {
    "path": "03_源代码/backend/voices/_archive/20260916_093656_voice_a/voice_a.wav",
@@ -935,18 +935,18 @@
   },
   {
    "path": "03_源代码/backend/voices/_archive/20260916_164849_prompt_ab/voice_a.json",
-   "bytes": 335,
-   "sha256": "8823cece890147c306b703e4ff3b638df50bd378acbec097f9acb5991f37408d"
+   "bytes": 327,
+   "sha256": "b73fe5b7304578b9524ae6108742390d675465c5f81c59c09fb06b01d07e7bc0"
   },
   {
    "path": "03_源代码/backend/voices/_archive/20260916_164849_prompt_ab/voice_b.json",
-   "bytes": 416,
-   "sha256": "4643f91fd32550a9939468c511946ba238c5b77aee9e4af7ae37c3062f6fb1f9"
+   "bytes": 408,
+   "sha256": "8d015d98ff0614a51b45b0f18bf0434133ec752e6315180589cb17c73a08ad2f"
   },
   {
    "path": "03_源代码/backend/voices/voice_a.json",
-   "bytes": 335,
-   "sha256": "8823cece890147c306b703e4ff3b638df50bd378acbec097f9acb5991f37408d"
+   "bytes": 327,
+   "sha256": "b73fe5b7304578b9524ae6108742390d675465c5f81c59c09fb06b01d07e7bc0"
   },
   {
    "path": "03_源代码/backend/voices/voice_a.wav",
@@ -955,8 +955,8 @@
   },
   {
    "path": "03_源代码/backend/voices/voice_b.json",
-   "bytes": 416,
-   "sha256": "4643f91fd32550a9939468c511946ba238c5b77aee9e4af7ae37c3062f6fb1f9"
+   "bytes": 408,
+   "sha256": "8d015d98ff0614a51b45b0f18bf0434133ec752e6315180589cb17c73a08ad2f"
   },
   {
    "path": "03_源代码/backend/voices/voice_b.wav",
@@ -1230,8 +1230,8 @@
   },
   {
    "path": "03_源代码/scripts/eval_batch.py",
-   "bytes": 49903,
-   "sha256": "e5bbf3f618b9301512af60b9abf142c93d2eef43608e9c4d2dc14d20237ac2bf"
+   "bytes": 48907,
+   "sha256": "8d26537b0b58001a3f38a649647934a0b04b4eb30df2ac6f1f7d914a0fa579c7"
   },
   {
    "path": "03_源代码/scripts/fetch_matcha.py",
@@ -1270,8 +1270,8 @@
   },
   {
    "path": "03_源代码/scripts/make_delivery_pack.py",
-   "bytes": 29270,
-   "sha256": "e848eae86b7276e0ddfd9313860de38c5e49346297202e51ea00dbe39d99b0cb"
+   "bytes": 33112,
+   "sha256": "d34cf9fc107df74a6eb950043da6bc8a22c76806b493f678374993681d61e9a5"
   },
   {
    "path": "03_源代码/scripts/make_demo_pack.py",
@@ -1395,13 +1395,13 @@
   },
   {
    "path": "03_源代码/scripts/verify_d6.py",
-   "bytes": 8821,
-   "sha256": "fbc62c2707d60fdfe24845ac3c6348549e3d155739b7f70e4573396baf7f1b67"
+   "bytes": 8610,
+   "sha256": "e1721a2f7716b500638be5a15b317f3bd360bb126064324216b2c8eb3417d4f5"
   },
   {
    "path": "03_源代码/scripts/verify_demo_pack.py",
-   "bytes": 33198,
-   "sha256": "7c482982c961c6cf974c147008527cdd7ea4411decce5619d497ee73416cb343"
+   "bytes": 32511,
+   "sha256": "81b9069bb95d5e44ff3c080c254f6861249fc198f15df4ffd7fc0efbf5ce2f2e"
   },
   {
    "path": "03_源代码/scripts/verify_env.py",
@@ -1545,18 +1545,18 @@
   },
   {
    "path": "05_验收证据/一致率/report.md",
-   "bytes": 7565,
-   "sha256": "e668b8c7c126ad5837487128cc907645752941436d0f8479d994e1c1b45341c0"
+   "bytes": 7456,
+   "sha256": "19a124b6f70fe7ebb6dc40ecc87e6b51ab24f4387a36e5e04963133df6a23a73"
   },
   {
    "path": "05_验收证据/一致率/result.json",
-   "bytes": 13254,
-   "sha256": "7ca2205d83f08d514d8d1d6828255dbd32bc6b790a3d2bfb2127ae492ea133d6"
+   "bytes": 12763,
+   "sha256": "e4b316376b7a07508e7eaaac9eed4478e27b166d62072f2d5ad2172d9dc8649f"
   },
   {
    "path": "05_验收证据/回归与变异/cleanup_verify_frontend.log",
-   "bytes": 1765,
-   "sha256": "020d1cf3594bb83532b9ffcf5ff555dbac5df68a30034c9634eaddc604aed2dd"
+   "bytes": 1728,
+   "sha256": "b4b73ca221f65b5f3fad3d7588f9978faa9cdcfa96a48df8fd60b009f06c8a13"
   },
   {
    "path": "05_验收证据/回归与变异/cleanup_verify_junit.xml",
@@ -1565,8 +1565,8 @@
   },
   {
    "path": "05_验收证据/回归与变异/d11_mutation.log",
-   "bytes": 3858,
-   "sha256": "7fac1bd91363bcce045be115eb6621d58e9809b292967afed1ca8b97ff8f6af2"
+   "bytes": 3816,
+   "sha256": "d7b9c56dc924e83966dc65587a815b25b523133a6a61214f2224c71762225242"
   },
   {
    "path": "05_验收证据/回归与变异/d13_junit_final.xml",
@@ -1575,118 +1575,118 @@
   },
   {
    "path": "05_验收证据/回归与变异/frontend_mutation.log",
-   "bytes": 1499,
-   "sha256": "9c3908f6a83d4cd1f0fca08ecb8fcffe1f4fc38df64390a14f0fa2adf3747521"
+   "bytes": 1475,
+   "sha256": "0616ecee7d52ef443be6512d46736407fa8c3e18d5267085c2109df74032834b"
   },
   {
    "path": "05_验收证据/文档终检/check_spec_docs_final.log",
-   "bytes": 28546,
-   "sha256": "3b0b060d67f6ad3b93b65221e3b969cb302b9bae27a1dc4f3e1e23e8ba5e007b"
+   "bytes": 27930,
+   "sha256": "21a2ecc2252e49221d5773319d35ad95685296a35b77a263a217030dd4919305"
   },
   {
    "path": "05_验收证据/浏览器取证/evidence.json",
-   "bytes": 2015,
-   "sha256": "c8894258ae2f1e37a5ab7947c082543c868034995100c4ac3f72787125f1f371"
+   "bytes": 1918,
+   "sha256": "5ba9efead12b62afa91101bd4acc6772b163e1e1df6e858a1e090f317d13d262"
   },
   {
    "path": "05_验收证据/演示核验/d14_demo_verify.json",
-   "bytes": 1267,
-   "sha256": "cb662ed40eff1515b0b5e842e90a168705943024911a116ebadde8abf0287947"
+   "bytes": 1222,
+   "sha256": "8f78b0f7c55909e2a74391a65ff6998ad9c308a0f052a5a00e84fa4635adcaab"
   },
   {
    "path": "05_验收证据/环境与冒烟/d3_verify_result.json",
-   "bytes": 6732,
-   "sha256": "01b681c4d100354590651b9a818648e40b1883ccdbfaadeb6cc28604a718f831"
+   "bytes": 6459,
+   "sha256": "4096dad7b45e6f38762745ded6a33c40990becabeb9384fc02de76c9af5f3d0b"
   },
   {
    "path": "05_验收证据/环境与冒烟/d5_verify_result.json",
-   "bytes": 11196,
-   "sha256": "a38b30b1fb818f08a534148bf83d6dc4fc162a16d7826af84f93f4190a594d6a"
+   "bytes": 10820,
+   "sha256": "d92e53918a086a0abfc002d8703a1d3385e953a09f3f2d193b3857261c4ce1a8"
   },
   {
    "path": "05_验收证据/环境与冒烟/d6_verify_evidence.json",
-   "bytes": 1163,
-   "sha256": "39d6d7a1b9e78b46a568a8ee149a541e6bf4998b4cf54e220a02d67031d9c3a1"
+   "bytes": 1105,
+   "sha256": "ca461658488f26dfedacec0e1f85a9030302d8111274b0c3850bb154e0108304"
   },
   {
    "path": "05_验收证据/环境与冒烟/offline.json",
-   "bytes": 317,
-   "sha256": "fd48ca759d9e3277e25983cac21d635dbbbd00bea636d5abb0d0971f4ea8ff94"
+   "bytes": 308,
+   "sha256": "ad030d688722b1e0828aa59cc9bd738f80fb6ee3210acb925c1de541e2957121"
   },
   {
    "path": "05_验收证据/环境与冒烟/phase1.json",
-   "bytes": 501,
-   "sha256": "2c6be935125664b03e74dea22405adef57925fb84175e233a8b6ddfb838e3e2e"
+   "bytes": 488,
+   "sha256": "c085580d1590af5784b5960cabf30e82e5e4d5d446f52678e9c21129770b2507"
   },
   {
    "path": "05_验收证据/环境与冒烟/phase1_console.log",
-   "bytes": 778,
-   "sha256": "d3faec9960671117286a922f7c474a54dbdff44324e93314fc384b922fb8da6b"
+   "bytes": 760,
+   "sha256": "6f8e106816341671503be25c198d9f38f25ccf801314b20fb83985cc52cf98d8"
   },
   {
    "path": "05_验收证据/环境与冒烟/phase2.json",
-   "bytes": 1113,
-   "sha256": "2b565caff87dc6ca0cbc05172797a762c048d61ec988278811a5a0e0b4cb5dbc"
+   "bytes": 1079,
+   "sha256": "fca55574b5bb1fea5df0233d9bd9a6560ed816ba8adbeb0740f3513fd5da1c9d"
   },
   {
    "path": "05_验收证据/环境与冒烟/phase2_console.log",
-   "bytes": 184,
-   "sha256": "540ea13f9e9c6911ac3fca3bebaecda0d4571947a2ef6f3a140ce20508c6ac51"
+   "bytes": 182,
+   "sha256": "9a9a7752657c297176b97b5f6893b64e002428ac268153d3b58d7e4c9c3103f6"
   },
   {
    "path": "05_验收证据/环境与冒烟/run_summary.json",
-   "bytes": 251,
-   "sha256": "959c8a505745b6076975ce82ba78d759f4ba1ff271aa3e01a4f903558e5ede97"
+   "bytes": 240,
+   "sha256": "4da5c7f68c3c718791cdd8f35f36462af554cdf9173380004fab82c1ad9eb90b"
   },
   {
    "path": "05_验收证据/环境与冒烟/server2.log",
-   "bytes": 11272,
-   "sha256": "1729e3ef5ba7aba4565cbce0255062508c4c1f184b493871a3da06d4757dc96b"
+   "bytes": 11165,
+   "sha256": "2043951e666f888c41386f10eeb7f40ed4f0b1a2f724c35358724b57375d768f"
   },
   {
    "path": "05_验收证据/环境与冒烟/server_after.log",
-   "bytes": 934,
-   "sha256": "ef64f1a2db42cefeaf42252a6d8ce568d111f7c73b5b01fe80146847e3d7304c"
+   "bytes": 925,
+   "sha256": "9664b74f9eedf71855d309e1127a745a9eb550ccea2bd68f11c68d40928a0f21"
   },
   {
    "path": "05_验收证据/环境与冒烟/server_before.log",
-   "bytes": 9202,
-   "sha256": "035f2137452b5dedd2dfe43fe8d04b98ebca7c4d447f98c07e565ceaf00478cd"
+   "bytes": 9128,
+   "sha256": "67af5ecc298ad4d4e8aa94448ceb1bb63ecc713502d42d81fd6608c5588a57be"
   },
   {
    "path": "05_验收证据/环境与冒烟/server_cleanup.log",
-   "bytes": 12953,
-   "sha256": "27f987857e87578976ceca7a8f4f7c02450e87846ab4ecca8bb66ee3110d8ff1"
+   "bytes": 12836,
+   "sha256": "98a07cc550d943526d1cff758151d6db9e447897f3a11ccaaa1cf19cb61a4ca9"
   },
   {
    "path": "05_验收证据/环境与冒烟/server_offline.log",
-   "bytes": 6464,
-   "sha256": "ea72a1e9df55c6efc1e4aa22746219b0cdb24b89692eccc5c05dbbbc75833b29"
+   "bytes": 6367,
+   "sha256": "7fbfb770267b61d54c9989f6093d7618db01ddf7a93246b801eaf2eea7938e33"
   },
   {
    "path": "05_验收证据/环境与冒烟/server_retry.log",
-   "bytes": 12253,
-   "sha256": "feb4eca7e3201362640ba8a4bdf78656a974234b00067bd8e84ec5d581ba40b7"
+   "bytes": 12140,
+   "sha256": "fbeaa3f015ea8c74fc03c68c3de78644c5c1b8580346fef161d04dedc8186668"
   },
   {
    "path": "05_验收证据/环境与冒烟/smoke_result.json",
-   "bytes": 1294,
-   "sha256": "0ffa185f729f24be78a98418c63382a43dca8f46252ace27bfe25369be681a29"
+   "bytes": 1231,
+   "sha256": "bc6964285b4b30e05e1d5ee06d55ca854c5a1069b61da21fa31073174a27b7ef"
   },
   {
    "path": "05_验收证据/环境与冒烟/verify.log",
-   "bytes": 1810,
-   "sha256": "401e05f66418f2f9ed30b539d624fbca133d4696e6e8eb57808e7c9c2d3cb263"
+   "bytes": 1786,
+   "sha256": "361409f3e57922c1a3c3a1d90dd9992b017df8cbefd7a73054c67ca55ff4799d"
   },
   {
    "path": "05_验收证据/订阅源核对/d13_feed_verify.json",
-   "bytes": 3639,
-   "sha256": "9234c2256f35d6569d90ee3e1a453d340bba1b9411cc860b98a13ddc26695d79"
+   "bytes": 3470,
+   "sha256": "10f105ecff329854c1238003f5a085d0b81e24aa4bfd2b42dd4a397e0c99dd05"
   },
   {
    "path": "交付说明.md",
    "bytes": 7938,
-   "sha256": "f9051dbc6ba2e3f19f81626befd12d68f46432c4c6f7307d3499f0d6e750261c"
+   "sha256": "a31cea48b2f67a75fd2596ae26d5a50d91b5189bd71855c8a046cbf30b6911c7"
   }
  ]
 }

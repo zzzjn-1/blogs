@@ -65,8 +65,13 @@ tests/           后端测试
 docs/            交付文档（**镜像目录**，真源在工作区，见下）
 demo/            演示产物：成片 mp3、演示台账、真实浏览器截图
 outputs/         运行期产物与评测报告（音频不入库，JSON / PNG 报告入库）
+  d15_delivery/     **最终交付产物快照**：答辩 PPT 17 页 + 交付包 + 部署脚本，见其 `README.md`
 patches/         对上游 CosyVoice 的改动补丁（上游仓库本体不入库）
 ```
+
+> **想换台电脑复现？** 直接看 [`outputs/d15_delivery/README.md`](outputs/d15_delivery/README.md) ——
+> 环境前提、装依赖、配 `.env`、起服务、跑一期、自测命令，一份说清。
+> 交付包整包 zip 在 [Releases](../../releases) 附件里（不入 git 历史）。
 
 ## 快速开始
 

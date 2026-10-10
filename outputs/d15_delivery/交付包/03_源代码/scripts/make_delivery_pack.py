@@ -158,6 +158,40 @@ def sha256(path: str) -> str:
     return h.hexdigest()
 
 
+# 文本归一白名单：这些后缀按文本处理（换行归一）；其余按二进制原样保留。
+TEXT_SUFFIX = (".md", ".py", ".ts", ".tsx", ".js", ".jsx", ".json", ".txt", ".ini",
+               ".cfg", ".yml", ".yaml", ".html", ".css", ".xml", ".csv", ".slide",
+               ".gitignore", ".example", ".log")
+# `.bat` / `.cmd` 必须 CRLF —— cmd.exe 对 LF-only 的批处理解析会出错。
+CRLF_SUFFIX = (".bat", ".cmd")
+
+
+def normalize_eol(path: str) -> str:
+    """把文本文件的换行归一为 LF（`.bat`/`.cmd` 归一为 CRLF）；二进制原样返回。
+
+    返回 'lf' / 'crlf' / 'binary'，供调用方统计。
+    幂等：已经是目标换行的文件不会被改写（避免 sha256 漂移与无意义写盘）。
+    """
+    lower = path.lower()
+    if lower.endswith(CRLF_SUFFIX):
+        want = b"\r\n"
+    elif lower.endswith(TEXT_SUFFIX):
+        want = b"\n"
+    else:
+        return "binary"          # 二进制：一个字节都不动
+    with open(path, "rb") as f:
+        raw = f.read()
+    if b"\x00" in raw[:4096]:     # 含 NUL 视为二进制（防止后缀骗人）
+        return "binary"
+    # 先统一成 LF，再按目标换行展开
+    lf = raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    out = lf if want == b"\n" else lf.replace(b"\n", b"\r\n")
+    if out != raw:
+        with open(path, "wb") as f:
+            f.write(out)
+    return "lf" if want == b"\n" else "crlf"
+
+
 def skip_file(name: str) -> bool:
     if name.startswith(EXCL_FILE_PREFIX):
         return True
@@ -271,11 +305,16 @@ def build(check_only: bool) -> int:
         print("目标已存在，按幂等覆盖方式原地刷新（不删除任何文件）")
 
     # 4) 复制
+    #    ⚠️ 换行符归一：包内**文本一律 LF**、`.bat` 保持 CRLF。
+    #    否则本机（CRLF 工作区）打出的 MANIFEST sha256，在别的机器 clone（.gitattributes
+    #    把文本归一为 LF）后**必然对不上** —— 「可在别的电脑复现」就成了空话。
+    #    归一化与 .gitattributes 的 `* text=auto eol=lf` / `*.bat eol=crlf` 口径一致。
     manifest: list[dict] = []
     for pack_dir, src, rel in tasks:
         dst = os.path.join(pack, pack_dir.replace("/", os.sep), rel.replace("/", os.sep))
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copy2(src, dst)
+        normalize_eol(dst)
         manifest.append({
             "path": os.path.relpath(dst, pack).replace(os.sep, "/"),
             "bytes": os.path.getsize(dst),
@@ -331,16 +370,32 @@ def build(check_only: bool) -> int:
 
 
 def verify(tasks: list[tuple[str, str, str]], pack: str) -> list[str]:
+    """逐文件复核「源 vs 包」。
+
+    文本文件在复制时做了换行归一（见 `normalize_eol`），故不能直接比字节 ——
+    改为比较**归一到同一换行后的内容**：二进制必须逐字节相等，文本必须
+    「LF 化之后」相等。这样既守住「内容没被动过」，又不冤枉换行归一。
+    """
     problems: list[str] = []
     for pack_dir, src, rel in tasks:
         dst = os.path.join(pack, pack_dir.replace("/", os.sep), rel.replace("/", os.sep))
         if not os.path.exists(dst):
             problems.append("缺失：%s" % dst)
-        elif os.path.getsize(src) != os.path.getsize(dst):
-            problems.append("字节数不一致：%s" % os.path.relpath(dst, pack))
-        elif sha256(src) != sha256(dst):
+            continue
+        if not same_content(src, dst):
             problems.append("内容不一致：%s" % os.path.relpath(dst, pack))
     return problems
+
+
+def same_content(a: str, b: str) -> bool:
+    """两个文件内容是否等价：二进制逐字节比；文本比 LF 归一后的字节。"""
+    def canon(p: str) -> bytes:
+        with open(p, "rb") as f:
+            raw = f.read()
+        if b"\x00" in raw[:4096]:
+            return raw
+        return raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return canon(a) == canon(b)
 
 
 def render_readme(manifest: list[dict], pack: str, self_bytes: int = 0) -> str:
@@ -556,6 +611,36 @@ def self_test() -> int:
         "共 3 个文件" in txt and "约 0.00 MB" in txt,
         note_line.strip()[:80],
     )
+
+    # T9 换行归一：文本→LF、.bat→CRLF、二进制不动（否则跨机 clone 后 MANIFEST 必对不上）
+    with tempfile.TemporaryDirectory() as td:
+        p_txt = os.path.join(td, "doc.md")
+        with open(p_txt, "wb") as f:
+            f.write(b"a\r\nb\r\n")           # CRLF 输入
+        r1 = normalize_eol(p_txt)
+        with open(p_txt, "rb") as f:
+            got = f.read()
+        r1_idem = normalize_eol(p_txt)        # 幂等再跑一次
+        p_bat = os.path.join(td, "run.bat")
+        with open(p_bat, "wb") as f:
+            f.write(b"echo 1\npause\n")      # LF 输入
+        r2 = normalize_eol(p_bat)
+        with open(p_bat, "rb") as f:
+            got2 = f.read()
+        p_bin = os.path.join(td, "a.bin")
+        blob = bytes(range(256)) + b"\r\n\x00"
+        with open(p_bin, "wb") as f:
+            f.write(blob)
+        r3 = normalize_eol(p_bin)
+        with open(p_bin, "rb") as f:
+            got3 = f.read()
+        check(
+            "T9 文本归一 LF / .bat 归一 CRLF / 二进制零改动（幂等）",
+            got == b"a\nb\n" and r1 == "lf" and r1_idem == "lf"
+            and got2 == b"echo 1\r\npause\r\n" and r2 == "crlf"
+            and r3 == "binary" and got3 == blob,
+            f"md={r1}/{got!r} bat={r2}/{got2!r} bin={r3}/{'same' if got3==blob else 'CHANGED'}",
+        )
 
     n_ok = sum(1 for r in results if r)
     print("\n自检结论：%d/%d 如期通过" % (n_ok, len(results)))
