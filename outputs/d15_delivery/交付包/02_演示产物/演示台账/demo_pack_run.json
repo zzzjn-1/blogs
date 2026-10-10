@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-09-20T11:26:21",
+  "dry_run": false,
+  "total_seconds": 1203.8,
+  "ok": 3,
+  "failed": 0,
+  "skipped": [],
+  "results": [
+    {
+      "idx": 1,
+      "topic": "人工智能会不会取代程序员",
+      "words": 900,
+      "rc": 0,
+      "ok": true,
+      "seconds": 432.9,
+      "log": "D:\\podcast-ai\\outputs\\d14_demo\\01_人工智能会不会取代程序员.log",
+      "kind": "科技与职业"
+    },
+    {
+      "idx": 2,
+      "topic": "为什么周末休息完反而更累",
+      "words": 900,
+      "rc": 0,
+      "ok": true,
+      "seconds": 385.1,
+      "log": "D:\\podcast-ai\\outputs\\d14_demo\\02_为什么周末休息完反而更累.log",
+      "kind": "生活与健康"
+    },
+    {
+      "idx": 3,
+      "topic": "小城市正在变成新的机会洼地吗",
+      "words": 900,
+      "rc": 0,
+      "ok": true,
+      "seconds": 385.8,
+      "log": "D:\\podcast-ai\\outputs\\d14_demo\\03_小城市正在变成新的机会洼地吗.log",
+      "kind": "社会与经济"
+    }
+  ]
+}

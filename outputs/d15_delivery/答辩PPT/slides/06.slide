@@ -1,0 +1,116 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '20px 72px 20px 72px', flexDirection: 'column', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`这一页是界面，先说设计，再看长什么样。
+
+设计上第一条原则，也是最重要的一条：这不是一个「用得越久越好」的产品界面。它的成功标准是用户尽快离开——提交完就去做别的事，回头直接拿走成片。所以整个界面的重心不是让人沉浸，是让人一眼看清状态。
+
+第二条，状态必须可判，不能靠猜。每个任务都有状态标签、阶段文案和进度条，出错就直接把错误信息显示出来。
+
+第三条比较细：没有信息和信息是零，必须区分开。比如「队列位置」如果是空，就不显示那一栏，而不是显示一个零——这两件事对用户的意思完全不同。
+
+第四条，破坏性的操作，取消和删除，都要二次确认。
+
+技术上，组件用 Ant Design，布局用 Tailwind，分工很清楚：Tailwind 只管间距、栅格、背景色这些工具类，组件长什么样交给 AntD，避免两套设计语言打架。主色沿用 AntD 默认蓝，没做主题定制——这是有意的取舍，工具型界面、单人开发，不做设计系统，代价是将来要做视觉统一得回头补一层令牌。
+
+右边这些图都是真机截图，一千四百四乘九百，无头浏览器截的，脚本能重跑。左上是任务详情页，也是信息密度最高的一页：进度、播放器、下载、逐句脚本全在一屏。脚本回看按 A、B 交替标色，你听到的两把声音就是这两个人。这一屏同时是个调试工具——哪句念错了、卡在第几段，看一眼就知道。
+
+下面五张是其余页面：新建节目、历史列表、订阅源、登录、注册。`}>
+
+    {/* A · 标题块 */}
+    <Box style={{ height: 100, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#15171B', lineHeight: 1.25 }}>界面：先让人看清状态</Text>
+            <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>01 做出来的是什么</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, color: '#6E7480', lineHeight: 1.5 }}>
+                左：四条设计原则与组件分工　·　右：六张 1440 × 900 真机截图，同一批脚本产出
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        </Box>
+    </Box>
+
+    {/* B · 内容区 */}
+    <Box style={{ height: 540, flexDirection: 'row', paddingTop: 20 }}>
+
+        {/* 左栏：设计 */}
+        <Box style={{ width: 430, flexDirection: 'column', paddingRight: 30 }}>
+            <Box style={{ width: 44, height: 3, background: '#D9480F' }} />
+            <Box style={{ height: 12 }} />
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>
+                成功标准是<br />用户尽快离开
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.65 }}>
+                它不是让人沉浸的产品，是让人一眼看清状态、提交完就能走。四条原则：
+            </Text>
+            <Box style={{ height: 10 }} />
+
+            {[
+              ['状态可判，不靠猜','每个任务都有状态标签 + 阶段文案 + 进度条；错误态直接显示原因'],
+              ['长任务不阻塞人','提交后立即跳详情，轮询进度，可随时离开、从历史回来'],
+              ['「没有信息」与「信息是 0」分开','队列位置、缓存命中率为空时不显示，而不是显示 0'],
+              ['破坏性操作二次确认','取消、删除走 Popconfirm']
+            ].map((row,i)=>(
+              <Box key={i} style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10, marginBottom: 7 }}>
+                <Text style={{ width: 18, fontSize: 13, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.5 }}>{i+1}</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 12.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>{row[0]}</Text>
+                    <Text style={{ fontSize: 11, color: '#6E7480', lineHeight: 1.45 }}>{row[1]}</Text>
+                </Box>
+              </Box>
+            ))}
+
+            <Box style={{ height: 4 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 10 }} />
+
+            <Text style={{ fontSize: 12.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>组件分工：两套库，各管一段</Text>
+            <Box style={{ height: 6 }} />
+            <Text style={{ fontSize: 11.5, color: '#5A6069', lineHeight: 1.6 }}>
+                <span style={{ fontWeight: 'bold', color: '#15171B' }}>Ant Design 5</span> —— 表单、表格、反馈组件等交互外观；<span style={{ fontWeight: 'bold', color: '#15171B' }}>Tailwind 3</span> —— 只用于间距、栅格、背景色等工具类。<span style={{ color: '#6E7480' }}>主色沿用 AntD 默认蓝，未做主题定制（有意的取舍：工具型界面、单人开发，不建令牌层）</span>
+            </Text>
+        </Box>
+
+        {/* 右栏：截图墙 */}
+        <Box style={{ flex: 1, flexDirection: 'column' }}>
+            <Image src='assets/ui_detail.png' style={{ width: 700, height: 322, border: '1px solid #15171B' }} />
+            <Box style={{ height: 7 }} />
+            <Text style={{ fontSize: 11.5, color: '#6E7480', lineHeight: 1.45 }}>
+                任务详情页 —— 信息密度最高的一页：进度、播放器、下载、逐句脚本回看（A / B 交替标色），同时是一个调试工具
+            </Text>
+            <Box style={{ height: 11 }} />
+            <Box style={{ flexDirection: 'row', gap: 12 }}>
+                <Image src='assets/ui_submit.png' style={{ width: 132, height: 84, border: '1px solid #15171B', opacity: 0.94 }} />
+                <Image src='assets/ui_history.png' style={{ width: 132, height: 84, border: '1px solid #15171B', opacity: 0.94 }} />
+                <Image src='assets/ui_feed.png' style={{ width: 132, height: 84, border: '1px solid #15171B', opacity: 0.94 }} />
+                <Image src='assets/ui_login.png' style={{ width: 132, height: 84, border: '1px solid #15171B', opacity: 0.94 }} />
+                <Image src='assets/ui_register.png' style={{ width: 132, height: 84, border: '1px solid #15171B', opacity: 0.94 }} />
+            </Box>
+            <Box style={{ height: 5 }} />
+            <Box style={{ flexDirection: 'row', gap: 12 }}>
+                <Text style={{ width: 132, fontSize: 11, color: '#6E7480' }}>新建节目：四参数</Text>
+                <Text style={{ width: 132, fontSize: 11, color: '#6E7480' }}>历史：任务与状态</Text>
+                <Text style={{ width: 132, fontSize: 11, color: '#6E7480' }}>订阅源：可订阅</Text>
+                <Text style={{ width: 132, fontSize: 11, color: '#6E7480' }}>登录</Text>
+                <Text style={{ width: 132, fontSize: 11, color: '#6E7480' }}>注册</Text>
+            </Box>
+            <Box style={{ height: 10 }} />
+            <Box style={{ borderLeft: '2px solid #D9480F', paddingLeft: 12 }}>
+                <Text style={{ fontSize: 12.5, color: '#15171B', lineHeight: 1.55 }}>
+                    都是真机画面，不是效果图 —— 想看的话，这台机器上现在就能跑一期。
+                </Text>
+            </Box>
+        </Box>
+
+    </Box>
+
+    {/* C · 页脚条 */}
+    <Box style={{ height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 18, height: 2, background: '#D9480F' }} />
+            <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>双人对话播客自动生成系统 · 项目答辩</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>06 / 17</Text>
+    </Box>
+
+</Slide>

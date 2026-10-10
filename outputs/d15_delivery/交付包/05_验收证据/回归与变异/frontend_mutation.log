@@ -1,0 +1,24 @@
+node: C:\Users\zzz\.workbuddy\binaries\node\versions\22.22.2-3\node.EXE
+工作目录: D:\podcast-ai\frontend
+
+--- F1 taskView.ts :: 把「0 = 正在跑」改成「0 = 前面还有 0 个」
+    [ok]   如期变红；变红文件：taskView.test.ts, History.test.tsx
+--- F2 taskView.ts :: seg=0 时不再隐藏读数（未算 ≠ 0%）
+    [ok]   如期变红；变红文件：taskView.test.ts
+--- F3 TaskDetail.tsx :: 去掉全部条件：pos=0（自己正在跑）也弹队列提示（仅组件测试可抓）
+    [ok]   如期变红；变红文件：TaskDetail.test.tsx
+--- F4 History.tsx :: 列表页不再显示排队位次（仅组件测试可抓）
+    [ok]   如期变红；变红文件：History.test.tsx
+--- F5 TaskDetail.tsx :: 去掉阶段白名单：脚本阶段也显示缓存读数（仅组件测试可抓）
+    [ok]   如期变红；变红文件：TaskDetail.test.tsx
+--- F6 taskView.ts :: 去掉 showQueue 的状态白名单：终态也显示排队提示
+    [ok]   如期变红；变红文件：taskView.test.ts, History.test.tsx, TaskDetail.test.tsx
+--- F7 TaskDetail.tsx :: 详情页退回「自己写一套判断」的旧写法（漏状态白名单）
+    [ok]   如期变红；变红文件：TaskDetail.test.tsx
+
+--- 还原复跑（必须全绿）
+    [ok]   全绿，工作树已干净
+
+========================================================
+结果：7 / 7 全部如期变红，且还原干净
+========================================================

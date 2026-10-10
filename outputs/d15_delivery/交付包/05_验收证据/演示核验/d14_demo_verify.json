@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-09-20T11:37:18",
+  "account": "local",
+  "count": 3,
+  "intro_fix_cutoff": "2026-09-20T00:00:00+08:00",
+  "measured_by": "ffprobe",
+  "problems": [],
+  "entries": [
+    {
+      "task_id": "ep_20260920_110641",
+      "role": "主期",
+      "topic_kind": "科技与职业",
+      "note": "900 字档；开场第 1 期，用于讲「输入四参数 → 脚本 → 成片」",
+      "_measured": {
+        "duration_sec": 301.68,
+        "source": "ffprobe",
+        "disk_bytes": 4827889,
+        "speech_sec": 249.16
+      }
+    },
+    {
+      "task_id": "ep_20260920_111344",
+      "role": "主期",
+      "topic_kind": "生活与健康",
+      "note": "900 字档；用于讲流程与句级缓存读数",
+      "_measured": {
+        "duration_sec": 257.06,
+        "source": "ffprobe",
+        "disk_bytes": 4114015,
+        "speech_sec": 218.76
+      }
+    },
+    {
+      "task_id": "ep_20260920_112014",
+      "role": "主期",
+      "topic_kind": "社会与经济",
+      "note": "900 字档；用于收口到订阅源与下载",
+      "_measured": {
+        "duration_sec": 279.36,
+        "source": "ffprobe",
+        "disk_bytes": 4470952,
+        "speech_sec": 234.76
+      }
+    }
+  ]
+}

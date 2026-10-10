@@ -1,0 +1,54 @@
+# =============================================================================
+# 双人对话播客自动生成系统 —— 忽略规则
+# =============================================================================
+
+# --- 密钥与本地配置（最重要：.env 内含真实 DeepSeek Key，绝不可入库）---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# --- 运行期数据（大体积 / 可重建）---
+data/
+downloads/
+wheels/
+_orphan_trash/
+logs/*.log
+
+# 音频产物不入库，但**保留** JSON 报告作为评测证据
+outputs/**/*.wav
+outputs/**/*.mp3
+outputs/**/*.m4a
+
+# --- 模型权重（约 9 GB，按部署手册另行获取）---
+pretrained_models/
+# CosyVoice 上游仓库为 git clone 取得；本项目对其的改动通过 patches/ 下的脚本固化，
+# 因此仓库本体不入库，补丁脚本必须入库。
+CosyVoice/
+
+# --- 前端 ---
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# --- 编辑器 / 系统 ---
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+*~
+# Office 打开文档时生成的锁文件（如 ~$xxx.pptx），属临时垃圾
+~$*
+
+# --- 本机 Agent 状态（记忆 / 自动化，与项目无关，且含本机路径）---
+.workbuddy/

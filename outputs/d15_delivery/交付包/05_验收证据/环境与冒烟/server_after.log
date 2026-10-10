@@ -1,0 +1,9 @@
+[serve_trace] root level=INFO handlers=1
+INFO:     Started server process [148736]
+INFO:     Waiting for application startup.
+2026-09-18 15:14:12,929 INFO API 启动：数据库=D:\podcast-ai\data\podcast.db，数据目录=D:\podcast-ai\data
+2026-09-18 15:14:12,946 WARNING [RECOVER] 扫描到 4 个非终态任务：脚本重投 0、续跑 1、仅标记失败 0、跳过（等待用户确认）3
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.

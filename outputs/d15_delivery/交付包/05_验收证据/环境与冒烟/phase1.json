@@ -1,0 +1,14 @@
+{
+  "phase": 1,
+  "started_at": "2026-09-18T15:26:28",
+  "script_seed": 1789716388,
+  "script_sample": "欢迎收听今天的节目，我们聊一个工程上特别容易被忽略的话题，本质上是在用空间换时间。",
+  "user": "d12p116388",
+  "task_id": "700ae951-ef23-4dbd-ad87-9a548478fe64",
+  "line_count": 24,
+  "progress_at_kill": 40,
+  "status_at_kill": "SYNTHESIZING",
+  "synth_wall_sec_at_kill": 112.8,
+  "killed_pid": 192584,
+  "finished_at": "2026-09-18T15:28:32"
+}

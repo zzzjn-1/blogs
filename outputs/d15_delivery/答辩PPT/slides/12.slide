@@ -1,0 +1,179 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '20px 72px 20px 72px', flexDirection: 'column', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`这一页把整个系统拆开给你看。但我想先说一句：这个架构不是自由设计出来的，是被几条实测出来的约束钉死的。
+
+最硬的一条：这块卡标称六 G，被系统和桌面占完之后，净可用只有四点三二 G。任务书建议八 G 起步，差了将近一半。这一条直接决定了后面所有选择——模型必须常驻、不能反复加载；并发只能是一路；能搬到 CPU 上的都搬走。任何「优雅但违反这条」的方案，直接不成立。
+
+第二条是显存记账要双口径，allocated 和 reserved 分开算，因为换缓冲区的时候吃的是 reserved。
+
+第三，上游 CosyVoice 的依赖链在 Python 三点一一以上没有可用的安装包，所以只能锁三点十。这跟任务书写的不一样，我在文档里做了偏离声明，不藏。
+
+第四，模型权重九点一七 G，必须外置，不能进代码库，所以部署链路里必须自带「怎么拿到权重、怎么校验」。
+
+架构本身分四层。最上面是表现层，浏览器的单页应用，React 十八加 Vite，组件用 Ant Design，布局用 Tailwind。第二层是接口层，FastAPI，四组路由：认证、任务、订阅源、音色。第三层是领域服务层，七个服务，脚本生成、文本规范化、语音合成、后期、RSS、片头片尾、任务编排。最底下是基础设施层：SQLite 加 SQLAlchemy、文件系统、配置、安全。
+
+跟这三层并列的还有三个外部依赖：DeepSeek 走网络、CosyVoice 权重在本地、FFmpeg 在后期链路里。
+
+分层不是为了好看，判据是「能不能独立替换或独立测试」。所以有三条不可跨越：接口层不碰推理，只做校验和投递；领域层不直接读环境变量，参数一律走统一的配置模块；表现层不猜后端状态，可观测性判断收在一个共用文件里，两个页面共用一套口径。
+
+最后一列是代价。每条决策我都写了它放弃了什么——比如不引入 Celery，代价就是队列随进程重启而丢，所以必须做崩溃恢复扫描。`}>
+
+    {/* A · 标题块 */}
+    <Box style={{ height: 100, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#15171B', lineHeight: 1.25 }}>四层架构，被四条约束钉死</Text>
+            <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>03 系统架构</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, color: '#6E7480', lineHeight: 1.5 }}>
+                分层的判据是「能否独立替换或独立测试」，不是目录好看
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        </Box>
+    </Box>
+
+    {/* B · 内容区 */}
+    <Box style={{ height: 540, flexDirection: 'row', paddingTop: 20 }}>
+
+        {/* 左：四层架构 */}
+        <Box style={{ width: 700, flexDirection: 'column', paddingRight: 34 }}>
+
+            <Box style={{ flexDirection: 'column', gap: 8 }}>
+
+                {/* L4 */}
+                <Box style={{ flexDirection: 'row', alignItems: 'stretch' }}>
+                    <Box style={{ width: 62, background: '#D9480F', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.3 }}>表现层</Text>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#EEF0F3', padding: '9px 14px', flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 13.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>浏览器 SPA　<span style={{ fontWeight: 'normal', color: '#6E7480' }}>React 18 + Vite 5</span></Text>
+                        <Box style={{ height: 3 }} />
+                        <Text style={{ fontSize: 12, color: '#5A6069', lineHeight: 1.5 }}>Ant Design 5（交互组件）· Tailwind 3（布局响应式）· 路由守卫 · JWT 落地 localStorage</Text>
+                    </Box>
+                </Box>
+
+                {/* L3 */}
+                <Box style={{ flexDirection: 'row', alignItems: 'stretch' }}>
+                    <Box style={{ width: 62, background: '#15171B', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.3 }}>接口层</Text>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#EEF0F3', padding: '9px 14px', flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 13.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>FastAPI　<span style={{ fontWeight: 'normal', color: '#6E7480' }}>四组路由 + 依赖注入 + Pydantic 契约</span></Text>
+                        <Box style={{ height: 3 }} />
+                        <Text style={{ fontSize: 12, color: '#5A6069', lineHeight: 1.5 }}>auth 注册登录 · tasks 提交/进度/脚本/试听/下载 · feed RSS（公开）· voices 音色档案</Text>
+                    </Box>
+                </Box>
+
+                {/* L2 */}
+                <Box style={{ flexDirection: 'row', alignItems: 'stretch' }}>
+                    <Box style={{ width: 62, background: '#15171B', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.3 }}>领域层</Text>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#EEF0F3', padding: '9px 14px', flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 13.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>七个服务　<span style={{ fontWeight: 'normal', color: '#6E7480' }}>耗时推理只在这一层</span></Text>
+                        <Box style={{ height: 3 }} />
+                        <Text style={{ fontSize: 12, color: '#5A6069', lineHeight: 1.5 }}>script_gen · normalize · tts（句级缓存）· postprocess · podcast_rss · intro_outro · task_runner（状态机 + 单并发队列）</Text>
+                    </Box>
+                </Box>
+
+                {/* L1 */}
+                <Box style={{ flexDirection: 'row', alignItems: 'stretch' }}>
+                    <Box style={{ width: 62, background: '#15171B', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.3 }}>基础层</Text>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#EEF0F3', padding: '9px 14px', flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 13.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>存储与配置　<span style={{ fontWeight: 'normal', color: '#6E7480' }}>SQLAlchemy 2.x + SQLite（WAL）</span></Text>
+                        <Box style={{ height: 3 }} />
+                        <Text style={{ fontSize: 12, color: '#5A6069', lineHeight: 1.5 }}>文件系统 data/ · models.py 状态词汇表 · config.py 参数单一来源 · security.py bcrypt + JWT</Text>
+                    </Box>
+                </Box>
+
+                {/* EXT */}
+                <Box style={{ flexDirection: 'row', alignItems: 'stretch' }}>
+                    <Box style={{ width: 62, background: '#FFFFFF', border: '1px dashed #9AA0A6', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#5A6069', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.3 }}>外部</Text>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#FFFFFF', border: '1px dashed #9AA0A6', padding: '9px 14px' }}>
+                        <Text style={{ fontSize: 12, color: '#5A6069', lineHeight: 1.5 }}>DeepSeek API（脚本生成，需外网）· CosyVoice2-0.5B 权重（本地推理）· FFmpeg 9.0.1（后期链路）</Text>
+                    </Box>
+                </Box>
+
+            </Box>
+
+            <Box style={{ height: 12 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 10 }} />
+            <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.6 }}>
+                <span style={{ fontWeight: 'bold', color: '#15171B' }}>三条不可跨越：</span>接口层不碰推理（只校验、鉴权、投递、读状态）／领域层不直接读环境变量（参数一律走 config.py）／表现层不猜后端状态（可观测性收口到共用的纯函数）
+            </Text>
+
+        </Box>
+
+        {/* 右：硬约束 + 技术选型 */}
+        <Box style={{ flex: 1, flexDirection: 'column' }}>
+
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>四条硬约束（实测，非假设）</Text>
+            <Box style={{ height: 8 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 10 }} />
+
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10 }}>
+                <Text style={{ width: 26, fontSize: 12, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.6 }}>C1</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 12.5, color: '#15171B', lineHeight: 1.55 }}><span style={{ fontWeight: 'bold' }}>净可用显存 4.32 GB</span>（标称 6 GB，被系统占用后只剩这些）</Text>
+                    <Text style={{ fontSize: 11.5, color: '#6E7480', lineHeight: 1.5 }}>→ 决定「单并发 + 模型常驻 + 句级缓存 + onnx 走 CPU」主干，排除一切并发多路推理</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 10 }} />
+
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10 }}>
+                <Text style={{ width: 26, fontSize: 12, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.6 }}>C2</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 12.5, color: '#15171B', lineHeight: 1.55 }}><span style={{ fontWeight: 'bold' }}>显存记账必须双口径</span>：allocated ≤ 3600 / reserved ≤ 4200 MB</Text>
+                    <Text style={{ fontSize: 11.5, color: '#6E7480', lineHeight: 1.5 }}>→ 任何需要换缓冲区的设计都按 reserved 记账</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 10 }} />
+
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10 }}>
+                <Text style={{ width: 26, fontSize: 12, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.6 }}>C4</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 12.5, color: '#15171B', lineHeight: 1.55 }}><span style={{ fontWeight: 'bold' }}>上游依赖链硬要求 Python 3.10</span>（pyworld / pynini 在 3.11+ 无可用轮子）</Text>
+                    <Text style={{ fontSize: 11.5, color: '#6E7480', lineHeight: 1.5 }}>→ 与任务书「3.12+」冲突，已声明偏离（架构文档第八章）</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 10 }} />
+
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10 }}>
+                <Text style={{ width: 26, fontSize: 12, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.6 }}>C6</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 12.5, color: '#15171B', lineHeight: 1.55 }}><span style={{ fontWeight: 'bold' }}>LLM 需外网</span>（DeepSeek API，OpenAI 兼容）</Text>
+                    <Text style={{ fontSize: 11.5, color: '#6E7480', lineHeight: 1.5 }}>→ 脚本生成与合成必须解耦，网络不可达时任务失败可续跑</Text>
+                </Box>
+            </Box>
+
+            <Box style={{ height: 16 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 12 }} />
+            <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>技术选型</Text>
+            <Box style={{ height: 8 }} />
+            <Text style={{ fontSize: 12, color: '#5A6069', lineHeight: 1.7 }}>
+                后端 FastAPI + SQLAlchemy 2.x + SQLite（WAL）<br />
+                前端 React 18 + Vite 5 + AntD 5 + Tailwind 3<br />
+                推理 CosyVoice2-0.5B（fp16）· 后期 FFmpeg 9.0.1<br />
+                生成 DeepSeek API · 鉴权 bcrypt + JWT
+            </Text>
+
+        </Box>
+
+    </Box>
+
+    {/* C · 页脚条 */}
+    <Box style={{ height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 18, height: 2, background: '#D9480F' }} />
+            <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>双人对话播客自动生成系统 · 项目答辩</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>12 / 17</Text>
+    </Box>
+
+</Slide>

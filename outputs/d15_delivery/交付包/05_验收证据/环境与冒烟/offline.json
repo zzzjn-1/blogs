@@ -1,0 +1,10 @@
+{
+  "phase": "offline",
+  "user": "d12net17187",
+  "task_id": "a4bff1a1-3853-4600-8f96-e41ef341b8e4",
+  "elapsed_sec": 12.1,
+  "final_status": "FAILED",
+  "error_msg": "脚本生成失败：无法连接 DeepSeek，已退避重试：Connection error.",
+  "progress": 0,
+  "started_at": "2026-09-18T15:39:59"
+}

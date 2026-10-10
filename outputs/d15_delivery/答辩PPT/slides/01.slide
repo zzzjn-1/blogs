@@ -1,0 +1,87 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '36px 72px 32px 72px', flexDirection: 'column', justifyContent: 'space-between', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`各位老师好，我是数学学院的张佳楠。我这次做的东西，一句话说清楚：你给它一个主题，它给你一期能直接听的播客。不是写出一段文字，是真的有人声、有片头片尾、能塞进播客客户端订阅的那种成片。
+
+下面这三张图就是它跑起来的样子。左边是填参数的地方，中间是一期做完之后的任务详情页，右边是它自动生成的订阅源。都是真的，不是效果图。
+
+接下来我用十分钟讲三件事：做出来了什么、它凭什么能跑通、以及做到什么程度、还差什么。`}>
+
+    {/* 顶部署名行 */}
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', letterSpacing: '1px' }}>
+            嘉应学院数学学院 · 张佳楠
+        </Text>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', letterSpacing: '1px' }}>
+            项目答辩 · 2026 年 9 月
+        </Text>
+    </Box>
+
+    {/* 标题块 */}
+    <Box style={{ flexDirection: 'column' }}>
+        <Box style={{ width: 56, height: 3, background: '#D9480F' }} />
+        <Box style={{ height: 26 }} />
+        <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#15171B', lineHeight: 1.18, letterSpacing: '-1px' }}>
+            双人对话播客自动生成系统
+        </Text>
+        <Box style={{ height: 18 }} />
+        <Text style={{ fontSize: 22, color: '#3A3F47', lineHeight: 1.5 }}>
+            你给一个主题，它给你一期能直接听的播客
+        </Text>
+        <Box style={{ height: 14 }} />
+        <Text style={{ fontSize: 15, color: '#6E7480', lineHeight: 1.5 }}>
+            网页填四个参数 → 自动写双人对话脚本 → 用你自己的声音念出来 → 合成 mp3 并发布订阅源
+        </Text>
+    </Box>
+
+    {/* 真实界面截图带（主视觉） */}
+    <Box style={{ flexDirection: 'column' }}>
+        <Box style={{ flexDirection: 'row', gap: 16 }}>
+            <Image src='assets/ui_submit.png' style={{ width: 368, height: 230, border: '1px solid #15171B' }} />
+            <Image src='assets/ui_detail.png' style={{ width: 368, height: 230, border: '1px solid #15171B' }} />
+            <Image src='assets/ui_feed.png' style={{ width: 368, height: 230, border: '1px solid #15171B' }} />
+        </Box>
+        <Box style={{ height: 10 }} />
+        <Box style={{ flexDirection: 'row', gap: 16 }}>
+            <Text style={{ width: 368, fontSize: 13, color: '#6E7480' }}>新建一期节目 —— 四个输入参数</Text>
+            <Text style={{ width: 368, fontSize: 13, color: '#6E7480' }}>一期跑完 —— 成片、下载、脚本回看</Text>
+            <Text style={{ width: 368, fontSize: 13, color: '#6E7480' }}>自动生成的播客订阅源</Text>
+        </Box>
+    </Box>
+
+    {/* 底部数字带 */}
+    <Box style={{ flexDirection: 'column' }}>
+        <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        <Box style={{ height: 18 }} />
+        <Box style={{ flexDirection: 'row', gap: 52, alignItems: 'flex-end' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 8 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#15171B', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                    40
+                </Text>
+                <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>期成片</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 8 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#15171B', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                    1545
+                </Text>
+                <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>行对话</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 8 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                    1120 / 1120
+                </Text>
+                <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>逐句一致率</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 8 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#15171B', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                    4.32
+                </Text>
+                <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>GB 显存跑通</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 8 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#15171B', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                    411
+                </Text>
+                <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>项回归用例</Text>
+            </Box>
+        </Box>
+    </Box>
+
+</Slide>

@@ -1,0 +1,64 @@
+{
+  "args": {
+    "model": "both",
+    "fp16": true,
+    "only_naive": false,
+    "only_profile": false
+  },
+  "results": [
+    {
+      "model": "cosyvoice2",
+      "ok": true,
+      "load_s": 12.5,
+      "resident_mb": 2442.2,
+      "sample_rate": 24000,
+      "naive_s": 20.81,
+      "naive_rtf": 1.133,
+      "naive_per": [
+        6.21,
+        6.93,
+        7.66
+      ],
+      "reg_s": 0.3,
+      "profile_s": 22.4,
+      "profile_rtf": 1.037,
+      "profile_per": [
+        6.6,
+        8.83,
+        6.97
+      ],
+      "avg_sentence_s": 7.47,
+      "profile_saved_s": -1.6,
+      "profile_saved_pct": -7.7,
+      "peak_mb": 3513,
+      "peak_reserved_mb": 4024
+    },
+    {
+      "model": "cosyvoice3",
+      "ok": true,
+      "load_s": 14.9,
+      "resident_mb": 3310.3,
+      "sample_rate": 24000,
+      "naive_s": 21.17,
+      "naive_rtf": 1.119,
+      "naive_per": [
+        5.7,
+        7.98,
+        7.48
+      ],
+      "reg_s": 0.51,
+      "profile_s": 19.1,
+      "profile_rtf": 1.057,
+      "profile_per": [
+        5.6,
+        6.7,
+        6.8
+      ],
+      "avg_sentence_s": 6.37,
+      "profile_saved_s": 2.06,
+      "profile_saved_pct": 9.7,
+      "peak_mb": 4338,
+      "peak_reserved_mb": 5306
+    }
+  ]
+}

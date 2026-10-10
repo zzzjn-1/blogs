@@ -1,0 +1,42 @@
+被测文件：verify_consistency.py、task_runner.py、collect_mos.py、postprocess.py
+
+--- M1 [verify_consistency.py] :: 去掉 L4b 粒度不变量：首段长于整行也不报错
+    [ok]   如期变红；变红用例：test_line_first_seg_longer_than_line_fails_L4b
+--- M2 [verify_consistency.py] :: 缓存 wav 读不出来时不再判失败（音轨丢失变静默）
+    [ok]   如期变红；变红用例：test_line_unreadable_wav_fails_L4, test_render_report_lists_failure_rows, test_run_excludes_tasks_without_episode, test_run_granularity_stats_are_measured
+--- M3 [verify_consistency.py] :: 不再检查 read_text 是否落库
+    [ok]   如期变红；变红用例：test_line_missing_read_text_fails_L1, test_line_short_circuit_reports_first_layer_only
+--- M4 [verify_consistency.py] :: 只看 seg_status，不再要求 duration_ms > 0
+    [ok]   如期变红；变红用例：test_line_not_ready_fails_L3[DONE-0], test_line_not_ready_fails_L3[DONE-None]
+--- M5 [verify_consistency.py] :: 立体声按字节数当帧数：时长算成 2 倍
+    [ok]   如期变红；变红用例：test_wav_duration_stereo_counts_frames_not_bytes
+--- M6 [verify_consistency.py] :: 坏 wav 不返回 None 而返回 0（失败被伪装成「时长 0」）
+    [ok]   如期变红；变红用例：test_wav_duration_returns_none_on_bad_input[no_data_chunk]
+--- M7 [verify_consistency.py] :: 期级不变量比较符号反向：正常成片全被判失败
+    [ok]   如期变红；变红用例：test_episode_ok, test_episode_sum_exceeds_final_fails_E2, test_render_report_states_no_failures, test_run_all_good_is_100_percent, test_run_episode_invariant_detected, test_run_excludes_tasks_without_episode
+--- M8 [verify_consistency.py] :: 把未成片（放弃）任务也放进一致率分母 → 把「没做完」误报成「不一致」
+    [ok]   如期变红；变红用例：test_run_all_good_is_100_percent, test_run_excludes_tasks_without_episode
+--- M9 [task_runner.py] :: 词典加载了却没用上（漏传参数）：纯函数测试照样全绿，只有链路测试能抓
+    [ok]   如期变红；变红用例：test_polyphone_dict_applies_on_production_synthesis_path
+--- M10 [task_runner.py] :: 不可逆改写不再留痕：一致率核对时无法知道读文被谁改过
+    [ok]   如期变红；变红用例：test_polyphone_dict_applies_on_production_synthesis_path
+--- M11 [collect_mos.py] :: 人数阈值失效：1~2 人也给结论（计划书要求 3~5 人取均值）
+    [ok]   如期变红；变红用例：test_fewer_than_three_raters_is_not_recycled, test_invalid_sheet_does_not_count_toward_raters, test_verdict_codes_are_exhaustive
+--- M12 [collect_mos.py] :: 悄悄放宽验收线：3.0 也算达标（验收线是 3.5）
+    [ok]   如期变红；变红用例：test_three_raters_at_3_fails
+--- M13 [collect_mos.py] :: 允许半整数档位：3.5 被 int() 静默截断成 3，等于悄悄改分
+    [ok]   如期变红；变红用例：test_fractional_score_is_rejected_not_truncated
+--- M14 [collect_mos.py] :: 填写不合格的表也参与算分：乱填的表能凑人头、还能拉均值
+    [ok]   如期变红；变红用例：test_fractional_score_is_rejected_not_truncated
+--- M15 [postprocess.py] :: 句间停顿旋钮没接线（硬编码回 250）：改配置对成片无影响
+    [ok]   如期变红；变红用例：test_pause_lengths_follow_settings
+
+--- 还原复跑（全部测试文件都必须全绿）
+    [ok]   tests/test_verify_consistency.py 全绿
+    [ok]   tests/test_task_runner.py 全绿
+    [ok]   tests/test_collect_mos.py 全绿
+    [ok]   tests/test_postprocess.py 全绿
+
+============================================================
+结果：15 / 15 全部如期变红，且还原干净
+============================================================

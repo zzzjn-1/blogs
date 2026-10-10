@@ -1,0 +1,155 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '20px 72px 20px 72px', flexDirection: 'column', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`上一页讲了流水线有哪五段，这一页讲一次真实的提交，从头到尾发生了什么。
+
+用户点「新建节目」，填主题、时长、语速、风格，这四样提交上去。后端先做两件事：校验参数，然后在这个用户自己的账号下建一条任务，状态是「待处理」，同时把它丢进只有一个工作线程的队列。注意是排队，不是并行——这块卡同一时间只能跑一路推理。
+
+队列轮到它了，阶段一开始，状态变成脚本生成中。脚本服务把主题和风格套进提示词模板，调 DeepSeek，拿回一段双人对话。拿回来的东西要先过一遍结构化校验和敏感词，不合格就重试。合格了逐行落库，状态变成「脚本就绪」，等人确认。
+
+这时候用户可以看一眼，改两句，也可以直接放行。确认之后进阶段二，状态切成合成中。文本先做规范化——多音字、数字、英文缩写都处理掉，再按标点切成一句一句。然后每句单独合成，用说话人切换音色，A 用女声、B 用男声。这里最关键的一条：算完一句立刻存盘，缓存键是八个字段拼出来的哈希。所以中途崩了、或者要重跑，已经算过的句子不会重算。
+
+全部句子合成完，进阶段三，后期。用 FFmpeg 按标点插停顿、把两个音色拼成一条、做响度归一、再混上片头和片尾。
+
+最后阶段四打包：导出 mp3、写 RSS 的 XML、更新订阅地址。状态置为完成，历史列表里能看到、能重新下载。
+
+整条链路上任何一个阶段失败，状态都回落到失败并带上原因，不会卡在半路。这就是为什么前面强调那张状态转移表——每一步能去哪、不能去哪，只有它说了算。`}>
+
+    {/* A · 标题块 */}
+    <Box style={{ height: 100, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#15171B', lineHeight: 1.25 }}>一次提交，从头到尾</Text>
+            <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>02 一期播客的业务全流程</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, color: '#6E7480', lineHeight: 1.5 }}>
+                上一页讲「有哪五段」，这一页讲「一次真实提交，每一步的输入输出与状态怎么变」
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        </Box>
+    </Box>
+
+    {/* B · 内容区 */}
+    <Box style={{ height: 540, flexDirection: 'column', paddingTop: 20 }}>
+
+        {/* 四个阶段横排 */}
+        <Box style={{ flexDirection: 'row', gap: 14 }}>
+
+            {/* 阶段 1 */}
+            <Box style={{ flex: 1, flexDirection: 'column', background: '#EEF0F3', padding: '14px 16px' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF', background: '#D9480F', padding: '2px 8px', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>阶段 1</Text>
+                    <Text style={{ fontSize: 11, color: '#5A6069', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>PENDING → SCRIPTING</Text>
+                </Box>
+                <Box style={{ height: 10 }} />
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>写脚本</Text>
+                <Box style={{ height: 8 }} />
+                <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.6 }}>
+                    四个参数套进提示词模板 → 调 DeepSeek 生成双人对话 → 结构化校验 + 敏感词 → 逐行落库
+                </Text>
+                <Box style={{ height: 10 }} />
+                <Text style={{ fontSize: 12, color: '#6E7480', lineHeight: 1.5 }}>
+                    <span style={{ fontWeight: 'bold', color: '#15171B' }}>产出：</span>A / B 对话脚本，状态转 SCRIPT_READY
+                </Text>
+            </Box>
+
+            {/* 阶段 2 */}
+            <Box style={{ flex: 1, flexDirection: 'column', background: '#EEF0F3', padding: '14px 16px' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF', background: '#15171B', padding: '2px 8px', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>阶段 2</Text>
+                    <Text style={{ fontSize: 11, color: '#5A6069', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>SYNTHESIZING</Text>
+                </Box>
+                <Box style={{ height: 10 }} />
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>等你确认，再念</Text>
+                <Box style={{ height: 8 }} />
+                <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.6 }}>
+                    人可以先看脚本、改两句再放行 → 文本规范化（多音字 / 数字 / 英文）→ 按标点切句 → 逐句合成、A 女声 B 男声
+                </Text>
+                <Box style={{ height: 10 }} />
+                <Text style={{ fontSize: 12, color: '#6E7480', lineHeight: 1.5 }}>
+                    <span style={{ fontWeight: 'bold', color: '#15171B' }}>关键：</span>算完一句立即落盘，缓存键 8 字段 SHA1
+                </Text>
+            </Box>
+
+            {/* 阶段 3 */}
+            <Box style={{ flex: 1, flexDirection: 'column', background: '#EEF0F3', padding: '14px 16px' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF', background: '#15171B', padding: '2px 8px', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>阶段 3</Text>
+                    <Text style={{ fontSize: 11, color: '#5A6069', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>POSTPROCESSING</Text>
+                </Box>
+                <Box style={{ height: 10 }} />
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>后期</Text>
+                <Box style={{ height: 8 }} />
+                <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.6 }}>
+                    FFmpeg 按标点插停顿 → 双音色拼接 → 响度归一（loudnorm）→ 混入片头片尾
+                </Text>
+                <Box style={{ height: 10 }} />
+                <Text style={{ fontSize: 12, color: '#6E7480', lineHeight: 1.5 }}>
+                    <span style={{ fontWeight: 'bold', color: '#15171B' }}>注意：</span>片头片尾必须 zero_shot，禁用 instruct2
+                </Text>
+            </Box>
+
+            {/* 阶段 4 */}
+            <Box style={{ flex: 1, flexDirection: 'column', background: '#EEF0F3', padding: '14px 16px' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF', background: '#15171B', padding: '2px 8px', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>阶段 4</Text>
+                    <Text style={{ fontSize: 11, color: '#5A6069', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>PACKAGING → DONE</Text>
+                </Box>
+                <Box style={{ height: 10 }} />
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.4 }}>打包</Text>
+                <Box style={{ height: 8 }} />
+                <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.6 }}>
+                    导出 mp3 → 生成 RSS 的 XML → 更新订阅地址 → 历史列表可见、可重新下载
+                </Text>
+                <Box style={{ height: 10 }} />
+                <Text style={{ fontSize: 12, color: '#6E7480', lineHeight: 1.5 }}>
+                    <span style={{ fontWeight: 'bold', color: '#15171B' }}>产出：</span>成片 mp3 + RSS，状态终态 DONE
+                </Text>
+            </Box>
+
+        </Box>
+
+        <Box style={{ height: 16 }} />
+
+        {/* 底部：三件要说清楚的事 */}
+        <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        <Box style={{ height: 14 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 30 }}>
+
+            <Box style={{ flex: 1, flexDirection: 'column' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#D9480F', lineHeight: 1.5 }}>为什么是排队，不是并行</Text>
+                <Box style={{ height: 4 }} />
+                <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.65 }}>
+                    全程只有一个工作线程。4.32 GB 显存只够跑一路推理，第二个任务进来是排队等，不是两个一起抢卡。代价是吞吐低，换来的是不会因为抢显存而双双失败。
+                </Text>
+            </Box>
+
+            <Box style={{ flex: 1, flexDirection: 'column' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#D9480F', lineHeight: 1.5 }}>为什么每句都要立刻存</Text>
+                <Box style={{ height: 4 }} />
+                <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.65 }}>
+                    合成是最慢也最容易崩的一段。算完一句马上落盘、缓存键把音色/参考音频指纹/模型版本/种子都拼进去，所以崩溃后重跑只补没算过的句子，不会从头再来。
+                </Text>
+            </Box>
+
+            <Box style={{ flex: 1, flexDirection: 'column' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#D9480F', lineHeight: 1.5 }}>为什么脚本生成与合成不放进一个事务</Text>
+                <Box style={{ height: 4 }} />
+                <Text style={{ fontSize: 12.5, color: '#4B5158', lineHeight: 1.65 }}>
+                    DeepSeek 要外网，本地推理不要。把两者解耦开，网络断了只影响脚本段，合成段的成果不受牵连，任务可以分阶段续跑。
+                </Text>
+            </Box>
+
+        </Box>
+
+    </Box>
+
+    {/* C · 页脚条 */}
+    <Box style={{ height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 18, height: 2, background: '#D9480F' }} />
+            <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>双人对话播客自动生成系统 · 项目答辩</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>08 / 17</Text>
+    </Box>
+
+</Slide>

@@ -29,6 +29,10 @@ logs/*.log
 outputs/**/*.wav
 outputs/**/*.mp3
 outputs/**/*.m4a
+# 例外：D15 交付产物目录是**冻结的交付快照**，其中的成片音频属交付物本身，必须入库
+!outputs/d15_delivery/**
+# 交付包压缩件走 GitHub Release 附件，不进 git 历史（zip 入库后无法瘦身）
+outputs/d15_delivery/**/*.zip
 
 # --- 模型权重（约 9 GB，按部署手册另行获取）---
 pretrained_models/

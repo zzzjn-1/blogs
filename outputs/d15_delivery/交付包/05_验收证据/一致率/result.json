@@ -1,0 +1,492 @@
+{
+  "generated_at": "2026-09-18T17:28:40",
+  "db": "data/podcast.db",
+  "tol_ms": 20,
+  "use_ffprobe": true,
+  "totals": {
+    "episodes": 36,
+    "lines": 1120,
+    "lines_passed": 1120,
+    "consistency_rate": 1.0,
+    "failures": 0,
+    "idle_tasks": 5,
+    "idle_lines": 162
+  },
+  "granularity": {
+    "exact": 1106,
+    "first_seg_shorter": 14,
+    "max_gap_ms": 5760
+  },
+  "episodes": [
+    {
+      "task_id": "134fd48e-a01e-407c-83ba-8097013140ba",
+      "title": "D12 崩溃恢复实机验证",
+      "lines": 24,
+      "lines_ok": 24,
+      "sum_line_ms": 144600,
+      "mp3_ms": 171440,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "1395ca26-2146-45a6-88f1-0ebb0feef4cd",
+      "title": "免疫系统如何分清敌我",
+      "lines": 61,
+      "lines_ok": 61,
+      "sum_line_ms": 260360,
+      "mp3_ms": 306680,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "29b83a67-319f-496b-9216-12c452a52552",
+      "title": "打哈欠为什么会传染",
+      "lines": 20,
+      "lines_ok": 20,
+      "sum_line_ms": 92440,
+      "mp3_ms": 117200,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "48104012-7a11-4a2c-aec3-a3b03a028a17",
+      "title": "社区团购为何重新走热",
+      "lines": 26,
+      "lines_ok": 26,
+      "sum_line_ms": 102720,
+      "mp3_ms": 130440,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "487557a2-2f04-41a3-85e5-a541dbc7178c",
+      "title": "开播前先热一下嗓子",
+      "lines": 8,
+      "lines_ok": 8,
+      "sum_line_ms": 38720,
+      "mp3_ms": 58400,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "5f5b3d49-37a6-4b56-96d1-d21e4171d7af",
+      "title": "深夜为何让人想通很多事",
+      "lines": 22,
+      "lines_ok": 22,
+      "sum_line_ms": 98640,
+      "mp3_ms": 125360,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "6db267fd-967c-4638-926f-26c9f7a7d4a7",
+      "title": "播客为什么又火了",
+      "lines": 20,
+      "lines_ok": 20,
+      "sum_line_ms": 97280,
+      "mp3_ms": 121740,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "700ae951-ef23-4dbd-ad87-9a548478fe64",
+      "title": "D12 崩溃恢复实机验证（可控杀死）",
+      "lines": 24,
+      "lines_ok": 24,
+      "sum_line_ms": 224360,
+      "mp3_ms": 253770,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "70546eac-b76a-4f89-9b77-02684a08d202",
+      "title": "开播前先热一下嗓子",
+      "lines": 8,
+      "lines_ok": 8,
+      "sum_line_ms": 42880,
+      "mp3_ms": 62060,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "70846e37-0bb2-4e72-ad59-46074fd5486a",
+      "title": "为什么我们总在拖延重要的事",
+      "lines": 51,
+      "lines_ok": 51,
+      "sum_line_ms": 246720,
+      "mp3_ms": 286900,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "79d4042c-77c8-4976-8e4c-43c52720516b",
+      "title": "打哈欠为什么会传染",
+      "lines": 20,
+      "lines_ok": 20,
+      "sum_line_ms": 99640,
+      "mp3_ms": 124650,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "8806c910-3bbc-44ef-af1d-adb3b924ea92",
+      "title": "开播前先热一下嗓子",
+      "lines": 8,
+      "lines_ok": 8,
+      "sum_line_ms": 42040,
+      "mp3_ms": 61020,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "92c70dad-0ed9-4721-b62b-4bac484e0d41",
+      "title": "搬家时最该扔掉的是什么",
+      "lines": 22,
+      "lines_ok": 22,
+      "sum_line_ms": 104560,
+      "mp3_ms": 131030,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "969463d1-c809-4b6d-9be2-94b1dfd5d53e",
+      "title": "打哈欠为什么会传染",
+      "lines": 18,
+      "lines_ok": 18,
+      "sum_line_ms": 90640,
+      "mp3_ms": 114400,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "9b0fe050-c6f0-4240-ad9f-4a288b7915fa",
+      "title": "老歌为什么记得那么牢",
+      "lines": 20,
+      "lines_ok": 20,
+      "sum_line_ms": 97400,
+      "mp3_ms": 122960,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ab68fd20-d6ea-4af6-9077-0cf2aa9642ee",
+      "title": "深海生物的抗压生存术",
+      "lines": 63,
+      "lines_ok": 63,
+      "sum_line_ms": 259680,
+      "mp3_ms": 306060,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "b1c7ba02-ecc9-4e0b-b3ac-f6cd6cfa25b1",
+      "title": "开播前先热一下嗓子",
+      "lines": 8,
+      "lines_ok": 8,
+      "sum_line_ms": 37920,
+      "mp3_ms": 57100,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "b667893a-7ebc-4381-8bb2-6b41f5426d11",
+      "title": "把通勤时间真正用起来",
+      "lines": 55,
+      "lines_ok": 55,
+      "sum_line_ms": 240480,
+      "mp3_ms": 284750,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "bd88a8b9-a822-4f80-be28-e91de0d34844",
+      "title": "开源大模型的竞争格局之变",
+      "lines": 67,
+      "lines_ok": 67,
+      "sum_line_ms": 276320,
+      "mp3_ms": 325720,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "bf40a90f-f251-40b7-a7ba-905dd152192a",
+      "title": "小桌板背后的安全逻辑",
+      "lines": 21,
+      "lines_ok": 21,
+      "sum_line_ms": 96680,
+      "mp3_ms": 122310,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "bf6aebf0-20f9-4f00-bf6b-f9e6ea0d2640",
+      "title": "冰箱串味的科学真相",
+      "lines": 21,
+      "lines_ok": 21,
+      "sum_line_ms": 96520,
+      "mp3_ms": 121740,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "cecf6e5c-27be-43d6-9aa9-4dc13b4ec055",
+      "title": "D12 崩溃恢复实机验证（可控杀死）",
+      "lines": 24,
+      "lines_ok": 24,
+      "sum_line_ms": 144600,
+      "mp3_ms": 173260,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "d3b60a61-b506-4080-aaf9-dd8e2907e5cb",
+      "title": "低空经济背后的产业链机会",
+      "lines": 59,
+      "lines_ok": 59,
+      "sum_line_ms": 265880,
+      "mp3_ms": 310600,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "dfe5c153-af4e-4e73-a6d8-f16295071290",
+      "title": "成年后怎么重新交到朋友",
+      "lines": 57,
+      "lines_ok": 57,
+      "sum_line_ms": 249120,
+      "mp3_ms": 292640,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "e05068ca-1ee7-4311-a6e7-5488aa51f8d3",
+      "title": "王者荣耀到底好不好玩",
+      "lines": 40,
+      "lines_ok": 40,
+      "sum_line_ms": 184480,
+      "mp3_ms": 218940,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "e44c680d-1a4a-45ad-be1d-451d08863e91",
+      "title": "开播前先热一下嗓子",
+      "lines": 8,
+      "lines_ok": 8,
+      "sum_line_ms": 37720,
+      "mp3_ms": 56900,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ee93cf5d-0670-4108-9972-c194c43ed628",
+      "title": "开播前先热一下嗓子",
+      "lines": 8,
+      "lines_ok": 8,
+      "sum_line_ms": 44160,
+      "mp3_ms": 63140,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ep_20260916_172721",
+      "title": "哲学有什么用聊聊看",
+      "lines": 44,
+      "lines_ok": 44,
+      "sum_line_ms": 208040,
+      "mp3_ms": 250660,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ep_20260917_094220",
+      "title": "爱情这门课怎么学",
+      "lines": 46,
+      "lines_ok": 46,
+      "sum_line_ms": 201080,
+      "mp3_ms": 247381,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ep_20260917_094738",
+      "title": "聊聊爱情这件小事",
+      "lines": 48,
+      "lines_ok": 48,
+      "sum_line_ms": 212400,
+      "mp3_ms": 259070,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ep_20260917_105452",
+      "title": "爱情这门功课怎么修",
+      "lines": 50,
+      "lines_ok": 50,
+      "sum_line_ms": 187960,
+      "mp3_ms": 235750,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ep_20260917_110043",
+      "title": "爱情这件小事有多复杂",
+      "lines": 40,
+      "lines_ok": 40,
+      "sum_line_ms": 196240,
+      "mp3_ms": 239380,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ep_20260917_113449",
+      "title": "爱情这门课，我们都在学",
+      "lines": 48,
+      "lines_ok": 48,
+      "sum_line_ms": 214840,
+      "mp3_ms": 254940,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "ep_20260918_113820",
+      "title": "为什么有些旋律一听就忘不掉",
+      "lines": 22,
+      "lines_ok": 22,
+      "sum_line_ms": 85520,
+      "mp3_ms": 111880,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "f1744e01-e2be-41c6-a207-895d6c165561",
+      "title": "睡眠为何是最好的恢复方式",
+      "lines": 21,
+      "lines_ok": 21,
+      "sum_line_ms": 98000,
+      "mp3_ms": 123900,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    },
+    {
+      "task_id": "f54536e8-4ba5-400c-b151-76f6115c8025",
+      "title": "熬夜之后怎么补回来",
+      "lines": 18,
+      "lines_ok": 18,
+      "sum_line_ms": 74640,
+      "mp3_ms": 99360,
+      "mp3_src": "ffprobe 实测",
+      "episode_ok": true,
+      "episode_layer": "",
+      "episode_reason": ""
+    }
+  ],
+  "failures": [],
+  "idle_tasks": [
+    {
+      "task_id": "08c69bda-1c27-4d1a-8a6b-5a7d37915a4e",
+      "lines": 20,
+      "statuses": [
+        "PENDING"
+      ]
+    },
+    {
+      "task_id": "6fc49556-9474-4312-bb08-c53f33f0bafd",
+      "lines": 20,
+      "statuses": [
+        "PENDING"
+      ]
+    },
+    {
+      "task_id": "945b49e5-c37a-4945-bd8a-40e0987cfdd9",
+      "lines": 60,
+      "statuses": [
+        "PENDING"
+      ]
+    },
+    {
+      "task_id": "d8929965-15d2-48b6-a7ea-8decae5c6018",
+      "lines": 20,
+      "statuses": [
+        "PENDING"
+      ]
+    },
+    {
+      "task_id": "ep_20260917_105352",
+      "lines": 42,
+      "statuses": [
+        "PENDING"
+      ]
+    }
+  ]
+}

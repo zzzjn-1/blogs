@@ -1,0 +1,117 @@
+[serve_trace] root level=INFO handlers=1
+INFO:     Started server process [192584]
+INFO:     Waiting for application startup.
+2026-09-18 15:25:18,545 INFO API 启动：数据库=D:\podcast-ai\data\podcast.db，数据目录=D:\podcast-ai\data
+2026-09-18 15:25:18,564 WARNING [RECOVER] 扫描到 4 个非终态任务：脚本重投 0、续跑 1、仅标记失败 0、跳过（等待用户确认）3
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 15:25:35,031 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 15:25:36,239 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 15:25:37,646 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 15:25:37,668 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 15:25:38,421 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 15:25:41,706 INFO text_frontend=wetext | model=CosyVoice2 | 加载 11.3s
+2026-09-18 15:25:41,706 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 15:25:42,798 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 15:25:42,798 INFO 说话人 A → 音色 voice_a
+2026-09-18 15:25:42,798 INFO 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:25:42,807 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 15:25:48,302 INFO yield speech len 4.04, rtf 1.360217061373267
+100%|██████████| 1/1 [00:05<00:00,  5.52s/it]100%|██████████| 1/1 [00:05<00:00,  5.52s/it]
+2026-09-18 15:25:48,325 INFO 预热耗时 5.52s
+2026-09-18 15:25:48,377 INFO [CACHE] task=cecf6e5c-27be-43d6-9aa9-4dc13b4ec055 合成段数=24 命中缓存=24（命中率 100.0%）
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:25:48,454 INFO synthesis text 大家好，今天是二零二六年九月十八日，今天的主题是D十二崩溃恢复实机验证可…。
+2026-09-18 15:25:58,727 INFO yield speech len 9.7, rtf 1.059008578664249
+100%|██████████| 1/1 [00:10<00:00, 10.30s/it]100%|██████████| 1/1 [00:10<00:00, 10.30s/it]
+2026-09-18 15:25:59,302 INFO 动态片头已生成：intro_norm.wav（40 字）
+2026-09-18 15:25:59,302 INFO 后期片头尾：intro=intro_norm.wav outro=outro.mp3
+2026-09-18 15:25:59,306 INFO [1/6] 格式统一 44100 Hz / 1 ch / pcm_s16le
+2026-09-18 15:25:59,426 INFO     seg 1/24 -> seg_0000.wav
+2026-09-18 15:25:59,547 INFO     seg 2/24 -> seg_0001.wav
+2026-09-18 15:25:59,668 INFO     seg 3/24 -> seg_0002.wav
+2026-09-18 15:25:59,789 INFO     seg 4/24 -> seg_0003.wav
+2026-09-18 15:25:59,910 INFO     seg 5/24 -> seg_0004.wav
+2026-09-18 15:26:00,028 INFO     seg 6/24 -> seg_0005.wav
+2026-09-18 15:26:00,150 INFO     seg 7/24 -> seg_0006.wav
+2026-09-18 15:26:00,267 INFO     seg 8/24 -> seg_0007.wav
+2026-09-18 15:26:00,387 INFO     seg 9/24 -> seg_0008.wav
+2026-09-18 15:26:00,512 INFO     seg 10/24 -> seg_0009.wav
+2026-09-18 15:26:00,633 INFO     seg 11/24 -> seg_0010.wav
+2026-09-18 15:26:00,765 INFO     seg 12/24 -> seg_0011.wav
+2026-09-18 15:26:00,885 INFO     seg 13/24 -> seg_0012.wav
+2026-09-18 15:26:01,004 INFO     seg 14/24 -> seg_0013.wav
+2026-09-18 15:26:01,131 INFO     seg 15/24 -> seg_0014.wav
+2026-09-18 15:26:01,251 INFO     seg 16/24 -> seg_0015.wav
+2026-09-18 15:26:01,368 INFO     seg 17/24 -> seg_0016.wav
+2026-09-18 15:26:01,488 INFO     seg 18/24 -> seg_0017.wav
+2026-09-18 15:26:01,607 INFO     seg 19/24 -> seg_0018.wav
+2026-09-18 15:26:01,728 INFO     seg 20/24 -> seg_0019.wav
+2026-09-18 15:26:01,847 INFO     seg 21/24 -> seg_0020.wav
+2026-09-18 15:26:01,967 INFO     seg 22/24 -> seg_0021.wav
+2026-09-18 15:26:02,085 INFO     seg 23/24 -> seg_0022.wav
+2026-09-18 15:26:02,202 INFO     seg 24/24 -> seg_0023.wav
+2026-09-18 15:26:02,661 INFO [2/6] 片头/片尾微淡化 30 ms（必须在拼接之前）
+2026-09-18 15:26:03,027 INFO [3/6] 停顿：话轮 500 ms / 句间 250 ms
+2026-09-18 15:26:03,278 INFO [4/6] 拼接 49 个片段（含 23 处停顿）
+2026-09-18 15:26:03,749 INFO [5/6] 两遍 loudnorm -> I=-16 LUFS / TP=-1.5 dBTP
+2026-09-18 15:26:09,969 INFO     实测 -18.54 -> -16.15 LUFS（目标 -16）
+2026-09-18 15:26:09,969 INFO [6/6] 导出 mp3（libmp3lame 128k）
+2026-09-18 15:26:11,124 INFO 完成：D:\podcast-ai\data\work\cecf6e5c-27be-43d6-9aa9-4dc13b4ec055\cecf6e5c-27be-43d6-9aa9-4dc13b4ec055.mp3（173.3 s，2.64 MB）
+[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":273,"threshold":50,"scope":"turn","targets":["D:\\podcast-ai\\data\\work\\cecf6e5c-27be-43d6-9aa9-4dc13b4ec055"],"targetCount":1}
+2026-09-18 15:26:30,007 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 15:26:32,162 WARNING [D4] 网关静默映射模型名：请求 deepseek-chat → 实际 deepseek-flash。凡涉及「本次用了哪个模型」的结论，一律以响应体 model 字段为准（计划书 4.10 ①）
+2026-09-18 15:26:32,162 WARNING [D4] 第 1 轮输出未通过校验（共 3 轮）：总字数 215 不在配额区间 234~286（目标 260 字，允许上下浮动 10%）
+2026-09-18 15:26:32,324 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 15:26:34,165 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 15:26:34,862 INFO [D4] 脚本生成完成：主题=D12 崩溃恢复实机验证（可控杀死） | 14 行 / 269 字（配额 260）| 模型 deepseek-chat→deepseek-flash | 请求 2 次 / 纠错 1 轮 | 降级=False 命中=False | 5.1s | tokens={'prompt_tokens': 3157, 'completion_tokens': 734, 'total_tokens': 3891}
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:26:35,165 INFO synthesis text 欢迎收听今天的节目，我们聊一个工程上特别容易被忽略的话题。
+2026-09-18 15:26:42,361 INFO yield speech len 6.84, rtf 1.052158652690419
+100%|██████████| 1/1 [00:07<00:00,  7.22s/it]100%|██████████| 1/1 [00:07<00:00,  7.22s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:26:42,398 INFO synthesis text 本质上是在用空间换时间。
+2026-09-18 15:26:46,398 INFO yield speech len 3.32, rtf 1.204852598259248
+100%|██████████| 1/1 [00:04<00:00,  4.02s/it]100%|██████████| 1/1 [00:04<00:00,  4.02s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:26:46,432 INFO synthesis text 哦，是什么话题呢，听起来好像跟稳定性有关，避免把两件事混在一起讨论。
+2026-09-18 15:26:54,830 INFO yield speech len 7.8, rtf 1.0766600645505464
+100%|██████████| 1/1 [00:08<00:00,  8.42s/it]100%|██████████| 1/1 [00:08<00:00,  8.42s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:26:54,867 INFO synthesis text 没错，就是进程被暴力杀死之后，那些卡在半路的任务该怎么办，这就是所谓的经验沉淀。
+2026-09-18 15:27:03,808 INFO yield speech len 8.48, rtf 1.0543698128664267
+100%|██████████| 1/1 [00:08<00:00,  8.96s/it]100%|██████████| 1/1 [00:08<00:00,  8.96s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:27:03,845 INFO synthesis text 这个问题确实很现实，服务器重启、容器被驱逐都会遇到，说到底还是流程的问题。
+2026-09-18 15:27:14,417 INFO yield speech len 9.76, rtf 1.0831218029631944
+100%|██████████| 1/1 [00:10<00:00, 10.59s/it]100%|██████████| 1/1 [00:10<00:00, 10.59s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:27:14,454 INFO synthesis text 最糟的情况是任务永远停在合成中，前端进度条一直转圈，我把这里当作一条硬性约束。
+2026-09-18 15:27:24,432 INFO yield speech len 9.64, rtf 1.0350354232234085
+100%|██████████| 1/1 [00:10<00:00, 10.00s/it]100%|██████████| 1/1 [00:10<00:00, 10.00s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:27:24,472 INFO synthesis text 用户只能刷新页面，然后发现什么都没变，体验非常糟糕，所以我把边界单独列了一节。
+2026-09-18 15:27:33,611 INFO yield speech len 9.0, rtf 1.0154655509524875
+100%|██████████| 1/1 [00:09<00:00,  9.16s/it]100%|██████████| 1/1 [00:09<00:00,  9.16s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:27:33,649 INFO synthesis text 所以我们需要在服务启动的时候，主动去扫一遍数据库里的残留状态。
+2026-09-18 15:27:40,657 INFO yield speech len 6.68, rtf 1.0490888963916345
+100%|██████████| 1/1 [00:07<00:00,  7.03s/it]100%|██████████| 1/1 [00:07<00:00,  7.03s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:27:40,695 INFO synthesis text 代价是代码会稍微复杂一点。
+2026-09-18 15:27:44,284 INFO yield speech len 2.92, rtf 1.228848303834053
+100%|██████████| 1/1 [00:03<00:00,  3.61s/it]100%|██████████| 1/1 [00:03<00:00,  3.61s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:27:44,319 INFO synthesis text 扫出来之后要怎么处理呢，直接删掉还是让它们接着跑，下次遇到类似的问题就能用上。
+2026-09-18 15:27:53,073 INFO yield speech len 8.52, rtf 1.0274561358169771
+100%|██████████| 1/1 [00:08<00:00,  8.78s/it]100%|██████████| 1/1 [00:08<00:00,  8.78s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:27:53,113 INFO synthesis text 直接删掉太粗暴了，已经合成好的部分应该尽量复用，否则就会出现难以排查的怪问题。
+2026-09-18 15:28:02,872 INFO yield speech len 9.4, rtf 1.0381456638904327
+100%|██████████| 1/1 [00:09<00:00,  9.78s/it]100%|██████████| 1/1 [00:09<00:00,  9.78s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:28:02,908 INFO synthesis text 我明白了，因为合成是按句子缓存的对吧，这样出问题的时候才追得动。
+2026-09-18 15:28:16,406 INFO yield speech len 12.76, rtf 1.0577745759001347
+100%|██████████| 1/1 [00:13<00:00, 13.52s/it]100%|██████████| 1/1 [00:13<00:00, 13.52s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:28:16,445 INFO synthesis text 对，每句话都有文本哈希，命中缓存就不需要重新推理。
+2026-09-18 15:28:23,634 INFO yield speech len 6.72, rtf 1.0698112703505016
+100%|██████████| 1/1 [00:07<00:00,  7.21s/it]100%|██████████| 1/1 [00:07<00:00,  7.21s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:28:23,672 INFO synthesis text 这也是我们这次要重点说明的地方。
+2026-09-18 15:28:27,862 INFO yield speech len 3.68, rtf 1.1385690906773442
+100%|██████████| 1/1 [00:04<00:00,  4.21s/it]100%|██████████| 1/1 [00:04<00:00,  4.21s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:28:27,898 INFO synthesis text 那续跑的成本就很低了，只补没做完的那部分，别等到线上才发现。

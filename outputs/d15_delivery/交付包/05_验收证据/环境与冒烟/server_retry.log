@@ -1,0 +1,113 @@
+[serve_trace] root level=INFO handlers=1
+INFO:     Started server process [186016]
+INFO:     Waiting for application startup.
+2026-09-18 15:18:28,931 INFO API 启动：数据库=D:\podcast-ai\data\podcast.db，数据目录=D:\podcast-ai\data
+2026-09-18 15:18:28,948 WARNING [RECOVER] 扫描到 4 个非终态任务：脚本重投 0、续跑 1、仅标记失败 0、跳过（等待用户确认）3
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+D:\anaconda\envs\cosyvoice\lib\site-packages\lightning\fabric\__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+D:\anaconda\envs\cosyvoice\lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-09-18 15:18:43,358 INFO input frame rate=25
+D:\anaconda\envs\cosyvoice\lib\site-packages\torch\nn\utils\weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+2026-09-18 15:18:44,622 INFO [PATCH-VRAM-01] onnxruntime providers=['CPUExecutionProvider'] (COSYVOICE_ONNX_DEVICE=cpu, available=['AzureExecutionProvider', 'CPUExecutionProvider'])
+2026-09-18 15:18:46,099 INFO [PATCH-TN-01] ttsfrd 不可用，改用 wetext：No module named 'ttsfrd'
+2026-09-18 15:18:46,122 - modelscope - WARNING - We can not confirm the cached file is for revision: None
+2026-09-18 15:18:46,883 INFO [PATCH-TN-01] use wetext frontend (offline, dir=C:\Users\zzz\.cache\modelscope\hub\pengzhendong\wetext)
+2026-09-18 15:18:50,227 INFO text_frontend=wetext | model=CosyVoice2 | 加载 10.6s
+2026-09-18 15:18:50,227 INFO [PATCH-GUARD-02] 上限一致性校验通过：ratio=20（上游 Qwen2LM.inference 默认值），20 字句上限 16.00 s
+2026-09-18 15:18:51,335 INFO 已注册音色档案：['voice_a', 'voice_b']
+2026-09-18 15:18:51,335 INFO 说话人 A → 音色 voice_a
+2026-09-18 15:18:51,335 INFO 说话人 B → 音色 voice_b
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:18:51,344 INFO synthesis text 这是一次用于预热的合成测试。
+D:\anaconda\envs\cosyvoice\lib\site-packages\transformers\integrations\sdpa_attention.py:54: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:455.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+2026-09-18 15:18:56,868 INFO yield speech len 4.04, rtf 1.36737593329779
+100%|██████████| 1/1 [00:05<00:00,  5.54s/it]100%|██████████| 1/1 [00:05<00:00,  5.54s/it]
+2026-09-18 15:18:56,888 INFO 预热耗时 5.55s
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:18:56,918 INFO synthesis text 而且这个机制还有一个好处，就是重放是幂等的。
+2026-09-18 15:19:03,347 INFO yield speech len 5.76, rtf 1.1160833140214286
+100%|██████████| 1/1 [00:06<00:00,  6.45s/it]100%|██████████| 1/1 [00:06<00:00,  6.45s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:03,383 INFO synthesis text 幂等意味着重复执行也不会产生错误的结果。
+2026-09-18 15:19:09,165 INFO yield speech len 5.28, rtf 1.0949478004917954
+100%|██████████| 1/1 [00:05<00:00,  5.80s/it]100%|██████████| 1/1 [00:05<00:00,  5.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:09,204 INFO synthesis text 正是如此，所以我们可以放心地自动续跑，不用怕把事情搞坏。
+2026-09-18 15:19:15,657 INFO yield speech len 6.08, rtf 1.061217173149711
+100%|██████████| 1/1 [00:06<00:00,  6.47s/it]100%|██████████| 1/1 [00:06<00:00,  6.47s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:15,693 INFO synthesis text 不过有一个细节要注意，等待用户确认的任务不能动。
+2026-09-18 15:19:21,784 INFO yield speech len 5.6, rtf 1.0877688441957747
+100%|██████████| 1/1 [00:06<00:00,  6.11s/it]100%|██████████| 1/1 [00:06<00:00,  6.11s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:21,821 INFO synthesis text 对，那种状态不是被中断，而是本来就在等人工编辑。
+2026-09-18 15:19:27,540 INFO yield speech len 5.2, rtf 1.0999086728462806
+100%|██████████| 1/1 [00:05<00:00,  5.74s/it]100%|██████████| 1/1 [00:05<00:00,  5.74s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:27,575 INFO synthesis text 把它误判成中断会让用户丢掉刚改好的脚本。
+2026-09-18 15:19:33,158 INFO yield speech len 5.08, rtf 1.0989375471130132
+100%|██████████| 1/1 [00:05<00:00,  5.61s/it]100%|██████████| 1/1 [00:05<00:00,  5.61s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:33,196 INFO synthesis text 所以我们只处理真正处于中间态的那几种状态。
+2026-09-18 15:19:39,799 INFO yield speech len 6.16, rtf 1.0718614637077628
+100%|██████████| 1/1 [00:06<00:00,  6.62s/it]100%|██████████| 1/1 [00:06<00:00,  6.62s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:39,834 INFO synthesis text 还有一个问题，续跑会不会陷入无限循环。
+2026-09-18 15:19:45,414 INFO yield speech len 5.2, rtf 1.0731762189131517
+100%|██████████| 1/1 [00:05<00:00,  5.60s/it]100%|██████████| 1/1 [00:05<00:00,  5.60s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:45,450 INFO synthesis text 不会，因为恢复扫描只看非终态，失败之后就不会再被扫到。
+2026-09-18 15:19:52,315 INFO yield speech len 6.76, rtf 1.0155369191480106
+100%|██████████| 1/1 [00:06<00:00,  6.89s/it]100%|██████████| 1/1 [00:06<00:00,  6.89s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:19:52,353 INFO synthesis text 这样同一份中断最多只会自动续跑一次，很安全。
+2026-09-18 15:20:00,850 INFO yield speech len 8.28, rtf 1.0262588084031996
+100%|██████████| 1/1 [00:08<00:00,  8.52s/it]100%|██████████| 1/1 [00:08<00:00,  8.52s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:20:00,887 INFO synthesis text 总结一下，关键是幂等、可观测，还有明确的处置边界。
+2026-09-18 15:20:07,354 INFO yield speech len 6.2, rtf 1.0430917816777383
+100%|██████████| 1/1 [00:06<00:00,  6.49s/it]100%|██████████| 1/1 [00:06<00:00,  6.49s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:20:07,390 WARNING synthesis text 感谢收听，我们下期再见。 too short than prompt text 你好，生活就像海洋，只有意志坚强的人才能到达彼岸。, this may lead to bad performance
+2026-09-18 15:20:07,391 INFO synthesis text 感谢收听，我们下期再见。
+2026-09-18 15:20:11,370 INFO yield speech len 3.4, rtf 1.1702458998736214
+100%|██████████| 1/1 [00:04<00:00,  4.00s/it]100%|██████████| 1/1 [00:04<00:00,  4.00s/it]
+2026-09-18 15:20:11,404 INFO [CACHE] task=134fd48e-a01e-407c-83ba-8097013140ba 合成段数=24 命中缓存=12（命中率 50.0%）
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:20:11,490 INFO synthesis text 大家好，今天是二零二六年九月十八日，今天的主题是D十二崩溃恢复实机验证。
+2026-09-18 15:20:19,931 INFO yield speech len 7.88, rtf 1.0711903499467723
+100%|██████████| 1/1 [00:08<00:00,  8.46s/it]100%|██████████| 1/1 [00:08<00:00,  8.46s/it]
+2026-09-18 15:20:20,513 INFO 动态片头已生成：intro_norm.wav（37 字）
+2026-09-18 15:20:20,514 INFO 后期片头尾：intro=intro_norm.wav outro=outro.mp3
+2026-09-18 15:20:20,517 INFO [1/6] 格式统一 44100 Hz / 1 ch / pcm_s16le
+2026-09-18 15:20:20,633 INFO     seg 1/24 -> seg_0000.wav
+2026-09-18 15:20:20,752 INFO     seg 2/24 -> seg_0001.wav
+2026-09-18 15:20:20,879 INFO     seg 3/24 -> seg_0002.wav
+2026-09-18 15:20:20,999 INFO     seg 4/24 -> seg_0003.wav
+2026-09-18 15:20:21,116 INFO     seg 5/24 -> seg_0004.wav
+2026-09-18 15:20:21,232 INFO     seg 6/24 -> seg_0005.wav
+2026-09-18 15:20:21,349 INFO     seg 7/24 -> seg_0006.wav
+2026-09-18 15:20:21,467 INFO     seg 8/24 -> seg_0007.wav
+2026-09-18 15:20:21,587 INFO     seg 9/24 -> seg_0008.wav
+2026-09-18 15:20:21,709 INFO     seg 10/24 -> seg_0009.wav
+2026-09-18 15:20:21,827 INFO     seg 11/24 -> seg_0010.wav
+2026-09-18 15:20:21,944 INFO     seg 12/24 -> seg_0011.wav
+2026-09-18 15:20:22,061 INFO     seg 13/24 -> seg_0012.wav
+2026-09-18 15:20:22,184 INFO     seg 14/24 -> seg_0013.wav
+2026-09-18 15:20:22,299 INFO     seg 15/24 -> seg_0014.wav
+2026-09-18 15:20:22,416 INFO     seg 16/24 -> seg_0015.wav
+2026-09-18 15:20:22,531 INFO     seg 17/24 -> seg_0016.wav
+2026-09-18 15:20:22,647 INFO     seg 18/24 -> seg_0017.wav
+2026-09-18 15:20:22,761 INFO     seg 19/24 -> seg_0018.wav
+2026-09-18 15:20:22,874 INFO     seg 20/24 -> seg_0019.wav
+2026-09-18 15:20:22,992 INFO     seg 21/24 -> seg_0020.wav
+2026-09-18 15:20:23,109 INFO     seg 22/24 -> seg_0021.wav
+2026-09-18 15:20:23,226 INFO     seg 23/24 -> seg_0022.wav
+2026-09-18 15:20:23,343 INFO     seg 24/24 -> seg_0023.wav
+2026-09-18 15:20:23,796 INFO [2/6] 片头/片尾微淡化 30 ms（必须在拼接之前）
+2026-09-18 15:20:24,152 INFO [3/6] 停顿：话轮 500 ms / 句间 250 ms
+2026-09-18 15:20:24,398 INFO [4/6] 拼接 49 个片段（含 23 处停顿）
+2026-09-18 15:20:24,866 INFO [5/6] 两遍 loudnorm -> I=-16 LUFS / TP=-1.5 dBTP
+2026-09-18 15:20:31,002 INFO     实测 -18.54 -> -16.15 LUFS（目标 -16）
+2026-09-18 15:20:31,002 INFO [6/6] 导出 mp3（libmp3lame 128k）
+2026-09-18 15:20:32,134 INFO 完成：D:\podcast-ai\data\work\134fd48e-a01e-407c-83ba-8097013140ba\134fd48e-a01e-407c-83ba-8097013140ba.mp3（171.4 s，2.62 MB）
+[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":273,"threshold":50,"scope":"turn","targets":["D:\\podcast-ai\\data\\work\\134fd48e-a01e-407c-83ba-8097013140ba"],"targetCount":1}
+2026-09-18 15:24:02,565 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 15:24:04,831 WARNING [D4] 网关静默映射模型名：请求 deepseek-chat → 实际 deepseek-flash。凡涉及「本次用了哪个模型」的结论，一律以响应体 model 字段为准（计划书 4.10 ①）
+2026-09-18 15:24:04,831 WARNING [D4] 第 1 轮输出未通过校验（共 3 轮）：总字数 220 不在配额区间 234~286（目标 260 字，允许上下浮动 10%）
+2026-09-18 15:24:05,293 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 15:24:07,230 INFO HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 15:24:07,591 INFO [D4] 脚本生成完成：主题=D12 崩溃恢复实机验证（可控杀死） | 14 行 / 260 字（配额 260）| 模型 deepseek-chat→deepseek-flash | 请求 2 次 / 纠错 1 轮 | 降级=False 命中=False | 5.4s | tokens={'prompt_tokens': 3254, 'completion_tokens': 933, 'total_tokens': 4187}
+2026-09-18 15:24:09,675 INFO [CACHE] task=cecf6e5c-27be-43d6-9aa9-4dc13b4ec055 合成段数=24 命中缓存=24（命中率 100.0%）
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-18 15:24:09,746 INFO synthesis text 大家好，今天是二零二六年九月十八日，今天的主题是D十二崩溃恢复实机验证可…。

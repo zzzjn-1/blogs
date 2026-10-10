@@ -1,0 +1,98 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '20px 72px 20px 72px', flexDirection: 'column', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`时间不多，我就讲三件事。
+
+第一件是它做出来长什么样——真的跑出来的成片，真的界面。第二件是它凭什么能跑通，重点是显存只有 4.32 GB，这件事我是怎么绕过去的。第三件是做到什么程度、还差什么，包括我踩过的六个坑，还有到现在没做完的四件事。
+
+每一件我都会给能当场复算的数字。讲得不对的地方，欢迎老师直接打断我。`}>
+
+    {/* A · 标题块 */}
+    <Box style={{ height: 100, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#15171B', lineHeight: 1.25 }}>目录</Text>
+            <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>17 页 · 讲 13~15 分钟</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, color: '#6E7480', lineHeight: 1.5 }}>
+                三章，只讲已经跑完的东西；没跑完的也放在第三章里说
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        </Box>
+    </Box>
+
+    {/* B · 内容区 */}
+    <Box style={{ height: 540, flexDirection: 'row', paddingTop: 34, paddingBottom: 24 }}>
+
+        {/* 左栏：引导 */}
+        <Box style={{ width: 340, flexDirection: 'column', paddingRight: 44 }}>
+            <Box style={{ width: 44, height: 3, background: '#D9480F' }} />
+            <Box style={{ height: 22 }} />
+            <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>
+                时间不多，<br />我只讲三件事
+            </Text>
+            <Box style={{ height: 20 }} />
+            <Text style={{ fontSize: 15, color: '#6E7480', lineHeight: 1.8 }}>
+                每一件都配了能当场复算的数字。讲不完的细节，都写在交付包里现役的 32 份文档中。
+            </Text>
+        </Box>
+
+        {/* 右栏：三条 */}
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ height: 1, background: '#15171B', opacity: 0.14 }} />
+                <Box style={{ height: 18 }} />
+                <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 26 }}>
+                    <Text style={{ width: 58, fontSize: 34, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>01</Text>
+                    <Box style={{ flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#15171B', lineHeight: 1.3 }}>做出来的是什么</Text>
+                        <Box style={{ height: 10 }} />
+                        <Text style={{ fontSize: 18, color: '#4B5158', lineHeight: 1.7 }}>
+                            四个输入参数 → 双人对话脚本 → 成片 mp3 → 播客订阅源。先讲它为什么做、六个模块，再放六张真机界面与三期真成片，每一期都能点开听。
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ height: 1, background: '#15171B', opacity: 0.14 }} />
+                <Box style={{ height: 18 }} />
+                <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 26 }}>
+                    <Text style={{ width: 58, fontSize: 34, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>02</Text>
+                    <Box style={{ flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#15171B', lineHeight: 1.3 }}>它凭什么能跑通</Text>
+                        <Box style={{ height: 10 }} />
+                        <Text style={{ fontSize: 18, color: '#4B5158', lineHeight: 1.7 }}>
+                            四层架构与一次提交的完整业务流；五段流水线只认一张状态转移表；4.32 GB 显存靠「一次只干一件事 + 干过的句子不重干」扛下来。
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ height: 1, background: '#15171B', opacity: 0.14 }} />
+                <Box style={{ height: 18 }} />
+                <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 26 }}>
+                    <Text style={{ width: 58, fontSize: 34, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>03</Text>
+                    <Box style={{ flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#15171B', lineHeight: 1.3 }}>做到什么程度、还差什么</Text>
+                        <Box style={{ height: 10 }} />
+                        <Text style={{ fontSize: 18, color: '#4B5158', lineHeight: 1.7 }}>
+                            五项指标里四项是机器算的、一项是人听的；六个真实缺陷以及它们为什么没被发现；还有四件到现在没做完的事。
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+        </Box>
+    </Box>
+
+    {/* C · 页脚条 */}
+    <Box style={{ height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 18, height: 2, background: '#D9480F' }} />
+            <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>双人对话播客自动生成系统 · 项目答辩</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>02 / 17</Text>
+    </Box>
+
+</Slide>

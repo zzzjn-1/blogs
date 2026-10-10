@@ -1,0 +1,141 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '20px 72px 20px 72px', flexDirection: 'column', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`这一页是六个真实的缺陷，我挑两个说。
+
+第一个，vite 的代理配置我写成了前缀匹配，结果前端的页面路由 /feed 被代理规则吃掉了，打开那个页面就是空的。为什么没早点发现？因为代理转发和页面路由本来是两个不相干的东西，而我的测试只访问了首页。
+
+第五个更有意思。报告里我写「MOS 包是六段抽样」，但实际交付的包是由清单里十二个条目拼起来的。结论没错，但规格描述和产物对不上。这不是代码问题，是文档漂移——我改了产物，没回头改描述产物的那句话。
+
+六个缺陷有一个共同点：它们全都活过了当时的回归和门禁。失败不发声，就不会有人去找它。所以对策不是「更仔细地看」，而是让失败必然出声——现在有三十五条变异测试，把代码故意改坏，看测试会不会红；判据本身也自带一个自检开关。
+
+最下面四件事，是我到今天还没做完的。`}>
+
+    {/* A · 标题块 */}
+    <Box style={{ height: 100, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#15171B', lineHeight: 1.25 }}>六个缺陷，和还没做完的四件事</Text>
+            <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>03 做到什么程度、还差什么</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, color: '#6E7480', lineHeight: 1.5 }}>
+                六个都是真实发生、能复现、已修复的；每条都给出「它为什么没被发现」
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        </Box>
+    </Box>
+
+    {/* B · 内容区 */}
+    <Box style={{ height: 540, flexDirection: 'row', paddingTop: 20 }}>
+
+        {/* 左栏 */}
+        <Box style={{ width: 264, flexDirection: 'column', paddingRight: 40 }}>
+            <Box style={{ width: 44, height: 3, background: '#D9480F' }} />
+            <Box style={{ height: 18 }} />
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>
+                六个坑的共同点<br />是「失败不发声」
+            </Text>
+            <Box style={{ height: 16 }} />
+            <Text style={{ fontSize: 14, color: '#4B5158', lineHeight: 1.75 }}>
+                它们全都活过了当时的回归和门禁。没有人会去找一个不会叫的问题。
+            </Text>
+            <Box style={{ height: 16 }} />
+            <Text style={{ fontSize: 14, color: '#4B5158', lineHeight: 1.75 }}>
+                所以对策不是盯得更紧，是让失败必然出声：35 条变异测试（把代码故意改坏，看测试会不会红），判据自带 <span style={{ fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>--self-test</span>。
+            </Text>
+        </Box>
+
+        {/* 右栏：六条 */}
+        <Box style={{ flex: 1, flexDirection: 'column' }}>
+
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Text style={{ width: 40, fontSize: 16, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>K1</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>vite 代理键是前缀匹配，把前端自己的页面路由吞了</Text>
+                    <Box style={{ height: 2 }} />
+                    <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.55 }}>为什么没发现：代理转发和页面路由互不相干，测试只访问了首页</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 12 }} />
+
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Text style={{ width: 40, fontSize: 16, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>K2</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>演示账号口令哈希是 1 字节占位，登录必失败，还伪装成口令错误</Text>
+                    <Box style={{ height: 2 }} />
+                    <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.55 }}>为什么没发现：出得了成片就以为账号没问题，从没真正登进去过</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 12 }} />
+
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Text style={{ width: 40, fontSize: 16, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>K3</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>任务详情页的「脚本回看」是死代码：渲染条件与拉取条件互斥</Text>
+                    <Box style={{ height: 2 }} />
+                    <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.55 }}>为什么没发现：页面能打开、不报错，只是那一块永远空着</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 12 }} />
+
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Text style={{ width: 40, fontSize: 16, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>K4</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>素材说明文档三类漂移，版本沿革表整体错位一代</Text>
+                    <Box style={{ height: 2 }} />
+                    <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.55 }}>为什么没发现：它不在交付文档集、不过门禁、不参与任何测试</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 12 }} />
+
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Text style={{ width: 40, fontSize: 16, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>K5</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>报告把 MOS 包写成「6 段抽样」，实际由 12 个条目拼成</Text>
+                    <Box style={{ height: 2 }} />
+                    <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.55 }}>为什么没发现：结论没错，只有规格描述和产物对不上</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 12 }} />
+
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Text style={{ width: 40, fontSize: 16, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>K6</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>运维手册描述的是重写前的启停脚本，后端还绑着 0.0.0.0</Text>
+                    <Box style={{ height: 2 }} />
+                    <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.55 }}>为什么没发现：脚本改了，却没人回头改描述脚本的文档</Text>
+                </Box>
+            </Box>
+
+            <Box style={{ height: 16 }} />
+            <Box style={{ height: 1, background: '#D9480F', opacity: 0.5 }} />
+            <Box style={{ height: 12 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#D9480F' }}>还没做完的四件事</Text>
+                <Text style={{ fontSize: 13, color: '#4B5158' }}>演示录屏　|　验收自测表三角色签字　|　用耳朵听一遍片头　|　浏览器只实测了 Edge</Text>
+            </Box>
+
+        </Box>
+
+    </Box>
+
+    {/* C · 页脚条 */}
+    <Box style={{ height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 18, height: 2, background: '#D9480F' }} />
+            <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>双人对话播客自动生成系统 · 项目答辩</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>15 / 17</Text>
+    </Box>
+
+</Slide>

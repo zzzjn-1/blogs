@@ -1,0 +1,377 @@
+{
+  "ok": true,
+  "started": "2026-09-16 09:54:49",
+  "env": {
+    "ffmpeg": "C:\\Users\\zzz\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-9.0.1-full_build\\bin\\ffmpeg.EXE",
+    "ffprobe": "C:\\Users\\zzz\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-9.0.1-full_build\\bin\\ffprobe.EXE",
+    "version": "ffmpeg version 9.0.1-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+    "assets": {
+      "intro": "D:\\podcast-ai\\backend\\assets\\intro.mp3",
+      "outro": "D:\\podcast-ai\\backend\\assets\\outro.mp3"
+    }
+  },
+  "mixed": {
+    "elapsed_s": 1.79,
+    "result": {
+      "mp3": "D:\\podcast-ai\\data\\work\\d5_verify\\mixed\\out\\d5_mixed.mp3",
+      "merged_wav": "D:\\podcast-ai\\data\\work\\d5_verify\\mixed\\out\\build_d5_mixed\\merged.wav",
+      "duration_s": 2.55,
+      "size_bytes": 41838,
+      "segments": 3,
+      "pause_count": 2,
+      "intro_used": false,
+      "outro_used": false,
+      "loudness_applied": true,
+      "loudness_measured": {
+        "input_i": "-12.06",
+        "input_tp": "-6.00",
+        "input_lra": "0.00",
+        "input_thresh": "-22.06",
+        "output_i": "-16.00",
+        "output_tp": "-9.94",
+        "output_lra": "0.00",
+        "output_thresh": "-26.00",
+        "normalization_type": "linear",
+        "target_offset": "-0.00"
+      },
+      "loudness_after": {
+        "input_i": "-16.00",
+        "input_tp": "-9.94",
+        "input_lra": "0.00",
+        "input_thresh": "-26.00",
+        "output_i": "-16.01",
+        "output_tp": "-9.94",
+        "output_lra": "0.00",
+        "output_thresh": "-26.01",
+        "normalization_type": "linear",
+        "target_offset": "0.01"
+      },
+      "level_after": {
+        "mean_volume": -15.8,
+        "max_volume": -10.4
+      },
+      "max_volume_db": -10.4,
+      "clipped": false,
+      "build_dir": "D:\\podcast-ai\\data\\work\\d5_verify\\mixed\\out\\build_d5_mixed",
+      "elapsed_s": 1.67,
+      "warnings": []
+    },
+    "probe": {
+      "path": "D:\\podcast-ai\\data\\work\\d5_verify\\mixed\\out\\d5_mixed.mp3",
+      "duration_s": 2.55,
+      "sample_rate": 44100,
+      "channels": 1,
+      "codec": "mp3",
+      "size_bytes": 41838
+    },
+    "expect_duration_s": 2.55
+  },
+  "e2e": {
+    "elapsed_s": 109.29,
+    "summary": {
+      "ok": true,
+      "stages": {
+        "script": {
+          "source": "D:\\podcast-ai\\tests\\fixtures\\d5_turns_demo.json",
+          "lines": 10,
+          "title": "三分钟看懂播客后期"
+        },
+        "tts": {
+          "segments": 10,
+          "cached": 0,
+          "audio_s": 54.84,
+          "elapsed_s": 101.97,
+          "vram": {
+            "cuda": true,
+            "allocated_mb": 2506.8,
+            "reserved_mb": 2700.0,
+            "peak_alloc_mb": 3547.9,
+            "peak_reserved_mb": 4174.0,
+            "system_used_mb": 3834.5,
+            "system_total_mb": 6140.5
+          }
+        },
+        "postprocess": {
+          "mp3": "D:\\podcast-ai\\data\\work\\d5_verify\\e2e\\d5_verify_e2e.mp3",
+          "merged_wav": "D:\\podcast-ai\\data\\work\\d5_verify\\e2e\\build_d5_verify_e2e\\merged.wav",
+          "duration_s": 63.94,
+          "size_bytes": 1024043,
+          "segments": 10,
+          "pause_count": 9,
+          "intro_used": true,
+          "outro_used": true,
+          "loudness_applied": true,
+          "loudness_measured": {
+            "input_i": "-18.75",
+            "input_tp": "-0.42",
+            "input_lra": "8.90",
+            "input_thresh": "-30.56",
+            "output_i": "-16.51",
+            "output_tp": "-1.50",
+            "output_lra": "5.60",
+            "output_thresh": "-27.91",
+            "normalization_type": "dynamic",
+            "target_offset": "0.51"
+          },
+          "loudness_after": {
+            "input_i": "-16.12",
+            "input_tp": "-1.50",
+            "input_lra": "7.20",
+            "input_thresh": "-27.92",
+            "output_i": "-16.35",
+            "output_tp": "-1.50",
+            "output_lra": "5.30",
+            "output_thresh": "-27.73",
+            "normalization_type": "dynamic",
+            "target_offset": "0.35"
+          },
+          "level_after": {
+            "mean_volume": -17.9,
+            "max_volume": -1.9
+          },
+          "max_volume_db": -1.9,
+          "clipped": false,
+          "build_dir": "D:\\podcast-ai\\data\\work\\d5_verify\\e2e\\build_d5_verify_e2e",
+          "elapsed_s": 5.68,
+          "warnings": []
+        }
+      },
+      "output": {
+        "dir": "D:\\podcast-ai\\data\\work\\d5_verify\\e2e",
+        "mp3": "D:\\podcast-ai\\data\\work\\d5_verify\\e2e\\d5_verify_e2e.mp3",
+        "name": "d5_verify_e2e"
+      },
+      "elapsed_s": 107.67
+    }
+  },
+  "llm_e2e": {
+    "summary": {
+      "ok": true,
+      "stages": {
+        "script": {
+          "topic": "为什么天空是蓝色的",
+          "title": "天空为什么是蓝色的",
+          "lines": 26,
+          "usable": true,
+          "first_pass": false,
+          "target_words": 520,
+          "actual_words": 463,
+          "word_deviation": -0.1096,
+          "word_deviation_pct": -10.96,
+          "model_returned": "deepseek-flash",
+          "model_mapped": true,
+          "calls": 3,
+          "correction_rounds": 2,
+          "degraded": false,
+          "flagged": false,
+          "elapsed_s": 11.87
+        },
+        "tts": {
+          "segments": 27,
+          "cached": 0,
+          "audio_s": 125.2,
+          "elapsed_s": 183.93,
+          "vram": {
+            "cuda": true,
+            "allocated_mb": 2506.7,
+            "reserved_mb": 2700.0,
+            "peak_alloc_mb": 3548.5,
+            "peak_reserved_mb": 4156.0,
+            "system_used_mb": 3834.5,
+            "system_total_mb": 6140.5
+          }
+        },
+        "postprocess": {
+          "mp3": "D:\\podcast-ai\\outputs\\d5_e2e\\d5_e2e.mp3",
+          "merged_wav": "D:\\podcast-ai\\outputs\\d5_e2e\\build_d5_e2e\\merged.wav",
+          "duration_s": 142.55,
+          "size_bytes": 2281682,
+          "segments": 27,
+          "pause_count": 26,
+          "intro_used": true,
+          "outro_used": true,
+          "loudness_applied": true,
+          "loudness_measured": {
+            "input_i": "-20.05",
+            "input_tp": "-0.03",
+            "input_lra": "7.40",
+            "input_thresh": "-31.41",
+            "output_i": "-17.15",
+            "output_tp": "-1.50",
+            "output_lra": "5.40",
+            "output_thresh": "-28.25",
+            "normalization_type": "dynamic",
+            "target_offset": "1.15"
+          },
+          "loudness_after": {
+            "input_i": "-16.46",
+            "input_tp": "-1.50",
+            "input_lra": "5.20",
+            "input_thresh": "-27.71",
+            "output_i": "-16.32",
+            "output_tp": "-1.50",
+            "output_lra": "4.90",
+            "output_thresh": "-27.35",
+            "normalization_type": "dynamic",
+            "target_offset": "0.32"
+          },
+          "level_after": {
+            "mean_volume": -17.9,
+            "max_volume": -1.9
+          },
+          "max_volume_db": -1.9,
+          "clipped": false,
+          "build_dir": "D:\\podcast-ai\\outputs\\d5_e2e\\build_d5_e2e",
+          "elapsed_s": 16.3,
+          "warnings": []
+        }
+      },
+      "output": {
+        "dir": "D:\\podcast-ai\\outputs\\d5_e2e",
+        "mp3": "D:\\podcast-ai\\outputs\\d5_e2e\\d5_e2e.mp3",
+        "name": "d5_e2e"
+      },
+      "elapsed_s": 213.04
+    }
+  },
+  "elapsed_s": 112.13,
+  "checks": [
+    {
+      "name": "ffmpeg 可执行",
+      "ok": true,
+      "detail": "ffmpeg version 9.0.1-full_build-www.gyan.dev Copyright (c) 2000-2026 t"
+    },
+    {
+      "name": "滤镜 loudnorm 可用",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "滤镜 concat 可用",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "滤镜 afade 可用",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "滤镜 amix 可用",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "滤镜 volumedetect 可用",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "编码器 libmp3lame 可用",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "片头/片尾 intro.mp3 规格",
+      "ok": true,
+      "detail": "intro.mp3  2.40 s / mp3 / 44100 Hz / 1 ch"
+    },
+    {
+      "name": "片头/片尾 outro.mp3 规格",
+      "ok": true,
+      "detail": "outro.mp3  2.20 s / mp3 / 44100 Hz / 1 ch"
+    },
+    {
+      "name": "时长守恒（R12）",
+      "ok": true,
+      "detail": "实测 2.55 s / 预期 2.55 s（3 段 + 句间 250 + 话轮 500）"
+    },
+    {
+      "name": "mp3 规格 44.1k / 单声道",
+      "ok": true,
+      "detail": "mp3 / 44100 Hz / 1 ch"
+    },
+    {
+      "name": "码率接近 128k",
+      "ok": true,
+      "detail": "131.3 kbps"
+    },
+    {
+      "name": "无削波",
+      "ok": true,
+      "detail": "峰值 -10.40 dB"
+    },
+    {
+      "name": "响度落到 -16 LUFS ±1",
+      "ok": true,
+      "detail": "实测 -16.00 LUFS（目标 -16.0）"
+    },
+    {
+      "name": "中间产物齐全",
+      "ok": true,
+      "detail": "D:\\podcast-ai\\data\\work\\d5_verify\\mixed\\out\\build_d5_mixed"
+    },
+    {
+      "name": "CLI 端到端返回 0",
+      "ok": true,
+      "detail": "109.3 s"
+    },
+    {
+      "name": "成片存在",
+      "ok": true,
+      "detail": "D:\\podcast-ai\\data\\work\\d5_verify\\e2e\\d5_verify_e2e.mp3"
+    },
+    {
+      "name": "成片规格 mp3 / 44.1k / 单声道",
+      "ok": true,
+      "detail": "mp3 / 44100 Hz / 1 ch"
+    },
+    {
+      "name": "成片时长 ≈ 语音 + 停顿 + 片头尾",
+      "ok": true,
+      "detail": "成片 63.94 s；语音 54.84 s + 片头尾 4.60 s + 9 处停顿 [2.25, 4.50] s"
+    },
+    {
+      "name": "无削波",
+      "ok": true,
+      "detail": "峰值 -1.9 dB"
+    },
+    {
+      "name": "响度落到 -16 LUFS ±1",
+      "ok": true,
+      "detail": "实测 -16.12 LUFS"
+    },
+    {
+      "name": "片头片尾均已用上",
+      "ok": true,
+      "detail": "intro=True outro=True"
+    },
+    {
+      "name": "分句数 ≥ 10",
+      "ok": true,
+      "detail": "10 段（缓存命中 0）"
+    },
+    {
+      "name": "全链路成功",
+      "ok": true,
+      "detail": "总耗时 213.04 s"
+    },
+    {
+      "name": "脚本可用",
+      "ok": true,
+      "detail": "26 行 / 偏差 -11.0% / 模型 deepseek-flash"
+    },
+    {
+      "name": "成片无削波且响度达标",
+      "ok": true,
+      "detail": "峰值 -1.9 dB / -16.46 LUFS"
+    },
+    {
+      "name": "端到端时长合理",
+      "ok": true,
+      "detail": "142.6 s（27 段语音 125.2 s）"
+    }
+  ],
+  "passed": 27,
+  "failed": []
+}

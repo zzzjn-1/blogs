@@ -1,0 +1,138 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '20px 72px 20px 72px', flexDirection: 'column', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`这一页讲我认为最难的一件事：机器不够用。
+
+这块卡标称 6 G，系统自己先占掉 1 G，净可用只剩 4.32 G，也就是四千四百二十四兆。任务书里建议 8 G 起步，我差了将近一半。这个差值不是靠调参抹平的，是靠三个很笨的办法。
+
+第一，一次只干一件事。并发设成 1，再用一个显存互斥锁保证第二个任务进来是排队，不是两个一起抢卡。第二，干过的句子不重干。每句合成完就存起来，缓存键是八个字段拼出来的哈希——音色、参考音频的指纹、模型版本、随机种子、文本本身都在里面。第三，能搬走的搬走，把编码器放到 CPU 上跑，显存留给真正的推理。
+
+结果是峰值 allocated 三千五百五十一兆，门槛三千六，三次采样都没超。但我要如实说一个例外：有一次文本生成没收敛，那一次解码把 reserved 顶到了四千二百一十二兆，越过四千二的门槛十二兆。显存这一侧，我没有完全闭环。`}>
+
+    {/* A · 标题块 */}
+    <Box style={{ height: 100, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#15171B', lineHeight: 1.25 }}>4.32 GB 显存，怎么扛住的</Text>
+            <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>02 它凭什么能跑通</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, color: '#6E7480', lineHeight: 1.5 }}>
+                显存两条口径必须一起报：allocated（≤ 3600）与 reserved（≤ 4200），单位 MiB
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        </Box>
+    </Box>
+
+    {/* B · 内容区 */}
+    <Box style={{ height: 540, flexDirection: 'row', paddingTop: 30 }}>
+
+        {/* 左栏：显存刻度（分段宽之和 = 654） */}
+        <Box style={{ width: 700, flexDirection: 'column', paddingRight: 46 }}>
+
+            <Text style={{ fontSize: 14, color: '#4B5158', lineHeight: 1.7 }}>
+                任务书建议 8 GB 起步，这块卡净可用只有 4424 MiB —— 差了将近一半。这个差值不是靠调参抹平的。
+            </Text>
+            <Box style={{ height: 26 }} />
+
+            {/* 刻度条 */}
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
+                <Box style={{ width: 523, height: 76, background: '#15171B', justifyContent: 'center', paddingLeft: 12 }}>
+                    <Text style={{ fontSize: 13, color: '#FFFFFF', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>allocated 峰值 3512 / 3516.3 / 3551.7</Text>
+                </Box>
+                <Box style={{ width: 2, height: 110, background: '#D9480F' }} />
+                <Box style={{ width: 87, height: 76, background: '#15171B', opacity: 0.07 }} />
+                <Box style={{ width: 2, height: 110, background: '#D9480F' }} />
+                <Box style={{ width: 40, height: 76, background: '#D9480F', opacity: 0.3 }} />
+            </Box>
+
+            {/* 门槛数值（右端与门槛线对齐） */}
+            <Box style={{ flexDirection: 'row' }}>
+                <Box style={{ width: 525, flexDirection: 'row', justifyContent: 'flex-end', paddingRight: 4 }}>
+                    <Text style={{ fontSize: 12, color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>3600</Text>
+                </Box>
+                <Box style={{ width: 87, flexDirection: 'row', justifyContent: 'flex-end', paddingRight: 4 }}>
+                    <Text style={{ fontSize: 12, color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>4200</Text>
+                </Box>
+                <Box style={{ width: 2 }} />
+                <Box style={{ width: 40 }} />
+            </Box>
+
+            <Box style={{ height: 8 }} />
+            <Text style={{ fontSize: 12, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace' }}>
+                0 ·············· 刻度 0 → 4500 MiB ·············· 4500
+            </Text>
+
+            <Box style={{ height: 24 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 18 }} />
+
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
+                <Box style={{ width: 12, height: 12, background: '#15171B', marginTop: 3 }} />
+                <Text style={{ fontSize: 14, color: '#4B5158', lineHeight: 1.6 }}>
+                    allocated 峰值 3512 / 3516.3 / 3551.7 MiB —— 门槛 3600，三次采样都没超
+                </Text>
+            </Box>
+            <Box style={{ height: 14 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
+                <Box style={{ width: 12, height: 12, background: '#15171B', opacity: 0.07, marginTop: 3 }} />
+                <Text style={{ fontSize: 14, color: '#4B5158', lineHeight: 1.6 }}>
+                    reserved 峰值（收敛句）3978 / 4000 / 4046 MiB —— 门槛 4200，没超
+                </Text>
+            </Box>
+            <Box style={{ height: 14 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
+                <Box style={{ width: 12, height: 12, background: '#D9480F', opacity: 0.4, marginTop: 3 }} />
+                <Text style={{ fontSize: 14, color: '#D9480F', lineHeight: 1.6 }}>
+                    撞顶句单次解码 4212 MiB —— 越过 4200 门槛，全文唯一一次越线
+                </Text>
+            </Box>
+
+        </Box>
+
+        {/* 右栏：三条解法 */}
+        <Box style={{ flex: 1, flexDirection: 'column' }}>
+
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#15171B', lineHeight: 1.35 }}>
+                不够用，就靠三个笨办法
+            </Text>
+            <Box style={{ height: 18 }} />
+
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>一、一次只干一件事</Text>
+            <Box style={{ height: 4 }} />
+            <Text style={{ fontSize: 14, color: '#4B5158', lineHeight: 1.65 }}>
+                并发固定为 1，再加一把显存互斥锁。第二个任务进来是排队，不是两个一起抢卡。
+            </Text>
+            <Box style={{ height: 16 }} />
+
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>二、干过的句子不重干</Text>
+            <Box style={{ height: 4 }} />
+            <Text style={{ fontSize: 14, color: '#4B5158', lineHeight: 1.65 }}>
+                每句合成完就落盘。缓存键是八个字段拼的哈希：音色、参考音频指纹、模型版本、种子全在里面。
+            </Text>
+            <Box style={{ height: 16 }} />
+
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>三、能搬走的搬走</Text>
+            <Box style={{ height: 4 }} />
+            <Text style={{ fontSize: 14, color: '#4B5158', lineHeight: 1.65 }}>
+                fp16 推理，编码器改走 ONNX 在 CPU 上跑，显存留给真正吃显存的那一步。
+            </Text>
+
+            <Box style={{ height: 22 }} />
+            <Box style={{ borderLeft: '2px solid #D9480F', paddingLeft: 12 }}>
+                <Text style={{ fontSize: 15, color: '#15171B', lineHeight: 1.6 }}>
+                    差值不是调参抹平的，是「一次只干一件事 + 不重干」换来的。
+                </Text>
+            </Box>
+
+        </Box>
+
+    </Box>
+
+    {/* C · 页脚条 */}
+    <Box style={{ height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 18, height: 2, background: '#D9480F' }} />
+            <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>双人对话播客自动生成系统 · 项目答辩</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>10 / 17</Text>
+    </Box>
+
+</Slide>

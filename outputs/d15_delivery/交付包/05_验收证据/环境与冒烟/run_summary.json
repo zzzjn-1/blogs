@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "stages": {
+    "script": {
+      "source": "tests/fixtures/d5_turns_demo.json",
+      "lines": 10,
+      "title": "三分钟看懂播客后期"
+    }
+  },
+  "note": "--no-tts：已停在脚本阶段",
+  "elapsed_s": 0.0
+}

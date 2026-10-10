@@ -1,0 +1,76 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '40px 72px 44px 72px', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`我的汇报到这里。
+
+最后说一句实在的：这份 PPT 里出现的每一个数字，都能在这台机器上当场复算——成片在，脚本在，交付包也在。哪一步我讲得不够清楚，或者老师想看哪一页背后的东西，现在就可以说，我直接跑给各位看。
+
+谢谢各位老师。`}>
+
+    <Text style={{ fontSize: 88, fontWeight: 'bold', color: '#15171B', lineHeight: 1.15, letterSpacing: '4px' }}>
+        谢谢
+    </Text>
+
+    <Box style={{ height: 20 }} />
+
+    <Text style={{ fontSize: 22, color: '#4B5158', lineHeight: 1.6 }}>
+        想看哪一步，这台机器上现在就能跑。
+    </Text>
+
+    <Box style={{ height: 46 }} />
+    <Box style={{ width: 72, height: 3, background: '#D9480F' }} />
+    <Box style={{ height: 44 }} />
+
+    {/* 巨型数字带 */}
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 44 }}>
+
+        <Box style={{ flexDirection: 'column', alignItems: 'center' }}>
+            <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#15171B', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                40
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Text style={{ fontSize: 13, color: '#6E7480' }}>期成片</Text>
+        </Box>
+
+        <Box style={{ width: 1, height: 52, background: '#15171B', opacity: 0.14 }} />
+
+        <Box style={{ flexDirection: 'column', alignItems: 'center' }}>
+            <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                1120/1120
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Text style={{ fontSize: 13, color: '#6E7480' }}>逐句一致率</Text>
+        </Box>
+
+        <Box style={{ width: 1, height: 52, background: '#15171B', opacity: 0.14 }} />
+
+        <Box style={{ flexDirection: 'column', alignItems: 'center' }}>
+            <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#15171B', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                411
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Text style={{ fontSize: 13, color: '#6E7480' }}>项回归用例</Text>
+        </Box>
+
+        <Box style={{ width: 1, height: 52, background: '#15171B', opacity: 0.14 }} />
+
+        <Box style={{ flexDirection: 'column', alignItems: 'center' }}>
+            <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#15171B', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1 }}>
+                4.32
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Text style={{ fontSize: 13, color: '#6E7480' }}>GB 显存跑通</Text>
+        </Box>
+
+    </Box>
+
+    <Box style={{ height: 30 }} />
+
+    <Text style={{ fontSize: 15, color: '#6E7480', lineHeight: 1.7, textAlign: 'center' }}>
+        以上每一个数字都可以当场复算：成片、脚本、交付包都在这台机器上
+    </Text>
+
+    <Box style={{ height: 26 }} />
+
+    <Text style={{ fontSize: 14, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', letterSpacing: '1px' }}>
+        嘉应学院数学学院 · 张佳楠 · 2026 年 9 月
+    </Text>
+
+</Slide>

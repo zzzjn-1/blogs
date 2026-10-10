@@ -1,0 +1,135 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '20px 72px 20px 72px', flexDirection: 'column', fontFamily: '"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' }} notes={`先说为什么做这个，再说做给谁用。
+
+播客这两年是涨的，知识科普、行业解读这类双人对话节目尤其受欢迎。但做一档这样的节目，链条很长：先选题策划，再写两个人的对话脚本，然后两个主播分别录，最后还得剪辑、拼接、处理响度。一期节目从选题到成片，快也要好几天。个人做内容的人，还有学校里想批量做教学音频的老师，很难持续产出——不是没想法，是工期压不下来。
+
+那为什么是现在能做？因为两条技术刚好都熟了。一条是语音合成：阿里开源的 CosyVoice 支持零样本音色克隆，只要几秒参考音频就能复刻音色，中文自然度够用，而且能完全放在本地跑，不依赖云服务。另一条是内容生成：大模型能按主题、时长、风格，直接把双人对话脚本写出来。
+
+把这两条接起来，「输入一个主题、输出一期成片」这件事就成立了。再套一个网页壳子，没有录音棚、不会剪辑的人也能用。
+
+所以定位一句话：面向个人创作者和教学场景的、从「输入主题」到「成片加 RSS 订阅」闭环的网页应用。
+
+目标用户四类：个人内容创作者是主力，要的是「快」；教育机构和老师要的是「便宜且能批量复用」；视障和通勤用户只听不看，他们不碰网页，走 RSS 在播客客户端听——所以这个系统的听众出口是订阅源，不是界面；还有一类就是答辩评审，按验收清单逐项验。
+
+功能上切成六个模块：环境部署、对话脚本生成、语音合成、音频后期与封装、网页界面、用户与历史记录。这六个模块就是后面每一页在讲的东西。`}>
+
+    {/* A · 标题块 */}
+    <Box style={{ height: 100, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#15171B', lineHeight: 1.25 }}>为什么做它，做给谁用</Text>
+            <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>01 项目背景与目标</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, color: '#6E7480', lineHeight: 1.5 }}>
+                背景、定位、目标用户、六个功能模块 —— 一句话概括：把做一期播客从几天压到几分钟
+            </Text>
+            <Box style={{ height: 10 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+        </Box>
+    </Box>
+
+    {/* B · 内容区 */}
+    <Box style={{ height: 540, flexDirection: 'row', paddingTop: 20 }}>
+
+        {/* 左栏：背景 + 定位 */}
+        <Box style={{ width: 500, flexDirection: 'column', paddingRight: 40 }}>
+            <Box style={{ width: 44, height: 3, background: '#D9480F' }} />
+            <Box style={{ height: 16 }} />
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>
+                一期播客要几天，<br />两条技术刚好熟了
+            </Text>
+            <Box style={{ height: 14 }} />
+            <Text style={{ fontSize: 13.5, color: '#4B5158', lineHeight: 1.75 }}>
+                做一档双人对话播客，链条是：选题 → 写对话稿 → 两人分别录 → 剪辑拼接与响度处理。一期从选题到成片通常要好几天，个人创作者与教学团队都很难持续产出。
+            </Text>
+            <Box style={{ height: 16 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 14 }} />
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>两条前提，缺一不可</Text>
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.5 }}>01</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 13.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.45 }}>语音能克隆，且能本地跑</Text>
+                    <Box style={{ height: 2 }} />
+                    <Text style={{ fontSize: 12.5, color: '#6E7480', lineHeight: 1.5 }}>CosyVoice 零样本音色合成，几秒参考音频即可复现音色，中文自然度够用，可完全本地部署</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 10 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.5 }}>02</Text>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 13.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.45 }}>大模型会写双人对话</Text>
+                    <Box style={{ height: 2 }} />
+                    <Text style={{ fontSize: 12.5, color: '#6E7480', lineHeight: 1.5 }}>按主题 / 时长 / 风格生成结构化双人对话脚本（本项目用 DeepSeek API）</Text>
+                </Box>
+            </Box>
+            <Box style={{ height: 14 }} />
+            <Box style={{ background: '#EEF0F3', padding: '10px 14px', flexDirection: 'column' }}>
+                <Text style={{ fontSize: 12.5, color: '#5A6069', lineHeight: 1.6 }}>
+                    定位：面向个人创作者与教育机构的、以「输入主题 → 成片音频 + RSS 订阅」为闭环的双人对话播客自动生成 Web 应用
+                </Text>
+            </Box>
+        </Box>
+
+        {/* 右栏：目标用户 + 六模块 */}
+        <Box style={{ flex: 1, flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>目标用户</Text>
+            <Box style={{ height: 8 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 8 }} />
+
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10 }}>
+                <Text style={{ width: 92, fontSize: 13, fontWeight: 'bold', color: '#15171B' }}>个人创作者</Text>
+                <Text style={{ flex: 1, fontSize: 12.5, color: '#6E7480', lineHeight: 1.5 }}>无录音棚与剪辑能力，要的是「把选题快速变成一期可发布的节目」</Text>
+            </Box>
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10 }}>
+                <Text style={{ width: 92, fontSize: 13, fontWeight: 'bold', color: '#15171B' }}>教育机构 / 教师</Text>
+                <Text style={{ flex: 1, fontSize: 12.5, color: '#6E7480', lineHeight: 1.5 }}>需批量生产教学音频，要的是低成本、可复用的音频内容生产</Text>
+            </Box>
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10 }}>
+                <Text style={{ width: 92, fontSize: 13, fontWeight: 'bold', color: '#15171B' }}>视障 / 通勤用户</Text>
+                <Text style={{ flex: 1, fontSize: 12.5, color: '#6E7480', lineHeight: 1.5 }}>以听为主，订阅 RSS 在播客客户端收听 —— 不接触本界面</Text>
+            </Box>
+            <Box style={{ height: 8 }} />
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10 }}>
+                <Text style={{ width: 92, fontSize: 13, fontWeight: 'bold', color: '#15171B' }}>评审 / 答辩</Text>
+                <Text style={{ flex: 1, fontSize: 12.5, color: '#6E7480', lineHeight: 1.5 }}>需要可复现的演示路径与量化证据，按验收清单逐项验证</Text>
+            </Box>
+
+            <Box style={{ height: 16 }} />
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>六个功能模块</Text>
+            <Box style={{ height: 8 }} />
+            <Box style={{ height: 1, background: '#15171B', opacity: 0.12 }} />
+            <Box style={{ height: 10 }} />
+
+            {[
+              ['M1','开源环境部署','CosyVoice 与权重本地部署，2 种预置音色'],
+              ['M2','对话脚本生成','按主题 / 时长 / 风格生成，可编辑，含敏感词过滤'],
+              ['M3','语音合成','文本规范化、逐句切分、双音色切换'],
+              ['M4','音频后期与封装','停顿、拼接、响度归一、片头尾，导出 mp3 + RSS'],
+              ['M5','Web 界面','提交、在线编辑脚本、逐句试听、播放与下载'],
+              ['M6','用户与历史','注册登录、进度追踪、历史回放']
+            ].map((row,i)=>(
+              <Box key={i} style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10, marginBottom: 7 }}>
+                <Text style={{ width: 26, fontSize: 12.5, fontWeight: 'bold', color: '#D9480F', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.5 }}>{row[0]}</Text>
+                <Text style={{ width: 118, fontSize: 12.5, fontWeight: 'bold', color: '#15171B', lineHeight: 1.5 }}>{row[1]}</Text>
+                <Text style={{ flex: 1, fontSize: 12, color: '#6E7480', lineHeight: 1.5 }}>{row[2]}</Text>
+              </Box>
+            ))}
+
+        </Box>
+
+    </Box>
+
+    {/* C · 页脚条 */}
+    <Box style={{ height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 18, height: 2, background: '#D9480F' }} />
+            <Text style={{ fontSize: 13, color: '#6E7480', lineHeight: 1.4 }}>双人对话播客自动生成系统 · 项目答辩</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#6E7480', fontFamily: '"JetBrains Mono","Cascadia Mono",Consolas,monospace', lineHeight: 1.4 }}>03 / 17</Text>
+    </Box>
+
+</Slide>
